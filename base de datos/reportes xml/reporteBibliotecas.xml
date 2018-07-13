@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Bibliotecas>
+	<Biblioteca idBiblioteca="1">
+		<nombre>bibTemuco1</nombre>
+		<direccion>calleTemuco</direccion>
+		<idCiudad>1</idCiudad>
+		<propietario>Miguel Jimenez</propietario>
+		<numeroDeTelefono>452123123</numeroDeTelefono>
+		<correoElectronico>bibTemuco1@biblioteca.com</correoElectronico>
+	</Biblioteca>
+	<Biblioteca idBiblioteca="2">
+		<nombre>bibSantiago1</nombre>
+		<direccion>calleSantiago</direccion>
+		<idCiudad>2</idCiudad>
+		<propietario>Jacinto Rojas</propietario>
+		<numeroDeTelefono>452124124</numeroDeTelefono>
+		<correoElectronico>bibSantiago1@biblioteca.com</correoElectronico>
+	</Biblioteca>
+	<Biblioteca idBiblioteca="3">
+		<nombre>bibBuenosAires1</nombre>
+		<direccion>calleBuenosAires</direccion>
+		<idCiudad>3</idCiudad>
+		<propietario>Facundo Vega</propietario>
+		<numeroDeTelefono>452223223</numeroDeTelefono>
+		<correoElectronico>bibBuenosAires1@biblioteca.com</correoElectronico>
+	</Biblioteca>
+	<Biblioteca idBiblioteca="4">
+		<nombre>bibBariloche1</nombre>
+		<direccion>calleBariloche</direccion>
+		<idCiudad>4</idCiudad>
+		<propietario>Armando Casas</propietario>
+		<numeroDeTelefono>452323323</numeroDeTelefono>
+		<correoElectronico>bibBariloche1@biblioteca.com</correoElectronico>
+	</Biblioteca>
+	<Biblioteca idBiblioteca="5">
+		<nombre>bibNewYork1</nombre>
+		<direccion>calleNewYork</direccion>
+		<idCiudad>5</idCiudad>
+		<propietario>Mark Nier</propietario>
+		<numeroDeTelefono>452823823</numeroDeTelefono>
+		<correoElectronico>bibNewYork1@biblioteca.com</correoElectronico>
+	</Biblioteca>
+</Bibliotecas>

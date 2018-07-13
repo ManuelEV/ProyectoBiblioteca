@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Autores>
+	<Autor fechaNacimiento="1780-05-17" genero="hombre"
+		idAutor="131085266">
+		<nombre>Adrian</nombre>
+		<apellidoPaterno>Aguero</apellidoPaterno>
+		<apellidoMaterno>Aguero</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1853-05-06" genero="hombre"
+		idAutor="154229462">
+		<nombre>Adrian</nombre>
+		<apellidoPaterno>Aguero</apellidoPaterno>
+		<apellidoMaterno>Aguero</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1852-05-03" genero="hombre"
+		idAutor="152634213">
+		<nombre>Adrian</nombre>
+		<apellidoPaterno>Aguero</apellidoPaterno>
+		<apellidoMaterno>Araya</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1624-10-16" genero="hombre"
+		idAutor="162462040">
+		<nombre>Adrian</nombre>
+		<apellidoPaterno>Araya</apellidoPaterno>
+		<apellidoMaterno>Araya</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1664-10-15" genero="hombre"
+		idAutor="144655114">
+		<nombre>Adrian</nombre>
+		<apellidoPaterno>Araya</apellidoPaterno>
+		<apellidoMaterno>Araya</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1881-08-01" genero="hombre"
+		idAutor="13042661K">
+		<nombre>Adrian</nombre>
+		<apellidoPaterno>Araya</apellidoPaterno>
+		<apellidoMaterno>Araya</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1608-10-08" genero="hombre"
+		idAutor="135996452">
+		<nombre>Alberto</nombre>
+		<apellidoPaterno>Araya</apellidoPaterno>
+		<apellidoMaterno>Araya</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1634-05-15" genero="hombre"
+		idAutor="162281161">
+		<nombre>Alberto</nombre>
+		<apellidoPaterno>Araya</apellidoPaterno>
+		<apellidoMaterno>Bravo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1761-06-05" genero="hombre"
+		idAutor="145087090">
+		<nombre>Alberto</nombre>
+		<apellidoPaterno>Bravo</apellidoPaterno>
+		<apellidoMaterno>Bravo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1840-12-18" genero="hombre"
+		idAutor="160638096">
+		<nombre>Alberto</nombre>
+		<apellidoPaterno>Bravo</apellidoPaterno>
+		<apellidoMaterno>Bravo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1932-11-09" genero="hombre"
+		idAutor="14088957K">
+		<nombre>Alexis</nombre>
+		<apellidoPaterno>Carrasco</apellidoPaterno>
+		<apellidoMaterno>Carrasco</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1678-02-02" genero="hombre"
+		idAutor="156705305">
+		<nombre>Arturo</nombre>
+		<apellidoPaterno>Carrasco</apellidoPaterno>
+		<apellidoMaterno>Carrasco</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1653-11-20" genero="hombre"
+		idAutor="139058653">
+		<nombre>Arturo</nombre>
+		<apellidoPaterno>Carrasco</apellidoPaterno>
+		<apellidoMaterno>Carrasco</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1618-07-25" genero="hombre"
+		idAutor="164199757">
+		<nombre>Arturo</nombre>
+		<apellidoPaterno>Castillo</apellidoPaterno>
+		<apellidoMaterno>Carrasco</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1641-03-21" genero="hombre"
+		idAutor="138817970">
+		<nombre>Arturo</nombre>
+		<apellidoPaterno>Castillo</apellidoPaterno>
+		<apellidoMaterno>Castillo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1679-02-01" genero="hombre"
+		idAutor="151380864">
+		<nombre>Arturo</nombre>
+		<apellidoPaterno>Castro</apellidoPaterno>
+		<apellidoMaterno>Castillo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1865-12-06" genero="hombre"
+		idAutor="156895465">
+		<nombre>Benjamin</nombre>
+		<apellidoPaterno>Castro</apellidoPaterno>
+		<apellidoMaterno>Castillo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1903-01-20" genero="hombre"
+		idAutor="141596755">
+		<nombre>Benjamin</nombre>
+		<apellidoPaterno>Chavez</apellidoPaterno>
+		<apellidoMaterno>Castro</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1808-03-20" genero="hombre"
+		idAutor="148622875">
+		<nombre>Benjamin</nombre>
+		<apellidoPaterno>Chavez</apellidoPaterno>
+		<apellidoMaterno>Chavez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1798-03-24" genero="hombre"
+		idAutor="145971780">
+		<nombre>Benjamin</nombre>
+		<apellidoPaterno>Contreras</apellidoPaterno>
+		<apellidoMaterno>Chavez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1969-08-15" genero="hombre"
+		idAutor="169480461">
+		<nombre>Benjamin</nombre>
+		<apellidoPaterno>Contreras</apellidoPaterno>
+		<apellidoMaterno>Chavez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1663-12-27" genero="hombre"
+		idAutor="161671654">
+		<nombre>Carlos</nombre>
+		<apellidoPaterno>Contreras</apellidoPaterno>
+		<apellidoMaterno>Contreras</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1939-01-09" genero="hombre"
+		idAutor="154812337">
+		<nombre>Daniel</nombre>
+		<apellidoPaterno>Cortes</apellidoPaterno>
+		<apellidoMaterno>Contreras</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1750-03-26" genero="hombre"
+		idAutor="132018157">
+		<nombre>Daniel</nombre>
+		<apellidoPaterno>Cortes</apellidoPaterno>
+		<apellidoMaterno>Contreras</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1801-03-05" genero="hombre"
+		idAutor="139002143">
+		<nombre>David</nombre>
+		<apellidoPaterno>Cortes</apellidoPaterno>
+		<apellidoMaterno>Cortes</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1879-08-16" genero="hombre"
+		idAutor="132080264">
+		<nombre>David</nombre>
+		<apellidoPaterno>Cortes</apellidoPaterno>
+		<apellidoMaterno>Diaz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1891-05-28" genero="hombre"
+		idAutor="153223257">
+		<nombre>David</nombre>
+		<apellidoPaterno>Cortes</apellidoPaterno>
+		<apellidoMaterno>Diaz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1626-01-19" genero="hombre"
+		idAutor="159751764">
+		<nombre>David</nombre>
+		<apellidoPaterno>Diaz</apellidoPaterno>
+		<apellidoMaterno>Espinoza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1795-09-28" genero="hombre"
+		idAutor="130770009">
+		<nombre>David</nombre>
+		<apellidoPaterno>Diaz</apellidoPaterno>
+		<apellidoMaterno>Espinoza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1756-10-26" genero="hombre"
+		idAutor="159211241">
+		<nombre>Diego</nombre>
+		<apellidoPaterno>Diaz</apellidoPaterno>
+		<apellidoMaterno>Fierro</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1773-10-22" genero="hombre"
+		idAutor="152159729">
+		<nombre>Emilio</nombre>
+		<apellidoPaterno>Diaz</apellidoPaterno>
+		<apellidoMaterno>Fierro</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1708-06-12" genero="hombre"
+		idAutor="145878615">
+		<nombre>Emilio</nombre>
+		<apellidoPaterno>Diaz</apellidoPaterno>
+		<apellidoMaterno>Fuentes</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1751-02-17" genero="hombre"
+		idAutor="153784437">
+		<nombre>Emilio</nombre>
+		<apellidoPaterno>Espinoza</apellidoPaterno>
+		<apellidoMaterno>Garrido</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1665-09-11" genero="hombre"
+		idAutor="130309963">
+		<nombre>Esteban</nombre>
+		<apellidoPaterno>Espinoza</apellidoPaterno>
+		<apellidoMaterno>Garrido</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1852-10-11" genero="hombre"
+		idAutor="151760508">
+		<nombre>Esteban</nombre>
+		<apellidoPaterno>Espinoza</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1823-09-11" genero="hombre"
+		idAutor="146582928">
+		<nombre>Francisco</nombre>
+		<apellidoPaterno>Fierro</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1920-02-07" genero="hombre"
+		idAutor="140677577">
+		<nombre>Francisco</nombre>
+		<apellidoPaterno>Fuentes</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1767-03-28" genero="hombre"
+		idAutor="161364162">
+		<nombre>Francisco</nombre>
+		<apellidoPaterno>Fuentes</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1789-04-10" genero="hombre"
+		idAutor="147880480">
+		<nombre>Francisco</nombre>
+		<apellidoPaterno>Fuentes</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1727-02-14" genero="hombre"
+		idAutor="132798291">
+		<nombre>Gonzalo</nombre>
+		<apellidoPaterno>Garrido</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1722-10-05" genero="hombre"
+		idAutor="152089922">
+		<nombre>Gonzalo</nombre>
+		<apellidoPaterno>Garrido</apellidoPaterno>
+		<apellidoMaterno>Gomez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1749-01-04" genero="hombre"
+		idAutor="140677644">
+		<nombre>Joaquin</nombre>
+		<apellidoPaterno>Garrido</apellidoPaterno>
+		<apellidoMaterno>Gonzales</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1909-11-19" genero="hombre"
+		idAutor="155348781">
+		<nombre>Joaquin</nombre>
+		<apellidoPaterno>Garrido</apellidoPaterno>
+		<apellidoMaterno>Gonzales</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1684-09-25" genero="hombre"
+		idAutor="165821129">
+		<nombre>Jose</nombre>
+		<apellidoPaterno>Gomez</apellidoPaterno>
+		<apellidoMaterno>Iturria</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1953-08-09" genero="hombre"
+		idAutor="138156552">
+		<nombre>Jose</nombre>
+		<apellidoPaterno>Gomez</apellidoPaterno>
+		<apellidoMaterno>Lopez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1891-01-14" genero="hombre"
+		idAutor="14732957K">
+		<nombre>Jose</nombre>
+		<apellidoPaterno>Gomez</apellidoPaterno>
+		<apellidoMaterno>Lopez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1950-04-06" genero="hombre"
+		idAutor="13355788K">
+		<nombre>Juan</nombre>
+		<apellidoPaterno>Gomez</apellidoPaterno>
+		<apellidoMaterno>Lopez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1813-06-19" genero="hombre"
+		idAutor="153706748">
+		<nombre>Lorenzo</nombre>
+		<apellidoPaterno>Gomez</apellidoPaterno>
+		<apellidoMaterno>Lopez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1901-09-19" genero="hombre"
+		idAutor="138714111">
+		<nombre>Lorenzo</nombre>
+		<apellidoPaterno>Gonzales</apellidoPaterno>
+		<apellidoMaterno>Martines</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1831-12-24" genero="hombre"
+		idAutor="160350209">
+		<nombre>Lorenzo</nombre>
+		<apellidoPaterno>Gonzales</apellidoPaterno>
+		<apellidoMaterno>Martines</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1969-12-15" genero="hombre"
+		idAutor="150624745">
+		<nombre>Lorenzo</nombre>
+		<apellidoPaterno>Gonzales</apellidoPaterno>
+		<apellidoMaterno>Martines</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1741-11-22" genero="hombre"
+		idAutor="149182469">
+		<nombre>Lucas</nombre>
+		<apellidoPaterno>Gonzales</apellidoPaterno>
+		<apellidoMaterno>Medina</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1944-02-01" genero="hombre"
+		idAutor="155278365">
+		<nombre>Lucas</nombre>
+		<apellidoPaterno>Gonzales</apellidoPaterno>
+		<apellidoMaterno>Medina</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1856-11-02" genero="hombre"
+		idAutor="13293924K">
+		<nombre>Manuel</nombre>
+		<apellidoPaterno>Iturria</apellidoPaterno>
+		<apellidoMaterno>Medina</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1631-01-20" genero="hombre"
+		idAutor="133986753">
+		<nombre>Manuel</nombre>
+		<apellidoPaterno>Iturria</apellidoPaterno>
+		<apellidoMaterno>Mora</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1856-07-02" genero="hombre"
+		idAutor="141891571">
+		<nombre>Manuel</nombre>
+		<apellidoPaterno>Iturria</apellidoPaterno>
+		<apellidoMaterno>Mora</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1850-06-23" genero="hombre"
+		idAutor="161658741">
+		<nombre>Manuel</nombre>
+		<apellidoPaterno>Lopez</apellidoPaterno>
+		<apellidoMaterno>Mora</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1951-01-01" genero="hombre"
+		idAutor="141241102">
+		<nombre>Manuel</nombre>
+		<apellidoPaterno>Lopez</apellidoPaterno>
+		<apellidoMaterno>Mora</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1761-04-16" genero="hombre"
+		idAutor="153730787">
+		<nombre>Martin</nombre>
+		<apellidoPaterno>Martines</apellidoPaterno>
+		<apellidoMaterno>Morales</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1810-06-06" genero="hombre"
+		idAutor="167030336">
+		<nombre>Mateo</nombre>
+		<apellidoPaterno>Martines</apellidoPaterno>
+		<apellidoMaterno>Morales</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1891-10-21" genero="hombre"
+		idAutor="145894219">
+		<nombre>Mateo</nombre>
+		<apellidoPaterno>Martines</apellidoPaterno>
+		<apellidoMaterno>Morales</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1897-09-25" genero="hombre"
+		idAutor="146410753">
+		<nombre>Mateo</nombre>
+		<apellidoPaterno>Martines</apellidoPaterno>
+		<apellidoMaterno>Munoz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1840-09-23" genero="hombre"
+		idAutor="140684806">
+		<nombre>Pablo</nombre>
+		<apellidoPaterno>Mora</apellidoPaterno>
+		<apellidoMaterno>Obreque</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1790-07-01" genero="hombre"
+		idAutor="13397443K">
+		<nombre>Pablo</nombre>
+		<apellidoPaterno>Mora</apellidoPaterno>
+		<apellidoMaterno>Oliveros</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1654-09-12" genero="hombre"
+		idAutor="154071064">
+		<nombre>Pablo</nombre>
+		<apellidoPaterno>Morales</apellidoPaterno>
+		<apellidoMaterno>Oliveros</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1720-06-06" genero="hombre"
+		idAutor="162166372">
+		<nombre>Pablo</nombre>
+		<apellidoPaterno>Morales</apellidoPaterno>
+		<apellidoMaterno>Oliveros</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1820-10-05" genero="hombre"
+		idAutor="144016890">
+		<nombre>Pedro</nombre>
+		<apellidoPaterno>Munoz</apellidoPaterno>
+		<apellidoMaterno>Oliveros</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1828-08-18" genero="hombre"
+		idAutor="147503477">
+		<nombre>Pedro</nombre>
+		<apellidoPaterno>Munoz</apellidoPaterno>
+		<apellidoMaterno>Oliveros</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1852-01-19" genero="hombre"
+		idAutor="136730083">
+		<nombre>Roberto</nombre>
+		<apellidoPaterno>Munoz</apellidoPaterno>
+		<apellidoMaterno>Ortiz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1982-08-19" genero="hombre"
+		idAutor="148839013">
+		<nombre>Roberto</nombre>
+		<apellidoPaterno>Munoz</apellidoPaterno>
+		<apellidoMaterno>Ortiz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1834-02-09" genero="hombre"
+		idAutor="153356403">
+		<nombre>Santiago</nombre>
+		<apellidoPaterno>Munoz</apellidoPaterno>
+		<apellidoMaterno>Ovalle</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1781-10-28" genero="hombre"
+		idAutor="164600981">
+		<nombre>Santiago</nombre>
+		<apellidoPaterno>Munoz</apellidoPaterno>
+		<apellidoMaterno>Parra</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1974-12-13" genero="hombre"
+		idAutor="151436766">
+		<nombre>Santiago</nombre>
+		<apellidoPaterno>Obreque</apellidoPaterno>
+		<apellidoMaterno>Parra</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1846-02-14" genero="hombre"
+		idAutor="13847592K">
+		<nombre>Vicente</nombre>
+		<apellidoPaterno>Obreque</apellidoPaterno>
+		<apellidoMaterno>Parra</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1804-05-02" genero="hombre"
+		idAutor="137457052">
+		<nombre>Vicente</nombre>
+		<apellidoPaterno>Obreque</apellidoPaterno>
+		<apellidoMaterno>Parra</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1762-02-14" genero="mujer"
+		idAutor="168544030">
+		<nombre>Agustina</nombre>
+		<apellidoPaterno>Obreque</apellidoPaterno>
+		<apellidoMaterno>Pereira</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1778-02-27" genero="mujer"
+		idAutor="158863959">
+		<nombre>Agustina</nombre>
+		<apellidoPaterno>Oliveros</apellidoPaterno>
+		<apellidoMaterno>Pereira</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1887-12-11" genero="mujer"
+		idAutor="132723102">
+		<nombre>Ana</nombre>
+		<apellidoPaterno>Oliveros</apellidoPaterno>
+		<apellidoMaterno>Pereira</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1914-11-28" genero="mujer"
+		idAutor="135941153">
+		<nombre>Ana</nombre>
+		<apellidoPaterno>Ortiz</apellidoPaterno>
+		<apellidoMaterno>Perez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1604-10-16" genero="mujer"
+		idAutor="161569690">
+		<nombre>Ana</nombre>
+		<apellidoPaterno>Ortiz</apellidoPaterno>
+		<apellidoMaterno>Perez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1675-09-02" genero="mujer"
+		idAutor="157562010">
+		<nombre>Ana</nombre>
+		<apellidoPaterno>Ortiz</apellidoPaterno>
+		<apellidoMaterno>Plaza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1718-01-27" genero="mujer"
+		idAutor="148673135">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Ortiz</apellidoPaterno>
+		<apellidoMaterno>Plaza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1915-08-05" genero="mujer"
+		idAutor="162408392">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Ovalle</apellidoPaterno>
+		<apellidoMaterno>Plaza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1626-07-05" genero="mujer"
+		idAutor="135696560">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Ovalle</apellidoPaterno>
+		<apellidoMaterno>Plaza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1755-12-21" genero="mujer"
+		idAutor="130276994">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Ovalle</apellidoPaterno>
+		<apellidoMaterno>Plaza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1764-07-16" genero="mujer"
+		idAutor="144657585">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Parra</apellidoPaterno>
+		<apellidoMaterno>Riquelme</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1880-01-06" genero="mujer"
+		idAutor="145691473">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Pereira</apellidoPaterno>
+		<apellidoMaterno>Riquelme</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1711-06-01" genero="mujer"
+		idAutor="140097081">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Pereira</apellidoPaterno>
+		<apellidoMaterno>Riquelme</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1938-03-02" genero="mujer"
+		idAutor="146942106">
+		<nombre>Belen</nombre>
+		<apellidoPaterno>Pereira</apellidoPaterno>
+		<apellidoMaterno>Riquelme</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1950-02-10" genero="mujer"
+		idAutor="160098429">
+		<nombre>Camila</nombre>
+		<apellidoPaterno>Perez</apellidoPaterno>
+		<apellidoMaterno>Riquelme</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1958-10-05" genero="mujer"
+		idAutor="142394261">
+		<nombre>Camila</nombre>
+		<apellidoPaterno>Perez</apellidoPaterno>
+		<apellidoMaterno>Riquelme</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1697-11-12" genero="mujer"
+		idAutor="140931883">
+		<nombre>Camila</nombre>
+		<apellidoPaterno>Plaza</apellidoPaterno>
+		<apellidoMaterno>Rodriguez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1966-04-28" genero="mujer"
+		idAutor="132452386">
+		<nombre>Camila</nombre>
+		<apellidoPaterno>Plaza</apellidoPaterno>
+		<apellidoMaterno>Rodriguez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1901-08-27" genero="mujer"
+		idAutor="150310295">
+		<nombre>Catalina</nombre>
+		<apellidoPaterno>Riquelme</apellidoPaterno>
+		<apellidoMaterno>Rodriguez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1943-02-04" genero="mujer"
+		idAutor="16664687K">
+		<nombre>Catalina</nombre>
+		<apellidoPaterno>Riquelme</apellidoPaterno>
+		<apellidoMaterno>Rodriguez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1669-01-02" genero="mujer"
+		idAutor="16811915K">
+		<nombre>Catalina</nombre>
+		<apellidoPaterno>Riquelme</apellidoPaterno>
+		<apellidoMaterno>Rodriguez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1978-10-23" genero="mujer"
+		idAutor="142137203">
+		<nombre>Daniela</nombre>
+		<apellidoPaterno>Riquelme</apellidoPaterno>
+		<apellidoMaterno>Rojas</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1894-01-20" genero="mujer"
+		idAutor="148464868">
+		<nombre>Daniela</nombre>
+		<apellidoPaterno>Riquelme</apellidoPaterno>
+		<apellidoMaterno>Rojas</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1827-03-02" genero="mujer"
+		idAutor="133664397">
+		<nombre>Daniela</nombre>
+		<apellidoPaterno>Rodriguez</apellidoPaterno>
+		<apellidoMaterno>Rojas</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1769-04-14" genero="mujer"
+		idAutor="130211859">
+		<nombre>Daniela</nombre>
+		<apellidoPaterno>Rodriguez</apellidoPaterno>
+		<apellidoMaterno>Ruiz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1750-05-28" genero="mujer"
+		idAutor="166868622">
+		<nombre>Diana</nombre>
+		<apellidoPaterno>Rojas</apellidoPaterno>
+		<apellidoMaterno>Ruiz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1793-12-04" genero="mujer"
+		idAutor="142800834">
+		<nombre>Diana</nombre>
+		<apellidoPaterno>Rojas</apellidoPaterno>
+		<apellidoMaterno>Ruiz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1982-11-10" genero="mujer"
+		idAutor="131164117">
+		<nombre>Diana</nombre>
+		<apellidoPaterno>Rojas</apellidoPaterno>
+		<apellidoMaterno>Ruiz</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1961-05-16" genero="mujer"
+		idAutor="166281787">
+		<nombre>Florencia</nombre>
+		<apellidoPaterno>Ruiz</apellidoPaterno>
+		<apellidoMaterno>Salinas</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1663-04-12" genero="mujer"
+		idAutor="168508001">
+		<nombre>Florencia</nombre>
+		<apellidoPaterno>Ruiz</apellidoPaterno>
+		<apellidoMaterno>Salinas</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1782-08-14" genero="mujer"
+		idAutor="148406224">
+		<nombre>Florencia</nombre>
+		<apellidoPaterno>Salazar</apellidoPaterno>
+		<apellidoMaterno>Salinas</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1888-02-25" genero="mujer"
+		idAutor="137238172">
+		<nombre>Florencia</nombre>
+		<apellidoPaterno>Salazar</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1901-02-05" genero="mujer"
+		idAutor="150223891">
+		<nombre>Francisca</nombre>
+		<apellidoPaterno>Salazar</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1889-01-24" genero="mujer"
+		idAutor="159006232">
+		<nombre>Francisca</nombre>
+		<apellidoPaterno>Salazar</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1968-05-12" genero="mujer"
+		idAutor="167716660">
+		<nombre>Francisca</nombre>
+		<apellidoPaterno>Salinas</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1620-05-02" genero="mujer"
+		idAutor="165645601">
+		<nombre>Francisca</nombre>
+		<apellidoPaterno>Sanchez</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1915-12-22" genero="mujer"
+		idAutor="159484610">
+		<nombre>Francisca</nombre>
+		<apellidoPaterno>Sanchez</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1691-12-21" genero="mujer"
+		idAutor="140576268">
+		<nombre>Isidora</nombre>
+		<apellidoPaterno>Sanhueza</apellidoPaterno>
+		<apellidoMaterno>Sanchez</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1716-12-01" genero="mujer"
+		idAutor="134530935">
+		<nombre>Isidora</nombre>
+		<apellidoPaterno>Sanhueza</apellidoPaterno>
+		<apellidoMaterno>Sanhueza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1840-02-06" genero="mujer"
+		idAutor="148039392">
+		<nombre>Isidora</nombre>
+		<apellidoPaterno>Sepulveda</apellidoPaterno>
+		<apellidoMaterno>Sanhueza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1868-03-03" genero="mujer"
+		idAutor="146816411">
+		<nombre>Isidora</nombre>
+		<apellidoPaterno>Sepulveda</apellidoPaterno>
+		<apellidoMaterno>Sanhueza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1601-11-18" genero="mujer"
+		idAutor="140989277">
+		<nombre>Julieta</nombre>
+		<apellidoPaterno>Sepulveda</apellidoPaterno>
+		<apellidoMaterno>Sanhueza</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1914-11-09" genero="mujer"
+		idAutor="140806092">
+		<nombre>Julieta</nombre>
+		<apellidoPaterno>Sepulveda</apellidoPaterno>
+		<apellidoMaterno>Sepulveda</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1690-07-10" genero="mujer"
+		idAutor="169380740">
+		<nombre>Julieta</nombre>
+		<apellidoPaterno>Sepulveda</apellidoPaterno>
+		<apellidoMaterno>Soto</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1680-11-06" genero="mujer"
+		idAutor="15866639K">
+		<nombre>Martina</nombre>
+		<apellidoPaterno>Soto</apellidoPaterno>
+		<apellidoMaterno>Soto</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1806-01-10" genero="mujer"
+		idAutor="136438360">
+		<nombre>Martina</nombre>
+		<apellidoPaterno>Soto</apellidoPaterno>
+		<apellidoMaterno>Suazo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1753-08-10" genero="mujer"
+		idAutor="145237063">
+		<nombre>Martina</nombre>
+		<apellidoPaterno>Soto</apellidoPaterno>
+		<apellidoMaterno>Suazo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1948-12-27" genero="mujer"
+		idAutor="156143406">
+		<nombre>Martina</nombre>
+		<apellidoPaterno>Suazo</apellidoPaterno>
+		<apellidoMaterno>Suazo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1786-07-20" genero="mujer"
+		idAutor="130678786">
+		<nombre>Martina</nombre>
+		<apellidoPaterno>Suazo</apellidoPaterno>
+		<apellidoMaterno>Suazo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1751-05-10" genero="mujer"
+		idAutor="135475841">
+		<nombre>Matilda</nombre>
+		<apellidoPaterno>Suazo</apellidoPaterno>
+		<apellidoMaterno>Suazo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1791-04-12" genero="mujer"
+		idAutor="156600027">
+		<nombre>Matilda</nombre>
+		<apellidoPaterno>Tapia</apellidoPaterno>
+		<apellidoMaterno>Suazo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1761-03-24" genero="mujer"
+		idAutor="157447208">
+		<nombre>Matilda</nombre>
+		<apellidoPaterno>Toledo</apellidoPaterno>
+		<apellidoMaterno>Tapia</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1707-07-20" genero="mujer"
+		idAutor="144681320">
+		<nombre>Paulina</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Tapia</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1688-07-01" genero="mujer"
+		idAutor="130221907">
+		<nombre>Paulina</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Tapia</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1879-05-25" genero="mujer"
+		idAutor="163976912">
+		<nombre>Paulina</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Tapia</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1854-05-16" genero="mujer"
+		idAutor="167369935">
+		<nombre>Paulina</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Toledo</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1743-06-03" genero="mujer"
+		idAutor="137812265">
+		<nombre>Paulina</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Torres</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1941-01-22" genero="mujer"
+		idAutor="136804078">
+		<nombre>Paulina</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Torres</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1691-12-20" genero="mujer"
+		idAutor="159096749">
+		<nombre>Paz</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Valenzuela</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1933-01-17" genero="mujer"
+		idAutor="151521939">
+		<nombre>Paz</nombre>
+		<apellidoPaterno>Torres</apellidoPaterno>
+		<apellidoMaterno>Valenzuela</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1807-05-26" genero="mujer"
+		idAutor="158018998">
+		<nombre>Paz</nombre>
+		<apellidoPaterno>Valenzuela</apellidoPaterno>
+		<apellidoMaterno>Valenzuela</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1963-12-02" genero="mujer"
+		idAutor="163778245">
+		<nombre>Renata</nombre>
+		<apellidoPaterno>Valenzuela</apellidoPaterno>
+		<apellidoMaterno>Vazques</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1846-12-20" genero="mujer"
+		idAutor="145031333">
+		<nombre>Rocio</nombre>
+		<apellidoPaterno>Valenzuela</apellidoPaterno>
+		<apellidoMaterno>Vergara</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1791-01-05" genero="mujer"
+		idAutor="133347781">
+		<nombre>Rocio</nombre>
+		<apellidoPaterno>Valenzuela</apellidoPaterno>
+		<apellidoMaterno>Vergara</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1877-10-11" genero="mujer"
+		idAutor="135220322">
+		<nombre>Rocio</nombre>
+		<apellidoPaterno>Valenzuela</apellidoPaterno>
+		<apellidoMaterno>Vergara</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1687-04-26" genero="mujer"
+		idAutor="15711251K">
+		<nombre>Rocio</nombre>
+		<apellidoPaterno>Valenzuela</apellidoPaterno>
+		<apellidoMaterno>Vergara</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1810-05-05" genero="mujer"
+		idAutor="147516721">
+		<nombre>Rocio</nombre>
+		<apellidoPaterno>Vazques</apellidoPaterno>
+		<apellidoMaterno>Zapata</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1644-12-18" genero="mujer"
+		idAutor="144883858">
+		<nombre>Rocio</nombre>
+		<apellidoPaterno>Vazques</apellidoPaterno>
+		<apellidoMaterno>Zapata</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1626-03-18" genero="mujer"
+		idAutor="131123115">
+		<nombre>Sofia</nombre>
+		<apellidoPaterno>Vergara</apellidoPaterno>
+		<apellidoMaterno>Zapata</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1746-04-23" genero="mujer"
+		idAutor="152416222">
+		<nombre>Valentina</nombre>
+		<apellidoPaterno>Zapata</apellidoPaterno>
+		<apellidoMaterno>Zapata</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1886-05-08" genero="mujer"
+		idAutor="133497134">
+		<nombre>Valentina</nombre>
+		<apellidoPaterno>Zapata</apellidoPaterno>
+		<apellidoMaterno>Zuniga</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1609-11-15" genero="mujer"
+		idAutor="163589357">
+		<nombre>Valentina</nombre>
+		<apellidoPaterno>Zapata</apellidoPaterno>
+		<apellidoMaterno>Zuniga</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1692-03-27" genero="mujer"
+		idAutor="154489836">
+		<nombre>Valentina</nombre>
+		<apellidoPaterno>Zapata</apellidoPaterno>
+		<apellidoMaterno>Zuniga</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1851-11-16" genero="mujer"
+		idAutor="168216531">
+		<nombre>Valentina</nombre>
+		<apellidoPaterno>Zapata</apellidoPaterno>
+		<apellidoMaterno>Zuniga</apellidoMaterno>
+	</Autor>
+	<Autor fechaNacimiento="1772-01-14" genero="mujer"
+		idAutor="153496584">
+		<nombre>Valentina</nombre>
+		<apellidoPaterno>Zuniga</apellidoPaterno>
+		<apellidoMaterno>Zuniga</apellidoMaterno>
+	</Autor>
+</Autores>

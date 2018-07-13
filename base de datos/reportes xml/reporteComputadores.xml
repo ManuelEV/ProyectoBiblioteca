@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Computadores>
+	<Computador idComputador="1">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1994-05-22</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-13</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="2">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1985-12-28</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-08</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="3">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>2003-08-03</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-08</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="4">
+		<marca>HP</marca>
+		<fechaAdquisicion>2000-03-06</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-21</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="5">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1999-06-10</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-16</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="6">
+		<marca>HP</marca>
+		<fechaAdquisicion>1986-06-15</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-28</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="7">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1980-03-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-04</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="8">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1982-09-18</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-24</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="9">
+		<marca>HP</marca>
+		<fechaAdquisicion>1996-08-28</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-09-13</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="10">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1984-03-01</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-01-15</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="11">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1993-04-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-03</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="12">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1990-10-27</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-07-01</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="13">
+		<marca>HP</marca>
+		<fechaAdquisicion>1997-05-27</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-18</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="14">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1994-01-21</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-20</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="15">
+		<marca>HP</marca>
+		<fechaAdquisicion>1986-03-17</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-10</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="16">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1982-08-14</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-08</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="17">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1994-05-04</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-05</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="18">
+		<marca>DELL</marca>
+		<fechaAdquisicion>2004-12-19</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-24</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="19">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1993-09-27</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-28</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="20">
+		<marca>HP</marca>
+		<fechaAdquisicion>1998-11-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-13</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="21">
+		<marca>HP</marca>
+		<fechaAdquisicion>1996-02-01</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-09</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="22">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1990-04-14</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-09</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="23">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1996-10-02</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-13</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="24">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1980-07-14</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-05-20</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="25">
+		<marca>HP</marca>
+		<fechaAdquisicion>1999-05-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-15</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="26">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1986-06-08</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-07-13</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="27">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>2004-09-24</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-07</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="28">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1999-09-27</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-22</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="29">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>2003-09-26</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-01</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="30">
+		<marca>HP</marca>
+		<fechaAdquisicion>1988-09-24</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-25</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="31">
+		<marca>HP</marca>
+		<fechaAdquisicion>1997-09-05</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-07-19</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="32">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1997-12-07</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-01</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="33">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1991-01-08</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-13</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="34">
+		<marca>HP</marca>
+		<fechaAdquisicion>1991-11-01</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-20</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="35">
+		<marca>HP</marca>
+		<fechaAdquisicion>1990-08-20</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-01-09</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="36">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1981-06-09</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-09-25</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="37">
+		<marca>HP</marca>
+		<fechaAdquisicion>1980-03-03</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-12</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="38">
+		<marca>HP</marca>
+		<fechaAdquisicion>2000-01-24</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-14</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="39">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1996-05-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-01-25</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="40">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1990-08-17</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-28</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="41">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1981-08-07</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-20</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="42">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1990-03-08</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-04</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="43">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1990-09-08</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-05</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="44">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1981-08-02</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-07-19</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="45">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1992-12-15</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-05-10</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="46">
+		<marca>HP</marca>
+		<fechaAdquisicion>2003-10-20</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-09</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="47">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1988-01-16</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-16</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="48">
+		<marca>HP</marca>
+		<fechaAdquisicion>1986-07-03</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-22</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="49">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1984-08-13</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-17</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="50">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1986-01-21</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-27</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="51">
+		<marca>HP</marca>
+		<fechaAdquisicion>2003-11-06</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-13</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="52">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1997-09-10</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-12</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="53">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1984-01-07</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-13</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="54">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1983-01-07</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-03</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="55">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1992-08-11</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-03</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="56">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1990-12-18</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-02</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="57">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1988-01-06</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-03</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="58">
+		<marca>HP</marca>
+		<fechaAdquisicion>1987-05-14</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-01-18</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="59">
+		<marca>DELL</marca>
+		<fechaAdquisicion>2000-10-18</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-07-26</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="60">
+		<marca>HP</marca>
+		<fechaAdquisicion>1980-07-05</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-02-06</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="61">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1991-01-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-05</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="62">
+		<marca>HP</marca>
+		<fechaAdquisicion>1987-02-17</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-09</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="63">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1993-06-18</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-25</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="64">
+		<marca>DELL</marca>
+		<fechaAdquisicion>2000-09-28</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-12</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="65">
+		<marca>HP</marca>
+		<fechaAdquisicion>1986-07-02</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-01</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="66">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1992-04-08</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-09-11</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="67">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1980-10-10</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-06</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="68">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1988-09-26</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-08</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="69">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1984-09-03</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-09</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="70">
+		<marca>HP</marca>
+		<fechaAdquisicion>1983-09-11</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-15</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="71">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1985-12-19</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-14</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="72">
+		<marca>HP</marca>
+		<fechaAdquisicion>2004-04-02</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-05-03</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="73">
+		<marca>HP</marca>
+		<fechaAdquisicion>1992-10-28</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-26</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="74">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1987-10-24</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-06</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="75">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>2002-12-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-15</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="76">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1990-01-21</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-26</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="77">
+		<marca>HP</marca>
+		<fechaAdquisicion>2001-06-20</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-09-13</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="78">
+		<marca>DELL</marca>
+		<fechaAdquisicion>2003-02-26</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-15</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="79">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1984-01-15</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-17</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="80">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1981-05-17</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-21</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="81">
+		<marca>HP</marca>
+		<fechaAdquisicion>1998-03-28</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-04-01</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="82">
+		<marca>HP</marca>
+		<fechaAdquisicion>2004-09-25</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-25</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="83">
+		<marca>DELL</marca>
+		<fechaAdquisicion>1993-12-10</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-13</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="84">
+		<marca>HP</marca>
+		<fechaAdquisicion>1982-03-26</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-22</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="85">
+		<marca>HP</marca>
+		<fechaAdquisicion>2004-07-17</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-01-11</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="86">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>2001-07-05</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-11-18</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="87">
+		<marca>HP</marca>
+		<fechaAdquisicion>1989-05-04</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-22</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="88">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1987-10-02</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-01-24</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="89">
+		<marca>Hitachi</marca>
+		<fechaAdquisicion>1995-03-16</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-05-27</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="90">
+		<marca>HP</marca>
+		<fechaAdquisicion>2003-04-19</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-10-23</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="91">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1991-09-05</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-01</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="92">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1985-01-12</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-02</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="93">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1999-04-28</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-05-22</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="94">
+		<marca>HP</marca>
+		<fechaAdquisicion>1985-01-14</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-12</fechaUltimaSolicitud>
+		<idBiblioteca>3</idBiblioteca>
+	</Computador>
+	<Computador idComputador="95">
+		<marca>HP</marca>
+		<fechaAdquisicion>1984-11-24</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-03-24</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+	<Computador idComputador="96">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1992-06-05</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-03</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="97">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1990-12-11</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-06-07</fechaUltimaSolicitud>
+		<idBiblioteca>5</idBiblioteca>
+	</Computador>
+	<Computador idComputador="98">
+		<marca>HP</marca>
+		<fechaAdquisicion>1980-02-07</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-08-26</fechaUltimaSolicitud>
+		<idBiblioteca>1</idBiblioteca>
+	</Computador>
+	<Computador idComputador="99">
+		<marca>Lenovo</marca>
+		<fechaAdquisicion>1997-06-12</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-07-07</fechaUltimaSolicitud>
+		<idBiblioteca>2</idBiblioteca>
+	</Computador>
+	<Computador idComputador="100">
+		<marca>HP</marca>
+		<fechaAdquisicion>1994-04-20</fechaAdquisicion>
+		<fechaUltimaSolicitud>2016-12-18</fechaUltimaSolicitud>
+		<idBiblioteca>4</idBiblioteca>
+	</Computador>
+</Computadores>

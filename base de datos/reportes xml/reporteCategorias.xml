@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Categorias>
+	<Categoria idCategoria="1">
+		<nombre>Accion</nombre>
+	</Categoria>
+	<Categoria idCategoria="2">
+		<nombre>Romance</nombre>
+	</Categoria>
+	<Categoria idCategoria="3">
+		<nombre>Historia</nombre>
+	</Categoria>
+	<Categoria idCategoria="4">
+		<nombre>Leyenda</nombre>
+	</Categoria>
+	<Categoria idCategoria="5">
+		<nombre>Fisica</nombre>
+	</Categoria>
+	<Categoria idCategoria="6">
+		<nombre>Quimica</nombre>
+	</Categoria>
+	<Categoria idCategoria="7">
+		<nombre>Biologia</nombre>
+	</Categoria>
+	<Categoria idCategoria="8">
+		<nombre>Programacion</nombre>
+	</Categoria>
+	<Categoria idCategoria="9">
+		<nombre>Seguridad Informatica</nombre>
+	</Categoria>
+	<Categoria idCategoria="10">
+		<nombre>Sistemas operativos</nombre>
+	</Categoria>
+	<Categoria idCategoria="11">
+		<nombre>Novela policiaca</nombre>
+	</Categoria>
+	<Categoria idCategoria="12">
+		<nombre>Filosofia</nombre>
+	</Categoria>
+</Categorias>
