@@ -82,6 +82,8 @@ public class Cliente {
 	
 	private modelo.Ciudad idCiudad;
 	
+	private String password;
+	
 	private java.util.Set ORM_solicitudComputador = new java.util.HashSet();
 	
 	private java.util.Set ORM_solicitudLibro = new java.util.HashSet();
@@ -206,6 +208,14 @@ public class Cliente {
 	
 	public String getCorreoElectronico() {
 		return correoElectronico;
+	}
+	
+	public void setPassword(String value) {
+		this.password = value;
+	}
+	
+	public String getPassword() {
+		return password;
 	}
 	
 	public void setIdCiudad(modelo.Ciudad value) {

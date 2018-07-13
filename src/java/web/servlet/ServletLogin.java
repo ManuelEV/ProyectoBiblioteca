@@ -47,8 +47,10 @@ public class ServletLogin extends HttpServlet {
             String query="correoElectronico = '"+mail+"'";
             modelo.Cliente lmodeloCliente = modelo.ClienteDAO.loadClienteByQuery(query, null);
             
+            //System.out.println(lmodeloCliente.getCorreoElectronico());
+            //System.out.println(lmodeloCliente.getPassword());
             
-            if (lmodeloCliente!=null) {
+            if (lmodeloCliente!=null && password.equals(lmodeloCliente.getPassword())) {
                 dispatcher = request.getRequestDispatcher("principal.html");
             }else{
                 dispatcher = request.getRequestDispatcher("index.html");

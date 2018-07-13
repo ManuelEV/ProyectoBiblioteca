@@ -23,9 +23,10 @@ License Type: Academic
 		</property>
 		<property name="numeroDeCelular" column="numeroDeCelular" type="integer" length="12" not-null="false" lazy="false"/>
 		<property name="numeroDeTelefono" column="numeroDeTelefono" type="integer" length="12" not-null="false" lazy="false"/>
-		<property name="correoElectronico" column="correoElectronico" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="correoElectronico" column="correoElectronico" type="string" length="50" not-null="true" lazy="false"/>
 		<many-to-one name="idCiudad" cascade="lock" column="idCiudad" class="modelo.Ciudad" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
+		<property name="password" column="password" type="string" length="30" not-null="true" lazy="false"/>
 		<set name="ORM_SolicitudComputador" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="ClienteRUN" not-null="true"/>
 			<one-to-many class="modelo.SolicitudComputador"/>

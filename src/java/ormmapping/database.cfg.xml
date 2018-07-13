@@ -241,6 +241,21 @@
     <ServerName></ServerName>
     <SelectedForm>true</SelectedForm>
   </Setting>
+  <Setting type="1048576">
+    <Driver></Driver>
+    <DriverFiles></DriverFiles>
+    <Dialect></Dialect>
+    <DriverClass></DriverClass>
+    <URL></URL>
+    <UserName></UserName>
+    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
+    <HostName></HostName>
+    <PortNO></PortNO>
+    <DBName></DBName>
+    <ServiceName></ServiceName>
+    <ServerName></ServerName>
+    <SelectedForm>true</SelectedForm>
+  </Setting>
   <Setting type="33554432">
     <Driver></Driver>
     <DriverFiles></DriverFiles>
@@ -291,12 +306,12 @@
     <DriverFiles>&lt;&lt;MySQL Connector/J 5.1.33&gt;&gt;</DriverFiles>
     <Dialect>org.hibernate.dialect.MySQLDialect</Dialect>
     <DriverClass>com.mysql.jdbc.Driver</DriverClass>
-    <URL>jdbc:mysql://localhost/Biblioteca_ORM</URL>
+    <URL>jdbc:mysql://localhost/biblioteca_ORM</URL>
     <UserName>root</UserName>
-    <EncryptedPassword>32F3ACE632ECEBAFB24DCAF99A8C6CDC</EncryptedPassword>
+    <EncryptedPassword>13C7D7C71641267E4B660D2E5E7A6225</EncryptedPassword>
     <HostName>localhost</HostName>
     <PortNO></PortNO>
-    <DBName>Biblioteca_ORM</DBName>
+    <DBName>biblioteca_ORM</DBName>
     <ServiceName></ServiceName>
     <ServerName></ServerName>
     <SelectedForm>true</SelectedForm>

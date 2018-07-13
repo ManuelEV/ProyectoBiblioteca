@@ -34,6 +34,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression correoElectronico;
 	public final StringExpression idCiudadId;
 	public final AssociationExpression idCiudad;
+	public final StringExpression password;
 	public final CollectionExpression solicitudComputador;
 	public final CollectionExpression solicitudLibro;
 	public final CollectionExpression entregaDeLibro;
@@ -57,6 +58,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		correoElectronico = new StringExpression("correoElectronico", this.getDetachedCriteria());
 		idCiudadId = new StringExpression("idCiudad.idCiudad", this.getDetachedCriteria());
 		idCiudad = new AssociationExpression("idCiudad", this.getDetachedCriteria());
+		password = new StringExpression("password", this.getDetachedCriteria());
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this.getDetachedCriteria());
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this.getDetachedCriteria());
@@ -81,6 +83,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		correoElectronico = new StringExpression("correoElectronico", this.getDetachedCriteria());
 		idCiudadId = new StringExpression("idCiudad.idCiudad", this.getDetachedCriteria());
 		idCiudad = new AssociationExpression("idCiudad", this.getDetachedCriteria());
+		password = new StringExpression("password", this.getDetachedCriteria());
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this.getDetachedCriteria());
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this.getDetachedCriteria());
