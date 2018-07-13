@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Biblioteca" table="biblioteca" lazy="false">
+		<id name="idBiblioteca" column="idBiblioteca" type="string">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="nombre" column="nombre" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="direccion" column="direccion" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="propietario" column="propietario" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="numeroDeTelefono" column="numeroDeTelefono" type="integer" length="12" not-null="false" lazy="false"/>
+		<property name="correoElectronico" column="correoElectronico" type="string" length="16" not-null="true" lazy="false"/>
+		<many-to-one name="idCiudad" cascade="lock" column="idCiudad" class="modelo.Ciudad" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<set name="ORM_Estante" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idBiblioteca" not-null="true"/>
+			<one-to-many class="modelo.Estante"/>
+		</set>
+		<set name="ORM_Computador" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idBiblioteca" not-null="true"/>
+			<one-to-many class="modelo.Computador"/>
+		</set>
+		<set name="ORM_SalaDeLectura" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idBiblioteca" not-null="true"/>
+			<one-to-many class="modelo.SalaDeLectura"/>
+		</set>
+		<set name="ORM_ClienteDeBiblioteca" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="bibliotecaidBiblioteca" not-null="true"/>
+			<one-to-many class="modelo.ClienteDeBiblioteca"/>
+		</set>
+		<set name="ORM_Funcionario" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idBiblioteca" not-null="true"/>
+			<one-to-many class="modelo.Funcionario"/>
+		</set>
+	</class>
+</hibernate-mapping>

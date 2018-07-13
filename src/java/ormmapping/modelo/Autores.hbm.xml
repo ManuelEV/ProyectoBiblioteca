@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Autores" table="Autores" lazy="false">
+		<composite-id>
+			<key-property name="id" column="id" type="integer"/>
+			<key-many-to-one name="ORM_AutoridAutor" column="AutoridAutor" class="modelo.Autor">
+			</key-many-to-one>
+			<key-many-to-one name="ORM_Librocodigo" column="Librocodigo" class="modelo.Libro">
+			</key-many-to-one>
+		</composite-id>
+	</class>
+</hibernate-mapping>

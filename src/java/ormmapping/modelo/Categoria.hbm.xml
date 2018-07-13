@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Categoria" table="Categoria" lazy="false">
+		<id name="idCategoria" column="idCategoria" type="string">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="nombre" column="nombre" type="string" length="10" not-null="true" lazy="false"/>
+		<set name="ORM_Estante" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idCategoria" not-null="true"/>
+			<one-to-many class="modelo.Estante"/>
+		</set>
+		<set name="ORM_Libro" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idCategoria" not-null="true"/>
+			<one-to-many class="modelo.Libro"/>
+		</set>
+	</class>
+</hibernate-mapping>

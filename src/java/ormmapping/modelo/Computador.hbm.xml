@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Computador" table="Computador" lazy="false">
+		<id name="idComputador" column="idComputador" type="string">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="marca" column="marca" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="fechaDeAdquisicion" column="fechaDeAdquisicion" type="date" not-null="true" lazy="false"/>
+		<property name="fechaUltimaSolicitud" column="fechaUltimaSolicitud" type="date" not-null="false" lazy="false"/>
+		<many-to-one name="idBiblioteca" cascade="lock" column="idBiblioteca" class="modelo.Biblioteca" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<set name="ORM_SolicitudComputador" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idComputador" not-null="true"/>
+			<one-to-many class="modelo.SolicitudComputador"/>
+		</set>
+	</class>
+</hibernate-mapping>

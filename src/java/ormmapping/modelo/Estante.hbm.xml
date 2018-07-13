@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Estante" table="Estante" lazy="false">
+		<id name="idEstante" column="IdEstante" type="string">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="capacidadAproximada" column="capacidadAproximada" type="integer" length="10" not-null="true" lazy="false"/>
+		<many-to-one name="idBiblioteca" cascade="lock" column="idBiblioteca" class="modelo.Biblioteca" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<many-to-one name="idCategoria" cascade="lock" column="idCategoria" class="modelo.Categoria" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<set name="ORM_Libro" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idEstante" not-null="false"/>
+			<one-to-many class="modelo.Libro"/>
+		</set>
+	</class>
+</hibernate-mapping>
