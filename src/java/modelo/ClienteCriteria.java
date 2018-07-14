@@ -35,6 +35,7 @@ public class ClienteCriteria extends AbstractORMCriteria {
 	public final StringExpression idCiudadId;
 	public final AssociationExpression idCiudad;
 	public final StringExpression password;
+	public final StringExpression privilegio;
 	public final CollectionExpression solicitudComputador;
 	public final CollectionExpression solicitudLibro;
 	public final CollectionExpression entregaDeLibro;
@@ -59,6 +60,7 @@ public class ClienteCriteria extends AbstractORMCriteria {
 		idCiudadId = new StringExpression("idCiudad.idCiudad", this);
 		idCiudad = new AssociationExpression("idCiudad", this);
 		password = new StringExpression("password", this);
+		privilegio = new StringExpression("privilegio", this);
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this);
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this);
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this);

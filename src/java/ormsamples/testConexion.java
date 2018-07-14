@@ -24,6 +24,8 @@ public class testConexion {
                         String query="correoElectronico = 'Diana.Salazar-134958984@bibClient.com'";
                         modelo.Cliente lmodeloClienteQuery = modelo.ClienteDAO.loadClienteByQuery(query, null);
                         System.out.println(lmodeloClienteQuery.getRUN());
+                        System.out.println(lmodeloClienteQuery.getPassword());
+                        System.out.println(lmodeloClienteQuery);
                         
                         
                         modelo.ClienteDAO.save(lmodeloClienteQuery);

@@ -84,6 +84,8 @@ public class Cliente {
 	
 	private String password;
 	
+	private String privilegio;
+	
 	private java.util.Set ORM_solicitudComputador = new java.util.HashSet();
 	
 	private java.util.Set ORM_solicitudLibro = new java.util.HashSet();
@@ -216,6 +218,14 @@ public class Cliente {
 	
 	public String getPassword() {
 		return password;
+	}
+	
+	public void setPrivilegio(String value) {
+		this.privilegio = value;
+	}
+	
+	public String getPrivilegio() {
+		return privilegio;
 	}
 	
 	public void setIdCiudad(modelo.Ciudad value) {

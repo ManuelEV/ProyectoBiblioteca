@@ -308,7 +308,7 @@
     <DriverClass>com.mysql.jdbc.Driver</DriverClass>
     <URL>jdbc:mysql://localhost/biblioteca_ORM</URL>
     <UserName>root</UserName>
-    <EncryptedPassword>13C7D7C71641267E4B660D2E5E7A6225</EncryptedPassword>
+    <EncryptedPassword>A8D4B2096D3DD999D638F2C51B5F8082</EncryptedPassword>
     <HostName>localhost</HostName>
     <PortNO></PortNO>
     <DBName>biblioteca_ORM</DBName>

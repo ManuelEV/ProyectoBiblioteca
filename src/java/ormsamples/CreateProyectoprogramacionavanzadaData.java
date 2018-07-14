@@ -16,7 +16,7 @@ public class CreateProyectoprogramacionavanzadaData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : autores, entregaDeLibro, solicitudLibro, idCategoria, idioma, estadoDeterioro, colorTapa, vecesSolicitado, editor, fechaDeEdicion, fechaDeAdquisicion, disponibilidad, numeroDePaginas, nombre
 			modelo.LibroDAO.save(lmodeloLibro);
 			modelo.Cliente lmodeloCliente = modelo.ClienteDAO.createCliente();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : clienteDeBiblioteca, registroSalaLectura, entregaDeLibro, solicitudLibro, solicitudComputador, password, idCiudad, correoElectronico, diasDeAtraso, areaDeInteres, estadoDeTrabajo, fechaDeNacimiento, genero, apellidoMaterno, apellidoPaterno, nombre
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : clienteDeBiblioteca, registroSalaLectura, entregaDeLibro, solicitudLibro, solicitudComputador, privilegio, password, idCiudad, correoElectronico, diasDeAtraso, areaDeInteres, estadoDeTrabajo, fechaDeNacimiento, genero, apellidoMaterno, apellidoPaterno, nombre
 			modelo.ClienteDAO.save(lmodeloCliente);
 			modelo.Estante lmodeloEstante = modelo.EstanteDAO.createEstante();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : idCategoria, idBiblioteca, capacidadAproximada

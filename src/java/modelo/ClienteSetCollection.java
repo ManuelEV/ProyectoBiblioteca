@@ -84,6 +84,7 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 	 * <li>numeroDeTelefono</li>
 	 * <li>correoElectronico</li>
 	 * <li>password</li>
+	 * <li>privilegio</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
 	 */
@@ -108,6 +109,7 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 	 * <li>numeroDeTelefono</li>
 	 * <li>correoElectronico</li>
 	 * <li>password</li>
+	 * <li>privilegio</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
 	 * @return The persistent objects sorted array

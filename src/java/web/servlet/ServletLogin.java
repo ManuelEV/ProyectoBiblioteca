@@ -49,6 +49,9 @@ public class ServletLogin extends HttpServlet {
             
             //System.out.println(lmodeloCliente.getCorreoElectronico());
             //System.out.println(lmodeloCliente.getPassword());
+            //request.setAttribute("email", lmodeloCliente.getAreaDeInteres());
+            
+            
             
             if (lmodeloCliente!=null && password.equals(lmodeloCliente.getPassword())) {
                 dispatcher = request.getRequestDispatcher("principal.html");

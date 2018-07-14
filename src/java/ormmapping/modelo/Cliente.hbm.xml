@@ -27,6 +27,7 @@ License Type: Academic
 		<many-to-one name="idCiudad" cascade="lock" column="idCiudad" class="modelo.Ciudad" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
 		<property name="password" column="password" type="string" length="30" not-null="true" lazy="false"/>
+		<property name="privilegio" column="privilegio" type="string" length="20" not-null="true" lazy="false"/>
 		<set name="ORM_SolicitudComputador" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="ClienteRUN" not-null="true"/>
 			<one-to-many class="modelo.SolicitudComputador"/>
