@@ -27,6 +27,7 @@ public class testConexion {
                         System.out.println(lmodeloClienteQuery.getPassword());
                         System.out.println(lmodeloClienteQuery);
                         
+                        System.out.println(lmodeloClienteQuery==null);
                         
                         modelo.ClienteDAO.save(lmodeloClienteQuery);
 			

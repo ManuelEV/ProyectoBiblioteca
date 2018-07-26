@@ -11,19 +11,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.orm.PersistentException;
-import org.orm.PersistentTransaction;
 
 /**
  *
- * @author jorge
+ * @author Manuel
  */
-@WebServlet(name = "ServletLogin", urlPatterns = {"/ServletLogin"})
-public class ServletLogin extends HttpServlet {
+public class LoginController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,32 +35,46 @@ public class ServletLogin extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        
         request.setCharacterEncoding("UTF-8");
         String mail = request.getParameter("email");
         String password = request.getParameter("password");
         RequestDispatcher dispatcher = null;
+        
+        System.out.println(mail);
+        System.out.println(password);
+        
+        String url="";
+        
         try {
             //PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
             String query="correoElectronico = '"+mail+"'";
-            modelo.Cliente lmodeloCliente = modelo.ClienteDAO.loadClienteByQuery(query, null);
+            modelo.Cliente cliente = modelo.ClienteDAO.loadClienteByQuery(query, null);
             
-            //System.out.println(lmodeloCliente.getCorreoElectronico());
-            //System.out.println(lmodeloCliente.getPassword());
+            System.out.println(cliente.getCorreoElectronico());
+            System.out.println(cliente.getPassword());
             //request.setAttribute("email", lmodeloCliente.getAreaDeInteres());
             
             
             
-            if (lmodeloCliente!=null && password.equals(lmodeloCliente.getPassword())) {
-                dispatcher = request.getRequestDispatcher("principal.html");
+            if (cliente!=null && password.equals(cliente.getPassword())) {
+                
+                url = "principal.html";
+                //dispatcher = request.getRequestDispatcher("principal.html");
+                
             }else{
-                dispatcher = request.getRequestDispatcher("index.html");
+                //dispatcher = request.getRequestDispatcher("index.html");
+                url = "index.html";
             }
             
         } catch (PersistentException ex) {
-            Logger.getLogger(ServletLogin.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        dispatcher.forward(request,response);
+        RequestDispatcher rd = request.getRequestDispatcher(url);
+        rd.forward(request, response);
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
