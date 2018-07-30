@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.orm.PersistentException;
 
 /**
@@ -35,14 +36,21 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        
         request.setCharacterEncoding("UTF-8");
+        
+        
+        
+        
+        HttpSession sesion = request.getSession();
+        
+        if(sesion!=null){
+            sesion.invalidate();
+            sesion = request.getSession();
+        }
+        
         String mail = request.getParameter("email");
         String password = request.getParameter("password");
-        RequestDispatcher dispatcher = null;
         
-        System.out.println(mail);
-        System.out.println(password);
         
         String url="";
         
@@ -51,28 +59,30 @@ public class LoginController extends HttpServlet {
             String query="correoElectronico = '"+mail+"'";
             modelo.Cliente cliente = modelo.ClienteDAO.loadClienteByQuery(query, null);
             
-            System.out.println(cliente.getCorreoElectronico());
-            System.out.println(cliente.getPassword());
-            //request.setAttribute("email", lmodeloCliente.getAreaDeInteres());
             
             
-            
-            if (cliente!=null && password.equals(cliente.getPassword())) {
-                
-                url = "principal.html";
+            if (cliente!=null && password.equals(cliente.getPassword()) && sesion.getAttribute("usuario")==null) {
+                sesion.setAttribute("usuario",cliente);
+                //url = "loginExitoso.jsp";
                 //dispatcher = request.getRequestDispatcher("principal.html");
+                response.sendRedirect("loginExitoso.jsp");
                 
             }else{
                 //dispatcher = request.getRequestDispatcher("index.html");
                 url = "index.html";
+                System.out.println("login invalido");
+                sesion.invalidate();
             }
             
         } catch (PersistentException ex) {
             Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-        RequestDispatcher rd = request.getRequestDispatcher(url);
-        rd.forward(request, response);
+        //RequestDispatcher rd = request.getRequestDispatcher(url);
+        //rd.forward(request, response);
+        
+        
+        
         
         
     }
