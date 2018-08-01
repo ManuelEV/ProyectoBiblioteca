@@ -4,10 +4,13 @@
     Author     : Manuel
 --%>
 
+
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="icon" type="image/png" href="Recursos/MyFavicon.png" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -70,7 +73,7 @@
                                 <label>Celular</label><br><input type="text" class="form-control" name="celular" value="" /><br>
                                 
                                 <!-- ESTO PODRIAMOS DEJARLO COMO 0 POR DEFECTO DIRECTAMENTE EN EL CONTROLADOR(SERVLET)-->
-                                <label>Días de atraso</label><br><input type="text" class="form-control" name="diasAtraso" value="" /><br>
+                                <!--<label>Días de atraso</label><br><input type="text" class="form-control" name="diasAtraso" value="" /><br>-->
                                 
 
                                 <label class="control-label" for="date">Fecha de nacimiento</label>

@@ -8,6 +8,10 @@
         <servlet-name>RegistroController</servlet-name>
         <servlet-class>web.servlet.RegistroController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserChartsController</servlet-name>
+        <servlet-class>web.servlet.UserChartsController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -16,13 +20,7 @@
         <servlet-name>RegistroController</servlet-name>
         <url-pattern>/Registro</url-pattern>
     </servlet-mapping>
-    
-    
-    
-    
-    
-    
-    <servlet>   
+    <servlet>
         <servlet-name>registro</servlet-name>
         <jsp-file>registro.jsp</jsp-file>
     </servlet>
@@ -30,8 +28,7 @@
         <servlet-name>registro</servlet-name>
         <url-pattern>/registro</url-pattern>
     </servlet-mapping>
-    
-    <servlet>   
+    <servlet>
         <servlet-name>perfil</servlet-name>
         <jsp-file>profile.jsp</jsp-file>
     </servlet>
@@ -39,8 +36,7 @@
         <servlet-name>perfil</servlet-name>
         <url-pattern>/perfil</url-pattern>
     </servlet-mapping>
-    
-    <servlet>   
+    <servlet>
         <servlet-name>principal</servlet-name>
         <jsp-file>loginExitoso.jsp</jsp-file>
     </servlet>
@@ -48,8 +44,7 @@
         <servlet-name>principal</servlet-name>
         <url-pattern>/principal</url-pattern>
     </servlet-mapping>
-    
-    <servlet>   
+    <servlet>
         <servlet-name>catalogo</servlet-name>
         <jsp-file>catalogo.jsp</jsp-file>
     </servlet>
@@ -57,8 +52,7 @@
         <servlet-name>catalogo</servlet-name>
         <url-pattern>/catalogo</url-pattern>
     </servlet-mapping>
-    
-    <servlet>   
+    <servlet>
         <servlet-name>credencial</servlet-name>
         <jsp-file>credencial.jsp</jsp-file>
     </servlet>
@@ -66,8 +60,10 @@
         <servlet-name>credencial</servlet-name>
         <url-pattern>/credencial</url-pattern>
     </servlet-mapping>
-    
-    
+    <servlet-mapping>
+        <servlet-name>UserChartsController</servlet-name>
+        <url-pattern>/UserCharts</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

@@ -43,7 +43,8 @@ public class LoginController extends HttpServlet {
         
         HttpSession sesion = request.getSession();
         
-        if(sesion!=null){
+        if(sesion.getAttribute("usuario")!=null){
+            sesion.removeAttribute("usuario");
             sesion.invalidate();
             sesion = request.getSession();
         }
@@ -65,7 +66,7 @@ public class LoginController extends HttpServlet {
                 sesion.setAttribute("usuario",cliente);
                 //url = "loginExitoso.jsp";
                 //dispatcher = request.getRequestDispatcher("principal.html");
-                response.sendRedirect("loginExitoso.jsp");
+                response.sendRedirect("/Biblioteca/principal");
                 
             }else{
                 //dispatcher = request.getRequestDispatcher("index.html");

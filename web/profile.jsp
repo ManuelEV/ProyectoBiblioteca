@@ -1,16 +1,25 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-
+<%
+    HttpSession sesion = request.getSession();
+        
+        if(sesion.getAttribute("usuario")==null){
+            response.sendRedirect("index.html");
+        }
+%>
 
 <!DOCTYPE html>
 <html>
 
-    
+
 
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biblioteca</title>
+        
+        <link rel="icon" type="image/png" href="Recursos/MyFavicon.png" />
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -46,7 +55,18 @@
         </nav>
 
 
-
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Tu información: ${sessionScope.usuario.nombre}</h1> 
+                <p>Apellidos: ${sessionScope.usuario.apellidoPaterno} ${sessionScope.usuario.apellidoMaterno}</p> 
+                <p>${sessionScope.usuario.correoElectronico}</p> 
+                <p>Ocupación: ${sessionScope.usuario.estadoDeTrabajo}</p> 
+                <p>Área de interés: ${sessionScope.usuario.areaDeInteres}</p> 
+                <p>Ocupación: ${sessionScope.usuario.estadoDeTrabajo}</p> 
+                <p>Fecha de nacimiento: ${sessionScope.usuario.fechaDeNacimiento}</p> 
+                <p>Género: ${sessionScope.usuario.genero}</p> 
+            </div>
+        </div>
 
 
     </body>

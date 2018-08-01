@@ -1,6 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-
+<%
+    HttpSession sesion = request.getSession();
+        
+        if(sesion.getAttribute("usuario")==null){
+            response.sendRedirect("index.html");
+        }
+%>
 
 <!DOCTYPE html>
 <html>
@@ -9,6 +15,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biblioteca</title>
+        
+        <link rel="icon" type="image/png" href="Recursos/MyFavicon.png" />
+        
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,7 +30,7 @@
     </head>
 
     <body style="background: linear-gradient(-90deg, #00ff99, #00e6e6)">
-        
+
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -31,17 +40,17 @@
                     <li class="active"><a href="#">Principal</a></li>
                     <li ><a href="/Biblioteca/catalogo">Catálogo</a></li>
                     <li ><a href="/Biblioteca/credencial.jsp">Credencial</a></li>
-                    
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li ><a href="/Biblioteca/perfil"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
                     <li><a href="./index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
-                
+
             </div>
         </nav>
 
-        
+
         <div class="container">
             <div class="jumbotron">
                 <h1>Bienvenid@ ${sessionScope.usuario.nombre}</h1> 
@@ -49,7 +58,7 @@
             </div>
         </div>
 
-        
+
     </body>
 
 </html>
