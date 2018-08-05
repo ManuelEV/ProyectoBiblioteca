@@ -8,10 +8,6 @@
         <servlet-name>RegistroController</servlet-name>
         <servlet-class>web.servlet.RegistroController</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>UserChartsController</servlet-name>
-        <servlet-class>web.servlet.UserChartsController</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -59,10 +55,6 @@
     <servlet-mapping>
         <servlet-name>credencial</servlet-name>
         <url-pattern>/credencial</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>UserChartsController</servlet-name>
-        <url-pattern>/UserCharts</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -57,7 +57,7 @@
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
 
-                        <form id="formulario" method="post" action="Registro">
+                        <form id="formulario" method="post" action="Reserva">
                             <fieldset>
 
                                 <label>Rut</label><br><input type="text" class="form-control" name="rut" value="" /><br>

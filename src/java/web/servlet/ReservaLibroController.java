@@ -7,21 +7,19 @@ package web.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.orm.PersistentException;
 
 /**
  *
  * @author Manuel
  */
-public class LoginController extends HttpServlet {
+@WebServlet(name = "ReservaLibroController", urlPatterns = {"/Reserva"})
+public class ReservaLibroController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,58 +34,9 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        request.setCharacterEncoding("UTF-8");
         
-        
-        
-        
-        HttpSession sesion = request.getSession();
-        
-        if(sesion.getAttribute("usuario")!=null){
-            sesion.removeAttribute("usuario");
-            sesion.invalidate();
-            sesion = request.getSession();
-        }
-        
-        String mail = request.getParameter("email");
-        String password = request.getParameter("password");
-        
-        
-        String url="";
-        
-        try {
-            //PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
-            String query="correoElectronico = '"+mail+"'";
-            modelo.Cliente cliente = modelo.ClienteDAO.loadClienteByQuery(query, null);
-            
-            String privilegio = cliente.getPrivilegio();
-            
-            if (cliente!=null && password.equals(cliente.getPassword()) && sesion.getAttribute("usuario")==null && privilegio.equals("general")) {
-                sesion.setAttribute("usuario",cliente);
-                //url = "loginExitoso.jsp";
-                //dispatcher = request.getRequestDispatcher("principal.html");
-                response.sendRedirect("/Biblioteca/principal");
-                
-            }else if(cliente!=null && password.equals(cliente.getPassword()) && sesion.getAttribute("usuario")==null && privilegio.equals("administrador")){
-                sesion.setAttribute("usuario",cliente);
-                response.sendRedirect("/Biblioteca/vistas_admin/principal.jsp");
-                
-            }else{
-                //dispatcher = request.getRequestDispatcher("index.html");
-                url = "index.html";
-                System.out.println("login invalido");
-                response.sendRedirect("/Biblioteca/index.html");
-                sesion.invalidate();
-            }
-            
-        } catch (PersistentException ex) {
-            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        //RequestDispatcher rd = request.getRequestDispatcher(url);
-        //rd.forward(request, response);
-        
-        
+        request.getParameter("codigo");
+        request.getParameter("rut");
         
         
         

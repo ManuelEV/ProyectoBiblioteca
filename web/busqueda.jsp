@@ -1,11 +1,12 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%
     HttpSession sesion = request.getSession();
-        
-        if(sesion.getAttribute("usuario")==null){
-            response.sendRedirect("index.html");
-        }
+
+    if (sesion.getAttribute("usuario") == null) {
+        response.sendRedirect("index.html");
+    }
 %>
 
 <!DOCTYPE html>
@@ -15,9 +16,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biblioteca</title>
-        
+
         <link rel="icon" type="image/png" href="Recursos/MyFavicon.png" />
-        
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,8 +38,8 @@
                     <a class="navbar-brand" href="#">Biblioteca</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Principal</a></li>
-                    <li ><a href="/Biblioteca/catalogo">Catálogo</a></li>
+                    <li ><a href="/Biblioteca/principal">Principal</a></li>
+                    <li class="active"><a href="/Biblioteca/catalogo">Catálogo</a></li>
                     <li ><a href="/Biblioteca/credencial">Credencial</a></li>
 
                 </ul>
@@ -50,13 +51,33 @@
             </div>
         </nav>
 
+        <form id="formulario" method="post" action="Registro">
+            <div class="container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Código del libro</th>
+                            <th>Usuario solicitante</th>
+                            <th>Nombre de libro</th>
+                            <th>Número de páginas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <c:forEach items="${busqueda}" var="element">    
+                            <tr>
+                                <td> <input name="nombre" type="text" value="${element.codigo}" disabled></td>
+                                <td> <input name="rut" type="text" value="${sessionScope.usuario.RUN}" disabled></td>
+                                <td>${element.nombre}</td>
+                                <td>${element.numeroDePaginas}</td>
+                                <td><input type="submit" value="RESERVAR"></td>
+                            </tr>
 
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Bienvenid@ ${sessionScope.usuario.nombre}</h1> 
-                <p>${sessionScope.usuario.correoElectronico}</p> 
+                        </c:forEach>
+                    </tbody>
+                </table>
             </div>
-        </div>
+        </form>
+
 
 
     </body>

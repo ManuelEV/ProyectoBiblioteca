@@ -2,10 +2,10 @@
 
 <%
     HttpSession sesion = request.getSession();
-        
-        if(sesion.getAttribute("usuario")==null){
-            response.sendRedirect("index.html");
-        }
+
+    if (sesion.getAttribute("usuario") == null) {
+        response.sendRedirect("index.html");
+    }
 %>
 
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
 
-    <body style="background: linear-gradient(-90deg, #00ff99, #00e6e6)">
+    <body style="background: linear-gradient(-90deg, #ffb366, #d9ff66)">
 
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -38,13 +38,13 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Principal</a></li>
-                    <li ><a href="/Biblioteca/catalogo">Catálogo</a></li>
-                    <li ><a href="/Biblioteca/credencial">Credencial</a></li>
+                    <li ><a href="/Biblioteca/vistas_admin/estadisticas">Estadísticas</a></li>
+                    <li ><a href="/Biblioteca/vistas_admin/registros">Registros</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li ><a href="/Biblioteca/perfil"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
-                    <li><a href="./index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <li ><a href="/Biblioteca/vistas_admin/"><span class="glyphicon glyphicon-user"></span> Mi perfil</a></li>
+                    <li><a href="/Biblioteca/index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
                 </ul>
 
             </div>
@@ -53,8 +53,9 @@
 
         <div class="container">
             <div class="jumbotron">
-                <h1>Bienvenid@ ${sessionScope.usuario.nombre}</h1> 
+                <h1>Bienvenid@ ${sessionScope.usuario.nombre}</h1>  
                 <p>${sessionScope.usuario.correoElectronico}</p> 
+                <p>Administrador</p>
             </div>
         </div>
 

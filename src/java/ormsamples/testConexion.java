@@ -29,6 +29,14 @@ public class testConexion {
                         
                         System.out.println(lmodeloClienteQuery==null);
                         
+                        
+                        
+                        query="genero = 'hombre'";
+                        modelo.Cliente hola = modelo.ClienteDAO.loadClienteByQuery(query, null);
+                        
+                        System.out.println(hola);
+                        
+                        
                         modelo.ClienteDAO.save(lmodeloClienteQuery);
 			
 			t.commit();
