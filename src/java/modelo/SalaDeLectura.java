@@ -42,7 +42,7 @@ public class SalaDeLectura {
 		
 	};
 	
-	private String idSala;
+	private int id;
 	
 	private int capacidad;
 	
@@ -52,16 +52,16 @@ public class SalaDeLectura {
 	
 	private java.util.Set ORM_registroSalaLectura = new java.util.HashSet();
 	
-	public void setIdSala(String value) {
-		this.idSala = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdSala() {
-		return idSala;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdSala();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setCapacidad(int value) {
@@ -115,7 +115,7 @@ public class SalaDeLectura {
 	public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_SALADELECTURA_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_SALADELECTURAIDSALA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdSala());
+		return String.valueOf(getId());
 	}
 	
 }

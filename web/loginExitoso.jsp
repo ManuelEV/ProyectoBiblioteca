@@ -54,7 +54,7 @@
         <div class="container">
             <div class="jumbotron">
                 <h1>Bienvenid@ ${sessionScope.usuario.nombre}</h1> 
-                <p>${sessionScope.usuario.correoElectronico}</p> 
+                <p>${sessionScope.usuario.RUN}</p> 
             </div>
         </div>
 

@@ -20,18 +20,18 @@ import org.orm.criteria.*;
 
 public class ClienteDeBibliotecaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression bibliotecaidBibliotecaId;
+	public final IntegerExpression bibliotecaidBibliotecaId;
 	public final AssociationExpression bibliotecaidBiblioteca;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public ClienteDeBibliotecaCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
-		bibliotecaidBibliotecaId = new StringExpression("ORM_BibliotecaidBiblioteca.idBiblioteca", this);
+		bibliotecaidBibliotecaId = new IntegerExpression("ORM_BibliotecaidBiblioteca.id", this);
 		bibliotecaidBiblioteca = new AssociationExpression("ORM_BibliotecaidBiblioteca", this);
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
 	}
 	
 	public ClienteDeBibliotecaCriteria(PersistentSession session) {
@@ -42,12 +42,12 @@ public class ClienteDeBibliotecaCriteria extends AbstractORMCriteria {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
-	}
-	
 	public BibliotecaCriteria createBibliotecaidBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("ORM_BibliotecaidBiblioteca"));
+	}
+	
+	public ClienteCriteria createClienteRUNCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public ClienteDeBiblioteca uniqueClienteDeBiblioteca() {

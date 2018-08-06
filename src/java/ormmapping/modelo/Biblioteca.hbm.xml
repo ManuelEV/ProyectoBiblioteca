@@ -5,8 +5,8 @@ License Type: Academic
 -->
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="modelo.Biblioteca" table="biblioteca" lazy="false">
-		<id name="idBiblioteca" column="idBiblioteca" type="string">
+	<class name="modelo.Biblioteca" table="Biblioteca" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
 			<generator class="native">
 			</generator>
 		</id>
@@ -36,6 +36,10 @@ License Type: Academic
 		<set name="ORM_Funcionario" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="idBiblioteca" not-null="true"/>
 			<one-to-many class="modelo.Funcionario"/>
+		</set>
+		<set name="ORM_Usuario" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idBiblioteca" not-null="true"/>
+			<one-to-many class="modelo.Usuario"/>
 		</set>
 	</class>
 </hibernate-mapping>

@@ -34,7 +34,7 @@
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-<!--        <script type="text/javascript" src="js/grafica_usuarios.js"></script>-->
+        <!--        <script type="text/javascript" src="js/grafica_usuarios.js"></script>-->
 
 
         <script type="text/javascript" src="libros_chart/grafica_libros.js"></script>
@@ -116,56 +116,59 @@
             <p>Haz tu reserva aquí</p> 
         </div>
 
+        <div class="container" style="background: linear-gradient(-90deg, #ffff66, #99ff33); width: 800px; height: 350px;padding-top: 50px">
+            
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4">
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
+                            <form id="formulario" method="post" action="Busqueda">
+                                <fieldset>
 
-                    <form id="formulario" method="post" action="Busqueda">
-                        <fieldset>
+                                    <label>Nombre</label><br><input type="text" class="form-control" name="nombre" value="" /><br>
+                                    <label>Categoría</label><br><select name="categoria">
+                                        <option>Accion</option>
+                                        <option>Romance</option>
+                                        <option>Historia</option>
+                                        <option>Leyenda</option>
+                                        <option>Fisica</option>
+                                        <option>Quimica</option>
+                                        <option>Biologia</option>
+                                        <option>Programacion</option>
+                                        <option>Seguridad Informatica</option>
+                                        <option>Sistemas operativos</option>
+                                        <option>Novela policiaca</option>
+                                        <option>Filosofia</option>
+                                    </select><br>
 
-                            <label>Nombre</label><br><input type="text" class="form-control" name="nombre" value="" /><br>
-                            <label>Categoría</label><br><select name="categoria">
-                                <option>Accion</option>
-                                <option>Romance</option>
-                                <option>Historia</option>
-                                <option>Leyenda</option>
-                                <option>Fisica</option>
-                                <option>Quimica</option>
-                                <option>Biologia</option>
-                                <option>Programacion</option>
-                                <option>Seguridad Informatica</option>
-                                <option>Sistemas operativos</option>
-                                <option>Novela policiaca</option>
-                                <option>Filosofia</option>
-                            </select><br>
-                            
 
-                            <label>Idioma</label><br><select name="idioma">
-                                <option>Español</option>
-                                <option>Ingles</option>
-                                <option>Frances</option>
-                            </select><br>
+                                    <label>Idioma</label><br><select name="idioma">
+                                        <option>Español</option>
+                                        <option>Ingles</option>
+                                        <option>Frances</option>
+                                    </select><br>
 
-                            
 
-                        </fieldset>
-                        <br>
 
-                        <!-- <input type="button" value="Cancelar" name="enviar" class="btn btn-danger" /> -->
-                        <input type="submit" value="Buscar" name="buscar" class="btn btn-primary" />
+                                </fieldset>
+                                <br>
 
-                        <br>
-                        
+                                <!-- <input type="button" value="Cancelar" name="enviar" class="btn btn-danger" /> -->
+                                <input type="submit" value="Buscar" name="buscar" class="btn btn-primary" />
 
-                    </form> 
+                                <br>
+
+
+                            </form> 
+                        </div>
+                    </div>
                 </div>
-            </div>
+            
         </div>
-
-
         <br/><br/><br/><br/>
+
+
 
         <div class="jumbotron">
             <h1>Lista completa de libros</h1> 
@@ -174,10 +177,14 @@
 
         <br/><br/><br/>
 
+        <div class="container">
+            <div class="center">
+                <div id="lib4_div"></div>
+            </div>
+        </div>
 
-        <div id="lib4_div"></div>
 
-
+        <br/><br/><br/>
         <!--        <form action="UserCharts" target="_black">
                     <input type="submit" value="Ver grafico" style="font-family: Arial; background: aqua; font-size: 20pt"/>
                 </form>-->

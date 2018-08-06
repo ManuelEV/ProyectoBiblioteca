@@ -32,22 +32,22 @@ public class Pais {
 		
 	};
 	
-	private String idPais;
+	private int id;
 	
 	private String nombre;
 	
 	private java.util.Set ORM_ciudad = new java.util.HashSet();
 	
-	public void setIdPais(String value) {
-		this.idPais = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdPais() {
-		return idPais;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdPais();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setNombre(String value) {
@@ -69,7 +69,7 @@ public class Pais {
 	public final modelo.CiudadSetCollection ciudad = new modelo.CiudadSetCollection(this, _ormAdapter, ORMConstants.KEY_PAIS_CIUDAD, ORMConstants.KEY_CIUDAD_IDPAIS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdPais());
+		return String.valueOf(getId());
 	}
 	
 }

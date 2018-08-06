@@ -6,11 +6,11 @@ License Type: Academic
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="modelo.Libro" table="Libro" lazy="false">
-		<id name="codigo" column="codigo" type="string">
+		<id name="id" column="id" type="integer" unsaved-value="0">
 			<generator class="native">
 			</generator>
 		</id>
-		<property name="nombre" column="nombre" type="string" length="20" not-null="true" lazy="false"/>
+		<property name="nombre" column="nombre" type="string" length="200" not-null="true" lazy="false"/>
 		<property name="numeroDePaginas" column="NumeroDePaginas" type="integer" length="10" not-null="true" lazy="false"/>
 		<property name="disponibilidad" column="Disponibilidad" type="string" length="16" not-null="true" lazy="false"/>
 		<property name="fechaDeAdquisicion" column="fechaDeAdquisicion" type="date" not-null="true" lazy="false"/>
@@ -35,7 +35,7 @@ License Type: Academic
 			<one-to-many class="modelo.EntregaDeLibro"/>
 		</set>
 		<set name="ORM_Autores" lazy="true" cascade="save-update,lock" inverse="true">
-			<key column="Librocodigo" not-null="true"/>
+			<key column="idLibro" not-null="true"/>
 			<one-to-many class="modelo.Autores"/>
 		</set>
 	</class>

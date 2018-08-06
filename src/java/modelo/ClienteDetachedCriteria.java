@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
+	public final IntegerExpression id;
 	public final StringExpression RUN;
 	public final StringExpression nombre;
 	public final StringExpression apellidoPaterno;
@@ -31,11 +32,10 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression diasDeAtraso;
 	public final IntegerExpression numeroDeCelular;
 	public final IntegerExpression numeroDeTelefono;
-	public final StringExpression correoElectronico;
-	public final StringExpression idCiudadId;
+	public final IntegerExpression idCiudadId;
 	public final AssociationExpression idCiudad;
-	public final StringExpression password;
-	public final StringExpression privilegio;
+	public final IntegerExpression usuarioId;
+	public final AssociationExpression usuario;
 	public final CollectionExpression solicitudComputador;
 	public final CollectionExpression solicitudLibro;
 	public final CollectionExpression entregaDeLibro;
@@ -44,6 +44,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public ClienteDetachedCriteria() {
 		super(modelo.Cliente.class, modelo.ClienteCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidoPaterno = new StringExpression("apellidoPaterno", this.getDetachedCriteria());
@@ -56,11 +57,10 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this.getDetachedCriteria());
 		numeroDeCelular = new IntegerExpression("numeroDeCelular", this.getDetachedCriteria());
 		numeroDeTelefono = new IntegerExpression("numeroDeTelefono", this.getDetachedCriteria());
-		correoElectronico = new StringExpression("correoElectronico", this.getDetachedCriteria());
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this.getDetachedCriteria());
+		idCiudadId = new IntegerExpression("idCiudad.id", this.getDetachedCriteria());
 		idCiudad = new AssociationExpression("idCiudad", this.getDetachedCriteria());
-		password = new StringExpression("password", this.getDetachedCriteria());
-		privilegio = new StringExpression("privilegio", this.getDetachedCriteria());
+		usuarioId = new IntegerExpression("usuario.id", this.getDetachedCriteria());
+		usuario = new AssociationExpression("usuario", this.getDetachedCriteria());
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this.getDetachedCriteria());
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this.getDetachedCriteria());
@@ -70,6 +70,7 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public ClienteDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.ClienteCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidoPaterno = new StringExpression("apellidoPaterno", this.getDetachedCriteria());
@@ -82,11 +83,10 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this.getDetachedCriteria());
 		numeroDeCelular = new IntegerExpression("numeroDeCelular", this.getDetachedCriteria());
 		numeroDeTelefono = new IntegerExpression("numeroDeTelefono", this.getDetachedCriteria());
-		correoElectronico = new StringExpression("correoElectronico", this.getDetachedCriteria());
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this.getDetachedCriteria());
+		idCiudadId = new IntegerExpression("idCiudad.id", this.getDetachedCriteria());
 		idCiudad = new AssociationExpression("idCiudad", this.getDetachedCriteria());
-		password = new StringExpression("password", this.getDetachedCriteria());
-		privilegio = new StringExpression("privilegio", this.getDetachedCriteria());
+		usuarioId = new IntegerExpression("usuario.id", this.getDetachedCriteria());
+		usuario = new AssociationExpression("usuario", this.getDetachedCriteria());
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this.getDetachedCriteria());
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this.getDetachedCriteria());
@@ -96,6 +96,10 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public CiudadDetachedCriteria createIdCiudadCriteria() {
 		return new CiudadDetachedCriteria(createCriteria("idCiudad"));
+	}
+	
+	public UsuarioDetachedCriteria createUsuarioCriteria() {
+		return new UsuarioDetachedCriteria(createCriteria("usuario"));
 	}
 	
 	public SolicitudComputadorDetachedCriteria createSolicitudComputadorCriteria() {

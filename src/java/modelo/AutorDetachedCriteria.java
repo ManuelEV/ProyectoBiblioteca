@@ -19,7 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class AutorDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idAutor;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final DateExpression fechaDeNacimiento;
 	public final StringExpression genero;
@@ -29,7 +29,7 @@ public class AutorDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public AutorDetachedCriteria() {
 		super(modelo.Autor.class, modelo.AutorCriteria.class);
-		idAutor = new StringExpression("idAutor", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		fechaDeNacimiento = new DateExpression("fechaDeNacimiento", this.getDetachedCriteria());
 		genero = new StringExpression("genero", this.getDetachedCriteria());
@@ -40,7 +40,7 @@ public class AutorDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public AutorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.AutorCriteria.class);
-		idAutor = new StringExpression("idAutor", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		fechaDeNacimiento = new DateExpression("fechaDeNacimiento", this.getDetachedCriteria());
 		genero = new StringExpression("genero", this.getDetachedCriteria());

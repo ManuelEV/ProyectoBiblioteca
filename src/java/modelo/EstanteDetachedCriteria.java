@@ -19,32 +19,32 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class EstanteDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idEstante;
+	public final IntegerExpression id;
 	public final IntegerExpression capacidadAproximada;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
-	public final StringExpression idCategoriaId;
+	public final IntegerExpression idCategoriaId;
 	public final AssociationExpression idCategoria;
 	public final CollectionExpression libro;
 	
 	public EstanteDetachedCriteria() {
 		super(modelo.Estante.class, modelo.EstanteCriteria.class);
-		idEstante = new StringExpression("idEstante", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidadAproximada = new IntegerExpression("capacidadAproximada", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
-		idCategoriaId = new StringExpression("idCategoria.idCategoria", this.getDetachedCriteria());
+		idCategoriaId = new IntegerExpression("idCategoria.id", this.getDetachedCriteria());
 		idCategoria = new AssociationExpression("idCategoria", this.getDetachedCriteria());
 		libro = new CollectionExpression("ORM_Libro", this.getDetachedCriteria());
 	}
 	
 	public EstanteDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.EstanteCriteria.class);
-		idEstante = new StringExpression("idEstante", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidadAproximada = new IntegerExpression("capacidadAproximada", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
-		idCategoriaId = new StringExpression("idCategoria.idCategoria", this.getDetachedCriteria());
+		idCategoriaId = new IntegerExpression("idCategoria.id", this.getDetachedCriteria());
 		idCategoria = new AssociationExpression("idCategoria", this.getDetachedCriteria());
 		libro = new CollectionExpression("ORM_Libro", this.getDetachedCriteria());
 	}

@@ -19,35 +19,37 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class BibliotecaCriteria extends AbstractORMCriteria {
-	public final StringExpression idBiblioteca;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final StringExpression direccion;
 	public final StringExpression propietario;
 	public final IntegerExpression numeroDeTelefono;
 	public final StringExpression correoElectronico;
-	public final StringExpression idCiudadId;
+	public final IntegerExpression idCiudadId;
 	public final AssociationExpression idCiudad;
 	public final CollectionExpression estante;
 	public final CollectionExpression computador;
 	public final CollectionExpression salaDeLectura;
 	public final CollectionExpression clienteDeBiblioteca;
 	public final CollectionExpression funcionario;
+	public final CollectionExpression usuario;
 	
 	public BibliotecaCriteria(Criteria criteria) {
 		super(criteria);
-		idBiblioteca = new StringExpression("idBiblioteca", this);
+		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
 		direccion = new StringExpression("direccion", this);
 		propietario = new StringExpression("propietario", this);
 		numeroDeTelefono = new IntegerExpression("numeroDeTelefono", this);
 		correoElectronico = new StringExpression("correoElectronico", this);
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this);
+		idCiudadId = new IntegerExpression("idCiudad.id", this);
 		idCiudad = new AssociationExpression("idCiudad", this);
 		estante = new CollectionExpression("ORM_Estante", this);
 		computador = new CollectionExpression("ORM_Computador", this);
 		salaDeLectura = new CollectionExpression("ORM_SalaDeLectura", this);
 		clienteDeBiblioteca = new CollectionExpression("ORM_ClienteDeBiblioteca", this);
 		funcionario = new CollectionExpression("ORM_Funcionario", this);
+		usuario = new CollectionExpression("ORM_Usuario", this);
 	}
 	
 	public BibliotecaCriteria(PersistentSession session) {
@@ -80,6 +82,10 @@ public class BibliotecaCriteria extends AbstractORMCriteria {
 	
 	public FuncionarioCriteria createFuncionarioCriteria() {
 		return new FuncionarioCriteria(createCriteria("ORM_Funcionario"));
+	}
+	
+	public UsuarioCriteria createUsuarioCriteria() {
+		return new UsuarioCriteria(createCriteria("ORM_Usuario"));
 	}
 	
 	public Biblioteca uniqueBiblioteca() {

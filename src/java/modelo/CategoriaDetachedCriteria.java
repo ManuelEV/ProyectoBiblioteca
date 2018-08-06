@@ -19,14 +19,14 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class CategoriaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idCategoria;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final CollectionExpression estante;
 	public final CollectionExpression libro;
 	
 	public CategoriaDetachedCriteria() {
 		super(modelo.Categoria.class, modelo.CategoriaCriteria.class);
-		idCategoria = new StringExpression("idCategoria", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		estante = new CollectionExpression("ORM_Estante", this.getDetachedCriteria());
 		libro = new CollectionExpression("ORM_Libro", this.getDetachedCriteria());
@@ -34,7 +34,7 @@ public class CategoriaDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public CategoriaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.CategoriaCriteria.class);
-		idCategoria = new StringExpression("idCategoria", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		estante = new CollectionExpression("ORM_Estante", this.getDetachedCriteria());
 		libro = new CollectionExpression("ORM_Libro", this.getDetachedCriteria());

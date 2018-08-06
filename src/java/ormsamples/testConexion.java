@@ -11,7 +11,7 @@ public class testConexion {
 		try {
 			
 			
-			modelo.Cliente lmodeloCliente = modelo.ClienteDAO.getClienteByORMID("131679348");
+			/*modelo.Cliente lmodeloCliente = modelo.ClienteDAO.getClienteByORMID("131679348");
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : clienteDeBiblioteca, registroSalaLectura, entregaDeLibro, solicitudLibro, solicitudComputador, password, idCiudad, correoElectronico, diasDeAtraso, areaDeInteres, estadoDeTrabajo, fechaDeNacimiento, genero, apellidoMaterno, apellidoPaterno, nombre
 			
                         System.out.println(lmodeloCliente.getPassword());
@@ -27,17 +27,17 @@ public class testConexion {
                         System.out.println(lmodeloClienteQuery.getPassword());
                         System.out.println(lmodeloClienteQuery);
                         
-                        System.out.println(lmodeloClienteQuery==null);
+                        System.out.println(lmodeloClienteQuery==null);*/
                         
+                        String query;
                         
-                        
-                        query="genero = 'hombre'";
+                        query="Usuarioid = '1'";
                         modelo.Cliente hola = modelo.ClienteDAO.loadClienteByQuery(query, null);
                         
                         System.out.println(hola);
                         
                         
-                        modelo.ClienteDAO.save(lmodeloClienteQuery);
+                        //modelo.ClienteDAO.save(lmodeloClienteQuery);
 			
 			t.commit();
 		}

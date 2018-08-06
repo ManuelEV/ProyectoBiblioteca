@@ -24,13 +24,7 @@ public class SolicitudComputador implements Serializable {
 		if (!(aObj instanceof SolicitudComputador))
 			return false;
 		SolicitudComputador solicitudcomputador = (SolicitudComputador)aObj;
-		if (getIdSolicitud() != solicitudcomputador.getIdSolicitud())
-			return false;
-		if (getClienteRUN() == null) {
-			if (solicitudcomputador.getClienteRUN() != null)
-				return false;
-		}
-		else if (!getClienteRUN().equals(solicitudcomputador.getClienteRUN()))
+		if (getId() != solicitudcomputador.getId())
 			return false;
 		if (getIdComputador() == null) {
 			if (solicitudcomputador.getIdComputador() != null)
@@ -38,17 +32,23 @@ public class SolicitudComputador implements Serializable {
 		}
 		else if (!getIdComputador().equals(solicitudcomputador.getIdComputador()))
 			return false;
+		if (getClienteRUN() == null) {
+			if (solicitudcomputador.getClienteRUN() != null)
+				return false;
+		}
+		else if (!getClienteRUN().equals(solicitudcomputador.getClienteRUN()))
+			return false;
 		return true;
 	}
 	
 	public int hashCode() {
 		int hashcode = 0;
-		hashcode = hashcode + (int) getIdSolicitud();
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (getClienteRUN().getORMID() == null ? 0 : getClienteRUN().getORMID().hashCode());
-		}
+		hashcode = hashcode + (int) getId();
 		if (getIdComputador() != null) {
-			hashcode = hashcode + (getIdComputador().getORMID() == null ? 0 : getIdComputador().getORMID().hashCode());
+			hashcode = hashcode + (int) getIdComputador().getORMID();
+		}
+		if (getClienteRUN() != null) {
+			hashcode = hashcode + (int) getClienteRUN().getORMID();
 		}
 		return hashcode;
 	}
@@ -70,42 +70,42 @@ public class SolicitudComputador implements Serializable {
 		
 	};
 	
-	private int idSolicitud;
+	private int id;
 	
 	private java.util.Date fechaDeSolicitud;
 	
 	private java.sql.Time horaSolicitud;
 	
-	private modelo.Cliente clienteRUN;
-	
-	private String clienteRUNId;
-	
-	private void setClienteRUNId(String value) {
-		this.clienteRUNId = value;
-	}
-	
-	public String getClienteRUNId() {
-		return clienteRUNId;
-	}
-	
 	private modelo.Computador idComputador;
 	
-	private String idComputadorId;
+	private int idComputadorId;
 	
-	private void setIdComputadorId(String value) {
+	private void setIdComputadorId(int value) {
 		this.idComputadorId = value;
 	}
 	
-	public String getIdComputadorId() {
+	public int getIdComputadorId() {
 		return idComputadorId;
 	}
 	
-	public void setIdSolicitud(int value) {
-		this.idSolicitud = value;
+	private modelo.Cliente clienteRUN;
+	
+	private int clienteRUNId;
+	
+	private void setClienteRUNId(int value) {
+		this.clienteRUNId = value;
 	}
 	
-	public int getIdSolicitud() {
-		return idSolicitud;
+	public int getClienteRUNId() {
+		return clienteRUNId;
+	}
+	
+	public void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	public void setFechaDeSolicitud(java.util.Date value) {
@@ -173,7 +173,7 @@ public class SolicitudComputador implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getIdSolicitud() + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())) + " " + ((getIdComputador() == null) ? "" : String.valueOf(getIdComputador().getORMID())));
+		return String.valueOf(getId() + " " + ((getIdComputador() == null) ? "" : String.valueOf(getIdComputador().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
 	}
 	
 }

@@ -24,13 +24,7 @@ public class SolicitudLibro implements Serializable {
 		if (!(aObj instanceof SolicitudLibro))
 			return false;
 		SolicitudLibro solicitudlibro = (SolicitudLibro)aObj;
-		if (getIdSolicitud() != solicitudlibro.getIdSolicitud())
-			return false;
-		if (getClienteRUN() == null) {
-			if (solicitudlibro.getClienteRUN() != null)
-				return false;
-		}
-		else if (!getClienteRUN().equals(solicitudlibro.getClienteRUN()))
+		if (getId() != solicitudlibro.getId())
 			return false;
 		if (getCodigoLibro() == null) {
 			if (solicitudlibro.getCodigoLibro() != null)
@@ -38,17 +32,23 @@ public class SolicitudLibro implements Serializable {
 		}
 		else if (!getCodigoLibro().equals(solicitudlibro.getCodigoLibro()))
 			return false;
+		if (getClienteRUN() == null) {
+			if (solicitudlibro.getClienteRUN() != null)
+				return false;
+		}
+		else if (!getClienteRUN().equals(solicitudlibro.getClienteRUN()))
+			return false;
 		return true;
 	}
 	
 	public int hashCode() {
 		int hashcode = 0;
-		hashcode = hashcode + (int) getIdSolicitud();
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (getClienteRUN().getORMID() == null ? 0 : getClienteRUN().getORMID().hashCode());
-		}
+		hashcode = hashcode + (int) getId();
 		if (getCodigoLibro() != null) {
-			hashcode = hashcode + (getCodigoLibro().getORMID() == null ? 0 : getCodigoLibro().getORMID().hashCode());
+			hashcode = hashcode + (int) getCodigoLibro().getORMID();
+		}
+		if (getClienteRUN() != null) {
+			hashcode = hashcode + (int) getClienteRUN().getORMID();
 		}
 		return hashcode;
 	}
@@ -70,7 +70,7 @@ public class SolicitudLibro implements Serializable {
 		
 	};
 	
-	private int idSolicitud;
+	private int id;
 	
 	private java.util.Date fechaDeSolicitud;
 	
@@ -78,36 +78,36 @@ public class SolicitudLibro implements Serializable {
 	
 	private java.util.Date fechaEntregaLimite;
 	
-	private modelo.Cliente clienteRUN;
-	
-	private String clienteRUNId;
-	
-	private void setClienteRUNId(String value) {
-		this.clienteRUNId = value;
-	}
-	
-	public String getClienteRUNId() {
-		return clienteRUNId;
-	}
-	
 	private modelo.Libro codigoLibro;
 	
-	private String codigoLibroId;
+	private int codigoLibroId;
 	
-	private void setCodigoLibroId(String value) {
+	private void setCodigoLibroId(int value) {
 		this.codigoLibroId = value;
 	}
 	
-	public String getCodigoLibroId() {
+	public int getCodigoLibroId() {
 		return codigoLibroId;
 	}
 	
-	public void setIdSolicitud(int value) {
-		this.idSolicitud = value;
+	private modelo.Cliente clienteRUN;
+	
+	private int clienteRUNId;
+	
+	private void setClienteRUNId(int value) {
+		this.clienteRUNId = value;
 	}
 	
-	public int getIdSolicitud() {
-		return idSolicitud;
+	public int getClienteRUNId() {
+		return clienteRUNId;
+	}
+	
+	public void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	public void setFechaDeSolicitud(java.util.Date value) {
@@ -183,7 +183,7 @@ public class SolicitudLibro implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getIdSolicitud() + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())) + " " + ((getCodigoLibro() == null) ? "" : String.valueOf(getCodigoLibro().getORMID())));
+		return String.valueOf(getId() + " " + ((getCodigoLibro() == null) ? "" : String.valueOf(getCodigoLibro().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
 	}
 	
 }

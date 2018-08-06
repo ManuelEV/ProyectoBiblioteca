@@ -19,29 +19,29 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class SalaDeLecturaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idSala;
+	public final IntegerExpression id;
 	public final IntegerExpression capacidad;
 	public final StringExpression nombre;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
 	public final CollectionExpression registroSalaLectura;
 	
 	public SalaDeLecturaDetachedCriteria() {
 		super(modelo.SalaDeLectura.class, modelo.SalaDeLecturaCriteria.class);
-		idSala = new StringExpression("idSala", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidad = new IntegerExpression("capacidad", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 		registroSalaLectura = new CollectionExpression("ORM_RegistroSalaLectura", this.getDetachedCriteria());
 	}
 	
 	public SalaDeLecturaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.SalaDeLecturaCriteria.class);
-		idSala = new StringExpression("idSala", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidad = new IntegerExpression("capacidad", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 		registroSalaLectura = new CollectionExpression("ORM_RegistroSalaLectura", this.getDetachedCriteria());
 	}

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class FuncionarioDAO {
-	public static Funcionario loadFuncionarioByORMID(String RUN) throws PersistentException {
+	public static Funcionario loadFuncionarioByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadFuncionarioByORMID(session, RUN);
+			return loadFuncionarioByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(String RUN) throws PersistentException {
+	public static Funcionario getFuncionarioByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getFuncionarioByORMID(session, RUN);
+			return getFuncionarioByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByORMID(String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Funcionario loadFuncionarioByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadFuncionarioByORMID(session, RUN, lockMode);
+			return loadFuncionarioByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Funcionario getFuncionarioByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getFuncionarioByORMID(session, RUN, lockMode);
+			return getFuncionarioByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByORMID(PersistentSession session, String RUN) throws PersistentException {
+	public static Funcionario loadFuncionarioByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Funcionario) session.load(modelo.Funcionario.class, RUN);
+			return (Funcionario) session.load(modelo.Funcionario.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(PersistentSession session, String RUN) throws PersistentException {
+	public static Funcionario getFuncionarioByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Funcionario) session.get(modelo.Funcionario.class, RUN);
+			return (Funcionario) session.get(modelo.Funcionario.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByORMID(PersistentSession session, String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Funcionario loadFuncionarioByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Funcionario) session.load(modelo.Funcionario.class, RUN, lockMode);
+			return (Funcionario) session.load(modelo.Funcionario.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(PersistentSession session, String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Funcionario getFuncionarioByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Funcionario) session.get(modelo.Funcionario.class, RUN, lockMode);
+			return (Funcionario) session.get(modelo.Funcionario.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

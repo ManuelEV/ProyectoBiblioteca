@@ -19,7 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class LibroCriteria extends AbstractORMCriteria {
-	public final StringExpression codigo;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final IntegerExpression numeroDePaginas;
 	public final StringExpression disponibilidad;
@@ -32,9 +32,9 @@ public class LibroCriteria extends AbstractORMCriteria {
 	public final StringExpression colorTapa;
 	public final StringExpression estadoDeterioro;
 	public final StringExpression idioma;
-	public final StringExpression idEstanteId;
+	public final IntegerExpression idEstanteId;
 	public final AssociationExpression idEstante;
-	public final StringExpression idCategoriaId;
+	public final IntegerExpression idCategoriaId;
 	public final AssociationExpression idCategoria;
 	public final CollectionExpression solicitudLibro;
 	public final CollectionExpression entregaDeLibro;
@@ -42,7 +42,7 @@ public class LibroCriteria extends AbstractORMCriteria {
 	
 	public LibroCriteria(Criteria criteria) {
 		super(criteria);
-		codigo = new StringExpression("codigo", this);
+		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
 		numeroDePaginas = new IntegerExpression("numeroDePaginas", this);
 		disponibilidad = new StringExpression("disponibilidad", this);
@@ -55,9 +55,9 @@ public class LibroCriteria extends AbstractORMCriteria {
 		colorTapa = new StringExpression("colorTapa", this);
 		estadoDeterioro = new StringExpression("estadoDeterioro", this);
 		idioma = new StringExpression("idioma", this);
-		idEstanteId = new StringExpression("idEstante.idEstante", this);
+		idEstanteId = new IntegerExpression("idEstante.id", this);
 		idEstante = new AssociationExpression("idEstante", this);
-		idCategoriaId = new StringExpression("idCategoria.idCategoria", this);
+		idCategoriaId = new IntegerExpression("idCategoria.id", this);
 		idCategoria = new AssociationExpression("idCategoria", this);
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this);
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this);

@@ -19,7 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class AutorCriteria extends AbstractORMCriteria {
-	public final StringExpression idAutor;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final DateExpression fechaDeNacimiento;
 	public final StringExpression genero;
@@ -29,7 +29,7 @@ public class AutorCriteria extends AbstractORMCriteria {
 	
 	public AutorCriteria(Criteria criteria) {
 		super(criteria);
-		idAutor = new StringExpression("idAutor", this);
+		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
 		fechaDeNacimiento = new DateExpression("fechaDeNacimiento", this);
 		genero = new StringExpression("genero", this);

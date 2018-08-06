@@ -318,7 +318,7 @@ public class CrearLibros {
         
         String[] nomLibros = librosNombres();
         String[] coloresTapas = {"rojo","verde","negro","azul","naranjo","amarillo","blanco","gris"};
-        String[] disponibilidad = {"Disponible", "No disponible"};
+        String[] disponibilidad = {"Disponible", "No disponible","Disponible","Disponible"};
         String[] edicion = {"Primera", "Segunda","Tercera","Cuarta"};
         String[] editor = {"Booket", "Austral","Alienta","Deusto","Destino","Oniro","Luciernaga"};
         String[] deterioro = {"Bajo", "Mediano", "Alto"};
@@ -327,13 +327,13 @@ public class CrearLibros {
         for (int i = 0; i < nomLibros.length; i++) {
             modelo.Libro libro = new modelo.Libro();
             
-            libro.setCodigo(""+(i+1));
+            
             
             int indice = (int) (Math.random()*8);
             
             libro.setColorTapa(coloresTapas[indice]);
             
-            indice = (int) (Math.random()*2);
+            indice = (int) (Math.random()*4);
             
             libro.setDisponibilidad(disponibilidad[indice]);
             
@@ -358,12 +358,12 @@ public class CrearLibros {
             //libro.setFechaUltimaSolicitud(value);
             
             indice = (int) (Math.random()*12)+1;
-            modelo.Categoria cat = modelo.CategoriaDAO.getCategoriaByORMID(""+indice);
+            modelo.Categoria cat = modelo.CategoriaDAO.getCategoriaByORMID(indice);
             libro.setIdCategoria(cat);
             
             
             indice = (int) (Math.random()*12)+1;
-            modelo.Estante est = modelo.EstanteDAO.getEstanteByORMID(""+indice);
+            modelo.Estante est = modelo.EstanteDAO.getEstanteByORMID(indice);
             libro.setIdEstante(est);
             
             indice = (int) (Math.random()*7);
@@ -396,15 +396,15 @@ public class CrearLibros {
             est.setCapacidadAproximada(capacidad);
             
             
-             modelo.Biblioteca bib = modelo.BibliotecaDAO.getBibliotecaByORMID("1");
+             modelo.Biblioteca bib = modelo.BibliotecaDAO.getBibliotecaByORMID(1);
             
             est.setIdBiblioteca(bib);
 
-            modelo.Categoria categ = modelo.CategoriaDAO.getCategoriaByORMID("" + i);
+            modelo.Categoria categ = modelo.CategoriaDAO.getCategoriaByORMID(i);
 
             est.setIdCategoria(categ);
 
-            est.setIdEstante("" + i);
+            //est.setId(i);
 
             lista.add(est);
 
@@ -417,14 +417,14 @@ public class CrearLibros {
 
         modelo.Biblioteca b = new modelo.Biblioteca();
 
-        b.setIdBiblioteca("b01");
+        //b.setIdBiblioteca("b01");
         b.setCorreoElectronico("bib@bib.cl");
         b.setDireccion("Av siempreviva");
         b.setNombre("Bib municipal");
         b.setNumeroDeTelefono(2332532);
         b.setPropietario("Juan Arcoiris");
 
-        modelo.Ciudad c = modelo.CiudadDAO.getCiudadByORMID("1");
+        modelo.Ciudad c = modelo.CiudadDAO.getCiudadByORMID(1);
 
         b.setIdCiudad(c);
 

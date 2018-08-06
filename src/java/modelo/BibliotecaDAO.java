@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class BibliotecaDAO {
-	public static Biblioteca loadBibliotecaByORMID(String idBiblioteca) throws PersistentException {
+	public static Biblioteca loadBibliotecaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadBibliotecaByORMID(session, idBiblioteca);
+			return loadBibliotecaByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(String idBiblioteca) throws PersistentException {
+	public static Biblioteca getBibliotecaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getBibliotecaByORMID(session, idBiblioteca);
+			return getBibliotecaByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByORMID(String idBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Biblioteca loadBibliotecaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadBibliotecaByORMID(session, idBiblioteca, lockMode);
+			return loadBibliotecaByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(String idBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Biblioteca getBibliotecaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getBibliotecaByORMID(session, idBiblioteca, lockMode);
+			return getBibliotecaByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByORMID(PersistentSession session, String idBiblioteca) throws PersistentException {
+	public static Biblioteca loadBibliotecaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Biblioteca) session.load(modelo.Biblioteca.class, idBiblioteca);
+			return (Biblioteca) session.load(modelo.Biblioteca.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(PersistentSession session, String idBiblioteca) throws PersistentException {
+	public static Biblioteca getBibliotecaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Biblioteca) session.get(modelo.Biblioteca.class, idBiblioteca);
+			return (Biblioteca) session.get(modelo.Biblioteca.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByORMID(PersistentSession session, String idBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Biblioteca loadBibliotecaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Biblioteca) session.load(modelo.Biblioteca.class, idBiblioteca, lockMode);
+			return (Biblioteca) session.load(modelo.Biblioteca.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(PersistentSession session, String idBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Biblioteca getBibliotecaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Biblioteca) session.get(modelo.Biblioteca.class, idBiblioteca, lockMode);
+			return (Biblioteca) session.get(modelo.Biblioteca.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -347,6 +347,10 @@ public class BibliotecaDAO {
 			for(int i = 0; i < lFuncionarios.length; i++) {
 				lFuncionarios[i].setIdBiblioteca(null);
 			}
+			modelo.Usuario[] lUsuarios = biblioteca.usuario.toArray();
+			for(int i = 0; i < lUsuarios.length; i++) {
+				lUsuarios[i].setIdBiblioteca(null);
+			}
 			return delete(biblioteca);
 		}
 		catch(Exception e) {
@@ -380,6 +384,10 @@ public class BibliotecaDAO {
 			modelo.Funcionario[] lFuncionarios = biblioteca.funcionario.toArray();
 			for(int i = 0; i < lFuncionarios.length; i++) {
 				lFuncionarios[i].setIdBiblioteca(null);
+			}
+			modelo.Usuario[] lUsuarios = biblioteca.usuario.toArray();
+			for(int i = 0; i < lUsuarios.length; i++) {
+				lUsuarios[i].setIdBiblioteca(null);
 			}
 			try {
 				session.delete(biblioteca);

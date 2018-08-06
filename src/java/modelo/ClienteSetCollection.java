@@ -70,6 +70,7 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>id</li>
 	 * <li>RUN</li>
 	 * <li>nombre</li>
 	 * <li>apellidoPaterno</li>
@@ -82,9 +83,6 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 	 * <li>diasDeAtraso</li>
 	 * <li>numeroDeCelular</li>
 	 * <li>numeroDeTelefono</li>
-	 * <li>correoElectronico</li>
-	 * <li>password</li>
-	 * <li>privilegio</li>
 	 * </ul>
 	 * @return The persistent objects sorted array
 	 */
@@ -95,6 +93,7 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>id</li>
 	 * <li>RUN</li>
 	 * <li>nombre</li>
 	 * <li>apellidoPaterno</li>
@@ -107,9 +106,6 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 	 * <li>diasDeAtraso</li>
 	 * <li>numeroDeCelular</li>
 	 * <li>numeroDeTelefono</li>
-	 * <li>correoElectronico</li>
-	 * <li>password</li>
-	 * <li>privilegio</li>
 	 * </ul>
 	 * @param ascending true for ascending, false for descending
 	 * @return The persistent objects sorted array

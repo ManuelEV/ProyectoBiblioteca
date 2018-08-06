@@ -62,7 +62,7 @@ public class CategoriaLibroController extends HttpServlet {
             
             for (int i = 1; i < 13; i++) {
                 modelo.Libro[] librosAux = modelo.LibroDAO.listLibroByQuery("idCategoria='"+i+"'", null);
-                modelo.Categoria cat = modelo.CategoriaDAO.getCategoriaByORMID(""+i);
+                modelo.Categoria cat = modelo.CategoriaDAO.getCategoriaByORMID(i);
                 
                 LibroChart lib = new LibroChart();
                 lib.setCantidadCategoria(librosAux.length);

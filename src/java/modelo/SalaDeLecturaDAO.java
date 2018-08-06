@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class SalaDeLecturaDAO {
-	public static SalaDeLectura loadSalaDeLecturaByORMID(String idSala) throws PersistentException {
+	public static SalaDeLectura loadSalaDeLecturaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadSalaDeLecturaByORMID(session, idSala);
+			return loadSalaDeLecturaByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura getSalaDeLecturaByORMID(String idSala) throws PersistentException {
+	public static SalaDeLectura getSalaDeLecturaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getSalaDeLecturaByORMID(session, idSala);
+			return getSalaDeLecturaByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura loadSalaDeLecturaByORMID(String idSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SalaDeLectura loadSalaDeLecturaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadSalaDeLecturaByORMID(session, idSala, lockMode);
+			return loadSalaDeLecturaByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura getSalaDeLecturaByORMID(String idSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SalaDeLectura getSalaDeLecturaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getSalaDeLecturaByORMID(session, idSala, lockMode);
+			return getSalaDeLecturaByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura loadSalaDeLecturaByORMID(PersistentSession session, String idSala) throws PersistentException {
+	public static SalaDeLectura loadSalaDeLecturaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (SalaDeLectura) session.load(modelo.SalaDeLectura.class, idSala);
+			return (SalaDeLectura) session.load(modelo.SalaDeLectura.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura getSalaDeLecturaByORMID(PersistentSession session, String idSala) throws PersistentException {
+	public static SalaDeLectura getSalaDeLecturaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (SalaDeLectura) session.get(modelo.SalaDeLectura.class, idSala);
+			return (SalaDeLectura) session.get(modelo.SalaDeLectura.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura loadSalaDeLecturaByORMID(PersistentSession session, String idSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SalaDeLectura loadSalaDeLecturaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (SalaDeLectura) session.load(modelo.SalaDeLectura.class, idSala, lockMode);
+			return (SalaDeLectura) session.load(modelo.SalaDeLectura.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class SalaDeLecturaDAO {
 		}
 	}
 	
-	public static SalaDeLectura getSalaDeLecturaByORMID(PersistentSession session, String idSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SalaDeLectura getSalaDeLecturaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (SalaDeLectura) session.get(modelo.SalaDeLectura.class, idSala, lockMode);
+			return (SalaDeLectura) session.get(modelo.SalaDeLectura.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

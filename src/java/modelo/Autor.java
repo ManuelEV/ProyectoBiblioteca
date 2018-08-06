@@ -32,7 +32,7 @@ public class Autor {
 		
 	};
 	
-	private String idAutor;
+	private int id;
 	
 	private String nombre;
 	
@@ -46,16 +46,16 @@ public class Autor {
 	
 	private java.util.Set ORM_autores = new java.util.HashSet();
 	
-	public void setIdAutor(String value) {
-		this.idAutor = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdAutor() {
-		return idAutor;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdAutor();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setNombre(String value) {
@@ -109,7 +109,7 @@ public class Autor {
 	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_AUTOR_AUTORES, ORMConstants.KEY_AUTORES_AUTORIDAUTOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdAutor());
+		return String.valueOf(getId());
 	}
 	
 }

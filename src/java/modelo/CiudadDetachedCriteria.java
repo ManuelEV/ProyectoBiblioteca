@@ -19,9 +19,9 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class CiudadDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idCiudad;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
-	public final StringExpression idPaisId;
+	public final IntegerExpression idPaisId;
 	public final AssociationExpression idPais;
 	public final CollectionExpression cliente;
 	public final CollectionExpression biblioteca;
@@ -29,9 +29,9 @@ public class CiudadDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public CiudadDetachedCriteria() {
 		super(modelo.Ciudad.class, modelo.CiudadCriteria.class);
-		idCiudad = new StringExpression("idCiudad", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
-		idPaisId = new StringExpression("idPais.idPais", this.getDetachedCriteria());
+		idPaisId = new IntegerExpression("idPais.id", this.getDetachedCriteria());
 		idPais = new AssociationExpression("idPais", this.getDetachedCriteria());
 		cliente = new CollectionExpression("ORM_Cliente", this.getDetachedCriteria());
 		biblioteca = new CollectionExpression("ORM_Biblioteca", this.getDetachedCriteria());
@@ -40,9 +40,9 @@ public class CiudadDetachedCriteria extends AbstractORMDetachedCriteria {
 	
 	public CiudadDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.CiudadCriteria.class);
-		idCiudad = new StringExpression("idCiudad", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
-		idPaisId = new StringExpression("idPais.idPais", this.getDetachedCriteria());
+		idPaisId = new IntegerExpression("idPais.id", this.getDetachedCriteria());
 		idPais = new AssociationExpression("idPais", this.getDetachedCriteria());
 		cliente = new CollectionExpression("ORM_Cliente", this.getDetachedCriteria());
 		biblioteca = new CollectionExpression("ORM_Biblioteca", this.getDetachedCriteria());

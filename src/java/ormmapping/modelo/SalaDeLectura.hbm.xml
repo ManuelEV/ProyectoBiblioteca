@@ -6,7 +6,7 @@ License Type: Academic
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 	<class name="modelo.SalaDeLectura" table="SalaDeLectura" lazy="false">
-		<id name="idSala" column="idSala" type="string">
+		<id name="id" column="id" type="integer" unsaved-value="0">
 			<generator class="native">
 			</generator>
 		</id>

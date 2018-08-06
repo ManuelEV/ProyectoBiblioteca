@@ -19,13 +19,13 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class PaisCriteria extends AbstractORMCriteria {
-	public final StringExpression idPais;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final CollectionExpression ciudad;
 	
 	public PaisCriteria(Criteria criteria) {
 		super(criteria);
-		idPais = new StringExpression("idPais", this);
+		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
 		ciudad = new CollectionExpression("ORM_Ciudad", this);
 	}

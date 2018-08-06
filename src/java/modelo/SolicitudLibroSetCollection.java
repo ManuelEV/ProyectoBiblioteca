@@ -70,7 +70,7 @@ public class SolicitudLibroSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idSolicitud</li>
+	 * <li>id</li>
 	 * <li>fechaDeSolicitud</li>
 	 * <li>horaDeSolicitud</li>
 	 * <li>fechaEntregaLimite</li>
@@ -84,7 +84,7 @@ public class SolicitudLibroSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idSolicitud</li>
+	 * <li>id</li>
 	 * <li>fechaDeSolicitud</li>
 	 * <li>horaDeSolicitud</li>
 	 * <li>fechaEntregaLimite</li>

@@ -7,10 +7,10 @@ License Type: Academic
 <hibernate-mapping>
 	<class name="modelo.SolicitudLibro" table="SolicitudLibro" lazy="false">
 		<composite-id>
-			<key-property name="idSolicitud" column="idSolicitud" type="integer"/>
-			<key-many-to-one name="ORM_ClienteRUN" column="ClienteRUN" class="modelo.Cliente">
-			</key-many-to-one>
+			<key-property name="id" column="id" type="integer"/>
 			<key-many-to-one name="ORM_CodigoLibro" column="codigoLibro" class="modelo.Libro">
+			</key-many-to-one>
+			<key-many-to-one name="ORM_ClienteRUN" column="idCliente" class="modelo.Cliente">
 			</key-many-to-one>
 		</composite-id>
 		<property name="fechaDeSolicitud" column="fechaDeSolicitud" type="date" not-null="true" lazy="false"/>

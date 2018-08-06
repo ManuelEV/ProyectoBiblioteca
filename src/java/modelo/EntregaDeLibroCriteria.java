@@ -19,23 +19,23 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class EntregaDeLibroCriteria extends AbstractORMCriteria {
-	public final IntegerExpression idDevolucion;
+	public final IntegerExpression id;
 	public final DateExpression fechaDeDevolucion;
 	public final IntegerExpression diasDeAtraso;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression librocodigoId;
+	public final IntegerExpression librocodigoId;
 	public final AssociationExpression librocodigo;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public EntregaDeLibroCriteria(Criteria criteria) {
 		super(criteria);
-		idDevolucion = new IntegerExpression("idDevolucion", this);
+		id = new IntegerExpression("id", this);
 		fechaDeDevolucion = new DateExpression("fechaDeDevolucion", this);
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this);
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
-		librocodigoId = new StringExpression("ORM_Librocodigo.codigo", this);
+		librocodigoId = new IntegerExpression("ORM_Librocodigo.id", this);
 		librocodigo = new AssociationExpression("ORM_Librocodigo", this);
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
 	}
 	
 	public EntregaDeLibroCriteria(PersistentSession session) {
@@ -46,12 +46,12 @@ public class EntregaDeLibroCriteria extends AbstractORMCriteria {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
-	}
-	
 	public LibroCriteria createLibrocodigoCriteria() {
 		return new LibroCriteria(createCriteria("ORM_Librocodigo"));
+	}
+	
+	public ClienteCriteria createClienteRUNCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public EntregaDeLibro uniqueEntregaDeLibro() {

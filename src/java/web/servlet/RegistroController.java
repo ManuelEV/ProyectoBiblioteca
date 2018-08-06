@@ -8,6 +8,7 @@ package web.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -36,81 +37,113 @@ public class RegistroController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, PersistentException {
-        
+
         HttpSession sesion = request.getSession();
-        
-        if(sesion.getAttribute("usuario")!=null){
+
+        if (sesion.getAttribute("usuario") != null) {
             sesion.removeAttribute("usuario");
             sesion.invalidate();
             sesion = request.getSession();
         }
 
-        String rut = request.getParameter("rut");
-        String nombre = request.getParameter("nombre");
-        String apellidoMaterno = request.getParameter("primerApellido");
-        String apellidoPaterno = request.getParameter("segundoApellido");
-        String correo = request.getParameter("correo");
-        String password = request.getParameter("password");
-        String estadoTrabajo = request.getParameter("estadoTrabajo");
-        String areaInteres = request.getParameter("areaInteres");
-        String genero = request.getParameter("genero");
-        String ciudad = request.getParameter("ciudad");
-        String fechaNacimiento = request.getParameter("date");
-        System.out.println(rut);
-        System.out.println(nombre);
-        System.out.println(apellidoMaterno);
-        System.out.println(apellidoPaterno);
+        String usuario = request.getParameter("usuario");
+        String correo = request.getParameter("email");
+
+        String contraseña = request.getParameter("password");
+
         System.out.println(correo);
-        System.out.println(password);
-        System.out.println(estadoTrabajo);
-        System.out.println(areaInteres);
-        System.out.println(genero);
-        System.out.println(ciudad);
-        System.out.println(fechaNacimiento);
-        //String telefono = request.getParameter("telefono");
-        //String celular = request.getParameter("celular");
+
+        String run = request.getParameter("run");
+        String nombre = request.getParameter("nombre");
+        String apellidoPaterno = request.getParameter("apellidoPaterno");
+        String apellidoMaterno = request.getParameter("apellidoMaterno");
+        String genero = request.getParameter("genero");
+        String fechaDeNacimiento = request.getParameter("date");
+        String estadoDeTrabajo = request.getParameter("estadoDeTrabajo");
+        String areaDeInteres = request.getParameter("areaDeInteres");
+        String numeroDeCelular = request.getParameter("numeroDeCelular");
+        String numeroDeTelefono = request.getParameter("numeroDeTelefono");
+        String ciudad = request.getParameter("ciudad");
 
         PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
         try {
 
-            if (modelo.ClienteDAO.getClienteByORMID(rut) == null) {
+            modelo.Usuario user = modelo.UsuarioDAO.createUsuario();
 
-                modelo.Cliente nuevoCliente = modelo.ClienteDAO.createCliente();
-                
-                nuevoCliente.setPrivilegio("general");
+            user.setCorreo(correo);
+            user.setContraseña(contraseña);
+            user.setTipoUsuario("cliente");
+            user.setUsuario(usuario);
 
-                nuevoCliente.setRUN(rut);
-                nuevoCliente.setNombre(nombre);
-                nuevoCliente.setApellidoMaterno(apellidoMaterno);
-                nuevoCliente.setApellidoPaterno(apellidoPaterno);
-                nuevoCliente.setCorreoElectronico(correo);
-                nuevoCliente.setPassword(password);
-                nuevoCliente.setEstadoDeTrabajo(estadoTrabajo);
-                nuevoCliente.setAreaDeInteres(areaInteres);
-                nuevoCliente.setGenero(genero);
+            modelo.Biblioteca bib = modelo.BibliotecaDAO.loadBibliotecaByQuery("id =" + 1, null);
 
-                String query = "nombre = '" + ciudad + "'";
-                modelo.Ciudad objCiudad = modelo.CiudadDAO.loadCiudadByQuery(query, null);
+            user.setIdBiblioteca(bib);
 
-                nuevoCliente.setIdCiudad(objCiudad);
+            modelo.UsuarioDAO.save(user);
+//            System.out.println("----------------------------");
+//            System.out.println("run: "+ run);
+//            System.out.println("nombre: "+ nombre);
+//            System.out.println("apellidoMaterno: "+ apellidoMaterno);
+//            System.out.println("apellidoPaterno: "+ apellidoPaterno);
+//            System.out.println("genero: "+ genero);
+//            System.out.println("estadoDeTrabajo: "+ estadoDeTrabajo);
+//            System.out.println("areaDeInteres: "+ areaDeInteres);
+//            
+            modelo.Cliente lmodeloCliente = modelo.ClienteDAO.createCliente();
+            // TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : clienteDeBiblioteca, registroSalaLectura, entregaDeLibro, solicitudLibro, solicitudComputador, idCiudad, correoElectronico, diasDeAtraso, areaDeInteres, estadoDeTrabajo, fechaDeNacimiento, genero, apellidoMaterno, apellidoPaterno, nombre
 
-                Date objFecha = new Date(fechaNacimiento);
-                nuevoCliente.setFechaDeNacimiento(objFecha);
+            System.out.println("-------------------------");
 
-                nuevoCliente.setDiasDeAtraso(0);
+            System.out.println(run);
+            System.out.println(nombre);
+            System.out.println(apellidoPaterno);
+            System.out.println(apellidoMaterno);
+            System.out.println(genero);
+            System.out.println(fechaDeNacimiento);
+            System.out.println(estadoDeTrabajo);
+            System.out.println(areaDeInteres);
+            System.out.println(user.getId());
 
-                modelo.ClienteDAO.save(nuevoCliente);
+            lmodeloCliente.setRUN(run);
+            lmodeloCliente.setNombre(nombre);
+            lmodeloCliente.setApellidoPaterno(apellidoPaterno);
+            lmodeloCliente.setApellidoMaterno(apellidoMaterno);
+            lmodeloCliente.setGenero(genero);
 
-                t.commit();
+            Date fechaDeNacimientoDATE = this.retrieveDate(fechaDeNacimiento);
+            lmodeloCliente.setFechaDeNacimiento(fechaDeNacimientoDATE);
+            lmodeloCliente.setEstadoDeTrabajo(estadoDeTrabajo);
+            lmodeloCliente.setAreaDeInteres(areaDeInteres);
+            lmodeloCliente.setDiasDeAtraso(0);
+            lmodeloCliente.setIdCiudad(modelo.CiudadDAO.loadCiudadByQuery("nombre ='" + ciudad + "'", null));
+            lmodeloCliente.setORM_Usuario(modelo.UsuarioDAO.loadUsuarioByORMID(user.getId()));
+            modelo.ClienteDAO.save(lmodeloCliente);
 
-                RequestDispatcher rd = request.getRequestDispatcher("/index.html");
-                rd.forward(request, response);
+            t.commit();
 
-            }
+            //-unir usuario-cliente
+            RequestDispatcher rd = request.getRequestDispatcher("/index.html");
+            rd.forward(request, response);
         } catch (Exception e) {
             t.rollback();
         }
 
+    }
+
+    private Date retrieveDate(String fechaDeNacimiento) {
+        String[] fecha = fechaDeNacimiento.split("/");
+        int year = Integer.parseInt(fecha[0]);
+        int month = Integer.parseInt(fecha[1]);
+        int day = Integer.parseInt(fecha[2]);
+
+        Date fechaDate = new Date(this.dateToMilis(year, month, day));
+        return fechaDate;
+    }
+
+    public long dateToMilis(int year, int month, int date) {
+        GregorianCalendar gc = new GregorianCalendar();
+        gc.set(year, month, date);
+        return gc.getTimeInMillis();
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

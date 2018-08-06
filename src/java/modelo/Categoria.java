@@ -35,7 +35,7 @@ public class Categoria {
 		
 	};
 	
-	private String idCategoria;
+	private int id;
 	
 	private String nombre;
 	
@@ -43,16 +43,16 @@ public class Categoria {
 	
 	private java.util.Set ORM_libro = new java.util.HashSet();
 	
-	public void setIdCategoria(String value) {
-		this.idCategoria = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdCategoria() {
-		return idCategoria;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdCategoria();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setNombre(String value) {
@@ -84,7 +84,7 @@ public class Categoria {
 	public final modelo.LibroSetCollection libro = new modelo.LibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CATEGORIA_LIBRO, ORMConstants.KEY_LIBRO_IDCATEGORIA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdCategoria());
+		return String.valueOf(getId());
 	}
 	
 }

@@ -10,13 +10,13 @@ public class CreateProyectoprogramacionavanzadaData {
 		PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
 		try {
 			modelo.Biblioteca lmodeloBiblioteca = modelo.BibliotecaDAO.createBiblioteca();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : funcionario, clienteDeBiblioteca, salaDeLectura, computador, estante, idCiudad, correoElectronico, propietario, direccion, nombre
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : usuario, funcionario, clienteDeBiblioteca, salaDeLectura, computador, estante, idCiudad, correoElectronico, propietario, direccion, nombre
 			modelo.BibliotecaDAO.save(lmodeloBiblioteca);
 			modelo.Libro lmodeloLibro = modelo.LibroDAO.createLibro();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : autores, entregaDeLibro, solicitudLibro, idCategoria, idioma, estadoDeterioro, colorTapa, vecesSolicitado, editor, fechaDeEdicion, fechaDeAdquisicion, disponibilidad, numeroDePaginas, nombre
 			modelo.LibroDAO.save(lmodeloLibro);
 			modelo.Cliente lmodeloCliente = modelo.ClienteDAO.createCliente();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : clienteDeBiblioteca, registroSalaLectura, entregaDeLibro, solicitudLibro, solicitudComputador, privilegio, password, idCiudad, correoElectronico, diasDeAtraso, areaDeInteres, estadoDeTrabajo, fechaDeNacimiento, genero, apellidoMaterno, apellidoPaterno, nombre
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : clienteDeBiblioteca, registroSalaLectura, entregaDeLibro, solicitudLibro, solicitudComputador, idCiudad, diasDeAtraso, areaDeInteres, estadoDeTrabajo, fechaDeNacimiento, genero, apellidoMaterno, apellidoPaterno, nombre, RUN
 			modelo.ClienteDAO.save(lmodeloCliente);
 			modelo.Estante lmodeloEstante = modelo.EstanteDAO.createEstante();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : idCategoria, idBiblioteca, capacidadAproximada
@@ -49,7 +49,7 @@ public class CreateProyectoprogramacionavanzadaData {
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : registroSalaLectura, idBiblioteca, nombre, capacidad
 			modelo.SalaDeLecturaDAO.save(lmodeloSalaDeLectura);
 			modelo.Funcionario lmodeloFuncionario = modelo.FuncionarioDAO.createFuncionario();
-			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : idBiblioteca, idCiudad, correoElectronico, fechaDeContrato, cargo, fechaDeNacimiento, genero, apellidoPaterno, apellidoMaterno, nombre
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : idBiblioteca, idCiudad, correoElectronico, fechaDeNacimiento, genero, apellidoPaterno, apellidoMaterno, nombre, RUN
 			modelo.FuncionarioDAO.save(lmodeloFuncionario);
 			modelo.RegistroSalaLectura lmodeloRegistroSalaLectura = modelo.RegistroSalaLecturaDAO.createRegistroSalaLectura();
 			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : horaRegistro, tipoRegistro, fechaRegistro
@@ -60,6 +60,9 @@ public class CreateProyectoprogramacionavanzadaData {
 			modelo.ClienteDeBiblioteca lmodeloClienteDeBiblioteca = modelo.ClienteDeBibliotecaDAO.createClienteDeBiblioteca();
 			// Initialize the properties of the persistent object here
 			modelo.ClienteDeBibliotecaDAO.save(lmodeloClienteDeBiblioteca);
+			modelo.Usuario lmodeloUsuario = modelo.UsuarioDAO.createUsuario();
+			// TODO Initialize the properties of the persistent object here, the following properties must be initialized before saving : idBiblioteca, contraseña, tipoUsuario, usuario, correo
+			modelo.UsuarioDAO.save(lmodeloUsuario);
 			t.commit();
 		}
 		catch (Exception e) {

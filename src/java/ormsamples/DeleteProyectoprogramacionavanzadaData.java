@@ -60,6 +60,9 @@ public class DeleteProyectoprogramacionavanzadaData {
 			modelo.ClienteDeBiblioteca lmodeloClienteDeBiblioteca = modelo.ClienteDeBibliotecaDAO.loadClienteDeBibliotecaByQuery(null, null);
 			// Delete the persistent object
 			modelo.ClienteDeBibliotecaDAO.delete(lmodeloClienteDeBiblioteca);
+			modelo.Usuario lmodeloUsuario = modelo.UsuarioDAO.loadUsuarioByQuery(null, null);
+			// Delete the persistent object
+			modelo.UsuarioDAO.delete(lmodeloUsuario);
 			t.commit();
 		}
 		catch (Exception e) {

@@ -45,10 +45,10 @@ public class Autores implements Serializable {
 		int hashcode = 0;
 		hashcode = hashcode + (int) getId();
 		if (getAutoridAutor() != null) {
-			hashcode = hashcode + (getAutoridAutor().getORMID() == null ? 0 : getAutoridAutor().getORMID().hashCode());
+			hashcode = hashcode + (int) getAutoridAutor().getORMID();
 		}
 		if (getLibrocodigo() != null) {
-			hashcode = hashcode + (getLibrocodigo().getORMID() == null ? 0 : getLibrocodigo().getORMID().hashCode());
+			hashcode = hashcode + (int) getLibrocodigo().getORMID();
 		}
 		return hashcode;
 	}
@@ -74,25 +74,25 @@ public class Autores implements Serializable {
 	
 	private modelo.Autor autoridAutor;
 	
-	private String autoridAutorId;
+	private int autoridAutorId;
 	
-	private void setAutoridAutorId(String value) {
+	private void setAutoridAutorId(int value) {
 		this.autoridAutorId = value;
 	}
 	
-	public String getAutoridAutorId() {
+	public int getAutoridAutorId() {
 		return autoridAutorId;
 	}
 	
 	private modelo.Libro librocodigo;
 	
-	private String librocodigoId;
+	private int librocodigoId;
 	
-	private void setLibrocodigoId(String value) {
+	private void setLibrocodigoId(int value) {
 		this.librocodigoId = value;
 	}
 	
-	public String getLibrocodigoId() {
+	public int getLibrocodigoId() {
 		return librocodigoId;
 	}
 	

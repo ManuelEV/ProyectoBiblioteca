@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Model quotesql="1" tablecharset="" mysql_version="504" mssql_version="2005" derby_version="106" ingres_version="9">
-  <Entity name="biblioteca" Unlogged="false" PKClustered="0">
-    <Column name="idBiblioteca">
+  <Entity name="Biblioteca" Unlogged="false" PKClustered="0">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -71,9 +71,9 @@
     <Column name="idCiudad">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Ciudad.idCiudad</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Ciudad.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -82,11 +82,11 @@
     </Column>
   </Entity>
   <Entity name="Libro" Unlogged="false" PKClustered="0">
-    <Column name="codigo">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>20</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -97,7 +97,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
-      <Length>20</Length>
+      <Length>200</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -228,9 +228,9 @@
     <Column name="idEstante">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Estante.IdEstante</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Estante.Id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -240,9 +240,9 @@
     <Column name="idCategoria">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Categoria.idCategoria</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Categoria.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -251,8 +251,19 @@
     </Column>
   </Entity>
   <Entity name="Cliente" Unlogged="false" PKClustered="0">
-    <Column name="RUN">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>11</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="RUN">
+      <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
       <Length>12</Length>
@@ -266,7 +277,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
-      <Length>16</Length>
+      <Length>30</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -277,7 +288,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
-      <Length>16</Length>
+      <Length>30</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -288,7 +299,7 @@
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
-      <Length>16</Length>
+      <Length>30</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -384,46 +395,25 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="correoElectronico">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>50</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
     <Column name="idCiudad">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Ciudad.idCiudad</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Ciudad.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="password">
+    <Column name="Usuarioid">
       <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>30</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>native</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="privilegio">
-      <PrimaryKey>false</PrimaryKey>
-      <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>20</Length>
-      <Nullable>false</Nullable>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Usuario.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
+      <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
@@ -431,11 +421,11 @@
     </Column>
   </Entity>
   <Entity name="Estante" Unlogged="false" PKClustered="0">
-    <Column name="IdEstante">
+    <Column name="Id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -456,9 +446,9 @@
     <Column name="idBiblioteca">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>biblioteca.idBiblioteca</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Biblioteca.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -468,9 +458,9 @@
     <Column name="idCategoria">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Categoria.idCategoria</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Categoria.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -479,11 +469,11 @@
     </Column>
   </Entity>
   <Entity name="Autor" Unlogged="false" PKClustered="0">
-    <Column name="idAutor">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -547,11 +537,11 @@
     </Column>
   </Entity>
   <Entity name="Ciudad" Unlogged="false" PKClustered="0">
-    <Column name="idCiudad">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -572,9 +562,9 @@
     <Column name="idPais">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Pais.idPais</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Pais.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -583,11 +573,11 @@
     </Column>
   </Entity>
   <Entity name="Pais" Unlogged="false" PKClustered="0">
-    <Column name="idPais">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -607,11 +597,11 @@
     </Column>
   </Entity>
   <Entity name="Categoria" Unlogged="false" PKClustered="0">
-    <Column name="idCategoria">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -631,11 +621,11 @@
     </Column>
   </Entity>
   <Entity name="Computador" Unlogged="false" PKClustered="0">
-    <Column name="idComputador">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -678,9 +668,9 @@
     <Column name="idBiblioteca">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>biblioteca.idBiblioteca</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Biblioteca.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -689,11 +679,11 @@
     </Column>
   </Entity>
   <Entity name="SolicitudComputador" Unlogged="false" PKClustered="0">
-    <Column name="idSolicitud">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>16</Length>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -722,24 +712,24 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="ClienteRUN">
+    <Column name="idComputador">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Cliente.RUN</ReferencedColumn>
-      <Type>27</Type>
-      <Length>12</Length>
+      <ReferencedColumn>Computador.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="idComputador">
+    <Column name="idCliente">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Computador.idComputador</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Cliente.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -748,11 +738,11 @@
     </Column>
   </Entity>
   <Entity name="SolicitudLibro" Unlogged="false" PKClustered="0">
-    <Column name="idSolicitud">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>16</Length>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -792,24 +782,24 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="ClienteRUN">
+    <Column name="codigoLibro">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Cliente.RUN</ReferencedColumn>
-      <Type>27</Type>
-      <Length>12</Length>
+      <ReferencedColumn>Libro.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="codigoLibro">
+    <Column name="idCliente">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Libro.codigo</ReferencedColumn>
-      <Type>27</Type>
-      <Length>20</Length>
+      <ReferencedColumn>Cliente.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -818,11 +808,11 @@
     </Column>
   </Entity>
   <Entity name="EntregaDeLibro" Unlogged="false" PKClustered="0">
-    <Column name="idDevolucion">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>16</Length>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -851,24 +841,24 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="ClienteRUN">
+    <Column name="Librocodigo">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Cliente.RUN</ReferencedColumn>
-      <Type>27</Type>
-      <Length>12</Length>
+      <ReferencedColumn>Libro.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="Librocodigo">
+    <Column name="idCliente">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Libro.codigo</ReferencedColumn>
-      <Type>27</Type>
-      <Length>20</Length>
+      <ReferencedColumn>Cliente.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -877,11 +867,11 @@
     </Column>
   </Entity>
   <Entity name="SalaDeLectura" Unlogged="false" PKClustered="0">
-    <Column name="idSala">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
-      <Type>27</Type>
-      <Length>16</Length>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -913,9 +903,9 @@
     <Column name="idBiblioteca">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>biblioteca.idBiblioteca</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Biblioteca.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -924,14 +914,25 @@
     </Column>
   </Entity>
   <Entity name="funcionario" Unlogged="false" PKClustered="0">
-    <Column name="RUN">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>11</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="RUN">
+      <PrimaryKey>false</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
       <Length>12</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
-      <Unique>true</Unique>
+      <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
@@ -995,7 +996,7 @@
       <ForeignKey>false</ForeignKey>
       <Type>27</Type>
       <Length>16</Length>
-      <Nullable>false</Nullable>
+      <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
@@ -1006,7 +1007,7 @@
       <ForeignKey>false</ForeignKey>
       <Type>17</Type>
       <Length>0</Length>
-      <Nullable>false</Nullable>
+      <Nullable>true</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
@@ -1059,9 +1060,9 @@
     <Column name="idCiudad">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Ciudad.idCiudad</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Ciudad.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -1071,9 +1072,9 @@
     <Column name="idBiblioteca">
       <PrimaryKey>false</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>biblioteca.idBiblioteca</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Biblioteca.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
@@ -1082,11 +1083,11 @@
     </Column>
   </Entity>
   <Entity name="RegistroSalaLectura" Unlogged="false" PKClustered="0">
-    <Column name="idRegistro">
+    <Column name="id">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>16</Length>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -1126,24 +1127,24 @@
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="ClienteRUN">
+    <Column name="SalaDeLecturaidSala">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Cliente.RUN</ReferencedColumn>
-      <Type>27</Type>
-      <Length>12</Length>
+      <ReferencedColumn>SalaDeLectura.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="SalaDeLecturaidSala">
+    <Column name="idCliente">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>SalaDeLectura.idSala</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Cliente.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -1156,31 +1157,31 @@
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>10</Length>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="AutoridAutor">
+    <Column name="idAutor">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Autor.idAutor</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Autor.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
     </Column>
-    <Column name="Librocodigo">
+    <Column name="idLibro">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Libro.codigo</ReferencedColumn>
-      <Type>27</Type>
-      <Length>20</Length>
+      <ReferencedColumn>Libro.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -1193,19 +1194,7 @@
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>false</ForeignKey>
       <Type>9</Type>
-      <Length>16</Length>
-      <Nullable>false</Nullable>
-      <IDGenerator>assigned</IDGenerator>
-      <Unique>false</Unique>
-      <Index>false</Index>
-      <UserTypes/>
-    </Column>
-    <Column name="ClienteRUN">
-      <PrimaryKey>true</PrimaryKey>
-      <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>Cliente.RUN</ReferencedColumn>
-      <Type>27</Type>
-      <Length>12</Length>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
       <Unique>false</Unique>
@@ -1215,11 +1204,92 @@
     <Column name="bibliotecaidBiblioteca">
       <PrimaryKey>true</PrimaryKey>
       <ForeignKey>true</ForeignKey>
-      <ReferencedColumn>biblioteca.idBiblioteca</ReferencedColumn>
-      <Type>27</Type>
-      <Length>16</Length>
+      <ReferencedColumn>Biblioteca.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
       <Nullable>false</Nullable>
       <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="Clienteid">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Cliente.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>assigned</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+  </Entity>
+  <Entity name="Usuario" Unlogged="false" PKClustered="0">
+    <Column name="id">
+      <PrimaryKey>true</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>9</Type>
+      <Length>11</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="correo">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>100</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>true</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="usuario">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>20</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>true</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="tipoUsuario">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>20</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="contraseña">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>false</ForeignKey>
+      <Type>27</Type>
+      <Length>20</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
+      <Unique>false</Unique>
+      <Index>false</Index>
+      <UserTypes/>
+    </Column>
+    <Column name="idBiblioteca">
+      <PrimaryKey>false</PrimaryKey>
+      <ForeignKey>true</ForeignKey>
+      <ReferencedColumn>Biblioteca.id</ReferencedColumn>
+      <Type>9</Type>
+      <Length>11</Length>
+      <Nullable>false</Nullable>
+      <IDGenerator>native</IDGenerator>
       <Unique>false</Unique>
       <Index>false</Index>
       <UserTypes/>
@@ -1232,17 +1302,17 @@
       <Column>idEstante</Column>
     </Columns>
     <RefColumns>
-      <Column>IdEstante</Column>
+      <Column>Id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="tieneEstantes">
     <ReferenceTable>Estante</ReferenceTable>
-    <ReferencedTable>biblioteca</ReferencedTable>
+    <ReferencedTable>Biblioteca</ReferencedTable>
     <Columns>
       <Column>idBiblioteca</Column>
     </Columns>
     <RefColumns>
-      <Column>idBiblioteca</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="perteneceAPais">
@@ -1252,7 +1322,7 @@
       <Column>idPais</Column>
     </Columns>
     <RefColumns>
-      <Column>idPais</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="clientePerteneceACiudad">
@@ -1262,17 +1332,17 @@
       <Column>idCiudad</Column>
     </Columns>
     <RefColumns>
-      <Column>idCiudad</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="bibliotecaPerteneceACiudad">
-    <ReferenceTable>biblioteca</ReferenceTable>
+    <ReferenceTable>Biblioteca</ReferenceTable>
     <ReferencedTable>Ciudad</ReferencedTable>
     <Columns>
       <Column>idCiudad</Column>
     </Columns>
     <RefColumns>
-      <Column>idCiudad</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="EstantePerteneceACategoria">
@@ -1282,27 +1352,27 @@
       <Column>idCategoria</Column>
     </Columns>
     <RefColumns>
-      <Column>idCategoria</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="tieneComputadores">
     <ReferenceTable>Computador</ReferenceTable>
-    <ReferencedTable>biblioteca</ReferencedTable>
+    <ReferencedTable>Biblioteca</ReferencedTable>
     <Columns>
       <Column>idBiblioteca</Column>
     </Columns>
     <RefColumns>
-      <Column>idBiblioteca</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="solicitaComputador">
     <ReferenceTable>SolicitudComputador</ReferenceTable>
     <ReferencedTable>Cliente</ReferencedTable>
     <Columns>
-      <Column>ClienteRUN</Column>
+      <Column>idCliente</Column>
     </Columns>
     <RefColumns>
-      <Column>RUN</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="registraSolicitudesComputador">
@@ -1312,17 +1382,17 @@
       <Column>idComputador</Column>
     </Columns>
     <RefColumns>
-      <Column>idComputador</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="solicitaLibro">
     <ReferenceTable>SolicitudLibro</ReferenceTable>
     <ReferencedTable>Cliente</ReferencedTable>
     <Columns>
-      <Column>ClienteRUN</Column>
+      <Column>idCliente</Column>
     </Columns>
     <RefColumns>
-      <Column>RUN</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="registraSolicitudesLibro">
@@ -1332,17 +1402,17 @@
       <Column>codigoLibro</Column>
     </Columns>
     <RefColumns>
-      <Column>codigo</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="devuelveLibro">
     <ReferenceTable>EntregaDeLibro</ReferenceTable>
     <ReferencedTable>Cliente</ReferencedTable>
     <Columns>
-      <Column>ClienteRUN</Column>
+      <Column>idCliente</Column>
     </Columns>
     <RefColumns>
-      <Column>RUN</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="registraDevoluciones">
@@ -1352,7 +1422,7 @@
       <Column>Librocodigo</Column>
     </Columns>
     <RefColumns>
-      <Column>codigo</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="funcionarioPerteneceACiudad">
@@ -1362,27 +1432,27 @@
       <Column>idCiudad</Column>
     </Columns>
     <RefColumns>
-      <Column>idCiudad</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="tieneSalas">
     <ReferenceTable>SalaDeLectura</ReferenceTable>
-    <ReferencedTable>biblioteca</ReferencedTable>
+    <ReferencedTable>Biblioteca</ReferencedTable>
     <Columns>
       <Column>idBiblioteca</Column>
     </Columns>
     <RefColumns>
-      <Column>idBiblioteca</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="registraEntrada">
     <ReferenceTable>RegistroSalaLectura</ReferenceTable>
     <ReferencedTable>Cliente</ReferencedTable>
     <Columns>
-      <Column>ClienteRUN</Column>
+      <Column>idCliente</Column>
     </Columns>
     <RefColumns>
-      <Column>RUN</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="registraEntradasSala">
@@ -1392,57 +1462,57 @@
       <Column>SalaDeLecturaidSala</Column>
     </Columns>
     <RefColumns>
-      <Column>idSala</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="creaLibros">
     <ReferenceTable>Autores</ReferenceTable>
     <ReferencedTable>Autor</ReferencedTable>
     <Columns>
-      <Column>AutoridAutor</Column>
+      <Column>idAutor</Column>
     </Columns>
     <RefColumns>
-      <Column>idAutor</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="tieneAutores">
     <ReferenceTable>Autores</ReferenceTable>
     <ReferencedTable>Libro</ReferencedTable>
     <Columns>
-      <Column>Librocodigo</Column>
+      <Column>idLibro</Column>
     </Columns>
     <RefColumns>
-      <Column>codigo</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="esClientedeBiblioteca">
     <ReferenceTable>ClienteDeBiblioteca</ReferenceTable>
     <ReferencedTable>Cliente</ReferencedTable>
     <Columns>
-      <Column>ClienteRUN</Column>
+      <Column>Clienteid</Column>
     </Columns>
     <RefColumns>
-      <Column>RUN</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="registraClientes">
     <ReferenceTable>ClienteDeBiblioteca</ReferenceTable>
-    <ReferencedTable>biblioteca</ReferencedTable>
+    <ReferencedTable>Biblioteca</ReferencedTable>
     <Columns>
       <Column>bibliotecaidBiblioteca</Column>
     </Columns>
     <RefColumns>
-      <Column>idBiblioteca</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="trabajaEn">
     <ReferenceTable>funcionario</ReferenceTable>
-    <ReferencedTable>biblioteca</ReferencedTable>
+    <ReferencedTable>Biblioteca</ReferencedTable>
     <Columns>
       <Column>idBiblioteca</Column>
     </Columns>
     <RefColumns>
-      <Column>idBiblioteca</Column>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
   <ForeignKey name="LibroPerteneceACategoria">
@@ -1452,7 +1522,27 @@
       <Column>idCategoria</Column>
     </Columns>
     <RefColumns>
-      <Column>idCategoria</Column>
+      <Column>id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKUsuario211782">
+    <ReferenceTable>Usuario</ReferenceTable>
+    <ReferencedTable>Biblioteca</ReferencedTable>
+    <Columns>
+      <Column>idBiblioteca</Column>
+    </Columns>
+    <RefColumns>
+      <Column>id</Column>
+    </RefColumns>
+  </ForeignKey>
+  <ForeignKey name="FKCliente701651">
+    <ReferenceTable>Cliente</ReferenceTable>
+    <ReferencedTable>Usuario</ReferencedTable>
+    <Columns>
+      <Column>Usuarioid</Column>
+    </Columns>
+    <RefColumns>
+      <Column>id</Column>
     </RefColumns>
   </ForeignKey>
 </Model>

@@ -19,45 +19,45 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class RegistroSalaLecturaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression idRegistro;
+	public final IntegerExpression id;
 	public final DateExpression fechaRegistro;
 	public final StringExpression tipoRegistro;
 	public final TimeExpression horaRegistro;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression salaDeLecturaidSalaId;
+	public final IntegerExpression salaDeLecturaidSalaId;
 	public final AssociationExpression salaDeLecturaidSala;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public RegistroSalaLecturaDetachedCriteria() {
 		super(modelo.RegistroSalaLectura.class, modelo.RegistroSalaLecturaCriteria.class);
-		idRegistro = new IntegerExpression("idRegistro", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaRegistro = new DateExpression("fechaRegistro", this.getDetachedCriteria());
 		tipoRegistro = new StringExpression("tipoRegistro", this.getDetachedCriteria());
 		horaRegistro = new TimeExpression("horaRegistro", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		salaDeLecturaidSalaId = new StringExpression("ORM_SalaDeLecturaidSala.idSala", this.getDetachedCriteria());
+		salaDeLecturaidSalaId = new IntegerExpression("ORM_SalaDeLecturaidSala.id", this.getDetachedCriteria());
 		salaDeLecturaidSala = new AssociationExpression("ORM_SalaDeLecturaidSala", this.getDetachedCriteria());
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public RegistroSalaLecturaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.RegistroSalaLecturaCriteria.class);
-		idRegistro = new IntegerExpression("idRegistro", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaRegistro = new DateExpression("fechaRegistro", this.getDetachedCriteria());
 		tipoRegistro = new StringExpression("tipoRegistro", this.getDetachedCriteria());
 		horaRegistro = new TimeExpression("horaRegistro", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		salaDeLecturaidSalaId = new StringExpression("ORM_SalaDeLecturaidSala.idSala", this.getDetachedCriteria());
+		salaDeLecturaidSalaId = new IntegerExpression("ORM_SalaDeLecturaidSala.id", this.getDetachedCriteria());
 		salaDeLecturaidSala = new AssociationExpression("ORM_SalaDeLecturaidSala", this.getDetachedCriteria());
-	}
-	
-	public ClienteDetachedCriteria createClienteRUNCriteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public SalaDeLecturaDetachedCriteria createSalaDeLecturaidSalaCriteria() {
 		return new SalaDeLecturaDetachedCriteria(createCriteria("ORM_SalaDeLecturaidSala"));
+	}
+	
+	public ClienteDetachedCriteria createClienteRUNCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public RegistroSalaLectura uniqueRegistroSalaLectura(PersistentSession session) {

@@ -41,6 +41,10 @@ public class Cliente {
 		if (key == ORMConstants.KEY_CLIENTE_IDCIUDAD) {
 			this.idCiudad = (modelo.Ciudad) owner;
 		}
+		
+		else if (key == ORMConstants.KEY_CLIENTE_USUARIO) {
+			this.usuario = (modelo.Usuario) owner;
+		}
 	}
 	
 	org.orm.util.ORMAdapter _ormAdapter = new org.orm.util.AbstractORMAdapter() {
@@ -53,6 +57,8 @@ public class Cliente {
 		}
 		
 	};
+	
+	private int id;
 	
 	private String RUN;
 	
@@ -78,13 +84,9 @@ public class Cliente {
 	
 	private Integer numeroDeTelefono;
 	
-	private String correoElectronico;
-	
 	private modelo.Ciudad idCiudad;
 	
-	private String password;
-	
-	private String privilegio;
+	private modelo.Usuario usuario;
 	
 	private java.util.Set ORM_solicitudComputador = new java.util.HashSet();
 	
@@ -102,10 +104,6 @@ public class Cliente {
 	
 	public String getRUN() {
 		return RUN;
-	}
-	
-	public String getORMID() {
-		return getRUN();
 	}
 	
 	public void setNombre(String value) {
@@ -204,28 +202,16 @@ public class Cliente {
 		return numeroDeTelefono;
 	}
 	
-	public void setCorreoElectronico(String value) {
-		this.correoElectronico = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getCorreoElectronico() {
-		return correoElectronico;
+	public int getId() {
+		return id;
 	}
 	
-	public void setPassword(String value) {
-		this.password = value;
-	}
-	
-	public String getPassword() {
-		return password;
-	}
-	
-	public void setPrivilegio(String value) {
-		this.privilegio = value;
-	}
-	
-	public String getPrivilegio() {
-		return privilegio;
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setIdCiudad(modelo.Ciudad value) {
@@ -250,6 +236,30 @@ public class Cliente {
 	
 	private modelo.Ciudad getORM_IdCiudad() {
 		return idCiudad;
+	}
+	
+	public void setUsuario(modelo.Usuario value) {
+		if (usuario != null) {
+			usuario.cliente1.remove(this);
+		}
+		if (value != null) {
+			value.cliente1.add(this);
+		}
+	}
+	
+	public modelo.Usuario getUsuario() {
+		return usuario;
+	}
+	
+	/**
+	 * This method is for internal use only.
+	 */
+	public void setORM_Usuario(modelo.Usuario value) {
+		this.usuario = value;
+	}
+	
+	private modelo.Usuario getORM_Usuario() {
+		return usuario;
 	}
 	
 	private void setORM_SolicitudComputador(java.util.Set value) {
@@ -303,7 +313,7 @@ public class Cliente {
 	public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTERUN, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getRUN());
+		return String.valueOf(getId());
 	}
 	
 }

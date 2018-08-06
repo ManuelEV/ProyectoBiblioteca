@@ -59,12 +59,11 @@
             <div class="jumbotron">
                 <h1>Tu información: ${sessionScope.usuario.nombre}</h1> 
                 <p>Apellidos: ${sessionScope.usuario.apellidoPaterno} ${sessionScope.usuario.apellidoMaterno}</p> 
-                <p>${sessionScope.usuario.correoElectronico}</p> 
                 <p>Ocupación: ${sessionScope.usuario.estadoDeTrabajo}</p> 
                 <p>Área de interés: ${sessionScope.usuario.areaDeInteres}</p> 
-                <p>Ocupación: ${sessionScope.usuario.estadoDeTrabajo}</p> 
                 <p>Fecha de nacimiento: ${sessionScope.usuario.fechaDeNacimiento}</p> 
                 <p>Género: ${sessionScope.usuario.genero}</p> 
+                <p>Días de atraso: ${sessionScope.usuario.diasDeAtraso}</p> 
             </div>
         </div>
 

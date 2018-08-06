@@ -56,7 +56,7 @@ public class BusquedaController extends HttpServlet {
 
             modelo.Categoria categ = modelo.CategoriaDAO.loadCategoriaByQuery(query, null);
 
-            query = "idCategoria = '" + categ.getIdCategoria() + "'";
+            query = "idCategoria = '" + categ.getId() + "'";
 
             modelo.Libro[] librosPorCategoria = modelo.LibroDAO.listLibroByQuery(query, null);
 

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class LibroDAO {
-	public static Libro loadLibroByORMID(String codigo) throws PersistentException {
+	public static Libro loadLibroByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadLibroByORMID(session, codigo);
+			return loadLibroByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(String codigo) throws PersistentException {
+	public static Libro getLibroByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getLibroByORMID(session, codigo);
+			return getLibroByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByORMID(String codigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Libro loadLibroByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadLibroByORMID(session, codigo, lockMode);
+			return loadLibroByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(String codigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Libro getLibroByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getLibroByORMID(session, codigo, lockMode);
+			return getLibroByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByORMID(PersistentSession session, String codigo) throws PersistentException {
+	public static Libro loadLibroByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Libro) session.load(modelo.Libro.class, codigo);
+			return (Libro) session.load(modelo.Libro.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(PersistentSession session, String codigo) throws PersistentException {
+	public static Libro getLibroByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Libro) session.get(modelo.Libro.class, codigo);
+			return (Libro) session.get(modelo.Libro.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByORMID(PersistentSession session, String codigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Libro loadLibroByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Libro) session.load(modelo.Libro.class, codigo, lockMode);
+			return (Libro) session.load(modelo.Libro.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(PersistentSession session, String codigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Libro getLibroByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Libro) session.get(modelo.Libro.class, codigo, lockMode);
+			return (Libro) session.get(modelo.Libro.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

@@ -70,7 +70,7 @@ public class RegistroSalaLecturaSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idRegistro</li>
+	 * <li>id</li>
 	 * <li>fechaRegistro</li>
 	 * <li>tipoRegistro</li>
 	 * <li>horaRegistro</li>
@@ -84,7 +84,7 @@ public class RegistroSalaLecturaSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idRegistro</li>
+	 * <li>id</li>
 	 * <li>fechaRegistro</li>
 	 * <li>tipoRegistro</li>
 	 * <li>horaRegistro</li>

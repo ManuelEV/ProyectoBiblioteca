@@ -19,32 +19,32 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class ComputadorDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idComputador;
+	public final IntegerExpression id;
 	public final StringExpression marca;
 	public final DateExpression fechaDeAdquisicion;
 	public final DateExpression fechaUltimaSolicitud;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
 	public final CollectionExpression solicitudComputador;
 	
 	public ComputadorDetachedCriteria() {
 		super(modelo.Computador.class, modelo.ComputadorCriteria.class);
-		idComputador = new StringExpression("idComputador", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		marca = new StringExpression("marca", this.getDetachedCriteria());
 		fechaDeAdquisicion = new DateExpression("fechaDeAdquisicion", this.getDetachedCriteria());
 		fechaUltimaSolicitud = new DateExpression("fechaUltimaSolicitud", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 	}
 	
 	public ComputadorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.ComputadorCriteria.class);
-		idComputador = new StringExpression("idComputador", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		marca = new StringExpression("marca", this.getDetachedCriteria());
 		fechaDeAdquisicion = new DateExpression("fechaDeAdquisicion", this.getDetachedCriteria());
 		fechaUltimaSolicitud = new DateExpression("fechaUltimaSolicitud", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 	}

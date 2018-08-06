@@ -19,20 +19,20 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class PaisDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final StringExpression idPais;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final CollectionExpression ciudad;
 	
 	public PaisDetachedCriteria() {
 		super(modelo.Pais.class, modelo.PaisCriteria.class);
-		idPais = new StringExpression("idPais", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		ciudad = new CollectionExpression("ORM_Ciudad", this.getDetachedCriteria());
 	}
 	
 	public PaisDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.PaisCriteria.class);
-		idPais = new StringExpression("idPais", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		ciudad = new CollectionExpression("ORM_Ciudad", this.getDetachedCriteria());
 	}

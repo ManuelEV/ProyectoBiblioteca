@@ -33,6 +33,9 @@ public class Biblioteca {
 		else if (key == ORMConstants.KEY_BIBLIOTECA_FUNCIONARIO) {
 			return ORM_funcionario;
 		}
+		else if (key == ORMConstants.KEY_BIBLIOTECA_USUARIO) {
+			return ORM_usuario;
+		}
 		
 		return null;
 	}
@@ -54,7 +57,7 @@ public class Biblioteca {
 		
 	};
 	
-	private String idBiblioteca;
+	private int id;
 	
 	private String nombre;
 	
@@ -78,16 +81,18 @@ public class Biblioteca {
 	
 	private java.util.Set ORM_funcionario = new java.util.HashSet();
 	
-	public void setIdBiblioteca(String value) {
-		this.idBiblioteca = value;
+	private java.util.Set ORM_usuario = new java.util.HashSet();
+	
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdBiblioteca() {
-		return idBiblioteca;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdBiblioteca();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setNombre(String value) {
@@ -208,8 +213,18 @@ public class Biblioteca {
 	
 	public final modelo.FuncionarioSetCollection funcionario = new modelo.FuncionarioSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_FUNCIONARIO, ORMConstants.KEY_FUNCIONARIO_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
+	private void setORM_Usuario(java.util.Set value) {
+		this.ORM_usuario = value;
+	}
+	
+	private java.util.Set getORM_Usuario() {
+		return ORM_usuario;
+	}
+	
+	public final modelo.UsuarioSetCollection usuario = new modelo.UsuarioSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_USUARIO, ORMConstants.KEY_USUARIO_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	
 	public String toString() {
-		return String.valueOf(getIdBiblioteca());
+		return String.valueOf(getId());
 	}
 	
 }

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class ClienteDAO {
-	public static Cliente loadClienteByORMID(String RUN) throws PersistentException {
+	public static Cliente loadClienteByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadClienteByORMID(session, RUN);
+			return loadClienteByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente getClienteByORMID(String RUN) throws PersistentException {
+	public static Cliente getClienteByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getClienteByORMID(session, RUN);
+			return getClienteByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente loadClienteByORMID(String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Cliente loadClienteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadClienteByORMID(session, RUN, lockMode);
+			return loadClienteByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente getClienteByORMID(String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Cliente getClienteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getClienteByORMID(session, RUN, lockMode);
+			return getClienteByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente loadClienteByORMID(PersistentSession session, String RUN) throws PersistentException {
+	public static Cliente loadClienteByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Cliente) session.load(modelo.Cliente.class, RUN);
+			return (Cliente) session.load(modelo.Cliente.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente getClienteByORMID(PersistentSession session, String RUN) throws PersistentException {
+	public static Cliente getClienteByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Cliente) session.get(modelo.Cliente.class, RUN);
+			return (Cliente) session.get(modelo.Cliente.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente loadClienteByORMID(PersistentSession session, String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Cliente loadClienteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Cliente) session.load(modelo.Cliente.class, RUN, lockMode);
+			return (Cliente) session.load(modelo.Cliente.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class ClienteDAO {
 		}
 	}
 	
-	public static Cliente getClienteByORMID(PersistentSession session, String RUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Cliente getClienteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Cliente) session.get(modelo.Cliente.class, RUN, lockMode);
+			return (Cliente) session.get(modelo.Cliente.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -327,6 +327,10 @@ public class ClienteDAO {
 				cliente.getIdCiudad().cliente.remove(cliente);
 			}
 			
+			if (cliente.getUsuario() != null) {
+				cliente.getUsuario().cliente1.remove(cliente);
+			}
+			
 			modelo.SolicitudComputador[] lSolicitudComputadors = cliente.solicitudComputador.toArray();
 			for(int i = 0; i < lSolicitudComputadors.length; i++) {
 				lSolicitudComputadors[i].setClienteRUN(null);
@@ -359,6 +363,10 @@ public class ClienteDAO {
 		try {
 			if (cliente.getIdCiudad() != null) {
 				cliente.getIdCiudad().cliente.remove(cliente);
+			}
+			
+			if (cliente.getUsuario() != null) {
+				cliente.getUsuario().cliente1.remove(cliente);
 			}
 			
 			modelo.SolicitudComputador[] lSolicitudComputadors = cliente.solicitudComputador.toArray();

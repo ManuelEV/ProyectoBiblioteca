@@ -48,7 +48,7 @@ public class Ciudad {
 		
 	};
 	
-	private String idCiudad;
+	private int id;
 	
 	private String nombre;
 	
@@ -60,16 +60,16 @@ public class Ciudad {
 	
 	private java.util.Set ORM_funcionario = new java.util.HashSet();
 	
-	public void setIdCiudad(String value) {
-		this.idCiudad = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdCiudad() {
-		return idCiudad;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdCiudad();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setNombre(String value) {
@@ -135,7 +135,7 @@ public class Ciudad {
 	public final modelo.FuncionarioSetCollection funcionario = new modelo.FuncionarioSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_FUNCIONARIO, ORMConstants.KEY_FUNCIONARIO_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdCiudad());
+		return String.valueOf(getId());
 	}
 	
 }

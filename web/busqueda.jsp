@@ -65,7 +65,7 @@
                     <tbody>
                         <c:forEach items="${busqueda}" var="element">    
                             <tr>
-                                <td> <input name="nombre" type="text" value="${element.codigo}" disabled></td>
+                                <td> <input name="idLibro" type="text" value="${element.id}" disabled></td>
                                 <td> <input name="rut" type="text" value="${sessionScope.usuario.RUN}" disabled></td>
                                 <td>${element.nombre}</td>
                                 <td>${element.numeroDePaginas}</td>

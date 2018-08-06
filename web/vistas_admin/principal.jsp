@@ -3,7 +3,7 @@
 <%
     HttpSession sesion = request.getSession();
 
-    if (sesion.getAttribute("usuario") == null) {
+    if (sesion.getAttribute("usuario") == null || !sesion.getAttribute("tipoUsuario").equals("administrador")) {
         response.sendRedirect("index.html");
     }
 %>

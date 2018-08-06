@@ -26,17 +26,17 @@ public class ClienteDeBiblioteca implements Serializable {
 		ClienteDeBiblioteca clientedebiblioteca = (ClienteDeBiblioteca)aObj;
 		if (getId() != clientedebiblioteca.getId())
 			return false;
-		if (getClienteRUN() == null) {
-			if (clientedebiblioteca.getClienteRUN() != null)
-				return false;
-		}
-		else if (!getClienteRUN().equals(clientedebiblioteca.getClienteRUN()))
-			return false;
 		if (getBibliotecaidBiblioteca() == null) {
 			if (clientedebiblioteca.getBibliotecaidBiblioteca() != null)
 				return false;
 		}
 		else if (!getBibliotecaidBiblioteca().equals(clientedebiblioteca.getBibliotecaidBiblioteca()))
+			return false;
+		if (getClienteRUN() == null) {
+			if (clientedebiblioteca.getClienteRUN() != null)
+				return false;
+		}
+		else if (!getClienteRUN().equals(clientedebiblioteca.getClienteRUN()))
 			return false;
 		return true;
 	}
@@ -44,11 +44,11 @@ public class ClienteDeBiblioteca implements Serializable {
 	public int hashCode() {
 		int hashcode = 0;
 		hashcode = hashcode + (int) getId();
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (getClienteRUN().getORMID() == null ? 0 : getClienteRUN().getORMID().hashCode());
-		}
 		if (getBibliotecaidBiblioteca() != null) {
-			hashcode = hashcode + (getBibliotecaidBiblioteca().getORMID() == null ? 0 : getBibliotecaidBiblioteca().getORMID().hashCode());
+			hashcode = hashcode + (int) getBibliotecaidBiblioteca().getORMID();
+		}
+		if (getClienteRUN() != null) {
+			hashcode = hashcode + (int) getClienteRUN().getORMID();
 		}
 		return hashcode;
 	}
@@ -72,28 +72,28 @@ public class ClienteDeBiblioteca implements Serializable {
 	
 	private int id;
 	
-	private modelo.Cliente clienteRUN;
-	
-	private String clienteRUNId;
-	
-	private void setClienteRUNId(String value) {
-		this.clienteRUNId = value;
-	}
-	
-	public String getClienteRUNId() {
-		return clienteRUNId;
-	}
-	
 	private modelo.Biblioteca bibliotecaidBiblioteca;
 	
-	private String bibliotecaidBibliotecaId;
+	private int bibliotecaidBibliotecaId;
 	
-	private void setBibliotecaidBibliotecaId(String value) {
+	private void setBibliotecaidBibliotecaId(int value) {
 		this.bibliotecaidBibliotecaId = value;
 	}
 	
-	public String getBibliotecaidBibliotecaId() {
+	public int getBibliotecaidBibliotecaId() {
 		return bibliotecaidBibliotecaId;
+	}
+	
+	private modelo.Cliente clienteRUN;
+	
+	private int clienteRUNId;
+	
+	private void setClienteRUNId(int value) {
+		this.clienteRUNId = value;
+	}
+	
+	public int getClienteRUNId() {
+		return clienteRUNId;
 	}
 	
 	public void setId(int value) {
@@ -153,7 +153,7 @@ public class ClienteDeBiblioteca implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getId() + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())) + " " + ((getBibliotecaidBiblioteca() == null) ? "" : String.valueOf(getBibliotecaidBiblioteca().getORMID())));
+		return String.valueOf(getId() + " " + ((getBibliotecaidBiblioteca() == null) ? "" : String.valueOf(getBibliotecaidBiblioteca().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
 	}
 	
 }

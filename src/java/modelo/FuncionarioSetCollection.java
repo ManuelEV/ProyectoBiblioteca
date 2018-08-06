@@ -70,6 +70,7 @@ public class FuncionarioSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>id</li>
 	 * <li>RUN</li>
 	 * <li>nombre</li>
 	 * <li>apellidoMaterno</li>
@@ -92,6 +93,7 @@ public class FuncionarioSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
+	 * <li>id</li>
 	 * <li>RUN</li>
 	 * <li>nombre</li>
 	 * <li>apellidoMaterno</li>

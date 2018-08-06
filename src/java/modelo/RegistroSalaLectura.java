@@ -24,13 +24,7 @@ public class RegistroSalaLectura implements Serializable {
 		if (!(aObj instanceof RegistroSalaLectura))
 			return false;
 		RegistroSalaLectura registrosalalectura = (RegistroSalaLectura)aObj;
-		if (getIdRegistro() != registrosalalectura.getIdRegistro())
-			return false;
-		if (getClienteRUN() == null) {
-			if (registrosalalectura.getClienteRUN() != null)
-				return false;
-		}
-		else if (!getClienteRUN().equals(registrosalalectura.getClienteRUN()))
+		if (getId() != registrosalalectura.getId())
 			return false;
 		if (getSalaDeLecturaidSala() == null) {
 			if (registrosalalectura.getSalaDeLecturaidSala() != null)
@@ -38,17 +32,23 @@ public class RegistroSalaLectura implements Serializable {
 		}
 		else if (!getSalaDeLecturaidSala().equals(registrosalalectura.getSalaDeLecturaidSala()))
 			return false;
+		if (getClienteRUN() == null) {
+			if (registrosalalectura.getClienteRUN() != null)
+				return false;
+		}
+		else if (!getClienteRUN().equals(registrosalalectura.getClienteRUN()))
+			return false;
 		return true;
 	}
 	
 	public int hashCode() {
 		int hashcode = 0;
-		hashcode = hashcode + (int) getIdRegistro();
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (getClienteRUN().getORMID() == null ? 0 : getClienteRUN().getORMID().hashCode());
-		}
+		hashcode = hashcode + (int) getId();
 		if (getSalaDeLecturaidSala() != null) {
-			hashcode = hashcode + (getSalaDeLecturaidSala().getORMID() == null ? 0 : getSalaDeLecturaidSala().getORMID().hashCode());
+			hashcode = hashcode + (int) getSalaDeLecturaidSala().getORMID();
+		}
+		if (getClienteRUN() != null) {
+			hashcode = hashcode + (int) getClienteRUN().getORMID();
 		}
 		return hashcode;
 	}
@@ -70,7 +70,7 @@ public class RegistroSalaLectura implements Serializable {
 		
 	};
 	
-	private int idRegistro;
+	private int id;
 	
 	private java.util.Date fechaRegistro;
 	
@@ -78,36 +78,36 @@ public class RegistroSalaLectura implements Serializable {
 	
 	private java.sql.Time horaRegistro;
 	
-	private modelo.Cliente clienteRUN;
-	
-	private String clienteRUNId;
-	
-	private void setClienteRUNId(String value) {
-		this.clienteRUNId = value;
-	}
-	
-	public String getClienteRUNId() {
-		return clienteRUNId;
-	}
-	
 	private modelo.SalaDeLectura salaDeLecturaidSala;
 	
-	private String salaDeLecturaidSalaId;
+	private int salaDeLecturaidSalaId;
 	
-	private void setSalaDeLecturaidSalaId(String value) {
+	private void setSalaDeLecturaidSalaId(int value) {
 		this.salaDeLecturaidSalaId = value;
 	}
 	
-	public String getSalaDeLecturaidSalaId() {
+	public int getSalaDeLecturaidSalaId() {
 		return salaDeLecturaidSalaId;
 	}
 	
-	public void setIdRegistro(int value) {
-		this.idRegistro = value;
+	private modelo.Cliente clienteRUN;
+	
+	private int clienteRUNId;
+	
+	private void setClienteRUNId(int value) {
+		this.clienteRUNId = value;
 	}
 	
-	public int getIdRegistro() {
-		return idRegistro;
+	public int getClienteRUNId() {
+		return clienteRUNId;
+	}
+	
+	public void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
 	}
 	
 	public void setFechaRegistro(java.util.Date value) {
@@ -183,7 +183,7 @@ public class RegistroSalaLectura implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getIdRegistro() + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())) + " " + ((getSalaDeLecturaidSala() == null) ? "" : String.valueOf(getSalaDeLecturaidSala().getORMID())));
+		return String.valueOf(getId() + " " + ((getSalaDeLecturaidSala() == null) ? "" : String.valueOf(getSalaDeLecturaidSala().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
 	}
 	
 }

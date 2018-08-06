@@ -19,19 +19,19 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class SalaDeLecturaCriteria extends AbstractORMCriteria {
-	public final StringExpression idSala;
+	public final IntegerExpression id;
 	public final IntegerExpression capacidad;
 	public final StringExpression nombre;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
 	public final CollectionExpression registroSalaLectura;
 	
 	public SalaDeLecturaCriteria(Criteria criteria) {
 		super(criteria);
-		idSala = new StringExpression("idSala", this);
+		id = new IntegerExpression("id", this);
 		capacidad = new IntegerExpression("capacidad", this);
 		nombre = new StringExpression("nombre", this);
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this);
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this);
 		idBiblioteca = new AssociationExpression("idBiblioteca", this);
 		registroSalaLectura = new CollectionExpression("ORM_RegistroSalaLectura", this);
 	}

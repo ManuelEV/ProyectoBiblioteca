@@ -40,5 +40,6 @@ License Type: Academic
 		<mapping resource="ormmapping/modelo/SalaDeLectura.hbm.xml" />
 		<mapping resource="ormmapping/modelo/SolicitudComputador.hbm.xml" />
 		<mapping resource="ormmapping/modelo/SolicitudLibro.hbm.xml" />
+		<mapping resource="ormmapping/modelo/Usuario.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

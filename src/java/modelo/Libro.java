@@ -52,7 +52,7 @@ public class Libro {
 		
 	};
 	
-	private String codigo;
+	private int id;
 	
 	private String nombre;
 	
@@ -88,16 +88,16 @@ public class Libro {
 	
 	private java.util.Set ORM_autores = new java.util.HashSet();
 	
-	public void setCodigo(String value) {
-		this.codigo = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getCodigo() {
-		return codigo;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getCodigo();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setNombre(String value) {
@@ -275,7 +275,7 @@ public class Libro {
 	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_AUTORES, ORMConstants.KEY_AUTORES_LIBROCODIGO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getCodigo());
+		return String.valueOf(getId());
 	}
 	
 }

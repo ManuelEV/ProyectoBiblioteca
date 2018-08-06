@@ -19,45 +19,45 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class SolicitudLibroDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression idSolicitud;
+	public final IntegerExpression id;
 	public final DateExpression fechaDeSolicitud;
 	public final TimeExpression horaDeSolicitud;
 	public final DateExpression fechaEntregaLimite;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression codigoLibroId;
+	public final IntegerExpression codigoLibroId;
 	public final AssociationExpression codigoLibro;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public SolicitudLibroDetachedCriteria() {
 		super(modelo.SolicitudLibro.class, modelo.SolicitudLibroCriteria.class);
-		idSolicitud = new IntegerExpression("idSolicitud", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this.getDetachedCriteria());
 		horaDeSolicitud = new TimeExpression("horaDeSolicitud", this.getDetachedCriteria());
 		fechaEntregaLimite = new DateExpression("fechaEntregaLimite", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		codigoLibroId = new StringExpression("ORM_CodigoLibro.codigo", this.getDetachedCriteria());
+		codigoLibroId = new IntegerExpression("ORM_CodigoLibro.id", this.getDetachedCriteria());
 		codigoLibro = new AssociationExpression("ORM_CodigoLibro", this.getDetachedCriteria());
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public SolicitudLibroDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.SolicitudLibroCriteria.class);
-		idSolicitud = new IntegerExpression("idSolicitud", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this.getDetachedCriteria());
 		horaDeSolicitud = new TimeExpression("horaDeSolicitud", this.getDetachedCriteria());
 		fechaEntregaLimite = new DateExpression("fechaEntregaLimite", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		codigoLibroId = new StringExpression("ORM_CodigoLibro.codigo", this.getDetachedCriteria());
+		codigoLibroId = new IntegerExpression("ORM_CodigoLibro.id", this.getDetachedCriteria());
 		codigoLibro = new AssociationExpression("ORM_CodigoLibro", this.getDetachedCriteria());
-	}
-	
-	public ClienteDetachedCriteria createClienteRUNCriteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public LibroDetachedCriteria createCodigoLibroCriteria() {
 		return new LibroDetachedCriteria(createCriteria("ORM_CodigoLibro"));
+	}
+	
+	public ClienteDetachedCriteria createClienteRUNCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public SolicitudLibro uniqueSolicitudLibro(PersistentSession session) {

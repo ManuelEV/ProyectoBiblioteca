@@ -34,6 +34,8 @@ public class Funcionario {
 		
 	};
 	
+	private int id;
+	
 	private String RUN;
 	
 	private String nombre;
@@ -68,10 +70,6 @@ public class Funcionario {
 	
 	public String getRUN() {
 		return RUN;
-	}
-	
-	public String getORMID() {
-		return getRUN();
 	}
 	
 	public void setNombre(String value) {
@@ -170,6 +168,18 @@ public class Funcionario {
 		return correoElectronico;
 	}
 	
+	private void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public int getORMID() {
+		return getId();
+	}
+	
 	public void setIdCiudad(modelo.Ciudad value) {
 		if (idCiudad != null) {
 			idCiudad.funcionario.remove(this);
@@ -219,7 +229,7 @@ public class Funcionario {
 	}
 	
 	public String toString() {
-		return String.valueOf(getRUN());
+		return String.valueOf(getId());
 	}
 	
 }

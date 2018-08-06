@@ -19,23 +19,23 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class SolicitudComputadorCriteria extends AbstractORMCriteria {
-	public final IntegerExpression idSolicitud;
+	public final IntegerExpression id;
 	public final DateExpression fechaDeSolicitud;
 	public final TimeExpression horaSolicitud;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression idComputadorId;
+	public final IntegerExpression idComputadorId;
 	public final AssociationExpression idComputador;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public SolicitudComputadorCriteria(Criteria criteria) {
 		super(criteria);
-		idSolicitud = new IntegerExpression("idSolicitud", this);
+		id = new IntegerExpression("id", this);
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this);
 		horaSolicitud = new TimeExpression("horaSolicitud", this);
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
-		idComputadorId = new StringExpression("ORM_IdComputador.idComputador", this);
+		idComputadorId = new IntegerExpression("ORM_IdComputador.id", this);
 		idComputador = new AssociationExpression("ORM_IdComputador", this);
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
 	}
 	
 	public SolicitudComputadorCriteria(PersistentSession session) {
@@ -46,12 +46,12 @@ public class SolicitudComputadorCriteria extends AbstractORMCriteria {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
-	}
-	
 	public ComputadorCriteria createIdComputadorCriteria() {
 		return new ComputadorCriteria(createCriteria("ORM_IdComputador"));
+	}
+	
+	public ClienteCriteria createClienteRUNCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public SolicitudComputador uniqueSolicitudComputador() {

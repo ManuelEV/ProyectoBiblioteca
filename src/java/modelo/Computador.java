@@ -42,7 +42,7 @@ public class Computador {
 		
 	};
 	
-	private String idComputador;
+	private int id;
 	
 	private String marca;
 	
@@ -54,16 +54,16 @@ public class Computador {
 	
 	private java.util.Set ORM_solicitudComputador = new java.util.HashSet();
 	
-	public void setIdComputador(String value) {
-		this.idComputador = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdComputador() {
-		return idComputador;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdComputador();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setMarca(String value) {
@@ -125,7 +125,7 @@ public class Computador {
 	public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_COMPUTADOR_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCOMPUTADOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdComputador());
+		return String.valueOf(getId());
 	}
 	
 }

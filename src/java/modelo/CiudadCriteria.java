@@ -19,9 +19,9 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class CiudadCriteria extends AbstractORMCriteria {
-	public final StringExpression idCiudad;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
-	public final StringExpression idPaisId;
+	public final IntegerExpression idPaisId;
 	public final AssociationExpression idPais;
 	public final CollectionExpression cliente;
 	public final CollectionExpression biblioteca;
@@ -29,9 +29,9 @@ public class CiudadCriteria extends AbstractORMCriteria {
 	
 	public CiudadCriteria(Criteria criteria) {
 		super(criteria);
-		idCiudad = new StringExpression("idCiudad", this);
+		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
-		idPaisId = new StringExpression("idPais.idPais", this);
+		idPaisId = new IntegerExpression("idPais.id", this);
 		idPais = new AssociationExpression("idPais", this);
 		cliente = new CollectionExpression("ORM_Cliente", this);
 		biblioteca = new CollectionExpression("ORM_Biblioteca", this);

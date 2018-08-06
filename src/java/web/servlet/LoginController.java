@@ -57,18 +57,27 @@ public class LoginController extends HttpServlet {
         
         try {
             //PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
-            String query="correoElectronico = '"+mail+"'";
+            String query="";
+            
+            
+            query="correo = '"+mail+"'";
+            
+            modelo.Usuario user = modelo.UsuarioDAO.loadUsuarioByQuery(query, null);
+            
+            query="Usuarioid = '"+user.getId()+"'";
+            
+            
             modelo.Cliente cliente = modelo.ClienteDAO.loadClienteByQuery(query, null);
             
-            String privilegio = cliente.getPrivilegio();
+            String privilegio = user.getTipoUsuario();
             
-            if (cliente!=null && password.equals(cliente.getPassword()) && sesion.getAttribute("usuario")==null && privilegio.equals("general")) {
+            if (cliente!=null && password.equals(user.getContraseña()) && sesion.getAttribute("usuario")==null && privilegio.equals("cliente")) {
                 sesion.setAttribute("usuario",cliente);
                 //url = "loginExitoso.jsp";
                 //dispatcher = request.getRequestDispatcher("principal.html");
                 response.sendRedirect("/Biblioteca/principal");
                 
-            }else if(cliente!=null && password.equals(cliente.getPassword()) && sesion.getAttribute("usuario")==null && privilegio.equals("administrador")){
+            }else if(cliente!=null && password.equals(user.getContraseña()) && sesion.getAttribute("usuario")==null && privilegio.equals("administrador")){
                 sesion.setAttribute("usuario",cliente);
                 response.sendRedirect("/Biblioteca/vistas_admin/principal.jsp");
                 

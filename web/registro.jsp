@@ -47,8 +47,8 @@
                 </ul>
             </div>
         </nav>
-        
-        
+
+
 
         <div class="bootstrap-iso" style="background: linear-gradient(-90deg, #ffcc00, #ff6600);">
             <br><br><br><br>
@@ -57,33 +57,30 @@
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
 
-                        <form id="formulario" method="post" action="Reserva">
+                        <form id="formulario" method="post" action="Registro">
                             <fieldset>
 
-                                <label>Rut</label><br><input type="text" class="form-control" name="rut" value="" /><br>
-                                <label>Correo electrónico</label><br><input type="text" class="form-control" name="correo" value="" /><br>
-                                <label>Password</label><br><input type="password" class="form-control" name="password" value="" /><br>
-                                <label>Primer nombre</label><br><input type="text" class="form-control" name="nombre" value="" /><br>
-                                <label>Primer Apellido</label><br><input type="text" class="form-control" name="primerApellido" value="" /><br>
-                                <label>Segundo Apellido</label><br><input type="text" class="form-control" name="segundoApellido" value="" /><br>
-                                <label>Estado de trabajo</label><br><input type="text" class="form-control" name="estadoTrabajo" value="" /><br>
-                                <label>Área de interés</label><br><input type="text" class="form-control" name="areaInteres" value="" /><br>
-                                
-                                <label>Teléfono</label><br><input type="text" class="form-control" name="telefono" value="" /><br>
-                                <label>Celular</label><br><input type="text" class="form-control" name="celular" value="" /><br>
-                                
-                                <!-- ESTO PODRIAMOS DEJARLO COMO 0 POR DEFECTO DIRECTAMENTE EN EL CONTROLADOR(SERVLET)-->
-                                <!--<label>Días de atraso</label><br><input type="text" class="form-control" name="diasAtraso" value="" /><br>-->
-                                
-
-                                <label class="control-label" for="date">Fecha de nacimiento</label>
-                                <input class="form-control" id="date" name="date" placeholder="YYY/MM/DD" type="text"/><br>
+                                <label>Correo</label><br><input type="mail" class="form-control" name="email" value="" /><br>
+                                <label>Usuario</label><br><input type="text" class="form-control" name="usuario" value="" /><br>
+                                <label>Contraseña</label><br><input type="password" class="form-control" name="password" value="" /><br>
+                                <label>RUN</label><br><input type="text" class="form-control" name="run" value="" /><br>
+                                <label>Nombre</label><br><input type="text" class="form-control" name="nombre" value="" /><br>
+                                <label>Apellido Paterno</label><br><input type="text" class="form-control" name="apellidoPaterno" value="" /><br>
+                                <label>Apellido Materno</label><br><input type="text" class="form-control" name="apellidoMaterno" value="" /><br>
 
                                 <label>Género</label><br><select name="genero">
                                     <option>Masculino</option>
                                     <option>Femenino</option>
                                 </select><br>
-                                
+
+                                <label class="control-label" for="date">Fecha de nacimiento</label>
+                                <input class="form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text"/><br>
+
+                                <label>Estado de trabajo</label><br><input type="text" class="form-control" name="estadoDeTrabajo" value="" /><br>
+                                <label>Area de interes</label><br><input type="text" class="form-control" name="areaDeInteres" value="" /><br>
+                                <label>Numero de celular</label><br><input type="text" class="form-control" name="numeroDeCelular" value="" /><br>
+                                <label>Numero de telefono</label><br><input type="text" class="form-control" name="numeroDeTelefono" value="" /><br>
+
                                 <label>Ciudad</label><br><select name="ciudad">
                                     <option>Temuco</option>
                                     <option>Santiago</option>
@@ -92,12 +89,22 @@
                                     <option>New York</option>
                                 </select><br>
 
+                                <!-- ESTO PODRIAMOS DEJARLO COMO 0 POR DEFECTO DIRECTAMENTE EN EL CONTROLADOR(SERVLET)-->
+                                <!--<label>Días de atraso</label><br><input type="text" class="form-control" name="diasAtraso" value="" /><br>-->
+
+
+
+
+
+
+
+
                             </fieldset>
                             <br>
 
                             <input type="button" value="Cancelar" name="enviar" class="btn btn-danger" />
                             <input type="submit" value="Enviar" name="enviar" class="btn btn-primary" />
-                            
+
                             <br>
                             <br><br><br><br><br><br><br><br>
 

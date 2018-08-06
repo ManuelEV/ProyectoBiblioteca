@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class ComputadorDAO {
-	public static Computador loadComputadorByORMID(String idComputador) throws PersistentException {
+	public static Computador loadComputadorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadComputadorByORMID(session, idComputador);
+			return loadComputadorByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador getComputadorByORMID(String idComputador) throws PersistentException {
+	public static Computador getComputadorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getComputadorByORMID(session, idComputador);
+			return getComputadorByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador loadComputadorByORMID(String idComputador, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Computador loadComputadorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadComputadorByORMID(session, idComputador, lockMode);
+			return loadComputadorByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador getComputadorByORMID(String idComputador, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Computador getComputadorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getComputadorByORMID(session, idComputador, lockMode);
+			return getComputadorByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador loadComputadorByORMID(PersistentSession session, String idComputador) throws PersistentException {
+	public static Computador loadComputadorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Computador) session.load(modelo.Computador.class, idComputador);
+			return (Computador) session.load(modelo.Computador.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador getComputadorByORMID(PersistentSession session, String idComputador) throws PersistentException {
+	public static Computador getComputadorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Computador) session.get(modelo.Computador.class, idComputador);
+			return (Computador) session.get(modelo.Computador.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador loadComputadorByORMID(PersistentSession session, String idComputador, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Computador loadComputadorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Computador) session.load(modelo.Computador.class, idComputador, lockMode);
+			return (Computador) session.load(modelo.Computador.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class ComputadorDAO {
 		}
 	}
 	
-	public static Computador getComputadorByORMID(PersistentSession session, String idComputador, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Computador getComputadorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Computador) session.get(modelo.Computador.class, idComputador, lockMode);
+			return (Computador) session.get(modelo.Computador.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

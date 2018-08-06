@@ -70,7 +70,7 @@ public class LibroSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>codigo</li>
+	 * <li>id</li>
 	 * <li>nombre</li>
 	 * <li>numeroDePaginas</li>
 	 * <li>disponibilidad</li>
@@ -93,7 +93,7 @@ public class LibroSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>codigo</li>
+	 * <li>id</li>
 	 * <li>nombre</li>
 	 * <li>numeroDePaginas</li>
 	 * <li>disponibilidad</li>

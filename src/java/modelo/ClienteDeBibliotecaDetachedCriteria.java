@@ -20,35 +20,35 @@ import org.orm.criteria.*;
 
 public class ClienteDeBibliotecaDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression id;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression bibliotecaidBibliotecaId;
+	public final IntegerExpression bibliotecaidBibliotecaId;
 	public final AssociationExpression bibliotecaidBiblioteca;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public ClienteDeBibliotecaDetachedCriteria() {
 		super(modelo.ClienteDeBiblioteca.class, modelo.ClienteDeBibliotecaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		bibliotecaidBibliotecaId = new StringExpression("ORM_BibliotecaidBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		bibliotecaidBibliotecaId = new IntegerExpression("ORM_BibliotecaidBiblioteca.id", this.getDetachedCriteria());
 		bibliotecaidBiblioteca = new AssociationExpression("ORM_BibliotecaidBiblioteca", this.getDetachedCriteria());
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public ClienteDeBibliotecaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.ClienteDeBibliotecaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		bibliotecaidBibliotecaId = new StringExpression("ORM_BibliotecaidBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		bibliotecaidBibliotecaId = new IntegerExpression("ORM_BibliotecaidBiblioteca.id", this.getDetachedCriteria());
 		bibliotecaidBiblioteca = new AssociationExpression("ORM_BibliotecaidBiblioteca", this.getDetachedCriteria());
-	}
-	
-	public ClienteDetachedCriteria createClienteRUNCriteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public BibliotecaDetachedCriteria createBibliotecaidBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("ORM_BibliotecaidBiblioteca"));
+	}
+	
+	public ClienteDetachedCriteria createClienteRUNCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public ClienteDeBiblioteca uniqueClienteDeBiblioteca(PersistentSession session) {

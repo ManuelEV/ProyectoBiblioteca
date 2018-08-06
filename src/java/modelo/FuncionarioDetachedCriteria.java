@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
+	public final IntegerExpression id;
 	public final StringExpression RUN;
 	public final StringExpression nombre;
 	public final StringExpression apellidoMaterno;
@@ -31,13 +32,14 @@ public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final IntegerExpression numeroCelular;
 	public final IntegerExpression numeroTelefono;
 	public final StringExpression correoElectronico;
-	public final StringExpression idCiudadId;
+	public final IntegerExpression idCiudadId;
 	public final AssociationExpression idCiudad;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
 	
 	public FuncionarioDetachedCriteria() {
 		super(modelo.Funcionario.class, modelo.FuncionarioCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidoMaterno = new StringExpression("apellidoMaterno", this.getDetachedCriteria());
@@ -50,14 +52,15 @@ public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		numeroCelular = new IntegerExpression("numeroCelular", this.getDetachedCriteria());
 		numeroTelefono = new IntegerExpression("numeroTelefono", this.getDetachedCriteria());
 		correoElectronico = new StringExpression("correoElectronico", this.getDetachedCriteria());
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this.getDetachedCriteria());
+		idCiudadId = new IntegerExpression("idCiudad.id", this.getDetachedCriteria());
 		idCiudad = new AssociationExpression("idCiudad", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 	}
 	
 	public FuncionarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.FuncionarioCriteria.class);
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		apellidoMaterno = new StringExpression("apellidoMaterno", this.getDetachedCriteria());
@@ -70,9 +73,9 @@ public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		numeroCelular = new IntegerExpression("numeroCelular", this.getDetachedCriteria());
 		numeroTelefono = new IntegerExpression("numeroTelefono", this.getDetachedCriteria());
 		correoElectronico = new StringExpression("correoElectronico", this.getDetachedCriteria());
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this.getDetachedCriteria());
+		idCiudadId = new IntegerExpression("idCiudad.id", this.getDetachedCriteria());
 		idCiudad = new AssociationExpression("idCiudad", this.getDetachedCriteria());
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this.getDetachedCriteria());
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 	}
 	

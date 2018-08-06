@@ -19,21 +19,21 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class ComputadorCriteria extends AbstractORMCriteria {
-	public final StringExpression idComputador;
+	public final IntegerExpression id;
 	public final StringExpression marca;
 	public final DateExpression fechaDeAdquisicion;
 	public final DateExpression fechaUltimaSolicitud;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
 	public final CollectionExpression solicitudComputador;
 	
 	public ComputadorCriteria(Criteria criteria) {
 		super(criteria);
-		idComputador = new StringExpression("idComputador", this);
+		id = new IntegerExpression("id", this);
 		marca = new StringExpression("marca", this);
 		fechaDeAdquisicion = new DateExpression("fechaDeAdquisicion", this);
 		fechaUltimaSolicitud = new DateExpression("fechaUltimaSolicitud", this);
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this);
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this);
 		idBiblioteca = new AssociationExpression("idBiblioteca", this);
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this);
 	}

@@ -70,7 +70,7 @@ public class EntregaDeLibroSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idDevolucion</li>
+	 * <li>id</li>
 	 * <li>fechaDeDevolucion</li>
 	 * <li>diasDeAtraso</li>
 	 * </ul>
@@ -83,7 +83,7 @@ public class EntregaDeLibroSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idDevolucion</li>
+	 * <li>id</li>
 	 * <li>fechaDeDevolucion</li>
 	 * <li>diasDeAtraso</li>
 	 * </ul>

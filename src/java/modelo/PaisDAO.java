@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class PaisDAO {
-	public static Pais loadPaisByORMID(String idPais) throws PersistentException {
+	public static Pais loadPaisByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadPaisByORMID(session, idPais);
+			return loadPaisByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais getPaisByORMID(String idPais) throws PersistentException {
+	public static Pais getPaisByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getPaisByORMID(session, idPais);
+			return getPaisByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais loadPaisByORMID(String idPais, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Pais loadPaisByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadPaisByORMID(session, idPais, lockMode);
+			return loadPaisByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais getPaisByORMID(String idPais, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Pais getPaisByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getPaisByORMID(session, idPais, lockMode);
+			return getPaisByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais loadPaisByORMID(PersistentSession session, String idPais) throws PersistentException {
+	public static Pais loadPaisByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Pais) session.load(modelo.Pais.class, idPais);
+			return (Pais) session.load(modelo.Pais.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais getPaisByORMID(PersistentSession session, String idPais) throws PersistentException {
+	public static Pais getPaisByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Pais) session.get(modelo.Pais.class, idPais);
+			return (Pais) session.get(modelo.Pais.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais loadPaisByORMID(PersistentSession session, String idPais, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Pais loadPaisByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Pais) session.load(modelo.Pais.class, idPais, lockMode);
+			return (Pais) session.load(modelo.Pais.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class PaisDAO {
 		}
 	}
 	
-	public static Pais getPaisByORMID(PersistentSession session, String idPais, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Pais getPaisByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Pais) session.get(modelo.Pais.class, idPais, lockMode);
+			return (Pais) session.get(modelo.Pais.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

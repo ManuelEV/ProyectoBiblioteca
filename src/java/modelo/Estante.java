@@ -46,7 +46,7 @@ public class Estante {
 		
 	};
 	
-	private String idEstante;
+	private int id;
 	
 	private int capacidadAproximada;
 	
@@ -56,16 +56,16 @@ public class Estante {
 	
 	private java.util.Set ORM_libro = new java.util.HashSet();
 	
-	public void setIdEstante(String value) {
-		this.idEstante = value;
+	private void setId(int value) {
+		this.id = value;
 	}
 	
-	public String getIdEstante() {
-		return idEstante;
+	public int getId() {
+		return id;
 	}
 	
-	public String getORMID() {
-		return getIdEstante();
+	public int getORMID() {
+		return getId();
 	}
 	
 	public void setCapacidadAproximada(int value) {
@@ -135,7 +135,7 @@ public class Estante {
 	public final modelo.LibroSetCollection libro = new modelo.LibroSetCollection(this, _ormAdapter, ORMConstants.KEY_ESTANTE_LIBRO, ORMConstants.KEY_LIBRO_IDESTANTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
-		return String.valueOf(getIdEstante());
+		return String.valueOf(getId());
 	}
 	
 }

@@ -19,14 +19,14 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class CategoriaCriteria extends AbstractORMCriteria {
-	public final StringExpression idCategoria;
+	public final IntegerExpression id;
 	public final StringExpression nombre;
 	public final CollectionExpression estante;
 	public final CollectionExpression libro;
 	
 	public CategoriaCriteria(Criteria criteria) {
 		super(criteria);
-		idCategoria = new StringExpression("idCategoria", this);
+		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
 		estante = new CollectionExpression("ORM_Estante", this);
 		libro = new CollectionExpression("ORM_Libro", this);

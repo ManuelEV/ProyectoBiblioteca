@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class FuncionarioCriteria extends AbstractORMCriteria {
+	public final IntegerExpression id;
 	public final StringExpression RUN;
 	public final StringExpression nombre;
 	public final StringExpression apellidoMaterno;
@@ -31,13 +32,14 @@ public class FuncionarioCriteria extends AbstractORMCriteria {
 	public final IntegerExpression numeroCelular;
 	public final IntegerExpression numeroTelefono;
 	public final StringExpression correoElectronico;
-	public final StringExpression idCiudadId;
+	public final IntegerExpression idCiudadId;
 	public final AssociationExpression idCiudad;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
 	
 	public FuncionarioCriteria(Criteria criteria) {
 		super(criteria);
+		id = new IntegerExpression("id", this);
 		RUN = new StringExpression("RUN", this);
 		nombre = new StringExpression("nombre", this);
 		apellidoMaterno = new StringExpression("apellidoMaterno", this);
@@ -50,9 +52,9 @@ public class FuncionarioCriteria extends AbstractORMCriteria {
 		numeroCelular = new IntegerExpression("numeroCelular", this);
 		numeroTelefono = new IntegerExpression("numeroTelefono", this);
 		correoElectronico = new StringExpression("correoElectronico", this);
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this);
+		idCiudadId = new IntegerExpression("idCiudad.id", this);
 		idCiudad = new AssociationExpression("idCiudad", this);
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this);
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this);
 		idBiblioteca = new AssociationExpression("idBiblioteca", this);
 	}
 	

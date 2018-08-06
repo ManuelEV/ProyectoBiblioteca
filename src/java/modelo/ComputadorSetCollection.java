@@ -70,7 +70,7 @@ public class ComputadorSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idComputador</li>
+	 * <li>id</li>
 	 * <li>marca</li>
 	 * <li>fechaDeAdquisicion</li>
 	 * <li>fechaUltimaSolicitud</li>
@@ -84,7 +84,7 @@ public class ComputadorSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idComputador</li>
+	 * <li>id</li>
 	 * <li>marca</li>
 	 * <li>fechaDeAdquisicion</li>
 	 * <li>fechaUltimaSolicitud</li>

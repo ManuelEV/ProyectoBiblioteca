@@ -70,7 +70,7 @@ public class BibliotecaSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idBiblioteca</li>
+	 * <li>id</li>
 	 * <li>nombre</li>
 	 * <li>direccion</li>
 	 * <li>propietario</li>
@@ -86,7 +86,7 @@ public class BibliotecaSetCollection extends org.orm.util.ORMSet {
 	/**
 	 * Return an sorted array containing all of the persistent objects in ORMSet
 	 * @param propertyName Name of the property for sorting:<ul>
-	 * <li>idBiblioteca</li>
+	 * <li>id</li>
 	 * <li>nombre</li>
 	 * <li>direccion</li>
 	 * <li>propietario</li>

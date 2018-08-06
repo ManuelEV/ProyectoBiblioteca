@@ -19,6 +19,7 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class ClienteCriteria extends AbstractORMCriteria {
+	public final IntegerExpression id;
 	public final StringExpression RUN;
 	public final StringExpression nombre;
 	public final StringExpression apellidoPaterno;
@@ -31,11 +32,10 @@ public class ClienteCriteria extends AbstractORMCriteria {
 	public final IntegerExpression diasDeAtraso;
 	public final IntegerExpression numeroDeCelular;
 	public final IntegerExpression numeroDeTelefono;
-	public final StringExpression correoElectronico;
-	public final StringExpression idCiudadId;
+	public final IntegerExpression idCiudadId;
 	public final AssociationExpression idCiudad;
-	public final StringExpression password;
-	public final StringExpression privilegio;
+	public final IntegerExpression usuarioId;
+	public final AssociationExpression usuario;
 	public final CollectionExpression solicitudComputador;
 	public final CollectionExpression solicitudLibro;
 	public final CollectionExpression entregaDeLibro;
@@ -44,6 +44,7 @@ public class ClienteCriteria extends AbstractORMCriteria {
 	
 	public ClienteCriteria(Criteria criteria) {
 		super(criteria);
+		id = new IntegerExpression("id", this);
 		RUN = new StringExpression("RUN", this);
 		nombre = new StringExpression("nombre", this);
 		apellidoPaterno = new StringExpression("apellidoPaterno", this);
@@ -56,11 +57,10 @@ public class ClienteCriteria extends AbstractORMCriteria {
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this);
 		numeroDeCelular = new IntegerExpression("numeroDeCelular", this);
 		numeroDeTelefono = new IntegerExpression("numeroDeTelefono", this);
-		correoElectronico = new StringExpression("correoElectronico", this);
-		idCiudadId = new StringExpression("idCiudad.idCiudad", this);
+		idCiudadId = new IntegerExpression("idCiudad.id", this);
 		idCiudad = new AssociationExpression("idCiudad", this);
-		password = new StringExpression("password", this);
-		privilegio = new StringExpression("privilegio", this);
+		usuarioId = new IntegerExpression("usuario.id", this);
+		usuario = new AssociationExpression("usuario", this);
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this);
 		solicitudLibro = new CollectionExpression("ORM_SolicitudLibro", this);
 		entregaDeLibro = new CollectionExpression("ORM_EntregaDeLibro", this);
@@ -78,6 +78,10 @@ public class ClienteCriteria extends AbstractORMCriteria {
 	
 	public CiudadCriteria createIdCiudadCriteria() {
 		return new CiudadCriteria(createCriteria("idCiudad"));
+	}
+	
+	public UsuarioCriteria createUsuarioCriteria() {
+		return new UsuarioCriteria(createCriteria("usuario"));
 	}
 	
 	public SolicitudComputadorCriteria createSolicitudComputadorCriteria() {

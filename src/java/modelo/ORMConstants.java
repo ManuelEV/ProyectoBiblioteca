@@ -32,6 +32,8 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	
 	final int KEY_BIBLIOTECA_SALADELECTURA = -1769102563;
 	
+	final int KEY_BIBLIOTECA_USUARIO = 2049605333;
+	
 	final int KEY_CATEGORIA_ESTANTE = -1719861576;
 	
 	final int KEY_CATEGORIA_LIBRO = 1595419990;
@@ -59,6 +61,8 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	final int KEY_CLIENTE_SOLICITUDCOMPUTADOR = -430373869;
 	
 	final int KEY_CLIENTE_SOLICITUDLIBRO = 1857068099;
+	
+	final int KEY_CLIENTE_USUARIO = 1510096329;
 	
 	final int KEY_COMPUTADOR_IDBIBLIOTECA = 700669004;
 	
@@ -105,5 +109,9 @@ public interface ORMConstants extends org.orm.util.ORMBaseConstants {
 	final int KEY_SOLICITUDLIBRO_CLIENTERUN = 1561208242;
 	
 	final int KEY_SOLICITUDLIBRO_CODIGOLIBRO = 1603793160;
+	
+	final int KEY_USUARIO_CLIENTE1 = -2092077176;
+	
+	final int KEY_USUARIO_IDBIBLIOTECA = 1578342354;
 	
 }

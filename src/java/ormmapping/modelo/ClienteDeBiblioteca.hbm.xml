@@ -8,9 +8,9 @@ License Type: Academic
 	<class name="modelo.ClienteDeBiblioteca" table="ClienteDeBiblioteca" lazy="false">
 		<composite-id>
 			<key-property name="id" column="id" type="integer"/>
-			<key-many-to-one name="ORM_ClienteRUN" column="ClienteRUN" class="modelo.Cliente">
-			</key-many-to-one>
 			<key-many-to-one name="ORM_BibliotecaidBiblioteca" column="bibliotecaidBiblioteca" class="modelo.Biblioteca">
+			</key-many-to-one>
+			<key-many-to-one name="ORM_ClienteRUN" column="Clienteid" class="modelo.Cliente">
 			</key-many-to-one>
 		</composite-id>
 	</class>

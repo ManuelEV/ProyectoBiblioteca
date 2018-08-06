@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class ClienteDeBibliotecaDAO {
-	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca) throws PersistentException {
+	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadClienteDeBibliotecaByORMID(session, id, clienteRUN, bibliotecaidBiblioteca);
+			return loadClienteDeBibliotecaByORMID(session, id, bibliotecaidBiblioteca, clienteRUN);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca) throws PersistentException {
+	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getClienteDeBibliotecaByORMID(session, id, clienteRUN, bibliotecaidBiblioteca);
+			return getClienteDeBibliotecaByORMID(session, id, bibliotecaidBiblioteca, clienteRUN);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadClienteDeBibliotecaByORMID(session, id, clienteRUN, bibliotecaidBiblioteca, lockMode);
+			return loadClienteDeBibliotecaByORMID(session, id, bibliotecaidBiblioteca, clienteRUN, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getClienteDeBibliotecaByORMID(session, id, clienteRUN, bibliotecaidBiblioteca, lockMode);
+			return getClienteDeBibliotecaByORMID(session, id, bibliotecaidBiblioteca, clienteRUN, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,12 +63,12 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca) throws PersistentException {
+	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			ClienteDeBiblioteca clientedebiblioteca = new modelo.ClienteDeBiblioteca();
 			clientedebiblioteca.setId(id);
-			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			clientedebiblioteca.setORM_BibliotecaidBiblioteca(bibliotecaidBiblioteca);
+			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			
 			return (ClienteDeBiblioteca) session.load(modelo.ClienteDeBiblioteca.class, clientedebiblioteca);
 		}
@@ -78,12 +78,12 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca) throws PersistentException {
+	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			ClienteDeBiblioteca clientedebiblioteca = new modelo.ClienteDeBiblioteca();
 			clientedebiblioteca.setId(id);
-			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			clientedebiblioteca.setORM_BibliotecaidBiblioteca(bibliotecaidBiblioteca);
+			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			
 			return (ClienteDeBiblioteca) session.get(modelo.ClienteDeBiblioteca.class, clientedebiblioteca);
 		}
@@ -93,12 +93,12 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static ClienteDeBiblioteca loadClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			ClienteDeBiblioteca clientedebiblioteca = new modelo.ClienteDeBiblioteca();
 			clientedebiblioteca.setId(id);
-			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			clientedebiblioteca.setORM_BibliotecaidBiblioteca(bibliotecaidBiblioteca);
+			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			
 			return (ClienteDeBiblioteca) session.load(modelo.ClienteDeBiblioteca.class, clientedebiblioteca, lockMode);
 		}
@@ -108,12 +108,12 @@ public class ClienteDeBibliotecaDAO {
 		}
 	}
 	
-	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Cliente clienteRUN, modelo.Biblioteca bibliotecaidBiblioteca, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static ClienteDeBiblioteca getClienteDeBibliotecaByORMID(PersistentSession session, int id, modelo.Biblioteca bibliotecaidBiblioteca, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			ClienteDeBiblioteca clientedebiblioteca = new modelo.ClienteDeBiblioteca();
 			clientedebiblioteca.setId(id);
-			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			clientedebiblioteca.setORM_BibliotecaidBiblioteca(bibliotecaidBiblioteca);
+			clientedebiblioteca.setORM_ClienteRUN(clienteRUN);
 			
 			return (ClienteDeBiblioteca) session.get(modelo.ClienteDeBiblioteca.class, clientedebiblioteca, lockMode);
 		}
@@ -343,17 +343,17 @@ public class ClienteDeBibliotecaDAO {
 	
 	public static boolean deleteAndDissociate(modelo.ClienteDeBiblioteca clienteDeBiblioteca)throws PersistentException {
 		try {
-			modelo.Cliente clienteRUN = clienteDeBiblioteca.getClienteRUN();
-			if (clienteDeBiblioteca.getClienteRUN() != null) {
-				clienteDeBiblioteca.getClienteRUN().clienteDeBiblioteca.remove(clienteDeBiblioteca);
-			}
-			clienteDeBiblioteca.setORM_ClienteRUN(clienteRUN);
-			
 			modelo.Biblioteca bibliotecaidBiblioteca = clienteDeBiblioteca.getBibliotecaidBiblioteca();
 			if (clienteDeBiblioteca.getBibliotecaidBiblioteca() != null) {
 				clienteDeBiblioteca.getBibliotecaidBiblioteca().clienteDeBiblioteca.remove(clienteDeBiblioteca);
 			}
 			clienteDeBiblioteca.setORM_BibliotecaidBiblioteca(bibliotecaidBiblioteca);
+			
+			modelo.Cliente clienteRUN = clienteDeBiblioteca.getClienteRUN();
+			if (clienteDeBiblioteca.getClienteRUN() != null) {
+				clienteDeBiblioteca.getClienteRUN().clienteDeBiblioteca.remove(clienteDeBiblioteca);
+			}
+			clienteDeBiblioteca.setORM_ClienteRUN(clienteRUN);
 			
 			return delete(clienteDeBiblioteca);
 		}
@@ -365,17 +365,17 @@ public class ClienteDeBibliotecaDAO {
 	
 	public static boolean deleteAndDissociate(modelo.ClienteDeBiblioteca clienteDeBiblioteca, org.orm.PersistentSession session)throws PersistentException {
 		try {
-			modelo.Cliente clienteRUN = clienteDeBiblioteca.getClienteRUN();
-			if (clienteDeBiblioteca.getClienteRUN() != null) {
-				clienteDeBiblioteca.getClienteRUN().clienteDeBiblioteca.remove(clienteDeBiblioteca);
-			}
-			clienteDeBiblioteca.setORM_ClienteRUN(clienteRUN);
-			
 			modelo.Biblioteca bibliotecaidBiblioteca = clienteDeBiblioteca.getBibliotecaidBiblioteca();
 			if (clienteDeBiblioteca.getBibliotecaidBiblioteca() != null) {
 				clienteDeBiblioteca.getBibliotecaidBiblioteca().clienteDeBiblioteca.remove(clienteDeBiblioteca);
 			}
 			clienteDeBiblioteca.setORM_BibliotecaidBiblioteca(bibliotecaidBiblioteca);
+			
+			modelo.Cliente clienteRUN = clienteDeBiblioteca.getClienteRUN();
+			if (clienteDeBiblioteca.getClienteRUN() != null) {
+				clienteDeBiblioteca.getClienteRUN().clienteDeBiblioteca.remove(clienteDeBiblioteca);
+			}
+			clienteDeBiblioteca.setORM_ClienteRUN(clienteRUN);
 			
 			try {
 				session.delete(clienteDeBiblioteca);

@@ -19,42 +19,42 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class SolicitudComputadorDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression idSolicitud;
+	public final IntegerExpression id;
 	public final DateExpression fechaDeSolicitud;
 	public final TimeExpression horaSolicitud;
-	public final StringExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
-	public final StringExpression idComputadorId;
+	public final IntegerExpression idComputadorId;
 	public final AssociationExpression idComputador;
+	public final IntegerExpression clienteRUNId;
+	public final AssociationExpression clienteRUN;
 	
 	public SolicitudComputadorDetachedCriteria() {
 		super(modelo.SolicitudComputador.class, modelo.SolicitudComputadorCriteria.class);
-		idSolicitud = new IntegerExpression("idSolicitud", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this.getDetachedCriteria());
 		horaSolicitud = new TimeExpression("horaSolicitud", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		idComputadorId = new StringExpression("ORM_IdComputador.idComputador", this.getDetachedCriteria());
+		idComputadorId = new IntegerExpression("ORM_IdComputador.id", this.getDetachedCriteria());
 		idComputador = new AssociationExpression("ORM_IdComputador", this.getDetachedCriteria());
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public SolicitudComputadorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.SolicitudComputadorCriteria.class);
-		idSolicitud = new IntegerExpression("idSolicitud", this.getDetachedCriteria());
+		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this.getDetachedCriteria());
 		horaSolicitud = new TimeExpression("horaSolicitud", this.getDetachedCriteria());
-		clienteRUNId = new StringExpression("ORM_ClienteRUN.RUN", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
-		idComputadorId = new StringExpression("ORM_IdComputador.idComputador", this.getDetachedCriteria());
+		idComputadorId = new IntegerExpression("ORM_IdComputador.id", this.getDetachedCriteria());
 		idComputador = new AssociationExpression("ORM_IdComputador", this.getDetachedCriteria());
-	}
-	
-	public ClienteDetachedCriteria createClienteRUNCriteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
+		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
+		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
 	}
 	
 	public ComputadorDetachedCriteria createIdComputadorCriteria() {
 		return new ComputadorDetachedCriteria(createCriteria("ORM_IdComputador"));
+	}
+	
+	public ClienteDetachedCriteria createClienteRUNCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
 	}
 	
 	public SolicitudComputador uniqueSolicitudComputador(PersistentSession session) {

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class AutorDAO {
-	public static Autor loadAutorByORMID(String idAutor) throws PersistentException {
+	public static Autor loadAutorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadAutorByORMID(session, idAutor);
+			return loadAutorByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(String idAutor) throws PersistentException {
+	public static Autor getAutorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getAutorByORMID(session, idAutor);
+			return getAutorByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByORMID(String idAutor, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autor loadAutorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadAutorByORMID(session, idAutor, lockMode);
+			return loadAutorByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(String idAutor, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autor getAutorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getAutorByORMID(session, idAutor, lockMode);
+			return getAutorByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByORMID(PersistentSession session, String idAutor) throws PersistentException {
+	public static Autor loadAutorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Autor) session.load(modelo.Autor.class, idAutor);
+			return (Autor) session.load(modelo.Autor.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(PersistentSession session, String idAutor) throws PersistentException {
+	public static Autor getAutorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Autor) session.get(modelo.Autor.class, idAutor);
+			return (Autor) session.get(modelo.Autor.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByORMID(PersistentSession session, String idAutor, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autor loadAutorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Autor) session.load(modelo.Autor.class, idAutor, lockMode);
+			return (Autor) session.load(modelo.Autor.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(PersistentSession session, String idAutor, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autor getAutorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Autor) session.get(modelo.Autor.class, idAutor, lockMode);
+			return (Autor) session.get(modelo.Autor.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

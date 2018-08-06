@@ -20,17 +20,17 @@ import org.orm.criteria.*;
 
 public class AutoresCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id;
-	public final StringExpression autoridAutorId;
+	public final IntegerExpression autoridAutorId;
 	public final AssociationExpression autoridAutor;
-	public final StringExpression librocodigoId;
+	public final IntegerExpression librocodigoId;
 	public final AssociationExpression librocodigo;
 	
 	public AutoresCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
-		autoridAutorId = new StringExpression("ORM_AutoridAutor.idAutor", this);
+		autoridAutorId = new IntegerExpression("ORM_AutoridAutor.id", this);
 		autoridAutor = new AssociationExpression("ORM_AutoridAutor", this);
-		librocodigoId = new StringExpression("ORM_Librocodigo.codigo", this);
+		librocodigoId = new IntegerExpression("ORM_Librocodigo.id", this);
 		librocodigo = new AssociationExpression("ORM_Librocodigo", this);
 	}
 	

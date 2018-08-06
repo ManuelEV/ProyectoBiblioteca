@@ -19,21 +19,21 @@ import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
 public class EstanteCriteria extends AbstractORMCriteria {
-	public final StringExpression idEstante;
+	public final IntegerExpression id;
 	public final IntegerExpression capacidadAproximada;
-	public final StringExpression idBibliotecaId;
+	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
-	public final StringExpression idCategoriaId;
+	public final IntegerExpression idCategoriaId;
 	public final AssociationExpression idCategoria;
 	public final CollectionExpression libro;
 	
 	public EstanteCriteria(Criteria criteria) {
 		super(criteria);
-		idEstante = new StringExpression("idEstante", this);
+		id = new IntegerExpression("id", this);
 		capacidadAproximada = new IntegerExpression("capacidadAproximada", this);
-		idBibliotecaId = new StringExpression("idBiblioteca.idBiblioteca", this);
+		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this);
 		idBiblioteca = new AssociationExpression("idBiblioteca", this);
-		idCategoriaId = new StringExpression("idCategoria.idCategoria", this);
+		idCategoriaId = new IntegerExpression("idCategoria.id", this);
 		idCategoria = new AssociationExpression("idCategoria", this);
 		libro = new CollectionExpression("ORM_Libro", this);
 	}

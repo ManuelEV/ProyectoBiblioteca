@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class RegistroSalaLecturaDAO {
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala) throws PersistentException {
+	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadRegistroSalaLecturaByORMID(session, idRegistro, clienteRUN, salaDeLecturaidSala);
+			return loadRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, clienteRUN);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala) throws PersistentException {
+	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getRegistroSalaLecturaByORMID(session, idRegistro, clienteRUN, salaDeLecturaidSala);
+			return getRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, clienteRUN);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadRegistroSalaLecturaByORMID(session, idRegistro, clienteRUN, salaDeLecturaidSala, lockMode);
+			return loadRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, clienteRUN, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getRegistroSalaLecturaByORMID(session, idRegistro, clienteRUN, salaDeLecturaidSala, lockMode);
+			return getRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, clienteRUN, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,12 +63,12 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala) throws PersistentException {
+	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
-			registrosalalectura.setIdRegistro(idRegistro);
-			registrosalalectura.setORM_ClienteRUN(clienteRUN);
+			registrosalalectura.setId(id);
 			registrosalalectura.setORM_SalaDeLecturaidSala(salaDeLecturaidSala);
+			registrosalalectura.setORM_ClienteRUN(clienteRUN);
 			
 			return (RegistroSalaLectura) session.load(modelo.RegistroSalaLectura.class, registrosalalectura);
 		}
@@ -78,12 +78,12 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala) throws PersistentException {
+	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
-			registrosalalectura.setIdRegistro(idRegistro);
-			registrosalalectura.setORM_ClienteRUN(clienteRUN);
+			registrosalalectura.setId(id);
 			registrosalalectura.setORM_SalaDeLecturaidSala(salaDeLecturaidSala);
+			registrosalalectura.setORM_ClienteRUN(clienteRUN);
 			
 			return (RegistroSalaLectura) session.get(modelo.RegistroSalaLectura.class, registrosalalectura);
 		}
@@ -93,12 +93,12 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
-			registrosalalectura.setIdRegistro(idRegistro);
-			registrosalalectura.setORM_ClienteRUN(clienteRUN);
+			registrosalalectura.setId(id);
 			registrosalalectura.setORM_SalaDeLecturaidSala(salaDeLecturaidSala);
+			registrosalalectura.setORM_ClienteRUN(clienteRUN);
 			
 			return (RegistroSalaLectura) session.load(modelo.RegistroSalaLectura.class, registrosalalectura, lockMode);
 		}
@@ -108,12 +108,12 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int idRegistro, modelo.Cliente clienteRUN, modelo.SalaDeLectura salaDeLecturaidSala, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
-			registrosalalectura.setIdRegistro(idRegistro);
-			registrosalalectura.setORM_ClienteRUN(clienteRUN);
+			registrosalalectura.setId(id);
 			registrosalalectura.setORM_SalaDeLecturaidSala(salaDeLecturaidSala);
+			registrosalalectura.setORM_ClienteRUN(clienteRUN);
 			
 			return (RegistroSalaLectura) session.get(modelo.RegistroSalaLectura.class, registrosalalectura, lockMode);
 		}
@@ -343,17 +343,17 @@ public class RegistroSalaLecturaDAO {
 	
 	public static boolean deleteAndDissociate(modelo.RegistroSalaLectura registroSalaLectura)throws PersistentException {
 		try {
-			modelo.Cliente clienteRUN = registroSalaLectura.getClienteRUN();
-			if (registroSalaLectura.getClienteRUN() != null) {
-				registroSalaLectura.getClienteRUN().registroSalaLectura.remove(registroSalaLectura);
-			}
-			registroSalaLectura.setORM_ClienteRUN(clienteRUN);
-			
 			modelo.SalaDeLectura salaDeLecturaidSala = registroSalaLectura.getSalaDeLecturaidSala();
 			if (registroSalaLectura.getSalaDeLecturaidSala() != null) {
 				registroSalaLectura.getSalaDeLecturaidSala().registroSalaLectura.remove(registroSalaLectura);
 			}
 			registroSalaLectura.setORM_SalaDeLecturaidSala(salaDeLecturaidSala);
+			
+			modelo.Cliente clienteRUN = registroSalaLectura.getClienteRUN();
+			if (registroSalaLectura.getClienteRUN() != null) {
+				registroSalaLectura.getClienteRUN().registroSalaLectura.remove(registroSalaLectura);
+			}
+			registroSalaLectura.setORM_ClienteRUN(clienteRUN);
 			
 			return delete(registroSalaLectura);
 		}
@@ -365,17 +365,17 @@ public class RegistroSalaLecturaDAO {
 	
 	public static boolean deleteAndDissociate(modelo.RegistroSalaLectura registroSalaLectura, org.orm.PersistentSession session)throws PersistentException {
 		try {
-			modelo.Cliente clienteRUN = registroSalaLectura.getClienteRUN();
-			if (registroSalaLectura.getClienteRUN() != null) {
-				registroSalaLectura.getClienteRUN().registroSalaLectura.remove(registroSalaLectura);
-			}
-			registroSalaLectura.setORM_ClienteRUN(clienteRUN);
-			
 			modelo.SalaDeLectura salaDeLecturaidSala = registroSalaLectura.getSalaDeLecturaidSala();
 			if (registroSalaLectura.getSalaDeLecturaidSala() != null) {
 				registroSalaLectura.getSalaDeLecturaidSala().registroSalaLectura.remove(registroSalaLectura);
 			}
 			registroSalaLectura.setORM_SalaDeLecturaidSala(salaDeLecturaidSala);
+			
+			modelo.Cliente clienteRUN = registroSalaLectura.getClienteRUN();
+			if (registroSalaLectura.getClienteRUN() != null) {
+				registroSalaLectura.getClienteRUN().registroSalaLectura.remove(registroSalaLectura);
+			}
+			registroSalaLectura.setORM_ClienteRUN(clienteRUN);
 			
 			try {
 				session.delete(registroSalaLectura);

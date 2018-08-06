@@ -35,7 +35,7 @@ public class ReservaLibroController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         
-        request.getParameter("codigo");
+        request.getParameter("idLibro");
         request.getParameter("rut");
         
         

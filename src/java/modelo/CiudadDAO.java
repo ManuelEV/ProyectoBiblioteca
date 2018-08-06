@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class CiudadDAO {
-	public static Ciudad loadCiudadByORMID(String idCiudad) throws PersistentException {
+	public static Ciudad loadCiudadByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadCiudadByORMID(session, idCiudad);
+			return loadCiudadByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(String idCiudad) throws PersistentException {
+	public static Ciudad getCiudadByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getCiudadByORMID(session, idCiudad);
+			return getCiudadByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByORMID(String idCiudad, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Ciudad loadCiudadByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadCiudadByORMID(session, idCiudad, lockMode);
+			return loadCiudadByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(String idCiudad, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Ciudad getCiudadByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getCiudadByORMID(session, idCiudad, lockMode);
+			return getCiudadByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByORMID(PersistentSession session, String idCiudad) throws PersistentException {
+	public static Ciudad loadCiudadByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Ciudad) session.load(modelo.Ciudad.class, idCiudad);
+			return (Ciudad) session.load(modelo.Ciudad.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(PersistentSession session, String idCiudad) throws PersistentException {
+	public static Ciudad getCiudadByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Ciudad) session.get(modelo.Ciudad.class, idCiudad);
+			return (Ciudad) session.get(modelo.Ciudad.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByORMID(PersistentSession session, String idCiudad, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Ciudad loadCiudadByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Ciudad) session.load(modelo.Ciudad.class, idCiudad, lockMode);
+			return (Ciudad) session.load(modelo.Ciudad.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(PersistentSession session, String idCiudad, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Ciudad getCiudadByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Ciudad) session.get(modelo.Ciudad.class, idCiudad, lockMode);
+			return (Ciudad) session.get(modelo.Ciudad.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

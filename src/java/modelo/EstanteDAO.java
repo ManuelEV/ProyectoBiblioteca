@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class EstanteDAO {
-	public static Estante loadEstanteByORMID(String idEstante) throws PersistentException {
+	public static Estante loadEstanteByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadEstanteByORMID(session, idEstante);
+			return loadEstanteByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(String idEstante) throws PersistentException {
+	public static Estante getEstanteByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getEstanteByORMID(session, idEstante);
+			return getEstanteByORMID(session, id);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByORMID(String idEstante, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Estante loadEstanteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadEstanteByORMID(session, idEstante, lockMode);
+			return loadEstanteByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(String idEstante, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Estante getEstanteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getEstanteByORMID(session, idEstante, lockMode);
+			return getEstanteByORMID(session, id, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,9 +63,9 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByORMID(PersistentSession session, String idEstante) throws PersistentException {
+	public static Estante loadEstanteByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Estante) session.load(modelo.Estante.class, idEstante);
+			return (Estante) session.load(modelo.Estante.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -73,9 +73,9 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(PersistentSession session, String idEstante) throws PersistentException {
+	public static Estante getEstanteByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
-			return (Estante) session.get(modelo.Estante.class, idEstante);
+			return (Estante) session.get(modelo.Estante.class, new Integer(id));
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -83,9 +83,9 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByORMID(PersistentSession session, String idEstante, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Estante loadEstanteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Estante) session.load(modelo.Estante.class, idEstante, lockMode);
+			return (Estante) session.load(modelo.Estante.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -93,9 +93,9 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(PersistentSession session, String idEstante, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Estante getEstanteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
-			return (Estante) session.get(modelo.Estante.class, idEstante, lockMode);
+			return (Estante) session.get(modelo.Estante.class, new Integer(id), lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();

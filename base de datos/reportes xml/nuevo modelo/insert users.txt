@@ -1,0 +1,11 @@
+use biblioteca_orm;
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Biblioteca\\base de datos\\reportes xml\\nuevo modelo\\reporteUsuarios.xml' 
+INTO TABLE usuario 
+
+ROWS IDENTIFIED BY '<Usuario>';
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Biblioteca\\base de datos\\reportes xml\\nuevo modelo\\reporteClientes.xml' 
+INTO TABLE cliente 
+
+ROWS IDENTIFIED BY '<Cliente>';
