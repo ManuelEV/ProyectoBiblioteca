@@ -53,10 +53,20 @@ public class ReservaLibroController extends HttpServlet {
         System.out.println("asdrut");
         System.out.println(rut);
         System.out.println("asdrut2");
-
+        
         ArrayList<modelo.SolicitudLibro> lista = new ArrayList<>();
 
-        if (idLibro != null && rut != null) {
+        modelo.SolicitudLibro[] sValidacion = modelo.SolicitudLibroDAO.listSolicitudLibroByQuery(null, null);
+        
+        boolean solicitudValida=true;
+        
+        for (SolicitudLibro sv : sValidacion) {
+            if(sv.getIdCliente().getRUN().equals(rut) && (sv.getCodigoLibro().getId()+"").equals(idLibro)){
+                solicitudValida=false;
+            }
+        }
+
+        if (idLibro != null && rut != null && solicitudValida) {
 
             try {
 

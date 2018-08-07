@@ -9,10 +9,10 @@
     HttpSession sesion = request.getSession();
 
     if (sesion.getAttribute("admin") == null){
-        response.sendRedirect("index.html");
+        response.sendRedirect("/Biblioteca/index.html");
     }
     if (sesion.getAttribute("usuario") != null){
-        response.sendRedirect("index.html");
+        response.sendRedirect("/Biblioteca/index.html");
     }
 
 %>
@@ -40,6 +40,7 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="/Biblioteca/libros_chart/grafica_libros.js"></script>
         <script type="text/javascript" src="/Biblioteca/vistas_admin/estadisticas/grafica_libros_no_populares.js"></script>
+        <script type="text/javascript" src="/Biblioteca/vistas_admin/estadisticas/grafica_clientes_lista.js"></script>
     </head>
 
     <body style="background: linear-gradient(-90deg, #ffb366, #d9ff66)">
@@ -52,7 +53,7 @@
                 <ul class="nav navbar-nav">
                     <li ><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
                     <li class="active"><a href="/Biblioteca/vistas_admin/estadisticas.jsp">Estadísticas</a></li>
-                    <li ><a href="/Biblioteca/vistas_admin/reservas.jsp">Libros reservados</a></li>
+                    <li ><a href="/Biblioteca/SolicitudesLibros">Libros reservados</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -66,6 +67,22 @@
 
         <div id="lib_div"></div>
         <div id="libmenos_div"></div>
+        
+        <br/><br/><br/>
+        <div class="jumbotron">
+            <h1>Lista completa de Clientes</h1> 
+            <p>Reporte de todos los clientes de la Biblioteca</p> 
+        </div>
+        <br/><br/><br/>
+
+        <div class="container">
+            <div class="center">
+                <div id="lista_clientes"></div>
+            </div>
+        </div>
+
+
+        <br/><br/><br/>
 
     </body>
 

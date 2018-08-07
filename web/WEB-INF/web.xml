@@ -8,6 +8,14 @@
         <servlet-name>RegistroController</servlet-name>
         <servlet-class>web.servlet.RegistroController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SolicitudesAdminController</servlet-name>
+        <servlet-class>web.servlet.SolicitudesAdminController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EntregaLibroController</servlet-name>
+        <servlet-class>web.servlet.EntregaLibroController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -56,7 +64,6 @@
         <servlet-name>credencial</servlet-name>
         <url-pattern>/credencial</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>reserva</servlet-name>
         <jsp-file>reservaLibros.jsp</jsp-file>
@@ -65,7 +72,14 @@
         <servlet-name>reserva</servlet-name>
         <url-pattern>/reservaLibros</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>SolicitudesAdminController</servlet-name>
+        <url-pattern>/SolicitudesLibros</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EntregaLibroController</servlet-name>
+        <url-pattern>/EntregaLibro</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

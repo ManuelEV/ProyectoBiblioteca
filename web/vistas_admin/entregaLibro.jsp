@@ -1,8 +1,4 @@
-<%-- 
-    Document   : reservas
-    Created on : 06-08-2018, 21:57:51
-    Author     : Manuel
---%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
@@ -48,8 +44,8 @@
                 <ul class="nav navbar-nav">
                     <li ><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
                     <li ><a href="/Biblioteca/vistas_admin/estadisticas.jsp">Estadísticas</a></li>
-                    <li class="active"><a href="/Biblioteca/SolicitudesLibros">Libros reservados</a></li>
-                    <li ><a href="/Biblioteca/EntregaLibro">Entrega Libros</a></li>
+                    <li ><a href="/Biblioteca/SolicitudesLibros">Libros reservados</a></li>
+                    <li class="active"><a href="/Biblioteca/EntregaLibro">Entrega Libros</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -60,36 +56,34 @@
             </div>
         </nav>
 
-        <form id="formulario" method="post" action="EntregaLibro">
+<!--        <form id="formulario" method="post" action="EntregaLibros">-->
             <div class="container">
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Código solicitud</th>
+                            <th>ID entrega</th>
                             <th>Código libro</th>
                             <th>ID cliente</th>
-                            <th>Fecha Solicitud</th>
-                            <th>Hora Solicitud</th>
-                            <th>Fecha límite de entrega</th>
+                            <th>Fecha Devolución</th>
+                            <th>Días de atraso</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach items="${solicitudes}" var="elemento">
+                        <c:forEach items="${entregas}" var="element">
                             <tr>
-                                <td> <input name="idSolicitud" type="text" value="${elemento.id}" readonly="readonly"></td>
-                                <td><input name="codLibro" type="text" value="${elemento.codigoLibro}" readonly="readonly"></td>
-                                <td>${elemento.idCliente}</td>
-                                <td>${elemento.fechaDeSolicitud}</td>
-                                <td>${elemento.horaDeSolicitud}</td>
-                                <td>${elemento.fechaEntregaLimite}</td>  
-                               <td><input type="submit" value="Entrega"></td>
+                                <td>${element.id} </td>
+                                <td>${element.librocodigo}</td>
+                                <td>${element.idCliente}</td>
+                                <td>${element.fechaDeDevolucion}</td>
+                                <td>${element.diasDeAtraso}</td> 
+<!--                               <td><input type="submit" value="Entrega"></td>-->
                             </tr>
 
                         </c:forEach>
                     </tbody>
                 </table>
             </div>
-        </form>
+<!--        </form>-->
 
     </body>
 
