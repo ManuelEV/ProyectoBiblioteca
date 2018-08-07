@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Usuario" table="Usuario" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="correo" column="correo" unique="true" type="string" length="100" not-null="true" lazy="false"/>
+		<property name="usuario" column="usuario" unique="true" type="string" length="20" not-null="true" lazy="false"/>
+		<property name="tipoUsuario" column="tipoUsuario" type="string" length="20" not-null="true" lazy="false"/>
+		<property name="contraseña" column="contraseña" type="string" length="20" not-null="true" lazy="false"/>
+		<many-to-one name="idBiblioteca" cascade="lock" column="idBiblioteca" class="modelo.Biblioteca" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<set name="ORM_Cliente" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Usuarioid" not-null="false"/>
+			<one-to-many class="modelo.Cliente"/>
+		</set>
+	</class>
+</hibernate-mapping>

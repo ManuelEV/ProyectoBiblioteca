@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.EntregaDeLibro" table="EntregaDeLibro" lazy="false">
+		<composite-id>
+			<key-property name="id" column="id" type="integer"/>
+			<key-many-to-one name="ORM_Librocodigo" column="Librocodigo" class="modelo.Libro">
+			</key-many-to-one>
+			<key-many-to-one name="ORM_IdCliente" column="idCliente" class="modelo.Cliente">
+			</key-many-to-one>
+		</composite-id>
+		<property name="fechaDeDevolucion" column="FechaDeDevolucion" type="date" not-null="true" lazy="false"/>
+		<property name="diasDeAtraso" column="diasDeAtraso" type="integer" length="4" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

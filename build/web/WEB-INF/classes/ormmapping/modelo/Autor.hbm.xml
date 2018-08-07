@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.Autor" table="Autor" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="nombre" column="nombre" type="string" length="20" not-null="true" lazy="false"/>
+		<property name="fechaDeNacimiento" column="fechaDeNacimiento" type="date" not-null="false" lazy="false"/>
+		<property name="genero" column="genero" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="apellidoPaterno" column="apellidoPaterno" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="apellidoMaterno" column="apellidoMaterno" type="string" length="16" not-null="true" lazy="false"/>
+		<set name="ORM_Autores" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="idAutor" not-null="true"/>
+			<one-to-many class="modelo.Autores"/>
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.SolicitudLibro" table="SolicitudLibro" lazy="false">
+		<composite-id>
+			<key-property name="id" column="id" type="integer"/>
+			<key-many-to-one name="ORM_CodigoLibro" column="codigoLibro" class="modelo.Libro">
+			</key-many-to-one>
+			<key-many-to-one name="ORM_IdCliente" column="idCliente" class="modelo.Cliente">
+			</key-many-to-one>
+		</composite-id>
+		<property name="fechaDeSolicitud" column="fechaDeSolicitud" type="date" not-null="true" lazy="false"/>
+		<property name="horaDeSolicitud" column="horaDeSolicitud" type="time" not-null="true" lazy="false"/>
+		<property name="fechaEntregaLimite" column="fechaEntregaLimite" type="date" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

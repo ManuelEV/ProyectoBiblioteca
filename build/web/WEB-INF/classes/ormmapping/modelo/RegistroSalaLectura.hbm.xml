@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: Universidad de La Frontera
+License Type: Academic
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="modelo.RegistroSalaLectura" table="RegistroSalaLectura" lazy="false">
+		<composite-id>
+			<key-property name="id" column="id" type="integer"/>
+			<key-many-to-one name="ORM_SalaDeLecturaidSala" column="SalaDeLecturaidSala" class="modelo.SalaDeLectura">
+			</key-many-to-one>
+			<key-many-to-one name="ORM_IdCliente" column="idCliente" class="modelo.Cliente">
+			</key-many-to-one>
+		</composite-id>
+		<property name="fechaRegistro" column="fechaRegistro" type="date" not-null="true" lazy="false"/>
+		<property name="tipoRegistro" column="tipoRegistro" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="horaRegistro" column="horaRegistro" type="time" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

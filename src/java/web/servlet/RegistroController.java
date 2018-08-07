@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.orm.PersistentException;
 import org.orm.PersistentTransaction;
+import utility.Utility;
 
 /**
  *
@@ -109,8 +110,8 @@ public class RegistroController extends HttpServlet {
             lmodeloCliente.setApellidoPaterno(apellidoPaterno);
             lmodeloCliente.setApellidoMaterno(apellidoMaterno);
             lmodeloCliente.setGenero(genero);
-
-            Date fechaDeNacimientoDATE = this.retrieveDate(fechaDeNacimiento);
+            Utility use=new Utility();
+            Date fechaDeNacimientoDATE = use.retrieveDate(fechaDeNacimiento);
             lmodeloCliente.setFechaDeNacimiento(fechaDeNacimientoDATE);
             lmodeloCliente.setEstadoDeTrabajo(estadoDeTrabajo);
             lmodeloCliente.setAreaDeInteres(areaDeInteres);
@@ -136,11 +137,11 @@ public class RegistroController extends HttpServlet {
         int month = Integer.parseInt(fecha[1]);
         int day = Integer.parseInt(fecha[2]);
 
-        Date fechaDate = new Date(this.dateToMilis(year, month, day));
+        Date fechaDate =new Date(this.dateToMilis(year, month, day));
         return fechaDate;
     }
 
-    public long dateToMilis(int year, int month, int date) {
+    public static long dateToMilis(int year, int month, int date) {
         GregorianCalendar gc = new GregorianCalendar();
         gc.set(year, month, date);
         return gc.getTimeInMillis();
