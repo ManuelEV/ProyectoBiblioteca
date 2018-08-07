@@ -10,148 +10,148 @@ public class ListProyectoprogramacionavanzadaData {
 	
 	public void listTestData() throws PersistentException {
 		System.out.println("Listing Biblioteca...");
-		modelo.Biblioteca[] modeloBibliotecas = modelo.BibliotecaDAO.listBibliotecaByQuery(null, null);
-		int length = Math.min(modeloBibliotecas.length, ROW_COUNT);
+		modelo.Categoria[] listaCategoria = modelo.CategoriaDAO.listCategoriaByQuery(null, null);
+		int length = Math.min(listaCategoria.length, ROW_COUNT);
 		for (int i = 0; i < length; i++) {
-			System.out.println(modeloBibliotecas[i]);
+			System.out.println(listaCategoria[i].getNombre());
 		}
 		System.out.println(length + " record(s) retrieved.");
 		
-		System.out.println("Listing Libro...");
-		modelo.Libro[] modeloLibros = modelo.LibroDAO.listLibroByQuery(null, null);
-		length = Math.min(modeloLibros.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloLibros[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Cliente...");
-		modelo.Cliente[] modeloClientes = modelo.ClienteDAO.listClienteByQuery(null, null);
-		length = Math.min(modeloClientes.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloClientes[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Estante...");
-		modelo.Estante[] modeloEstantes = modelo.EstanteDAO.listEstanteByQuery(null, null);
-		length = Math.min(modeloEstantes.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloEstantes[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Autor...");
-		modelo.Autor[] modeloAutors = modelo.AutorDAO.listAutorByQuery(null, null);
-		length = Math.min(modeloAutors.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloAutors[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Ciudad...");
-		modelo.Ciudad[] modeloCiudads = modelo.CiudadDAO.listCiudadByQuery(null, null);
-		length = Math.min(modeloCiudads.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloCiudads[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Pais...");
-		modelo.Pais[] modeloPaises = modelo.PaisDAO.listPaisByQuery(null, null);
-		length = Math.min(modeloPaises.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloPaises[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Categoria...");
-		modelo.Categoria[] modeloCategorias = modelo.CategoriaDAO.listCategoriaByQuery(null, null);
-		length = Math.min(modeloCategorias.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloCategorias[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Computador...");
-		modelo.Computador[] modeloComputadors = modelo.ComputadorDAO.listComputadorByQuery(null, null);
-		length = Math.min(modeloComputadors.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloComputadors[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing SolicitudComputador...");
-		modelo.SolicitudComputador[] modeloSolicitudComputadors = modelo.SolicitudComputadorDAO.listSolicitudComputadorByQuery(null, null);
-		length = Math.min(modeloSolicitudComputadors.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloSolicitudComputadors[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing SolicitudLibro...");
-		modelo.SolicitudLibro[] modeloSolicitudLibros = modelo.SolicitudLibroDAO.listSolicitudLibroByQuery(null, null);
-		length = Math.min(modeloSolicitudLibros.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloSolicitudLibros[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing EntregaDeLibro...");
-		modelo.EntregaDeLibro[] modeloEntregaDeLibros = modelo.EntregaDeLibroDAO.listEntregaDeLibroByQuery(null, null);
-		length = Math.min(modeloEntregaDeLibros.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloEntregaDeLibros[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing SalaDeLectura...");
-		modelo.SalaDeLectura[] modeloSalaDeLecturas = modelo.SalaDeLecturaDAO.listSalaDeLecturaByQuery(null, null);
-		length = Math.min(modeloSalaDeLecturas.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloSalaDeLecturas[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Funcionario...");
-		modelo.Funcionario[] modeloFuncionarios = modelo.FuncionarioDAO.listFuncionarioByQuery(null, null);
-		length = Math.min(modeloFuncionarios.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloFuncionarios[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing RegistroSalaLectura...");
-		modelo.RegistroSalaLectura[] modeloRegistroSalaLecturas = modelo.RegistroSalaLecturaDAO.listRegistroSalaLecturaByQuery(null, null);
-		length = Math.min(modeloRegistroSalaLecturas.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloRegistroSalaLecturas[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Autores...");
-		modelo.Autores[] modeloAutoreses = modelo.AutoresDAO.listAutoresByQuery(null, null);
-		length = Math.min(modeloAutoreses.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloAutoreses[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing ClienteDeBiblioteca...");
-		modelo.ClienteDeBiblioteca[] modeloClienteDeBibliotecas = modelo.ClienteDeBibliotecaDAO.listClienteDeBibliotecaByQuery(null, null);
-		length = Math.min(modeloClienteDeBibliotecas.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloClienteDeBibliotecas[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
-		
-		System.out.println("Listing Usuario...");
-		modelo.Usuario[] modeloUsuarios = modelo.UsuarioDAO.listUsuarioByQuery(null, null);
-		length = Math.min(modeloUsuarios.length, ROW_COUNT);
-		for (int i = 0; i < length; i++) {
-			System.out.println(modeloUsuarios[i]);
-		}
-		System.out.println(length + " record(s) retrieved.");
+//		System.out.println("Listing Libro...");
+//		modelo.Libro[] modeloLibros = modelo.LibroDAO.listLibroByQuery(null, null);
+//		length = Math.min(modeloLibros.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloLibros[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Cliente...");
+//		modelo.Cliente[] modeloClientes = modelo.ClienteDAO.listClienteByQuery(null, null);
+//		length = Math.min(modeloClientes.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloClientes[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Estante...");
+//		modelo.Estante[] modeloEstantes = modelo.EstanteDAO.listEstanteByQuery(null, null);
+//		length = Math.min(modeloEstantes.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloEstantes[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Autor...");
+//		modelo.Autor[] modeloAutors = modelo.AutorDAO.listAutorByQuery(null, null);
+//		length = Math.min(modeloAutors.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloAutors[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Ciudad...");
+//		modelo.Ciudad[] modeloCiudads = modelo.CiudadDAO.listCiudadByQuery(null, null);
+//		length = Math.min(modeloCiudads.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloCiudads[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Pais...");
+//		modelo.Pais[] modeloPaises = modelo.PaisDAO.listPaisByQuery(null, null);
+//		length = Math.min(modeloPaises.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloPaises[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Categoria...");
+//		modelo.Categoria[] modeloCategorias = modelo.CategoriaDAO.listCategoriaByQuery(null, null);
+//		length = Math.min(modeloCategorias.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloCategorias[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Computador...");
+//		modelo.Computador[] modeloComputadors = modelo.ComputadorDAO.listComputadorByQuery(null, null);
+//		length = Math.min(modeloComputadors.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloComputadors[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing SolicitudComputador...");
+//		modelo.SolicitudComputador[] modeloSolicitudComputadors = modelo.SolicitudComputadorDAO.listSolicitudComputadorByQuery(null, null);
+//		length = Math.min(modeloSolicitudComputadors.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloSolicitudComputadors[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing SolicitudLibro...");
+//		modelo.SolicitudLibro[] modeloSolicitudLibros = modelo.SolicitudLibroDAO.listSolicitudLibroByQuery(null, null);
+//		length = Math.min(modeloSolicitudLibros.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloSolicitudLibros[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing EntregaDeLibro...");
+//		modelo.EntregaDeLibro[] modeloEntregaDeLibros = modelo.EntregaDeLibroDAO.listEntregaDeLibroByQuery(null, null);
+//		length = Math.min(modeloEntregaDeLibros.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloEntregaDeLibros[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing SalaDeLectura...");
+//		modelo.SalaDeLectura[] modeloSalaDeLecturas = modelo.SalaDeLecturaDAO.listSalaDeLecturaByQuery(null, null);
+//		length = Math.min(modeloSalaDeLecturas.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloSalaDeLecturas[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Funcionario...");
+//		modelo.Funcionario[] modeloFuncionarios = modelo.FuncionarioDAO.listFuncionarioByQuery(null, null);
+//		length = Math.min(modeloFuncionarios.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloFuncionarios[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing RegistroSalaLectura...");
+//		modelo.RegistroSalaLectura[] modeloRegistroSalaLecturas = modelo.RegistroSalaLecturaDAO.listRegistroSalaLecturaByQuery(null, null);
+//		length = Math.min(modeloRegistroSalaLecturas.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloRegistroSalaLecturas[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Autores...");
+//		modelo.Autores[] modeloAutoreses = modelo.AutoresDAO.listAutoresByQuery(null, null);
+//		length = Math.min(modeloAutoreses.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloAutoreses[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing ClienteDeBiblioteca...");
+//		modelo.ClienteDeBiblioteca[] modeloClienteDeBibliotecas = modelo.ClienteDeBibliotecaDAO.listClienteDeBibliotecaByQuery(null, null);
+//		length = Math.min(modeloClienteDeBibliotecas.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloClienteDeBibliotecas[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
+//		
+//		System.out.println("Listing Usuario...");
+//		modelo.Usuario[] modeloUsuarios = modelo.UsuarioDAO.listUsuarioByQuery(null, null);
+//		length = Math.min(modeloUsuarios.length, ROW_COUNT);
+//		for (int i = 0; i < length; i++) {
+//			System.out.println(modeloUsuarios[i]);
+//		}
+//		System.out.println(length + " record(s) retrieved.");
 		
 	}
 	

@@ -92,7 +92,9 @@
                                 </select><br>
                                 <label>Idioma</label><br><input type="text" class="form-control" name="idioma" value="" /><br>
                                 <!--Estante-->
-                                <label>Categoria</label><br><input type="text" class="form-control" name="categoria" value="" /><br>
+                                <label>Categoria</label><br><select name="categoria">
+                                    {{categoria}}
+                                </select>
 
                                 
 
