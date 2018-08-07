@@ -63,11 +63,7 @@
             </div>
         </div>
                 
-                <form if="formulario" method="post" action="LibrosReservados">
-                    <input name="nombre" type="text" value="${sessionScope.admin.usuario}" readonly="readonly">
-                    <input type="submit" value="HOLA">
-                    
-                </form>
+                
 
 
     </body>
