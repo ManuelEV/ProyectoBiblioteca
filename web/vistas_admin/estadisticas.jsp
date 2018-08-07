@@ -1,12 +1,17 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%-- 
+    Document   : estadisticas
+    Created on : 06-08-2018, 21:42:43
+    Author     : Manuel
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     HttpSession sesion = request.getSession();
 
-    if (sesion.getAttribute("admin") == null){// || !sesion.getAttribute("tipoUsuario").equals("administrador")) {
+    if (sesion.getAttribute("admin") == null){
         response.sendRedirect("index.html");
     }
-    if (sesion.getAttribute("usuario") != null){// || !sesion.getAttribute("tipoUsuario").equals("administrador")) {
+    if (sesion.getAttribute("usuario") != null){
         response.sendRedirect("index.html");
     }
 
@@ -31,6 +36,10 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="/Biblioteca/libros_chart/grafica_libros.js"></script>
+        <script type="text/javascript" src="/Biblioteca/vistas_admin/estadisticas/grafica_libros_no_populares.js"></script>
     </head>
 
     <body style="background: linear-gradient(-90deg, #ffb366, #d9ff66)">
@@ -41,8 +50,8 @@
                     <a class="navbar-brand" href="#">Biblioteca</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
-                    <li ><a href="/Biblioteca/vistas_admin/estadisticas.jsp">Estadísticas</a></li>
+                    <li ><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
+                    <li class="active"><a href="/Biblioteca/vistas_admin/estadisticas.jsp">Estadísticas</a></li>
                     <li ><a href="/Biblioteca/vistas_admin/reservas.jsp">Libros reservados</a></li>
 
                 </ul>
@@ -55,14 +64,8 @@
         </nav>
 
 
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Bienvenid@ ${sessionScope.admin.usuario}</h1>  
-                <p>${sessionScope.admin.correo}</p> 
-                
-            </div>
-        </div>
-
+        <div id="lib_div"></div>
+        <div id="libmenos_div"></div>
 
     </body>
 

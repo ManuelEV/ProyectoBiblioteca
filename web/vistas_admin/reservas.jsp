@@ -1,5 +1,10 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%-- 
+    Document   : reservas
+    Created on : 06-08-2018, 21:57:51
+    Author     : Manuel
+--%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
     HttpSession sesion = request.getSession();
 
@@ -41,9 +46,9 @@
                     <a class="navbar-brand" href="#">Biblioteca</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
+                    <li ><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
                     <li ><a href="/Biblioteca/vistas_admin/estadisticas.jsp">Estadísticas</a></li>
-                    <li ><a href="/Biblioteca/vistas_admin/reservas.jsp">Libros reservados</a></li>
+                    <li class="active"><a href="/Biblioteca/vistas_admin/reservas.jsp">Libros reservados</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -55,13 +60,7 @@
         </nav>
 
 
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Bienvenid@ ${sessionScope.admin.usuario}</h1>  
-                <p>${sessionScope.admin.correo}</p> 
-                
-            </div>
-        </div>
+        
 
 
     </body>

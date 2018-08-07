@@ -49,6 +49,12 @@ public class LoginController extends HttpServlet {
             sesion = request.getSession();
         }
         
+        if(sesion.getAttribute("admin")!=null){
+            sesion.removeAttribute("admin");
+            sesion.invalidate();
+            sesion = request.getSession();
+        }
+        
         String mail = request.getParameter("email");
         String password = request.getParameter("password");
         
@@ -77,9 +83,10 @@ public class LoginController extends HttpServlet {
                 //dispatcher = request.getRequestDispatcher("principal.html");
                 response.sendRedirect("/Biblioteca/principal");
                 
-            }else if(cliente!=null && password.equals(user.getContraseña()) && sesion.getAttribute("usuario")==null && privilegio.equals("administrador")){
-                sesion.setAttribute("usuario",cliente);
-                response.sendRedirect("/Biblioteca/vistas_admin/principal.jsp");
+            }else if(user!=null && password.equals(user.getContraseña()) && sesion.getAttribute("usuario")==null && privilegio.equals("administrador")){
+                sesion.setAttribute("admin",user);
+                RequestDispatcher rd = request.getRequestDispatcher("vistas_admin/principal.jsp");
+                rd.forward(request, response);
                 
             }else{
                 //dispatcher = request.getRequestDispatcher("index.html");
