@@ -10,7 +10,7 @@ License Type: Academic
 			<key-property name="id" column="id" type="integer"/>
 			<key-many-to-one name="ORM_SalaDeLecturaidSala" column="SalaDeLecturaidSala" class="modelo.SalaDeLectura">
 			</key-many-to-one>
-			<key-many-to-one name="ORM_ClienteRUN" column="idCliente" class="modelo.Cliente">
+			<key-many-to-one name="ORM_IdCliente" column="idCliente" class="modelo.Cliente">
 			</key-many-to-one>
 		</composite-id>
 		<property name="fechaRegistro" column="fechaRegistro" type="date" not-null="true" lazy="false"/>

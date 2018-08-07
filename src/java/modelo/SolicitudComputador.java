@@ -32,11 +32,11 @@ public class SolicitudComputador implements Serializable {
 		}
 		else if (!getIdComputador().equals(solicitudcomputador.getIdComputador()))
 			return false;
-		if (getClienteRUN() == null) {
-			if (solicitudcomputador.getClienteRUN() != null)
+		if (getIdCliente() == null) {
+			if (solicitudcomputador.getIdCliente() != null)
 				return false;
 		}
-		else if (!getClienteRUN().equals(solicitudcomputador.getClienteRUN()))
+		else if (!getIdCliente().equals(solicitudcomputador.getIdCliente()))
 			return false;
 		return true;
 	}
@@ -47,15 +47,15 @@ public class SolicitudComputador implements Serializable {
 		if (getIdComputador() != null) {
 			hashcode = hashcode + (int) getIdComputador().getORMID();
 		}
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (int) getClienteRUN().getORMID();
+		if (getIdCliente() != null) {
+			hashcode = hashcode + (int) getIdCliente().getORMID();
 		}
 		return hashcode;
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == ORMConstants.KEY_SOLICITUDCOMPUTADOR_CLIENTERUN) {
-			this.clienteRUN = (modelo.Cliente) owner;
+		if (key == ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCLIENTE) {
+			this.idCliente = (modelo.Cliente) owner;
 		}
 		
 		else if (key == ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCOMPUTADOR) {
@@ -88,16 +88,16 @@ public class SolicitudComputador implements Serializable {
 		return idComputadorId;
 	}
 	
-	private modelo.Cliente clienteRUN;
+	private modelo.Cliente idCliente;
 	
-	private int clienteRUNId;
+	private int idClienteId;
 	
-	private void setClienteRUNId(int value) {
-		this.clienteRUNId = value;
+	private void setIdClienteId(int value) {
+		this.idClienteId = value;
 	}
 	
-	public int getClienteRUNId() {
-		return clienteRUNId;
+	public int getIdClienteId() {
+		return idClienteId;
 	}
 	
 	public void setId(int value) {
@@ -124,28 +124,28 @@ public class SolicitudComputador implements Serializable {
 		return horaSolicitud;
 	}
 	
-	public void setClienteRUN(modelo.Cliente value) {
-		if (clienteRUN != null) {
-			clienteRUN.solicitudComputador.remove(this);
+	public void setIdCliente(modelo.Cliente value) {
+		if (idCliente != null) {
+			idCliente.solicitudComputador.remove(this);
 		}
 		if (value != null) {
 			value.solicitudComputador.add(this);
 		}
 	}
 	
-	public modelo.Cliente getClienteRUN() {
-		return clienteRUN;
+	public modelo.Cliente getIdCliente() {
+		return idCliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_ClienteRUN(modelo.Cliente value) {
-		this.clienteRUN = value;
+	public void setORM_IdCliente(modelo.Cliente value) {
+		this.idCliente = value;
 	}
 	
-	private modelo.Cliente getORM_ClienteRUN() {
-		return clienteRUN;
+	private modelo.Cliente getORM_IdCliente() {
+		return idCliente;
 	}
 	
 	public void setIdComputador(modelo.Computador value) {
@@ -173,7 +173,7 @@ public class SolicitudComputador implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getId() + " " + ((getIdComputador() == null) ? "" : String.valueOf(getIdComputador().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
+		return String.valueOf(getId() + " " + ((getIdComputador() == null) ? "" : String.valueOf(getIdComputador().getORMID())) + " " + ((getIdCliente() == null) ? "" : String.valueOf(getIdCliente().getORMID())));
 	}
 	
 }

@@ -272,7 +272,7 @@ public class Libro {
 		return ORM_autores;
 	}
 	
-	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_AUTORES, ORMConstants.KEY_AUTORES_LIBROCODIGO, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_AUTORES, ORMConstants.KEY_AUTORES_IDLIBRO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

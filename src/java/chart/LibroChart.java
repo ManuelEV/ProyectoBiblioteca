@@ -16,7 +16,7 @@ public class LibroChart {
     private String editor;
     private String edicion;
     private String autor;
-    
+    private String codigoLibro;
     
     private int vecesSolicitado;
     private int cantidadCategoria;
@@ -29,6 +29,14 @@ public class LibroChart {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    public String getCodigoLibro() {
+        return codigoLibro;
+    }
+
+    public void setCodigoLibro(String codigoLibro) {
+        this.codigoLibro = codigoLibro;
     }
 
     

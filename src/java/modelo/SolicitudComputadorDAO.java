@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class SolicitudComputadorDAO {
-	public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadSolicitudComputadorByORMID(session, id, idComputador, clienteRUN);
+			return loadSolicitudComputadorByORMID(session, id, idComputador, idCliente);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getSolicitudComputadorByORMID(session, id, idComputador, clienteRUN);
+			return getSolicitudComputadorByORMID(session, id, idComputador, idCliente);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadSolicitudComputadorByORMID(session, id, idComputador, clienteRUN, lockMode);
+			return loadSolicitudComputadorByORMID(session, id, idComputador, idCliente, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getSolicitudComputadorByORMID(session, id, idComputador, clienteRUN, lockMode);
+			return getSolicitudComputadorByORMID(session, id, idComputador, idCliente, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,12 +63,12 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
 			solicitudcomputador.setORM_IdComputador(idComputador);
-			solicitudcomputador.setORM_ClienteRUN(clienteRUN);
+			solicitudcomputador.setORM_IdCliente(idCliente);
 			
 			return (SolicitudComputador) session.load(modelo.SolicitudComputador.class, solicitudcomputador);
 		}
@@ -78,12 +78,12 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
 			solicitudcomputador.setORM_IdComputador(idComputador);
-			solicitudcomputador.setORM_ClienteRUN(clienteRUN);
+			solicitudcomputador.setORM_IdCliente(idCliente);
 			
 			return (SolicitudComputador) session.get(modelo.SolicitudComputador.class, solicitudcomputador);
 		}
@@ -93,12 +93,12 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
 			solicitudcomputador.setORM_IdComputador(idComputador);
-			solicitudcomputador.setORM_ClienteRUN(clienteRUN);
+			solicitudcomputador.setORM_IdCliente(idCliente);
 			
 			return (SolicitudComputador) session.load(modelo.SolicitudComputador.class, solicitudcomputador, lockMode);
 		}
@@ -108,12 +108,12 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
 			solicitudcomputador.setORM_IdComputador(idComputador);
-			solicitudcomputador.setORM_ClienteRUN(clienteRUN);
+			solicitudcomputador.setORM_IdCliente(idCliente);
 			
 			return (SolicitudComputador) session.get(modelo.SolicitudComputador.class, solicitudcomputador, lockMode);
 		}
@@ -349,11 +349,11 @@ public class SolicitudComputadorDAO {
 			}
 			solicitudComputador.setORM_IdComputador(idComputador);
 			
-			modelo.Cliente clienteRUN = solicitudComputador.getClienteRUN();
-			if (solicitudComputador.getClienteRUN() != null) {
-				solicitudComputador.getClienteRUN().solicitudComputador.remove(solicitudComputador);
+			modelo.Cliente idCliente = solicitudComputador.getIdCliente();
+			if (solicitudComputador.getIdCliente() != null) {
+				solicitudComputador.getIdCliente().solicitudComputador.remove(solicitudComputador);
 			}
-			solicitudComputador.setORM_ClienteRUN(clienteRUN);
+			solicitudComputador.setORM_IdCliente(idCliente);
 			
 			return delete(solicitudComputador);
 		}
@@ -371,11 +371,11 @@ public class SolicitudComputadorDAO {
 			}
 			solicitudComputador.setORM_IdComputador(idComputador);
 			
-			modelo.Cliente clienteRUN = solicitudComputador.getClienteRUN();
-			if (solicitudComputador.getClienteRUN() != null) {
-				solicitudComputador.getClienteRUN().solicitudComputador.remove(solicitudComputador);
+			modelo.Cliente idCliente = solicitudComputador.getIdCliente();
+			if (solicitudComputador.getIdCliente() != null) {
+				solicitudComputador.getIdCliente().solicitudComputador.remove(solicitudComputador);
 			}
-			solicitudComputador.setORM_ClienteRUN(clienteRUN);
+			solicitudComputador.setORM_IdCliente(idCliente);
 			
 			try {
 				session.delete(solicitudComputador);

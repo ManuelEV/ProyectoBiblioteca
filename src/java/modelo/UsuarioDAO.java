@@ -327,9 +327,9 @@ public class UsuarioDAO {
 				usuario.getIdBiblioteca().usuario.remove(usuario);
 			}
 			
-			modelo.Cliente[] lCliente1s = usuario.cliente1.toArray();
-			for(int i = 0; i < lCliente1s.length; i++) {
-				lCliente1s[i].setUsuario(null);
+			modelo.Cliente[] lClientes = usuario.cliente.toArray();
+			for(int i = 0; i < lClientes.length; i++) {
+				lClientes[i].setUsuario(null);
 			}
 			return delete(usuario);
 		}
@@ -345,9 +345,9 @@ public class UsuarioDAO {
 				usuario.getIdBiblioteca().usuario.remove(usuario);
 			}
 			
-			modelo.Cliente[] lCliente1s = usuario.cliente1.toArray();
-			for(int i = 0; i < lCliente1s.length; i++) {
-				lCliente1s[i].setUsuario(null);
+			modelo.Cliente[] lClientes = usuario.cliente.toArray();
+			for(int i = 0; i < lClientes.length; i++) {
+				lClientes[i].setUsuario(null);
 			}
 			try {
 				session.delete(usuario);

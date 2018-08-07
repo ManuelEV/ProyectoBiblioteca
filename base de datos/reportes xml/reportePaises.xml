@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Paises>
-	<Pais idPais="p01">
+	<Pais>
 		<nombre>Chile</nombre>
 	</Pais>
-	<Pais idPais="p02">
+	<Pais>
 		<nombre>Argentina</nombre>
 	</Pais>
-	<Pais idPais="p03">
+	<Pais>
 		<nombre>Estados Unidos</nombre>
 	</Pais>
 </Paises>

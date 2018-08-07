@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class SolicitudLibroDAO {
-	public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadSolicitudLibroByORMID(session, id, codigoLibro, clienteRUN);
+			return loadSolicitudLibroByORMID(session, id, codigoLibro, idCliente);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getSolicitudLibroByORMID(session, id, codigoLibro, clienteRUN);
+			return getSolicitudLibroByORMID(session, id, codigoLibro, idCliente);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadSolicitudLibroByORMID(session, id, codigoLibro, clienteRUN, lockMode);
+			return loadSolicitudLibroByORMID(session, id, codigoLibro, idCliente, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getSolicitudLibroByORMID(session, id, codigoLibro, clienteRUN, lockMode);
+			return getSolicitudLibroByORMID(session, id, codigoLibro, idCliente, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,12 +63,12 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
 			solicitudlibro.setORM_CodigoLibro(codigoLibro);
-			solicitudlibro.setORM_ClienteRUN(clienteRUN);
+			solicitudlibro.setORM_IdCliente(idCliente);
 			
 			return (SolicitudLibro) session.load(modelo.SolicitudLibro.class, solicitudlibro);
 		}
@@ -78,12 +78,12 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN) throws PersistentException {
+	public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
 			solicitudlibro.setORM_CodigoLibro(codigoLibro);
-			solicitudlibro.setORM_ClienteRUN(clienteRUN);
+			solicitudlibro.setORM_IdCliente(idCliente);
 			
 			return (SolicitudLibro) session.get(modelo.SolicitudLibro.class, solicitudlibro);
 		}
@@ -93,12 +93,12 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
 			solicitudlibro.setORM_CodigoLibro(codigoLibro);
-			solicitudlibro.setORM_ClienteRUN(clienteRUN);
+			solicitudlibro.setORM_IdCliente(idCliente);
 			
 			return (SolicitudLibro) session.load(modelo.SolicitudLibro.class, solicitudlibro, lockMode);
 		}
@@ -108,12 +108,12 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
 			solicitudlibro.setORM_CodigoLibro(codigoLibro);
-			solicitudlibro.setORM_ClienteRUN(clienteRUN);
+			solicitudlibro.setORM_IdCliente(idCliente);
 			
 			return (SolicitudLibro) session.get(modelo.SolicitudLibro.class, solicitudlibro, lockMode);
 		}
@@ -349,11 +349,11 @@ public class SolicitudLibroDAO {
 			}
 			solicitudLibro.setORM_CodigoLibro(codigoLibro);
 			
-			modelo.Cliente clienteRUN = solicitudLibro.getClienteRUN();
-			if (solicitudLibro.getClienteRUN() != null) {
-				solicitudLibro.getClienteRUN().solicitudLibro.remove(solicitudLibro);
+			modelo.Cliente idCliente = solicitudLibro.getIdCliente();
+			if (solicitudLibro.getIdCliente() != null) {
+				solicitudLibro.getIdCliente().solicitudLibro.remove(solicitudLibro);
 			}
-			solicitudLibro.setORM_ClienteRUN(clienteRUN);
+			solicitudLibro.setORM_IdCliente(idCliente);
 			
 			return delete(solicitudLibro);
 		}
@@ -371,11 +371,11 @@ public class SolicitudLibroDAO {
 			}
 			solicitudLibro.setORM_CodigoLibro(codigoLibro);
 			
-			modelo.Cliente clienteRUN = solicitudLibro.getClienteRUN();
-			if (solicitudLibro.getClienteRUN() != null) {
-				solicitudLibro.getClienteRUN().solicitudLibro.remove(solicitudLibro);
+			modelo.Cliente idCliente = solicitudLibro.getIdCliente();
+			if (solicitudLibro.getIdCliente() != null) {
+				solicitudLibro.getIdCliente().solicitudLibro.remove(solicitudLibro);
 			}
-			solicitudLibro.setORM_ClienteRUN(clienteRUN);
+			solicitudLibro.setORM_IdCliente(idCliente);
 			
 			try {
 				session.delete(solicitudLibro);

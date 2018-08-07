@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Ciudades>
-	<Ciudad idCiudad="1">
+	<Ciudad>
 		<nombre>Temuco</nombre>
-		<idPais>p01</idPais>
+		<idPais>1</idPais>
 	</Ciudad>
-	<Ciudad idCiudad="2">
+	<Ciudad>
 		<nombre>Santiago</nombre>
-		<idPais>p01</idPais>
+		<idPais>1</idPais>
 	</Ciudad>
-	<Ciudad idCiudad="3">
+	<Ciudad>
 		<nombre>Buenos Aires</nombre>
-		<idPais>p02</idPais>
+		<idPais>2</idPais>
 	</Ciudad>
-	<Ciudad idCiudad="4">
+	<Ciudad>
 		<nombre>Bariloche</nombre>
-		<idPais>p02</idPais>
+		<idPais>2</idPais>
 	</Ciudad>
-	<Ciudad idCiudad="5">
+	<Ciudad>
 		<nombre>New York</nombre>
-		<idPais>p03</idPais>
+		<idPais>3</idPais>
 	</Ciudad>
 </Ciudades>

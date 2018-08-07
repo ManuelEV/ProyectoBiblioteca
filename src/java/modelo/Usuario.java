@@ -18,8 +18,8 @@ public class Usuario {
 	}
 	
 	private java.util.Set this_getSet (int key) {
-		if (key == ORMConstants.KEY_USUARIO_CLIENTE1) {
-			return ORM_cliente1;
+		if (key == ORMConstants.KEY_USUARIO_CLIENTE) {
+			return ORM_cliente;
 		}
 		
 		return null;
@@ -54,7 +54,7 @@ public class Usuario {
 	
 	private modelo.Biblioteca idBiblioteca;
 	
-	private java.util.Set ORM_cliente1 = new java.util.HashSet();
+	private java.util.Set ORM_cliente = new java.util.HashSet();
 	
 	private void setId(int value) {
 		this.id = value;
@@ -124,15 +124,15 @@ public class Usuario {
 		return idBiblioteca;
 	}
 	
-	private void setORM_Cliente1(java.util.Set value) {
-		this.ORM_cliente1 = value;
+	private void setORM_Cliente(java.util.Set value) {
+		this.ORM_cliente = value;
 	}
 	
-	private java.util.Set getORM_Cliente1() {
-		return ORM_cliente1;
+	private java.util.Set getORM_Cliente() {
+		return ORM_cliente;
 	}
 	
-	public final modelo.ClienteSetCollection cliente1 = new modelo.ClienteSetCollection(this, _ormAdapter, ORMConstants.KEY_USUARIO_CLIENTE1, ORMConstants.KEY_CLIENTE_USUARIO, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.ClienteSetCollection cliente = new modelo.ClienteSetCollection(this, _ormAdapter, ORMConstants.KEY_USUARIO_CLIENTE, ORMConstants.KEY_CLIENTE_USUARIO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

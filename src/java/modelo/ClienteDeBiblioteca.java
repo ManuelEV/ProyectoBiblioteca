@@ -32,11 +32,11 @@ public class ClienteDeBiblioteca implements Serializable {
 		}
 		else if (!getBibliotecaidBiblioteca().equals(clientedebiblioteca.getBibliotecaidBiblioteca()))
 			return false;
-		if (getClienteRUN() == null) {
-			if (clientedebiblioteca.getClienteRUN() != null)
+		if (getCliente() == null) {
+			if (clientedebiblioteca.getCliente() != null)
 				return false;
 		}
-		else if (!getClienteRUN().equals(clientedebiblioteca.getClienteRUN()))
+		else if (!getCliente().equals(clientedebiblioteca.getCliente()))
 			return false;
 		return true;
 	}
@@ -47,15 +47,15 @@ public class ClienteDeBiblioteca implements Serializable {
 		if (getBibliotecaidBiblioteca() != null) {
 			hashcode = hashcode + (int) getBibliotecaidBiblioteca().getORMID();
 		}
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (int) getClienteRUN().getORMID();
+		if (getCliente() != null) {
+			hashcode = hashcode + (int) getCliente().getORMID();
 		}
 		return hashcode;
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTERUN) {
-			this.clienteRUN = (modelo.Cliente) owner;
+		if (key == ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTE) {
+			this.cliente = (modelo.Cliente) owner;
 		}
 		
 		else if (key == ORMConstants.KEY_CLIENTEDEBIBLIOTECA_BIBLIOTECAIDBIBLIOTECA) {
@@ -84,16 +84,16 @@ public class ClienteDeBiblioteca implements Serializable {
 		return bibliotecaidBibliotecaId;
 	}
 	
-	private modelo.Cliente clienteRUN;
+	private modelo.Cliente cliente;
 	
-	private int clienteRUNId;
+	private int clienteId;
 	
-	private void setClienteRUNId(int value) {
-		this.clienteRUNId = value;
+	private void setClienteId(int value) {
+		this.clienteId = value;
 	}
 	
-	public int getClienteRUNId() {
-		return clienteRUNId;
+	public int getClienteId() {
+		return clienteId;
 	}
 	
 	public void setId(int value) {
@@ -104,28 +104,28 @@ public class ClienteDeBiblioteca implements Serializable {
 		return id;
 	}
 	
-	public void setClienteRUN(modelo.Cliente value) {
-		if (clienteRUN != null) {
-			clienteRUN.clienteDeBiblioteca.remove(this);
+	public void setCliente(modelo.Cliente value) {
+		if (cliente != null) {
+			cliente.clienteDeBiblioteca.remove(this);
 		}
 		if (value != null) {
 			value.clienteDeBiblioteca.add(this);
 		}
 	}
 	
-	public modelo.Cliente getClienteRUN() {
-		return clienteRUN;
+	public modelo.Cliente getCliente() {
+		return cliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_ClienteRUN(modelo.Cliente value) {
-		this.clienteRUN = value;
+	public void setORM_Cliente(modelo.Cliente value) {
+		this.cliente = value;
 	}
 	
-	private modelo.Cliente getORM_ClienteRUN() {
-		return clienteRUN;
+	private modelo.Cliente getORM_Cliente() {
+		return cliente;
 	}
 	
 	public void setBibliotecaidBiblioteca(modelo.Biblioteca value) {
@@ -153,7 +153,7 @@ public class ClienteDeBiblioteca implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getId() + " " + ((getBibliotecaidBiblioteca() == null) ? "" : String.valueOf(getBibliotecaidBiblioteca().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
+		return String.valueOf(getId() + " " + ((getBibliotecaidBiblioteca() == null) ? "" : String.valueOf(getBibliotecaidBiblioteca().getORMID())) + " " + ((getCliente() == null) ? "" : String.valueOf(getCliente().getORMID())));
 	}
 	
 }

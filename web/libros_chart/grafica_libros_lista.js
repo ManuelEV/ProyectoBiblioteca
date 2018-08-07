@@ -10,6 +10,7 @@ function drawChart() {
             var data = new google.visualization.DataTable();
             // assumes "word" is a string and "count" is a number
             data.addColumn('string', 'Nombre');
+            data.addColumn('string', 'Código');
             data.addColumn('string', 'Autor');
             data.addColumn('string', 'Idioma');
             data.addColumn('string', 'Edición');
@@ -18,7 +19,7 @@ function drawChart() {
 
             var total = 0;
             for (var i = 0; i < jsonData.length; i++) {
-                data.addRow([jsonData[i].nombre,jsonData[i].autor, jsonData[i].idioma,jsonData[i].edicion,jsonData[i].editor, jsonData[i].disponibilidad]);
+                data.addRow([jsonData[i].nombre,jsonData[i].codigoLibro,jsonData[i].autor, jsonData[i].idioma,jsonData[i].edicion,jsonData[i].editor, jsonData[i].disponibilidad]);
                 total+=jsonData[i].cantidadCategoria;
             }
 

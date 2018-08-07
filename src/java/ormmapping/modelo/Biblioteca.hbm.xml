@@ -14,7 +14,7 @@ License Type: Academic
 		<property name="direccion" column="direccion" type="string" length="16" not-null="true" lazy="false"/>
 		<property name="propietario" column="propietario" type="string" length="16" not-null="true" lazy="false"/>
 		<property name="numeroDeTelefono" column="numeroDeTelefono" type="integer" length="12" not-null="false" lazy="false"/>
-		<property name="correoElectronico" column="correoElectronico" type="string" length="16" not-null="true" lazy="false"/>
+		<property name="correoElectronico" column="correoElectronico" type="string" length="80" not-null="true" lazy="false"/>
 		<many-to-one name="idCiudad" cascade="lock" column="idCiudad" class="modelo.Ciudad" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
 		<set name="ORM_Estante" lazy="true" cascade="save-update,lock" inverse="true">

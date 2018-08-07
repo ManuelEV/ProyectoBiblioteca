@@ -20,18 +20,18 @@ import org.orm.criteria.*;
 
 public class AutoresCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id;
-	public final IntegerExpression autoridAutorId;
-	public final AssociationExpression autoridAutor;
-	public final IntegerExpression librocodigoId;
-	public final AssociationExpression librocodigo;
+	public final IntegerExpression idAutorId;
+	public final AssociationExpression idAutor;
+	public final IntegerExpression idLibroId;
+	public final AssociationExpression idLibro;
 	
 	public AutoresCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
-		autoridAutorId = new IntegerExpression("ORM_AutoridAutor.id", this);
-		autoridAutor = new AssociationExpression("ORM_AutoridAutor", this);
-		librocodigoId = new IntegerExpression("ORM_Librocodigo.id", this);
-		librocodigo = new AssociationExpression("ORM_Librocodigo", this);
+		idAutorId = new IntegerExpression("ORM_IdAutor.id", this);
+		idAutor = new AssociationExpression("ORM_IdAutor", this);
+		idLibroId = new IntegerExpression("ORM_IdLibro.id", this);
+		idLibro = new AssociationExpression("ORM_IdLibro", this);
 	}
 	
 	public AutoresCriteria(PersistentSession session) {
@@ -42,12 +42,12 @@ public class AutoresCriteria extends AbstractORMCriteria {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public AutorCriteria createAutoridAutorCriteria() {
-		return new AutorCriteria(createCriteria("ORM_AutoridAutor"));
+	public AutorCriteria createIdAutorCriteria() {
+		return new AutorCriteria(createCriteria("ORM_IdAutor"));
 	}
 	
-	public LibroCriteria createLibrocodigoCriteria() {
-		return new LibroCriteria(createCriteria("ORM_Librocodigo"));
+	public LibroCriteria createIdLibroCriteria() {
+		return new LibroCriteria(createCriteria("ORM_IdLibro"));
 	}
 	
 	public Autores uniqueAutores() {

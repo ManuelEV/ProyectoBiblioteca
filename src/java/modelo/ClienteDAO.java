@@ -328,28 +328,28 @@ public class ClienteDAO {
 			}
 			
 			if (cliente.getUsuario() != null) {
-				cliente.getUsuario().cliente1.remove(cliente);
+				cliente.getUsuario().cliente.remove(cliente);
 			}
 			
 			modelo.SolicitudComputador[] lSolicitudComputadors = cliente.solicitudComputador.toArray();
 			for(int i = 0; i < lSolicitudComputadors.length; i++) {
-				lSolicitudComputadors[i].setClienteRUN(null);
+				lSolicitudComputadors[i].setIdCliente(null);
 			}
 			modelo.SolicitudLibro[] lSolicitudLibros = cliente.solicitudLibro.toArray();
 			for(int i = 0; i < lSolicitudLibros.length; i++) {
-				lSolicitudLibros[i].setClienteRUN(null);
+				lSolicitudLibros[i].setIdCliente(null);
 			}
 			modelo.EntregaDeLibro[] lEntregaDeLibros = cliente.entregaDeLibro.toArray();
 			for(int i = 0; i < lEntregaDeLibros.length; i++) {
-				lEntregaDeLibros[i].setClienteRUN(null);
+				lEntregaDeLibros[i].setIdCliente(null);
 			}
 			modelo.RegistroSalaLectura[] lRegistroSalaLecturas = cliente.registroSalaLectura.toArray();
 			for(int i = 0; i < lRegistroSalaLecturas.length; i++) {
-				lRegistroSalaLecturas[i].setClienteRUN(null);
+				lRegistroSalaLecturas[i].setIdCliente(null);
 			}
 			modelo.ClienteDeBiblioteca[] lClienteDeBibliotecas = cliente.clienteDeBiblioteca.toArray();
 			for(int i = 0; i < lClienteDeBibliotecas.length; i++) {
-				lClienteDeBibliotecas[i].setClienteRUN(null);
+				lClienteDeBibliotecas[i].setCliente(null);
 			}
 			return delete(cliente);
 		}
@@ -366,28 +366,28 @@ public class ClienteDAO {
 			}
 			
 			if (cliente.getUsuario() != null) {
-				cliente.getUsuario().cliente1.remove(cliente);
+				cliente.getUsuario().cliente.remove(cliente);
 			}
 			
 			modelo.SolicitudComputador[] lSolicitudComputadors = cliente.solicitudComputador.toArray();
 			for(int i = 0; i < lSolicitudComputadors.length; i++) {
-				lSolicitudComputadors[i].setClienteRUN(null);
+				lSolicitudComputadors[i].setIdCliente(null);
 			}
 			modelo.SolicitudLibro[] lSolicitudLibros = cliente.solicitudLibro.toArray();
 			for(int i = 0; i < lSolicitudLibros.length; i++) {
-				lSolicitudLibros[i].setClienteRUN(null);
+				lSolicitudLibros[i].setIdCliente(null);
 			}
 			modelo.EntregaDeLibro[] lEntregaDeLibros = cliente.entregaDeLibro.toArray();
 			for(int i = 0; i < lEntregaDeLibros.length; i++) {
-				lEntregaDeLibros[i].setClienteRUN(null);
+				lEntregaDeLibros[i].setIdCliente(null);
 			}
 			modelo.RegistroSalaLectura[] lRegistroSalaLecturas = cliente.registroSalaLectura.toArray();
 			for(int i = 0; i < lRegistroSalaLecturas.length; i++) {
-				lRegistroSalaLecturas[i].setClienteRUN(null);
+				lRegistroSalaLecturas[i].setIdCliente(null);
 			}
 			modelo.ClienteDeBiblioteca[] lClienteDeBibliotecas = cliente.clienteDeBiblioteca.toArray();
 			for(int i = 0; i < lClienteDeBibliotecas.length; i++) {
-				lClienteDeBibliotecas[i].setClienteRUN(null);
+				lClienteDeBibliotecas[i].setCliente(null);
 			}
 			try {
 				session.delete(cliente);

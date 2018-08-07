@@ -55,6 +55,7 @@
                     <li ><a href="/Biblioteca/principal">Principal</a></li>
                     <li class="active"><a href="#">Catálogo</a></li>
                     <li ><a href="/Biblioteca/credencial">Credencial</a></li>
+                    <li ><a href="/Biblioteca/Reserva">Libros pedidos</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

@@ -16,7 +16,7 @@ License Type: Academic
 		<property name="contraseña" column="contraseña" type="string" length="20" not-null="true" lazy="false"/>
 		<many-to-one name="idBiblioteca" cascade="lock" column="idBiblioteca" class="modelo.Biblioteca" not-null="true" lazy="proxy" access="field">
 		</many-to-one>
-		<set name="ORM_Cliente1" lazy="true" cascade="save-update,lock" inverse="true">
+		<set name="ORM_Cliente" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="Usuarioid" not-null="false"/>
 			<one-to-many class="modelo.Cliente"/>
 		</set>

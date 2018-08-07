@@ -26,7 +26,7 @@ public class UsuarioDetachedCriteria extends AbstractORMDetachedCriteria {
 	public final StringExpression contraseña;
 	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression cliente1;
+	public final CollectionExpression cliente;
 	
 	public UsuarioDetachedCriteria() {
 		super(modelo.Usuario.class, modelo.UsuarioCriteria.class);
@@ -37,7 +37,7 @@ public class UsuarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		contraseña = new StringExpression("contraseña", this.getDetachedCriteria());
 		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
-		cliente1 = new CollectionExpression("ORM_Cliente1", this.getDetachedCriteria());
+		cliente = new CollectionExpression("ORM_Cliente", this.getDetachedCriteria());
 	}
 	
 	public UsuarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -49,15 +49,15 @@ public class UsuarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		contraseña = new StringExpression("contraseña", this.getDetachedCriteria());
 		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this.getDetachedCriteria());
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
-		cliente1 = new CollectionExpression("ORM_Cliente1", this.getDetachedCriteria());
+		cliente = new CollectionExpression("ORM_Cliente", this.getDetachedCriteria());
 	}
 	
 	public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public ClienteDetachedCriteria createCliente1Criteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_Cliente1"));
+	public ClienteDetachedCriteria createClienteCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_Cliente"));
 	}
 	
 	public Usuario uniqueUsuario(PersistentSession session) {

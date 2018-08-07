@@ -325,7 +325,7 @@ public class AutorDAO {
 		try {
 			modelo.Autores[] lAutoress = autor.autores.toArray();
 			for(int i = 0; i < lAutoress.length; i++) {
-				lAutoress[i].setAutoridAutor(null);
+				lAutoress[i].setIdAutor(null);
 			}
 			return delete(autor);
 		}
@@ -339,7 +339,7 @@ public class AutorDAO {
 		try {
 			modelo.Autores[] lAutoress = autor.autores.toArray();
 			for(int i = 0; i < lAutoress.length; i++) {
-				lAutoress[i].setAutoridAutor(null);
+				lAutoress[i].setIdAutor(null);
 			}
 			try {
 				session.delete(autor);

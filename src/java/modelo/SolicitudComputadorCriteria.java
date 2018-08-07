@@ -24,8 +24,8 @@ public class SolicitudComputadorCriteria extends AbstractORMCriteria {
 	public final TimeExpression horaSolicitud;
 	public final IntegerExpression idComputadorId;
 	public final AssociationExpression idComputador;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression idClienteId;
+	public final AssociationExpression idCliente;
 	
 	public SolicitudComputadorCriteria(Criteria criteria) {
 		super(criteria);
@@ -34,8 +34,8 @@ public class SolicitudComputadorCriteria extends AbstractORMCriteria {
 		horaSolicitud = new TimeExpression("horaSolicitud", this);
 		idComputadorId = new IntegerExpression("ORM_IdComputador.id", this);
 		idComputador = new AssociationExpression("ORM_IdComputador", this);
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this);
+		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
 	public SolicitudComputadorCriteria(PersistentSession session) {
@@ -50,8 +50,8 @@ public class SolicitudComputadorCriteria extends AbstractORMCriteria {
 		return new ComputadorCriteria(createCriteria("ORM_IdComputador"));
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteCriteria createIdClienteCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
 	public SolicitudComputador uniqueSolicitudComputador() {

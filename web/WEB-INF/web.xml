@@ -56,6 +56,16 @@
         <servlet-name>credencial</servlet-name>
         <url-pattern>/credencial</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>reserva</servlet-name>
+        <jsp-file>reservaLibros.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>reserva</servlet-name>
+        <url-pattern>/reservaLibros</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30

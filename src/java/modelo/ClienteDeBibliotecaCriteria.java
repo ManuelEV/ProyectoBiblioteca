@@ -22,16 +22,16 @@ public class ClienteDeBibliotecaCriteria extends AbstractORMCriteria {
 	public final IntegerExpression id;
 	public final IntegerExpression bibliotecaidBibliotecaId;
 	public final AssociationExpression bibliotecaidBiblioteca;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression clienteId;
+	public final AssociationExpression cliente;
 	
 	public ClienteDeBibliotecaCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		bibliotecaidBibliotecaId = new IntegerExpression("ORM_BibliotecaidBiblioteca.id", this);
 		bibliotecaidBiblioteca = new AssociationExpression("ORM_BibliotecaidBiblioteca", this);
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
+		clienteId = new IntegerExpression("ORM_Cliente.id", this);
+		cliente = new AssociationExpression("ORM_Cliente", this);
 	}
 	
 	public ClienteDeBibliotecaCriteria(PersistentSession session) {
@@ -46,8 +46,8 @@ public class ClienteDeBibliotecaCriteria extends AbstractORMCriteria {
 		return new BibliotecaCriteria(createCriteria("ORM_BibliotecaidBiblioteca"));
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteCriteria createClienteCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_Cliente"));
 	}
 	
 	public ClienteDeBiblioteca uniqueClienteDeBiblioteca() {

@@ -24,8 +24,8 @@ public class EntregaDeLibroCriteria extends AbstractORMCriteria {
 	public final IntegerExpression diasDeAtraso;
 	public final IntegerExpression librocodigoId;
 	public final AssociationExpression librocodigo;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression idClienteId;
+	public final AssociationExpression idCliente;
 	
 	public EntregaDeLibroCriteria(Criteria criteria) {
 		super(criteria);
@@ -34,8 +34,8 @@ public class EntregaDeLibroCriteria extends AbstractORMCriteria {
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this);
 		librocodigoId = new IntegerExpression("ORM_Librocodigo.id", this);
 		librocodigo = new AssociationExpression("ORM_Librocodigo", this);
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this);
+		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
 	public EntregaDeLibroCriteria(PersistentSession session) {
@@ -50,8 +50,8 @@ public class EntregaDeLibroCriteria extends AbstractORMCriteria {
 		return new LibroCriteria(createCriteria("ORM_Librocodigo"));
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteCriteria createIdClienteCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
 	public EntregaDeLibro uniqueEntregaDeLibro() {

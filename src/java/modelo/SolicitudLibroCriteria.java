@@ -25,8 +25,8 @@ public class SolicitudLibroCriteria extends AbstractORMCriteria {
 	public final DateExpression fechaEntregaLimite;
 	public final IntegerExpression codigoLibroId;
 	public final AssociationExpression codigoLibro;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression idClienteId;
+	public final AssociationExpression idCliente;
 	
 	public SolicitudLibroCriteria(Criteria criteria) {
 		super(criteria);
@@ -36,8 +36,8 @@ public class SolicitudLibroCriteria extends AbstractORMCriteria {
 		fechaEntregaLimite = new DateExpression("fechaEntregaLimite", this);
 		codigoLibroId = new IntegerExpression("ORM_CodigoLibro.id", this);
 		codigoLibro = new AssociationExpression("ORM_CodigoLibro", this);
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this);
+		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
 	public SolicitudLibroCriteria(PersistentSession session) {
@@ -52,8 +52,8 @@ public class SolicitudLibroCriteria extends AbstractORMCriteria {
 		return new LibroCriteria(createCriteria("ORM_CodigoLibro"));
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteCriteria createIdClienteCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
 	public SolicitudLibro uniqueSolicitudLibro() {

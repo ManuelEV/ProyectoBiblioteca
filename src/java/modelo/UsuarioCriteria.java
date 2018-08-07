@@ -26,7 +26,7 @@ public class UsuarioCriteria extends AbstractORMCriteria {
 	public final StringExpression contraseña;
 	public final IntegerExpression idBibliotecaId;
 	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression cliente1;
+	public final CollectionExpression cliente;
 	
 	public UsuarioCriteria(Criteria criteria) {
 		super(criteria);
@@ -37,7 +37,7 @@ public class UsuarioCriteria extends AbstractORMCriteria {
 		contraseña = new StringExpression("contraseña", this);
 		idBibliotecaId = new IntegerExpression("idBiblioteca.id", this);
 		idBiblioteca = new AssociationExpression("idBiblioteca", this);
-		cliente1 = new CollectionExpression("ORM_Cliente1", this);
+		cliente = new CollectionExpression("ORM_Cliente", this);
 	}
 	
 	public UsuarioCriteria(PersistentSession session) {
@@ -52,8 +52,8 @@ public class UsuarioCriteria extends AbstractORMCriteria {
 		return new BibliotecaCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public ClienteCriteria createCliente1Criteria() {
-		return new ClienteCriteria(createCriteria("ORM_Cliente1"));
+	public ClienteCriteria createClienteCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_Cliente"));
 	}
 	
 	public Usuario uniqueUsuario() {

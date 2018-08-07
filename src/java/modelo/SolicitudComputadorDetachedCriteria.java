@@ -24,8 +24,8 @@ public class SolicitudComputadorDetachedCriteria extends AbstractORMDetachedCrit
 	public final TimeExpression horaSolicitud;
 	public final IntegerExpression idComputadorId;
 	public final AssociationExpression idComputador;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression idClienteId;
+	public final AssociationExpression idCliente;
 	
 	public SolicitudComputadorDetachedCriteria() {
 		super(modelo.SolicitudComputador.class, modelo.SolicitudComputadorCriteria.class);
@@ -34,8 +34,8 @@ public class SolicitudComputadorDetachedCriteria extends AbstractORMDetachedCrit
 		horaSolicitud = new TimeExpression("horaSolicitud", this.getDetachedCriteria());
 		idComputadorId = new IntegerExpression("ORM_IdComputador.id", this.getDetachedCriteria());
 		idComputador = new AssociationExpression("ORM_IdComputador", this.getDetachedCriteria());
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this.getDetachedCriteria());
+		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
 	public SolicitudComputadorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -45,16 +45,16 @@ public class SolicitudComputadorDetachedCriteria extends AbstractORMDetachedCrit
 		horaSolicitud = new TimeExpression("horaSolicitud", this.getDetachedCriteria());
 		idComputadorId = new IntegerExpression("ORM_IdComputador.id", this.getDetachedCriteria());
 		idComputador = new AssociationExpression("ORM_IdComputador", this.getDetachedCriteria());
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this.getDetachedCriteria());
+		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
 	public ComputadorDetachedCriteria createIdComputadorCriteria() {
 		return new ComputadorDetachedCriteria(createCriteria("ORM_IdComputador"));
 	}
 	
-	public ClienteDetachedCriteria createClienteRUNCriteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteDetachedCriteria createIdClienteCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
 	public SolicitudComputador uniqueSolicitudComputador(PersistentSession session) {

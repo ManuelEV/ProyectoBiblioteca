@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class EntregaDeLibroDAO {
-	public static EntregaDeLibro loadEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN) throws PersistentException {
+	public static EntregaDeLibro loadEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadEntregaDeLibroByORMID(session, id, librocodigo, clienteRUN);
+			return loadEntregaDeLibroByORMID(session, id, librocodigo, idCliente);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro getEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN) throws PersistentException {
+	public static EntregaDeLibro getEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getEntregaDeLibroByORMID(session, id, librocodigo, clienteRUN);
+			return getEntregaDeLibroByORMID(session, id, librocodigo, idCliente);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro loadEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static EntregaDeLibro loadEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadEntregaDeLibroByORMID(session, id, librocodigo, clienteRUN, lockMode);
+			return loadEntregaDeLibroByORMID(session, id, librocodigo, idCliente, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro getEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static EntregaDeLibro getEntregaDeLibroByORMID(int id, modelo.Libro librocodigo, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getEntregaDeLibroByORMID(session, id, librocodigo, clienteRUN, lockMode);
+			return getEntregaDeLibroByORMID(session, id, librocodigo, idCliente, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,12 +63,12 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro loadEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN) throws PersistentException {
+	public static EntregaDeLibro loadEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			EntregaDeLibro entregadelibro = new modelo.EntregaDeLibro();
 			entregadelibro.setId(id);
 			entregadelibro.setORM_Librocodigo(librocodigo);
-			entregadelibro.setORM_ClienteRUN(clienteRUN);
+			entregadelibro.setORM_IdCliente(idCliente);
 			
 			return (EntregaDeLibro) session.load(modelo.EntregaDeLibro.class, entregadelibro);
 		}
@@ -78,12 +78,12 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro getEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN) throws PersistentException {
+	public static EntregaDeLibro getEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			EntregaDeLibro entregadelibro = new modelo.EntregaDeLibro();
 			entregadelibro.setId(id);
 			entregadelibro.setORM_Librocodigo(librocodigo);
-			entregadelibro.setORM_ClienteRUN(clienteRUN);
+			entregadelibro.setORM_IdCliente(idCliente);
 			
 			return (EntregaDeLibro) session.get(modelo.EntregaDeLibro.class, entregadelibro);
 		}
@@ -93,12 +93,12 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro loadEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static EntregaDeLibro loadEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			EntregaDeLibro entregadelibro = new modelo.EntregaDeLibro();
 			entregadelibro.setId(id);
 			entregadelibro.setORM_Librocodigo(librocodigo);
-			entregadelibro.setORM_ClienteRUN(clienteRUN);
+			entregadelibro.setORM_IdCliente(idCliente);
 			
 			return (EntregaDeLibro) session.load(modelo.EntregaDeLibro.class, entregadelibro, lockMode);
 		}
@@ -108,12 +108,12 @@ public class EntregaDeLibroDAO {
 		}
 	}
 	
-	public static EntregaDeLibro getEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente clienteRUN, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static EntregaDeLibro getEntregaDeLibroByORMID(PersistentSession session, int id, modelo.Libro librocodigo, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			EntregaDeLibro entregadelibro = new modelo.EntregaDeLibro();
 			entregadelibro.setId(id);
 			entregadelibro.setORM_Librocodigo(librocodigo);
-			entregadelibro.setORM_ClienteRUN(clienteRUN);
+			entregadelibro.setORM_IdCliente(idCliente);
 			
 			return (EntregaDeLibro) session.get(modelo.EntregaDeLibro.class, entregadelibro, lockMode);
 		}
@@ -349,11 +349,11 @@ public class EntregaDeLibroDAO {
 			}
 			entregaDeLibro.setORM_Librocodigo(librocodigo);
 			
-			modelo.Cliente clienteRUN = entregaDeLibro.getClienteRUN();
-			if (entregaDeLibro.getClienteRUN() != null) {
-				entregaDeLibro.getClienteRUN().entregaDeLibro.remove(entregaDeLibro);
+			modelo.Cliente idCliente = entregaDeLibro.getIdCliente();
+			if (entregaDeLibro.getIdCliente() != null) {
+				entregaDeLibro.getIdCliente().entregaDeLibro.remove(entregaDeLibro);
 			}
-			entregaDeLibro.setORM_ClienteRUN(clienteRUN);
+			entregaDeLibro.setORM_IdCliente(idCliente);
 			
 			return delete(entregaDeLibro);
 		}
@@ -371,11 +371,11 @@ public class EntregaDeLibroDAO {
 			}
 			entregaDeLibro.setORM_Librocodigo(librocodigo);
 			
-			modelo.Cliente clienteRUN = entregaDeLibro.getClienteRUN();
-			if (entregaDeLibro.getClienteRUN() != null) {
-				entregaDeLibro.getClienteRUN().entregaDeLibro.remove(entregaDeLibro);
+			modelo.Cliente idCliente = entregaDeLibro.getIdCliente();
+			if (entregaDeLibro.getIdCliente() != null) {
+				entregaDeLibro.getIdCliente().entregaDeLibro.remove(entregaDeLibro);
 			}
-			entregaDeLibro.setORM_ClienteRUN(clienteRUN);
+			entregaDeLibro.setORM_IdCliente(idCliente);
 			
 			try {
 				session.delete(entregaDeLibro);

@@ -19,10 +19,10 @@ import org.hibernate.LockMode;
 import java.util.List;
 
 public class AutoresDAO {
-	public static Autores loadAutoresByORMID(int id, modelo.Autor autoridAutor, modelo.Libro librocodigo) throws PersistentException {
+	public static Autores loadAutoresByORMID(int id, modelo.Autor idAutor, modelo.Libro idLibro) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadAutoresByORMID(session, id, autoridAutor, librocodigo);
+			return loadAutoresByORMID(session, id, idAutor, idLibro);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -30,10 +30,10 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores getAutoresByORMID(int id, modelo.Autor autoridAutor, modelo.Libro librocodigo) throws PersistentException {
+	public static Autores getAutoresByORMID(int id, modelo.Autor idAutor, modelo.Libro idLibro) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getAutoresByORMID(session, id, autoridAutor, librocodigo);
+			return getAutoresByORMID(session, id, idAutor, idLibro);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -41,10 +41,10 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores loadAutoresByORMID(int id, modelo.Autor autoridAutor, modelo.Libro librocodigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autores loadAutoresByORMID(int id, modelo.Autor idAutor, modelo.Libro idLibro, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return loadAutoresByORMID(session, id, autoridAutor, librocodigo, lockMode);
+			return loadAutoresByORMID(session, id, idAutor, idLibro, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -52,10 +52,10 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores getAutoresByORMID(int id, modelo.Autor autoridAutor, modelo.Libro librocodigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autores getAutoresByORMID(int id, modelo.Autor idAutor, modelo.Libro idLibro, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
-			return getAutoresByORMID(session, id, autoridAutor, librocodigo, lockMode);
+			return getAutoresByORMID(session, id, idAutor, idLibro, lockMode);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,12 +63,12 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores loadAutoresByORMID(PersistentSession session, int id, modelo.Autor autoridAutor, modelo.Libro librocodigo) throws PersistentException {
+	public static Autores loadAutoresByORMID(PersistentSession session, int id, modelo.Autor idAutor, modelo.Libro idLibro) throws PersistentException {
 		try {
 			Autores autores = new modelo.Autores();
 			autores.setId(id);
-			autores.setORM_AutoridAutor(autoridAutor);
-			autores.setORM_Librocodigo(librocodigo);
+			autores.setORM_IdAutor(idAutor);
+			autores.setORM_IdLibro(idLibro);
 			
 			return (Autores) session.load(modelo.Autores.class, autores);
 		}
@@ -78,12 +78,12 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores getAutoresByORMID(PersistentSession session, int id, modelo.Autor autoridAutor, modelo.Libro librocodigo) throws PersistentException {
+	public static Autores getAutoresByORMID(PersistentSession session, int id, modelo.Autor idAutor, modelo.Libro idLibro) throws PersistentException {
 		try {
 			Autores autores = new modelo.Autores();
 			autores.setId(id);
-			autores.setORM_AutoridAutor(autoridAutor);
-			autores.setORM_Librocodigo(librocodigo);
+			autores.setORM_IdAutor(idAutor);
+			autores.setORM_IdLibro(idLibro);
 			
 			return (Autores) session.get(modelo.Autores.class, autores);
 		}
@@ -93,12 +93,12 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores loadAutoresByORMID(PersistentSession session, int id, modelo.Autor autoridAutor, modelo.Libro librocodigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autores loadAutoresByORMID(PersistentSession session, int id, modelo.Autor idAutor, modelo.Libro idLibro, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			Autores autores = new modelo.Autores();
 			autores.setId(id);
-			autores.setORM_AutoridAutor(autoridAutor);
-			autores.setORM_Librocodigo(librocodigo);
+			autores.setORM_IdAutor(idAutor);
+			autores.setORM_IdLibro(idLibro);
 			
 			return (Autores) session.load(modelo.Autores.class, autores, lockMode);
 		}
@@ -108,12 +108,12 @@ public class AutoresDAO {
 		}
 	}
 	
-	public static Autores getAutoresByORMID(PersistentSession session, int id, modelo.Autor autoridAutor, modelo.Libro librocodigo, org.hibernate.LockMode lockMode) throws PersistentException {
+	public static Autores getAutoresByORMID(PersistentSession session, int id, modelo.Autor idAutor, modelo.Libro idLibro, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			Autores autores = new modelo.Autores();
 			autores.setId(id);
-			autores.setORM_AutoridAutor(autoridAutor);
-			autores.setORM_Librocodigo(librocodigo);
+			autores.setORM_IdAutor(idAutor);
+			autores.setORM_IdLibro(idLibro);
 			
 			return (Autores) session.get(modelo.Autores.class, autores, lockMode);
 		}
@@ -343,17 +343,17 @@ public class AutoresDAO {
 	
 	public static boolean deleteAndDissociate(modelo.Autores autores)throws PersistentException {
 		try {
-			modelo.Autor autoridAutor = autores.getAutoridAutor();
-			if (autores.getAutoridAutor() != null) {
-				autores.getAutoridAutor().autores.remove(autores);
+			modelo.Autor idAutor = autores.getIdAutor();
+			if (autores.getIdAutor() != null) {
+				autores.getIdAutor().autores.remove(autores);
 			}
-			autores.setORM_AutoridAutor(autoridAutor);
+			autores.setORM_IdAutor(idAutor);
 			
-			modelo.Libro librocodigo = autores.getLibrocodigo();
-			if (autores.getLibrocodigo() != null) {
-				autores.getLibrocodigo().autores.remove(autores);
+			modelo.Libro idLibro = autores.getIdLibro();
+			if (autores.getIdLibro() != null) {
+				autores.getIdLibro().autores.remove(autores);
 			}
-			autores.setORM_Librocodigo(librocodigo);
+			autores.setORM_IdLibro(idLibro);
 			
 			return delete(autores);
 		}
@@ -365,17 +365,17 @@ public class AutoresDAO {
 	
 	public static boolean deleteAndDissociate(modelo.Autores autores, org.orm.PersistentSession session)throws PersistentException {
 		try {
-			modelo.Autor autoridAutor = autores.getAutoridAutor();
-			if (autores.getAutoridAutor() != null) {
-				autores.getAutoridAutor().autores.remove(autores);
+			modelo.Autor idAutor = autores.getIdAutor();
+			if (autores.getIdAutor() != null) {
+				autores.getIdAutor().autores.remove(autores);
 			}
-			autores.setORM_AutoridAutor(autoridAutor);
+			autores.setORM_IdAutor(idAutor);
 			
-			modelo.Libro librocodigo = autores.getLibrocodigo();
-			if (autores.getLibrocodigo() != null) {
-				autores.getLibrocodigo().autores.remove(autores);
+			modelo.Libro idLibro = autores.getIdLibro();
+			if (autores.getIdLibro() != null) {
+				autores.getIdLibro().autores.remove(autores);
 			}
-			autores.setORM_Librocodigo(librocodigo);
+			autores.setORM_IdLibro(idLibro);
 			
 			try {
 				session.delete(autores);

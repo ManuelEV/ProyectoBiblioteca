@@ -10,7 +10,7 @@ License Type: Academic
 			<key-property name="id" column="id" type="integer"/>
 			<key-many-to-one name="ORM_BibliotecaidBiblioteca" column="bibliotecaidBiblioteca" class="modelo.Biblioteca">
 			</key-many-to-one>
-			<key-many-to-one name="ORM_ClienteRUN" column="Clienteid" class="modelo.Cliente">
+			<key-many-to-one name="ORM_Cliente" column="Clienteid" class="modelo.Cliente">
 			</key-many-to-one>
 		</composite-id>
 	</class>

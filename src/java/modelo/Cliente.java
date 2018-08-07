@@ -98,6 +98,18 @@ public class Cliente {
 	
 	private java.util.Set ORM_clienteDeBiblioteca = new java.util.HashSet();
 	
+	private void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public int getORMID() {
+		return getId();
+	}
+	
 	public void setRUN(String value) {
 		this.RUN = value;
 	}
@@ -202,18 +214,6 @@ public class Cliente {
 		return numeroDeTelefono;
 	}
 	
-	private void setId(int value) {
-		this.id = value;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	public int getORMID() {
-		return getId();
-	}
-	
 	public void setIdCiudad(modelo.Ciudad value) {
 		if (idCiudad != null) {
 			idCiudad.cliente.remove(this);
@@ -240,10 +240,10 @@ public class Cliente {
 	
 	public void setUsuario(modelo.Usuario value) {
 		if (usuario != null) {
-			usuario.cliente1.remove(this);
+			usuario.cliente.remove(this);
 		}
 		if (value != null) {
-			value.cliente1.add(this);
+			value.cliente.add(this);
 		}
 	}
 	
@@ -270,7 +270,7 @@ public class Cliente {
 		return ORM_solicitudComputador;
 	}
 	
-	public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_CLIENTERUN, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_SolicitudLibro(java.util.Set value) {
 		this.ORM_solicitudLibro = value;
@@ -280,7 +280,7 @@ public class Cliente {
 		return ORM_solicitudLibro;
 	}
 	
-	public final modelo.SolicitudLibroSetCollection solicitudLibro = new modelo.SolicitudLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDLIBRO, ORMConstants.KEY_SOLICITUDLIBRO_CLIENTERUN, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.SolicitudLibroSetCollection solicitudLibro = new modelo.SolicitudLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDLIBRO, ORMConstants.KEY_SOLICITUDLIBRO_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_EntregaDeLibro(java.util.Set value) {
 		this.ORM_entregaDeLibro = value;
@@ -290,7 +290,7 @@ public class Cliente {
 		return ORM_entregaDeLibro;
 	}
 	
-	public final modelo.EntregaDeLibroSetCollection entregaDeLibro = new modelo.EntregaDeLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_ENTREGADELIBRO, ORMConstants.KEY_ENTREGADELIBRO_CLIENTERUN, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.EntregaDeLibroSetCollection entregaDeLibro = new modelo.EntregaDeLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_ENTREGADELIBRO, ORMConstants.KEY_ENTREGADELIBRO_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_RegistroSalaLectura(java.util.Set value) {
 		this.ORM_registroSalaLectura = value;
@@ -300,7 +300,7 @@ public class Cliente {
 		return ORM_registroSalaLectura;
 	}
 	
-	public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_CLIENTERUN, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_ClienteDeBiblioteca(java.util.Set value) {
 		this.ORM_clienteDeBiblioteca = value;
@@ -310,7 +310,7 @@ public class Cliente {
 		return ORM_clienteDeBiblioteca;
 	}
 	
-	public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTERUN, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

@@ -341,7 +341,7 @@ public class LibroDAO {
 			}
 			modelo.Autores[] lAutoress = libro.autores.toArray();
 			for(int i = 0; i < lAutoress.length; i++) {
-				lAutoress[i].setLibrocodigo(null);
+				lAutoress[i].setIdLibro(null);
 			}
 			return delete(libro);
 		}
@@ -371,7 +371,7 @@ public class LibroDAO {
 			}
 			modelo.Autores[] lAutoress = libro.autores.toArray();
 			for(int i = 0; i < lAutoress.length; i++) {
-				lAutoress[i].setLibrocodigo(null);
+				lAutoress[i].setIdLibro(null);
 			}
 			try {
 				session.delete(libro);

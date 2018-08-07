@@ -24,8 +24,8 @@ public class EntregaDeLibroDetachedCriteria extends AbstractORMDetachedCriteria 
 	public final IntegerExpression diasDeAtraso;
 	public final IntegerExpression librocodigoId;
 	public final AssociationExpression librocodigo;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression idClienteId;
+	public final AssociationExpression idCliente;
 	
 	public EntregaDeLibroDetachedCriteria() {
 		super(modelo.EntregaDeLibro.class, modelo.EntregaDeLibroCriteria.class);
@@ -34,8 +34,8 @@ public class EntregaDeLibroDetachedCriteria extends AbstractORMDetachedCriteria 
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this.getDetachedCriteria());
 		librocodigoId = new IntegerExpression("ORM_Librocodigo.id", this.getDetachedCriteria());
 		librocodigo = new AssociationExpression("ORM_Librocodigo", this.getDetachedCriteria());
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this.getDetachedCriteria());
+		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
 	public EntregaDeLibroDetachedCriteria(DetachedCriteria aDetachedCriteria) {
@@ -45,16 +45,16 @@ public class EntregaDeLibroDetachedCriteria extends AbstractORMDetachedCriteria 
 		diasDeAtraso = new IntegerExpression("diasDeAtraso", this.getDetachedCriteria());
 		librocodigoId = new IntegerExpression("ORM_Librocodigo.id", this.getDetachedCriteria());
 		librocodigo = new AssociationExpression("ORM_Librocodigo", this.getDetachedCriteria());
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this.getDetachedCriteria());
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this.getDetachedCriteria());
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this.getDetachedCriteria());
+		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
 	public LibroDetachedCriteria createLibrocodigoCriteria() {
 		return new LibroDetachedCriteria(createCriteria("ORM_Librocodigo"));
 	}
 	
-	public ClienteDetachedCriteria createClienteRUNCriteria() {
-		return new ClienteDetachedCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteDetachedCriteria createIdClienteCriteria() {
+		return new ClienteDetachedCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
 	public EntregaDeLibro uniqueEntregaDeLibro(PersistentSession session) {

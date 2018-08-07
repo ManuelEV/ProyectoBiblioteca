@@ -131,7 +131,7 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		// Please uncomment the follow line and fill in parameter(s)
 		//lmodeloSolicitudComputadorCriteria.id.eq();
 		//lmodeloSolicitudComputadorCriteria.idComputador.eq();
-		//lmodeloSolicitudComputadorCriteria.clienteRUN.eq();
+		//lmodeloSolicitudComputadorCriteria.idCliente.eq();
 		System.out.println(lmodeloSolicitudComputadorCriteria.uniqueSolicitudComputador());
 		
 		System.out.println("Retrieving SolicitudLibro by SolicitudLibroCriteria");
@@ -139,7 +139,7 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		// Please uncomment the follow line and fill in parameter(s)
 		//lmodeloSolicitudLibroCriteria.id.eq();
 		//lmodeloSolicitudLibroCriteria.codigoLibro.eq();
-		//lmodeloSolicitudLibroCriteria.clienteRUN.eq();
+		//lmodeloSolicitudLibroCriteria.idCliente.eq();
 		System.out.println(lmodeloSolicitudLibroCriteria.uniqueSolicitudLibro());
 		
 		System.out.println("Retrieving EntregaDeLibro by EntregaDeLibroCriteria");
@@ -147,7 +147,7 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		// Please uncomment the follow line and fill in parameter(s)
 		//lmodeloEntregaDeLibroCriteria.id.eq();
 		//lmodeloEntregaDeLibroCriteria.librocodigo.eq();
-		//lmodeloEntregaDeLibroCriteria.clienteRUN.eq();
+		//lmodeloEntregaDeLibroCriteria.idCliente.eq();
 		System.out.println(lmodeloEntregaDeLibroCriteria.uniqueEntregaDeLibro());
 		
 		System.out.println("Retrieving SalaDeLectura by SalaDeLecturaCriteria");
@@ -167,15 +167,15 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		// Please uncomment the follow line and fill in parameter(s)
 		//lmodeloRegistroSalaLecturaCriteria.id.eq();
 		//lmodeloRegistroSalaLecturaCriteria.salaDeLecturaidSala.eq();
-		//lmodeloRegistroSalaLecturaCriteria.clienteRUN.eq();
+		//lmodeloRegistroSalaLecturaCriteria.idCliente.eq();
 		System.out.println(lmodeloRegistroSalaLecturaCriteria.uniqueRegistroSalaLectura());
 		
 		System.out.println("Retrieving Autores by AutoresCriteria");
 		modelo.AutoresCriteria lmodeloAutoresCriteria = new modelo.AutoresCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
 		//lmodeloAutoresCriteria.id.eq();
-		//lmodeloAutoresCriteria.autoridAutor.eq();
-		//lmodeloAutoresCriteria.librocodigo.eq();
+		//lmodeloAutoresCriteria.idAutor.eq();
+		//lmodeloAutoresCriteria.idLibro.eq();
 		System.out.println(lmodeloAutoresCriteria.uniqueAutores());
 		
 		System.out.println("Retrieving ClienteDeBiblioteca by ClienteDeBibliotecaCriteria");
@@ -183,7 +183,7 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		// Please uncomment the follow line and fill in parameter(s)
 		//lmodeloClienteDeBibliotecaCriteria.id.eq();
 		//lmodeloClienteDeBibliotecaCriteria.bibliotecaidBiblioteca.eq();
-		//lmodeloClienteDeBibliotecaCriteria.clienteRUN.eq();
+		//lmodeloClienteDeBibliotecaCriteria.cliente.eq();
 		System.out.println(lmodeloClienteDeBibliotecaCriteria.uniqueClienteDeBiblioteca());
 		
 		System.out.println("Retrieving Usuario by UsuarioCriteria");

@@ -270,7 +270,7 @@ public class ListProyectoprogramacionavanzadaData {
 		//lmodeloSolicitudComputadorCriteria.id.eq();
 		//modelo.ComputadorCriteria lmodeloSolicitudComputadorCriteria_Computador = lmodeloSolicitudComputadorCriteria.createIdComputadorCriteria();
 		//lmodeloSolicitudComputadorCriteria_Computador.id.eq();
-		//modelo.ClienteCriteria lmodeloSolicitudComputadorCriteria_Cliente = lmodeloSolicitudComputadorCriteria.createClienteRUNCriteria();
+		//modelo.ClienteCriteria lmodeloSolicitudComputadorCriteria_Cliente = lmodeloSolicitudComputadorCriteria.createIdClienteCriteria();
 		//lmodeloSolicitudComputadorCriteria_Cliente.id.eq();
 		lmodeloSolicitudComputadorCriteria.setMaxResults(ROW_COUNT);
 		modelo.SolicitudComputador[] modeloSolicitudComputadors = lmodeloSolicitudComputadorCriteria.listSolicitudComputador();
@@ -286,7 +286,7 @@ public class ListProyectoprogramacionavanzadaData {
 		//lmodeloSolicitudLibroCriteria.id.eq();
 		//modelo.LibroCriteria lmodeloSolicitudLibroCriteria_Libro = lmodeloSolicitudLibroCriteria.createCodigoLibroCriteria();
 		//lmodeloSolicitudLibroCriteria_Libro.id.eq();
-		//modelo.ClienteCriteria lmodeloSolicitudLibroCriteria_Cliente = lmodeloSolicitudLibroCriteria.createClienteRUNCriteria();
+		//modelo.ClienteCriteria lmodeloSolicitudLibroCriteria_Cliente = lmodeloSolicitudLibroCriteria.createIdClienteCriteria();
 		//lmodeloSolicitudLibroCriteria_Cliente.id.eq();
 		lmodeloSolicitudLibroCriteria.setMaxResults(ROW_COUNT);
 		modelo.SolicitudLibro[] modeloSolicitudLibros = lmodeloSolicitudLibroCriteria.listSolicitudLibro();
@@ -302,7 +302,7 @@ public class ListProyectoprogramacionavanzadaData {
 		//lmodeloEntregaDeLibroCriteria.id.eq();
 		//modelo.LibroCriteria lmodeloEntregaDeLibroCriteria_Libro = lmodeloEntregaDeLibroCriteria.createLibrocodigoCriteria();
 		//lmodeloEntregaDeLibroCriteria_Libro.id.eq();
-		//modelo.ClienteCriteria lmodeloEntregaDeLibroCriteria_Cliente = lmodeloEntregaDeLibroCriteria.createClienteRUNCriteria();
+		//modelo.ClienteCriteria lmodeloEntregaDeLibroCriteria_Cliente = lmodeloEntregaDeLibroCriteria.createIdClienteCriteria();
 		//lmodeloEntregaDeLibroCriteria_Cliente.id.eq();
 		lmodeloEntregaDeLibroCriteria.setMaxResults(ROW_COUNT);
 		modelo.EntregaDeLibro[] modeloEntregaDeLibros = lmodeloEntregaDeLibroCriteria.listEntregaDeLibro();
@@ -342,7 +342,7 @@ public class ListProyectoprogramacionavanzadaData {
 		//lmodeloRegistroSalaLecturaCriteria.id.eq();
 		//modelo.SalaDeLecturaCriteria lmodeloRegistroSalaLecturaCriteria_SalaDeLectura = lmodeloRegistroSalaLecturaCriteria.createSalaDeLecturaidSalaCriteria();
 		//lmodeloRegistroSalaLecturaCriteria_SalaDeLectura.id.eq();
-		//modelo.ClienteCriteria lmodeloRegistroSalaLecturaCriteria_Cliente = lmodeloRegistroSalaLecturaCriteria.createClienteRUNCriteria();
+		//modelo.ClienteCriteria lmodeloRegistroSalaLecturaCriteria_Cliente = lmodeloRegistroSalaLecturaCriteria.createIdClienteCriteria();
 		//lmodeloRegistroSalaLecturaCriteria_Cliente.id.eq();
 		lmodeloRegistroSalaLecturaCriteria.setMaxResults(ROW_COUNT);
 		modelo.RegistroSalaLectura[] modeloRegistroSalaLecturas = lmodeloRegistroSalaLecturaCriteria.listRegistroSalaLectura();
@@ -356,9 +356,9 @@ public class ListProyectoprogramacionavanzadaData {
 		modelo.AutoresCriteria lmodeloAutoresCriteria = new modelo.AutoresCriteria();
 		// Please uncomment the follow line and fill in parameter(s) 
 		//lmodeloAutoresCriteria.id.eq();
-		//modelo.AutorCriteria lmodeloAutoresCriteria_Autor = lmodeloAutoresCriteria.createAutoridAutorCriteria();
+		//modelo.AutorCriteria lmodeloAutoresCriteria_Autor = lmodeloAutoresCriteria.createIdAutorCriteria();
 		//lmodeloAutoresCriteria_Autor.id.eq();
-		//modelo.LibroCriteria lmodeloAutoresCriteria_Libro = lmodeloAutoresCriteria.createLibrocodigoCriteria();
+		//modelo.LibroCriteria lmodeloAutoresCriteria_Libro = lmodeloAutoresCriteria.createIdLibroCriteria();
 		//lmodeloAutoresCriteria_Libro.id.eq();
 		lmodeloAutoresCriteria.setMaxResults(ROW_COUNT);
 		modelo.Autores[] modeloAutoreses = lmodeloAutoresCriteria.listAutores();
@@ -374,7 +374,7 @@ public class ListProyectoprogramacionavanzadaData {
 		//lmodeloClienteDeBibliotecaCriteria.id.eq();
 		//modelo.BibliotecaCriteria lmodeloClienteDeBibliotecaCriteria_Biblioteca = lmodeloClienteDeBibliotecaCriteria.createBibliotecaidBibliotecaCriteria();
 		//lmodeloClienteDeBibliotecaCriteria_Biblioteca.id.eq();
-		//modelo.ClienteCriteria lmodeloClienteDeBibliotecaCriteria_Cliente = lmodeloClienteDeBibliotecaCriteria.createClienteRUNCriteria();
+		//modelo.ClienteCriteria lmodeloClienteDeBibliotecaCriteria_Cliente = lmodeloClienteDeBibliotecaCriteria.createClienteCriteria();
 		//lmodeloClienteDeBibliotecaCriteria_Cliente.id.eq();
 		lmodeloClienteDeBibliotecaCriteria.setMaxResults(ROW_COUNT);
 		modelo.ClienteDeBiblioteca[] modeloClienteDeBibliotecas = lmodeloClienteDeBibliotecaCriteria.listClienteDeBiblioteca();

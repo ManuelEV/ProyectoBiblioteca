@@ -8,9 +8,9 @@ License Type: Academic
 	<class name="modelo.Autores" table="Autores" lazy="false">
 		<composite-id>
 			<key-property name="id" column="id" type="integer"/>
-			<key-many-to-one name="ORM_AutoridAutor" column="idAutor" class="modelo.Autor">
+			<key-many-to-one name="ORM_IdAutor" column="idAutor" class="modelo.Autor">
 			</key-many-to-one>
-			<key-many-to-one name="ORM_Librocodigo" column="idLibro" class="modelo.Libro">
+			<key-many-to-one name="ORM_IdLibro" column="idLibro" class="modelo.Libro">
 			</key-many-to-one>
 		</composite-id>
 	</class>

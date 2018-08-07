@@ -32,11 +32,11 @@ public class SolicitudLibro implements Serializable {
 		}
 		else if (!getCodigoLibro().equals(solicitudlibro.getCodigoLibro()))
 			return false;
-		if (getClienteRUN() == null) {
-			if (solicitudlibro.getClienteRUN() != null)
+		if (getIdCliente() == null) {
+			if (solicitudlibro.getIdCliente() != null)
 				return false;
 		}
-		else if (!getClienteRUN().equals(solicitudlibro.getClienteRUN()))
+		else if (!getIdCliente().equals(solicitudlibro.getIdCliente()))
 			return false;
 		return true;
 	}
@@ -47,15 +47,15 @@ public class SolicitudLibro implements Serializable {
 		if (getCodigoLibro() != null) {
 			hashcode = hashcode + (int) getCodigoLibro().getORMID();
 		}
-		if (getClienteRUN() != null) {
-			hashcode = hashcode + (int) getClienteRUN().getORMID();
+		if (getIdCliente() != null) {
+			hashcode = hashcode + (int) getIdCliente().getORMID();
 		}
 		return hashcode;
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == ORMConstants.KEY_SOLICITUDLIBRO_CLIENTERUN) {
-			this.clienteRUN = (modelo.Cliente) owner;
+		if (key == ORMConstants.KEY_SOLICITUDLIBRO_IDCLIENTE) {
+			this.idCliente = (modelo.Cliente) owner;
 		}
 		
 		else if (key == ORMConstants.KEY_SOLICITUDLIBRO_CODIGOLIBRO) {
@@ -90,16 +90,16 @@ public class SolicitudLibro implements Serializable {
 		return codigoLibroId;
 	}
 	
-	private modelo.Cliente clienteRUN;
+	private modelo.Cliente idCliente;
 	
-	private int clienteRUNId;
+	private int idClienteId;
 	
-	private void setClienteRUNId(int value) {
-		this.clienteRUNId = value;
+	private void setIdClienteId(int value) {
+		this.idClienteId = value;
 	}
 	
-	public int getClienteRUNId() {
-		return clienteRUNId;
+	public int getIdClienteId() {
+		return idClienteId;
 	}
 	
 	public void setId(int value) {
@@ -134,28 +134,28 @@ public class SolicitudLibro implements Serializable {
 		return fechaEntregaLimite;
 	}
 	
-	public void setClienteRUN(modelo.Cliente value) {
-		if (clienteRUN != null) {
-			clienteRUN.solicitudLibro.remove(this);
+	public void setIdCliente(modelo.Cliente value) {
+		if (idCliente != null) {
+			idCliente.solicitudLibro.remove(this);
 		}
 		if (value != null) {
 			value.solicitudLibro.add(this);
 		}
 	}
 	
-	public modelo.Cliente getClienteRUN() {
-		return clienteRUN;
+	public modelo.Cliente getIdCliente() {
+		return idCliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_ClienteRUN(modelo.Cliente value) {
-		this.clienteRUN = value;
+	public void setORM_IdCliente(modelo.Cliente value) {
+		this.idCliente = value;
 	}
 	
-	private modelo.Cliente getORM_ClienteRUN() {
-		return clienteRUN;
+	private modelo.Cliente getORM_IdCliente() {
+		return idCliente;
 	}
 	
 	public void setCodigoLibro(modelo.Libro value) {
@@ -183,7 +183,7 @@ public class SolicitudLibro implements Serializable {
 	}
 	
 	public String toString() {
-		return String.valueOf(getId() + " " + ((getCodigoLibro() == null) ? "" : String.valueOf(getCodigoLibro().getORMID())) + " " + ((getClienteRUN() == null) ? "" : String.valueOf(getClienteRUN().getORMID())));
+		return String.valueOf(getId() + " " + ((getCodigoLibro() == null) ? "" : String.valueOf(getCodigoLibro().getORMID())) + " " + ((getIdCliente() == null) ? "" : String.valueOf(getIdCliente().getORMID())));
 	}
 	
 }

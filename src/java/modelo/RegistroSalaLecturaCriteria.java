@@ -25,8 +25,8 @@ public class RegistroSalaLecturaCriteria extends AbstractORMCriteria {
 	public final TimeExpression horaRegistro;
 	public final IntegerExpression salaDeLecturaidSalaId;
 	public final AssociationExpression salaDeLecturaidSala;
-	public final IntegerExpression clienteRUNId;
-	public final AssociationExpression clienteRUN;
+	public final IntegerExpression idClienteId;
+	public final AssociationExpression idCliente;
 	
 	public RegistroSalaLecturaCriteria(Criteria criteria) {
 		super(criteria);
@@ -36,8 +36,8 @@ public class RegistroSalaLecturaCriteria extends AbstractORMCriteria {
 		horaRegistro = new TimeExpression("horaRegistro", this);
 		salaDeLecturaidSalaId = new IntegerExpression("ORM_SalaDeLecturaidSala.id", this);
 		salaDeLecturaidSala = new AssociationExpression("ORM_SalaDeLecturaidSala", this);
-		clienteRUNId = new IntegerExpression("ORM_ClienteRUN.id", this);
-		clienteRUN = new AssociationExpression("ORM_ClienteRUN", this);
+		idClienteId = new IntegerExpression("ORM_IdCliente.id", this);
+		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
 	public RegistroSalaLecturaCriteria(PersistentSession session) {
@@ -52,8 +52,8 @@ public class RegistroSalaLecturaCriteria extends AbstractORMCriteria {
 		return new SalaDeLecturaCriteria(createCriteria("ORM_SalaDeLecturaidSala"));
 	}
 	
-	public ClienteCriteria createClienteRUNCriteria() {
-		return new ClienteCriteria(createCriteria("ORM_ClienteRUN"));
+	public ClienteCriteria createIdClienteCriteria() {
+		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
 	public RegistroSalaLectura uniqueRegistroSalaLectura() {

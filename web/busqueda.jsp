@@ -41,6 +41,7 @@
                     <li ><a href="/Biblioteca/principal">Principal</a></li>
                     <li class="active"><a href="/Biblioteca/catalogo">Catálogo</a></li>
                     <li ><a href="/Biblioteca/credencial">Credencial</a></li>
+                    <li ><a href="/Biblioteca/Reserva">Libros pedidos</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
@@ -51,7 +52,7 @@
             </div>
         </nav>
 
-        <form id="formulario" method="post" action="Registro">
+        <form id="formulario" method="post" action="Reserva">
             <div class="container">
                 <table class="table table-hover">
                     <thead>
@@ -65,8 +66,8 @@
                     <tbody>
                         <c:forEach items="${busqueda}" var="element">    
                             <tr>
-                                <td> <input name="idLibro" type="text" value="${element.id}" disabled></td>
-                                <td> <input name="rut" type="text" value="${sessionScope.usuario.RUN}" disabled></td>
+                                <td> <input name="idLibro" type="text" value="${element.id}" readonly="readonly"></td>
+                                <td> <input name="rut" type="text" value="${sessionScope.usuario.RUN}" readonly="readonly"></td>
                                 <td>${element.nombre}</td>
                                 <td>${element.numeroDePaginas}</td>
                                 <td><input type="submit" value="RESERVAR"></td>

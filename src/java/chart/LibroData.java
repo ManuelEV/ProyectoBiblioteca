@@ -78,6 +78,7 @@ public class LibroData extends HttpServlet {
                 l.setVecesSolicitado(modeloLibro.getVecesSolicitado());
                 l.setEdicion(modeloLibro.getEdicion());
                 l.setEditor(modeloLibro.getEditor());
+                l.setCodigoLibro(modeloLibro.getId()+"");
                 
                 int indiceAutor = (int)(Math.random()*150);
                 

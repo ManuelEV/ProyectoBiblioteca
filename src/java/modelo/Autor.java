@@ -106,7 +106,7 @@ public class Autor {
 		return ORM_autores;
 	}
 	
-	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_AUTOR_AUTORES, ORMConstants.KEY_AUTORES_AUTORIDAUTOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
+	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_AUTOR_AUTORES, ORMConstants.KEY_AUTORES_IDAUTOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

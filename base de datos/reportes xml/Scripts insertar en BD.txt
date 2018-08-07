@@ -1,0 +1,38 @@
+use biblioteca_orm;
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reportePaises.xml' 
+INTO TABLE pais 
+ROWS IDENTIFIED BY '<Pais>';
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reporteCiudades.xml' 
+INTO TABLE ciudad 
+
+ROWS IDENTIFIED BY '<Ciudad>';
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reporteAutores.xml' 
+INTO TABLE autor 
+ROWS IDENTIFIED BY '<Autor>';
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reporteClientes.xml' 
+INTO TABLE cliente 
+
+ROWS IDENTIFIED BY '<Cliente>';
+
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reporteBibliotecas.xml' 
+INTO TABLE Biblioteca 
+
+ROWS IDENTIFIED BY '<Biblioteca>';
+
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reporteCategorias.xml' 
+INTO TABLE Categoria 
+
+ROWS IDENTIFIED BY '<Categoria>';
+
+
+
+LOAD XML LOCAL INFILE 'E:\\Escritorio\\Universidad\\7mo semestre\\Progra Avanzada\\Proyecto\\Biblioteca\\Archivos github\\xml\\reporteComputadores.xml' 
+INTO TABLE Computador 
+
+ROWS IDENTIFIED BY '<Computador>';

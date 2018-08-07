@@ -26,17 +26,17 @@ public class Autores implements Serializable {
 		Autores autores = (Autores)aObj;
 		if (getId() != autores.getId())
 			return false;
-		if (getAutoridAutor() == null) {
-			if (autores.getAutoridAutor() != null)
+		if (getIdAutor() == null) {
+			if (autores.getIdAutor() != null)
 				return false;
 		}
-		else if (!getAutoridAutor().equals(autores.getAutoridAutor()))
+		else if (!getIdAutor().equals(autores.getIdAutor()))
 			return false;
-		if (getLibrocodigo() == null) {
-			if (autores.getLibrocodigo() != null)
+		if (getIdLibro() == null) {
+			if (autores.getIdLibro() != null)
 				return false;
 		}
-		else if (!getLibrocodigo().equals(autores.getLibrocodigo()))
+		else if (!getIdLibro().equals(autores.getIdLibro()))
 			return false;
 		return true;
 	}
@@ -44,22 +44,22 @@ public class Autores implements Serializable {
 	public int hashCode() {
 		int hashcode = 0;
 		hashcode = hashcode + (int) getId();
-		if (getAutoridAutor() != null) {
-			hashcode = hashcode + (int) getAutoridAutor().getORMID();
+		if (getIdAutor() != null) {
+			hashcode = hashcode + (int) getIdAutor().getORMID();
 		}
-		if (getLibrocodigo() != null) {
-			hashcode = hashcode + (int) getLibrocodigo().getORMID();
+		if (getIdLibro() != null) {
+			hashcode = hashcode + (int) getIdLibro().getORMID();
 		}
 		return hashcode;
 	}
 	
 	private void this_setOwner(Object owner, int key) {
-		if (key == ORMConstants.KEY_AUTORES_AUTORIDAUTOR) {
-			this.autoridAutor = (modelo.Autor) owner;
+		if (key == ORMConstants.KEY_AUTORES_IDAUTOR) {
+			this.idAutor = (modelo.Autor) owner;
 		}
 		
-		else if (key == ORMConstants.KEY_AUTORES_LIBROCODIGO) {
-			this.librocodigo = (modelo.Libro) owner;
+		else if (key == ORMConstants.KEY_AUTORES_IDLIBRO) {
+			this.idLibro = (modelo.Libro) owner;
 		}
 	}
 	
@@ -72,28 +72,28 @@ public class Autores implements Serializable {
 	
 	private int id;
 	
-	private modelo.Autor autoridAutor;
+	private modelo.Autor idAutor;
 	
-	private int autoridAutorId;
+	private int idAutorId;
 	
-	private void setAutoridAutorId(int value) {
-		this.autoridAutorId = value;
+	private void setIdAutorId(int value) {
+		this.idAutorId = value;
 	}
 	
-	public int getAutoridAutorId() {
-		return autoridAutorId;
+	public int getIdAutorId() {
+		return idAutorId;
 	}
 	
-	private modelo.Libro librocodigo;
+	private modelo.Libro idLibro;
 	
-	private int librocodigoId;
+	private int idLibroId;
 	
-	private void setLibrocodigoId(int value) {
-		this.librocodigoId = value;
+	private void setIdLibroId(int value) {
+		this.idLibroId = value;
 	}
 	
-	public int getLibrocodigoId() {
-		return librocodigoId;
+	public int getIdLibroId() {
+		return idLibroId;
 	}
 	
 	public void setId(int value) {
@@ -104,56 +104,56 @@ public class Autores implements Serializable {
 		return id;
 	}
 	
-	public void setAutoridAutor(modelo.Autor value) {
-		if (autoridAutor != null) {
-			autoridAutor.autores.remove(this);
+	public void setIdAutor(modelo.Autor value) {
+		if (idAutor != null) {
+			idAutor.autores.remove(this);
 		}
 		if (value != null) {
 			value.autores.add(this);
 		}
 	}
 	
-	public modelo.Autor getAutoridAutor() {
-		return autoridAutor;
+	public modelo.Autor getIdAutor() {
+		return idAutor;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_AutoridAutor(modelo.Autor value) {
-		this.autoridAutor = value;
+	public void setORM_IdAutor(modelo.Autor value) {
+		this.idAutor = value;
 	}
 	
-	private modelo.Autor getORM_AutoridAutor() {
-		return autoridAutor;
+	private modelo.Autor getORM_IdAutor() {
+		return idAutor;
 	}
 	
-	public void setLibrocodigo(modelo.Libro value) {
-		if (librocodigo != null) {
-			librocodigo.autores.remove(this);
+	public void setIdLibro(modelo.Libro value) {
+		if (idLibro != null) {
+			idLibro.autores.remove(this);
 		}
 		if (value != null) {
 			value.autores.add(this);
 		}
 	}
 	
-	public modelo.Libro getLibrocodigo() {
-		return librocodigo;
+	public modelo.Libro getIdLibro() {
+		return idLibro;
 	}
 	
 	/**
 	 * This method is for internal use only.
 	 */
-	public void setORM_Librocodigo(modelo.Libro value) {
-		this.librocodigo = value;
+	public void setORM_IdLibro(modelo.Libro value) {
+		this.idLibro = value;
 	}
 	
-	private modelo.Libro getORM_Librocodigo() {
-		return librocodigo;
+	private modelo.Libro getORM_IdLibro() {
+		return idLibro;
 	}
 	
 	public String toString() {
-		return String.valueOf(getId() + " " + ((getAutoridAutor() == null) ? "" : String.valueOf(getAutoridAutor().getORMID())) + " " + ((getLibrocodigo() == null) ? "" : String.valueOf(getLibrocodigo().getORMID())));
+		return String.valueOf(getId() + " " + ((getIdAutor() == null) ? "" : String.valueOf(getIdAutor().getORMID())) + " " + ((getIdLibro() == null) ? "" : String.valueOf(getIdLibro().getORMID())));
 	}
 	
 }

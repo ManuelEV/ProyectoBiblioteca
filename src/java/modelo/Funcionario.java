@@ -64,6 +64,18 @@ public class Funcionario {
 	
 	private modelo.Biblioteca idBiblioteca;
 	
+	private void setId(int value) {
+		this.id = value;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	
+	public int getORMID() {
+		return getId();
+	}
+	
 	public void setRUN(String value) {
 		this.RUN = value;
 	}
@@ -166,18 +178,6 @@ public class Funcionario {
 	
 	public String getCorreoElectronico() {
 		return correoElectronico;
-	}
-	
-	private void setId(int value) {
-		this.id = value;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	
-	public int getORMID() {
-		return getId();
 	}
 	
 	public void setIdCiudad(modelo.Ciudad value) {

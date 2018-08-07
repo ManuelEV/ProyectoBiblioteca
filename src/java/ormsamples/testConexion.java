@@ -31,7 +31,7 @@ public class testConexion {
                         
                         String query;
                         
-                        query="Usuarioid = '1'";
+                        query="RUN = '12345678'";
                         modelo.Cliente hola = modelo.ClienteDAO.loadClienteByQuery(query, null);
                         
                         System.out.println(hola);
