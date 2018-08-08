@@ -56,7 +56,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li ><a href="/Biblioteca/vistas_admin/libroMas.jsp">Libro+</a></li>
-                    <li ><a href="/Biblioteca/vistas_admin/libroMenos.jsp">Libro-</a></li>
+                    <!--<li ><a href="/Biblioteca/vistas_admin/libroMenos.jsp">Libro-</a></li>-->
                     
                     
                 </ul>
@@ -92,7 +92,7 @@
                                 </select><br>
                                 <label>Idioma</label><br><input type="text" class="form-control" name="idioma" value="" /><br>
                                 <!--Estante-->
-                                <label>Categoria</label><br><select name="categoria">
+                                <label>Categoria</label><br><select class="form-control" id="categoria" name="categoria">
                                     ${categoria}
                                 </select>
 

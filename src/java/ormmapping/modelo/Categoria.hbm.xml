@@ -10,7 +10,7 @@ License Type: Academic
 			<generator class="native">
 			</generator>
 		</id>
-		<property name="nombre" column="nombre" type="string" length="10" not-null="true" lazy="false"/>
+		<property name="nombre" column="nombre" type="string" length="100" not-null="true" lazy="false"/>
 		<set name="ORM_Estante" lazy="true" cascade="save-update,lock" inverse="true">
 			<key column="idCategoria" not-null="true"/>
 			<one-to-many class="modelo.Estante"/>

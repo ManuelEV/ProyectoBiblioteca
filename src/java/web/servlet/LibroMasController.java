@@ -82,7 +82,7 @@ public class LibroMasController extends HttpServlet {
                 t.commit();
                 
                 //-unir usuario-cliente
-                RequestDispatcher rd = request.getRequestDispatcher("/libroMas");
+                RequestDispatcher rd = request.getRequestDispatcher("/FormLibrosController");
                 rd.forward(request, response);
             } catch (Exception e) {
                 t.rollback();

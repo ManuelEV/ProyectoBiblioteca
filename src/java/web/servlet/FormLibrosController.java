@@ -7,6 +7,7 @@ package web.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -36,9 +37,16 @@ public class FormLibrosController extends HttpServlet {
         try {
             response.setContentType("text/html;charset=UTF-8");
             String html="";
-            modelo.Categoria[] listaCategoria = modelo.CategoriaDAO.listCategoriaByQuery("id !='0'", null);
-            for (int i = 0; i < listaCategoria.length; i++) {
-                html=html+"<option>"+listaCategoria[i].getNombre()+"</option>";
+            //modelo.Categoria[] listaCategoria = modelo.CategoriaDAO.listCategoriaByQuery("id !='0'", null);
+            ArrayList<String> listaCategoria=new ArrayList<>();
+            modelo.Categoria categoria=modelo.CategoriaDAO.loadCategoriaByORMID(1);
+            for (int i = 0; categoria!=null; i++) {
+                listaCategoria.add(categoria.getNombre());
+                categoria=modelo.CategoriaDAO.loadCategoriaByQuery("id='"+(i+2)+"'", null);
+                
+            }
+            for (int i = 0; i < listaCategoria.size(); i++) {
+                html=html+"<option>"+listaCategoria.get(i)+"</option>";
             }
             
             request.setAttribute("categoria", html);
