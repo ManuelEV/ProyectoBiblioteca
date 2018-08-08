@@ -55,7 +55,7 @@
                     <a class="navbar-brand" href="#">Biblioteca</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li ><a href="/Biblioteca/libroMas#">Libro+</a></li>
+                    <li ><a href="/Biblioteca/FormLibrosController">Libro+</a></li>
                     <li ><a href="/Biblioteca/libroMenos.jsp">Libro-</a></li>
                     
                     

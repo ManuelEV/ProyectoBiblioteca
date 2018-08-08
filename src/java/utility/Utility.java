@@ -15,7 +15,7 @@ import java.util.GregorianCalendar;
 public class Utility {
     public Utility(){}
     public Date retrieveDate(String fechaDeNacimiento) {
-        String[] fecha = fechaDeNacimiento.split("/");
+        String[] fecha = fechaDeNacimiento.split("-");
         int year = Integer.parseInt(fecha[0]);
         int month = Integer.parseInt(fecha[1]);
         int day = Integer.parseInt(fecha[2]);

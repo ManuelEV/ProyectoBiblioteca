@@ -36,6 +36,14 @@
         <servlet-name>FormLibrosController</servlet-name>
         <servlet-class>web.servlet.FormLibrosController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListRequest</servlet-name>
+        <servlet-class>web.servlet.ListCiudades</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListCiudades</servlet-name>
+        <servlet-class>web.servlet.ListCiudades</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>registro</servlet-name>
         <url-pattern>/registro</url-pattern>
@@ -86,7 +94,15 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LibroMasController</servlet-name>
-        <url-pattern>/libroMas#</url-pattern>
+        <url-pattern>/LibroMas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListRequest</servlet-name>
+        <url-pattern>/ListRequest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListCiudades</servlet-name>
+        <url-pattern>/ListCiudades</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

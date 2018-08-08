@@ -74,7 +74,7 @@
                                 </select><br>
 
                                 <label class="control-label" for="date">Fecha de nacimiento</label>
-                                <input class="form-control" id="date" name="date" placeholder="YYYY/MM/DD" type="text"/><br>
+                                <input class="form-control" id="date" name="date" placeholder="YYYY-MM-DD" type="date"/><br>
 
                                 <label>Estado de trabajo</label><br><input type="text" class="form-control" name="estadoDeTrabajo" value="" /><br>
                                 <label>Area de interes</label><br><input type="text" class="form-control" name="areaDeInteres" value="" /><br>
@@ -82,11 +82,7 @@
                                 <label>Numero de telefono</label><br><input type="text" class="form-control" name="numeroDeTelefono" value="" /><br>
 
                                 <label>Ciudad</label><br><select name="ciudad">
-                                    <option>Temuco</option>
-                                    <option>Santiago</option>
-                                    <option>Buenos Aires</option>
-                                    <option>Bariloche</option>
-                                    <option>New York</option>
+                                    ${ciudades}
                                 </select><br>
 
                                 <!-- ESTO PODRIAMOS DEJARLO COMO 0 POR DEFECTO DIRECTAMENTE EN EL CONTROLADOR(SERVLET)-->

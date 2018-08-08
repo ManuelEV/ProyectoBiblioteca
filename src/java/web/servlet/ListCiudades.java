@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +21,8 @@ import org.orm.PersistentException;
  *
  * @author jorge
  */
-public class FormLibrosController extends HttpServlet {
+@WebServlet(name = "ListRequest", urlPatterns = {"/ListRequest"})
+public class ListCiudades extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,21 +37,22 @@ public class FormLibrosController extends HttpServlet {
             throws ServletException, IOException {
         try {
             response.setContentType("text/html;charset=UTF-8");
+            
             String html="";
-            modelo.Categoria[] listaCategoria = modelo.CategoriaDAO.listCategoriaByQuery("id !='0'", null);
-            for (int i = 0; i < listaCategoria.length; i++) {
-                html=html+"<option>"+listaCategoria[i].getNombre()+"</option>";
+            modelo.Ciudad[] listaCiudad = modelo.CiudadDAO.listCiudadByQuery("id !='0'", null);
+            
+            for (int i = 0; i < listaCiudad.length; i++) {
+                html=html+"<option>"+listaCiudad[i].getNombre()+"</option>";
             }
             
-            request.setAttribute("categoria", html);
-            RequestDispatcher rd = request.getRequestDispatcher("/libroMas");
+            request.setAttribute("ciudades", html);
+            RequestDispatcher rd = request.getRequestDispatcher("/registro");
             rd.forward(request, response);
         } catch (PersistentException ex) {
-            Logger.getLogger(FormLibrosController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ListCiudades.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
-    
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

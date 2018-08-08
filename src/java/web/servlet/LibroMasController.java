@@ -55,7 +55,7 @@ public class LibroMasController extends HttpServlet {
             String estadoDeterioro= request.getParameter("estadoDeterioro");
             String idioma=request.getParameter("idioma");
             //idEstante=null
-            String idCategoria = request.getParameter("idCategoria");
+            String idCategoria = request.getParameter("categoria");
             
             /*----------------------*/
             
