@@ -18,16 +18,51 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class CiudadDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final IntegerExpression idPaisId;
-	public final AssociationExpression idPais;
-	public final CollectionExpression cliente;
-	public final CollectionExpression biblioteca;
-	public final CollectionExpression funcionario;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final IntegerExpression idPaisId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idPais;
+
+    /**
+     *
+     */
+    public final CollectionExpression cliente;
+
+    /**
+     *
+     */
+    public final CollectionExpression biblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression funcionario;
 	
-	public CiudadDetachedCriteria() {
+    /**
+     *
+     */
+    public CiudadDetachedCriteria() {
 		super(modelo.Ciudad.class, modelo.CiudadCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -38,7 +73,11 @@ public class CiudadDetachedCriteria extends AbstractORMDetachedCriteria {
 		funcionario = new CollectionExpression("ORM_Funcionario", this.getDetachedCriteria());
 	}
 	
-	public CiudadDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public CiudadDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.CiudadCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -49,27 +88,53 @@ public class CiudadDetachedCriteria extends AbstractORMDetachedCriteria {
 		funcionario = new CollectionExpression("ORM_Funcionario", this.getDetachedCriteria());
 	}
 	
-	public PaisDetachedCriteria createIdPaisCriteria() {
+    /**
+     *
+     * @return
+     */
+    public PaisDetachedCriteria createIdPaisCriteria() {
 		return new PaisDetachedCriteria(createCriteria("idPais"));
 	}
 	
-	public ClienteDetachedCriteria createClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDetachedCriteria createClienteCriteria() {
 		return new ClienteDetachedCriteria(createCriteria("ORM_Cliente"));
 	}
 	
-	public BibliotecaDetachedCriteria createBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaDetachedCriteria createBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("ORM_Biblioteca"));
 	}
 	
-	public FuncionarioDetachedCriteria createFuncionarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public FuncionarioDetachedCriteria createFuncionarioCriteria() {
 		return new FuncionarioDetachedCriteria(createCriteria("ORM_Funcionario"));
 	}
 	
-	public Ciudad uniqueCiudad(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Ciudad uniqueCiudad(PersistentSession session) {
 		return (Ciudad) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Ciudad[] listCiudad(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Ciudad[] listCiudad(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Ciudad[]) list.toArray(new Ciudad[list.size()]);
 	}

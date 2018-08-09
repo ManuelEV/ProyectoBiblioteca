@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Libro {
-	public Libro() {
+
+    /**
+     *
+     */
+    public Libro() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -92,111 +100,219 @@ public class Libro {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setNumeroDePaginas(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDePaginas(int value) {
 		this.numeroDePaginas = value;
 	}
 	
-	public int getNumeroDePaginas() {
+    /**
+     *
+     * @return
+     */
+    public int getNumeroDePaginas() {
 		return numeroDePaginas;
 	}
 	
-	public void setDisponibilidad(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setDisponibilidad(String value) {
 		this.disponibilidad = value;
 	}
 	
-	public String getDisponibilidad() {
+    /**
+     *
+     * @return
+     */
+    public String getDisponibilidad() {
 		return disponibilidad;
 	}
 	
-	public void setFechaDeAdquisicion(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeAdquisicion(java.util.Date value) {
 		this.fechaDeAdquisicion = value;
 	}
 	
-	public java.util.Date getFechaDeAdquisicion() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeAdquisicion() {
 		return fechaDeAdquisicion;
 	}
 	
-	public void setFechaDeEdicion(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeEdicion(java.util.Date value) {
 		this.fechaDeEdicion = value;
 	}
 	
-	public java.util.Date getFechaDeEdicion() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeEdicion() {
 		return fechaDeEdicion;
 	}
 	
-	public void setEdicion(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setEdicion(String value) {
 		this.edicion = value;
 	}
 	
-	public String getEdicion() {
+    /**
+     *
+     * @return
+     */
+    public String getEdicion() {
 		return edicion;
 	}
 	
-	public void setEditor(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setEditor(String value) {
 		this.editor = value;
 	}
 	
-	public String getEditor() {
+    /**
+     *
+     * @return
+     */
+    public String getEditor() {
 		return editor;
 	}
 	
-	public void setVecesSolicitado(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setVecesSolicitado(int value) {
 		this.vecesSolicitado = value;
 	}
 	
-	public int getVecesSolicitado() {
+    /**
+     *
+     * @return
+     */
+    public int getVecesSolicitado() {
 		return vecesSolicitado;
 	}
 	
-	public void setFechaUltimaSolicitud(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaUltimaSolicitud(java.util.Date value) {
 		this.fechaUltimaSolicitud = value;
 	}
 	
-	public java.util.Date getFechaUltimaSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaUltimaSolicitud() {
 		return fechaUltimaSolicitud;
 	}
 	
-	public void setColorTapa(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setColorTapa(String value) {
 		this.colorTapa = value;
 	}
 	
-	public String getColorTapa() {
+    /**
+     *
+     * @return
+     */
+    public String getColorTapa() {
 		return colorTapa;
 	}
 	
-	public void setEstadoDeterioro(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setEstadoDeterioro(String value) {
 		this.estadoDeterioro = value;
 	}
 	
-	public String getEstadoDeterioro() {
+    /**
+     *
+     * @return
+     */
+    public String getEstadoDeterioro() {
 		return estadoDeterioro;
 	}
 	
-	public void setIdioma(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdioma(String value) {
 		this.idioma = value;
 	}
 	
-	public String getIdioma() {
+    /**
+     *
+     * @return
+     */
+    public String getIdioma() {
 		return idioma;
 	}
 	
-	public void setIdEstante(modelo.Estante value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdEstante(modelo.Estante value) {
 		if (idEstante != null) {
 			idEstante.libro.remove(this);
 		}
@@ -205,12 +321,17 @@ public class Libro {
 		}
 	}
 	
-	public modelo.Estante getIdEstante() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Estante getIdEstante() {
 		return idEstante;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdEstante(modelo.Estante value) {
 		this.idEstante = value;
@@ -220,7 +341,11 @@ public class Libro {
 		return idEstante;
 	}
 	
-	public void setIdCategoria(modelo.Categoria value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCategoria(modelo.Categoria value) {
 		if (idCategoria != null) {
 			idCategoria.libro.remove(this);
 		}
@@ -229,12 +354,17 @@ public class Libro {
 		}
 	}
 	
-	public modelo.Categoria getIdCategoria() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Categoria getIdCategoria() {
 		return idCategoria;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCategoria(modelo.Categoria value) {
 		this.idCategoria = value;
@@ -252,7 +382,10 @@ public class Libro {
 		return ORM_solicitudLibro;
 	}
 	
-	public final modelo.SolicitudLibroSetCollection solicitudLibro = new modelo.SolicitudLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_SOLICITUDLIBRO, ORMConstants.KEY_SOLICITUDLIBRO_CODIGOLIBRO, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.SolicitudLibroSetCollection solicitudLibro = new modelo.SolicitudLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_SOLICITUDLIBRO, ORMConstants.KEY_SOLICITUDLIBRO_CODIGOLIBRO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_EntregaDeLibro(java.util.Set value) {
 		this.ORM_entregaDeLibro = value;
@@ -262,7 +395,10 @@ public class Libro {
 		return ORM_entregaDeLibro;
 	}
 	
-	public final modelo.EntregaDeLibroSetCollection entregaDeLibro = new modelo.EntregaDeLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_ENTREGADELIBRO, ORMConstants.KEY_ENTREGADELIBRO_LIBROCODIGO, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.EntregaDeLibroSetCollection entregaDeLibro = new modelo.EntregaDeLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_ENTREGADELIBRO, ORMConstants.KEY_ENTREGADELIBRO_LIBROCODIGO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Autores(java.util.Set value) {
 		this.ORM_autores = value;
@@ -272,7 +408,10 @@ public class Libro {
 		return ORM_autores;
 	}
 	
-	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_AUTORES, ORMConstants.KEY_AUTORES_IDLIBRO, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_LIBRO_AUTORES, ORMConstants.KEY_AUTORES_IDLIBRO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

@@ -25,7 +25,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biblioteca</title>
         
-        <link rel="icon" type="image/png" href="Recursos/MyFavicon.png" />
+        <link rel="icon" type="image/png" href="/Biblioteca/Recursos/MyFavicon.png" />
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
@@ -54,6 +54,7 @@
                     <li ><a href="/Biblioteca/vistas_admin/principal.jsp">Principal</a></li>
                     <li class="active"><a href="/Biblioteca/vistas_admin/estadisticas.jsp">Estadísticas</a></li>
                     <li ><a href="/Biblioteca/SolicitudesLibros">Libros reservados</a></li>
+                    <li ><a href="/Biblioteca/vistas_admin/editar.jsp">Editar</a></li>
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

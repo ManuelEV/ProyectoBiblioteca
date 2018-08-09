@@ -18,17 +18,56 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class RegistroSalaLecturaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final DateExpression fechaRegistro;
-	public final StringExpression tipoRegistro;
-	public final TimeExpression horaRegistro;
-	public final IntegerExpression salaDeLecturaidSalaId;
-	public final AssociationExpression salaDeLecturaidSala;
-	public final IntegerExpression idClienteId;
-	public final AssociationExpression idCliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final DateExpression fechaRegistro;
+
+    /**
+     *
+     */
+    public final StringExpression tipoRegistro;
+
+    /**
+     *
+     */
+    public final TimeExpression horaRegistro;
+
+    /**
+     *
+     */
+    public final IntegerExpression salaDeLecturaidSalaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression salaDeLecturaidSala;
+
+    /**
+     *
+     */
+    public final IntegerExpression idClienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCliente;
 	
-	public RegistroSalaLecturaDetachedCriteria() {
+    /**
+     *
+     */
+    public RegistroSalaLecturaDetachedCriteria() {
 		super(modelo.RegistroSalaLectura.class, modelo.RegistroSalaLecturaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaRegistro = new DateExpression("fechaRegistro", this.getDetachedCriteria());
@@ -40,7 +79,11 @@ public class RegistroSalaLecturaDetachedCriteria extends AbstractORMDetachedCrit
 		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
-	public RegistroSalaLecturaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public RegistroSalaLecturaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.RegistroSalaLecturaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaRegistro = new DateExpression("fechaRegistro", this.getDetachedCriteria());
@@ -52,19 +95,37 @@ public class RegistroSalaLecturaDetachedCriteria extends AbstractORMDetachedCrit
 		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
-	public SalaDeLecturaDetachedCriteria createSalaDeLecturaidSalaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SalaDeLecturaDetachedCriteria createSalaDeLecturaidSalaCriteria() {
 		return new SalaDeLecturaDetachedCriteria(createCriteria("ORM_SalaDeLecturaidSala"));
 	}
 	
-	public ClienteDetachedCriteria createIdClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDetachedCriteria createIdClienteCriteria() {
 		return new ClienteDetachedCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
-	public RegistroSalaLectura uniqueRegistroSalaLectura(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public RegistroSalaLectura uniqueRegistroSalaLectura(PersistentSession session) {
 		return (RegistroSalaLectura) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public RegistroSalaLectura[] listRegistroSalaLectura(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public RegistroSalaLectura[] listRegistroSalaLectura(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (RegistroSalaLectura[]) list.toArray(new RegistroSalaLectura[list.size()]);
 	}

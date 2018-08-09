@@ -14,8 +14,17 @@
 package modelo;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudLibro implements Serializable {
-	public SolicitudLibro() {
+
+    /**
+     *
+     */
+    public SolicitudLibro() {
 	}
 	
 	public boolean equals(Object aObj) {
@@ -86,7 +95,11 @@ public class SolicitudLibro implements Serializable {
 		this.codigoLibroId = value;
 	}
 	
-	public int getCodigoLibroId() {
+    /**
+     *
+     * @return
+     */
+    public int getCodigoLibroId() {
 		return codigoLibroId;
 	}
 	
@@ -98,43 +111,83 @@ public class SolicitudLibro implements Serializable {
 		this.idClienteId = value;
 	}
 	
-	public int getIdClienteId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdClienteId() {
 		return idClienteId;
 	}
 	
-	public void setId(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setId(int value) {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public void setFechaDeSolicitud(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeSolicitud(java.util.Date value) {
 		this.fechaDeSolicitud = value;
 	}
 	
-	public java.util.Date getFechaDeSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeSolicitud() {
 		return fechaDeSolicitud;
 	}
 	
-	public void setHoraDeSolicitud(java.sql.Time value) {
+    /**
+     *
+     * @param value
+     */
+    public void setHoraDeSolicitud(java.sql.Time value) {
 		this.horaDeSolicitud = value;
 	}
 	
-	public java.sql.Time getHoraDeSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.sql.Time getHoraDeSolicitud() {
 		return horaDeSolicitud;
 	}
 	
-	public void setFechaEntregaLimite(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaEntregaLimite(java.util.Date value) {
 		this.fechaEntregaLimite = value;
 	}
 	
-	public java.util.Date getFechaEntregaLimite() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaEntregaLimite() {
 		return fechaEntregaLimite;
 	}
 	
-	public void setIdCliente(modelo.Cliente value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCliente(modelo.Cliente value) {
 		if (idCliente != null) {
 			idCliente.solicitudLibro.remove(this);
 		}
@@ -143,12 +196,17 @@ public class SolicitudLibro implements Serializable {
 		}
 	}
 	
-	public modelo.Cliente getIdCliente() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Cliente getIdCliente() {
 		return idCliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCliente(modelo.Cliente value) {
 		this.idCliente = value;
@@ -158,7 +216,11 @@ public class SolicitudLibro implements Serializable {
 		return idCliente;
 	}
 	
-	public void setCodigoLibro(modelo.Libro value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCodigoLibro(modelo.Libro value) {
 		if (codigoLibro != null) {
 			codigoLibro.solicitudLibro.remove(this);
 		}
@@ -167,12 +229,17 @@ public class SolicitudLibro implements Serializable {
 		}
 	}
 	
-	public modelo.Libro getCodigoLibro() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Libro getCodigoLibro() {
 		return codigoLibro;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_CodigoLibro(modelo.Libro value) {
 		this.codigoLibro = value;

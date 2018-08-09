@@ -5,8 +5,18 @@
 package ormsamples;
 
 import org.orm.*;
+
+/**
+ *
+ * @author Manuel
+ */
 public class testConexion {
-	public void createTestData() throws PersistentException {
+
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void createTestData() throws PersistentException {
 		PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
 		try {
 			
@@ -47,7 +57,11 @@ public class testConexion {
 		
 	}
 	
-	public static void main(String[] args) {
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 		try {
 			testConexion createProyectoprogramacionavanzadaData = new testConexion();
 			try {

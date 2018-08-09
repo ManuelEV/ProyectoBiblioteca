@@ -15,12 +15,32 @@ package modelo;
 
 import org.orm.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class RegistroSalaLecturaSetCollection extends org.orm.util.ORMSet {
-	public RegistroSalaLecturaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
+
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param targetKey
+     * @param collType
+     */
+    public RegistroSalaLecturaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
 		super(owner, adapter, ownerKey, targetKey, true, collType);
 	}
 	
-	public RegistroSalaLecturaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param collType
+     */
+    public RegistroSalaLecturaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
 		super(owner, adapter, ownerKey, -1, false, collType);
 	}
 	
@@ -96,7 +116,12 @@ public class RegistroSalaLecturaSetCollection extends org.orm.util.ORMSet {
 		return (RegistroSalaLectura[]) super.toArray(new RegistroSalaLectura[size()], propertyName, ascending);
 	}
 	
-	protected PersistentManager getPersistentManager() throws PersistentException {
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
+    protected PersistentManager getPersistentManager() throws PersistentException {
 		return ProyectoprogramacionavanzadaPersistentManager.instance();
 	}
 	

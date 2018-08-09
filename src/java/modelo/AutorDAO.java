@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class AutorDAO {
-	public static Autor loadAutorByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadAutorByORMID(session, id);
@@ -30,7 +41,13 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor getAutorByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getAutorByORMID(session, id);
@@ -41,7 +58,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadAutorByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor getAutorByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getAutorByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Autor) session.load(modelo.Autor.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor getAutorByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Autor) session.get(modelo.Autor.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Autor) session.load(modelo.Autor.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor getAutorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor getAutorByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Autor) session.get(modelo.Autor.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static List queryAutor(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryAutor(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryAutor(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static List queryAutor(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryAutor(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryAutor(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor[] listAutorByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor[] listAutorByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listAutorByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor[] listAutorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor[] listAutorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listAutorByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static List queryAutor(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryAutor(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Autor as Autor");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class AutorDAO {
 		}
 	}
 	
-	public static List queryAutor(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryAutor(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Autor as Autor");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor[] listAutorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor[] listAutorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryAutor(session, condition, orderBy);
 			return (Autor[]) list.toArray(new Autor[list.size()]);
@@ -191,7 +307,16 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor[] listAutorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor[] listAutorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryAutor(session, condition, orderBy, lockMode);
 			return (Autor[]) list.toArray(new Autor[list.size()]);
@@ -202,7 +327,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadAutorByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadAutorByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Autor[] autors = listAutorByQuery(session, condition, orderBy);
 		if (autors != null && autors.length > 0)
 			return autors[0];
@@ -232,7 +380,16 @@ public class AutorDAO {
 			return null;
 	}
 	
-	public static Autor loadAutorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Autor loadAutorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Autor[] autors = listAutorByQuery(session, condition, orderBy, lockMode);
 		if (autors != null && autors.length > 0)
 			return autors[0];
@@ -240,7 +397,14 @@ public class AutorDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateAutorByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateAutorByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateAutorByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateAutorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateAutorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateAutorByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class AutorDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateAutorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateAutorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Autor as Autor");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class AutorDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateAutorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateAutorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Autor as Autor");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor createAutor() {
+    /**
+     *
+     * @return
+     */
+    public static Autor createAutor() {
 		return new modelo.Autor();
 	}
 	
-	public static boolean save(modelo.Autor autor) throws PersistentException {
+    /**
+     *
+     * @param autor
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Autor autor) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(autor);
 			return true;
@@ -310,7 +509,13 @@ public class AutorDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Autor autor) throws PersistentException {
+    /**
+     *
+     * @param autor
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Autor autor) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(autor);
 			return true;
@@ -321,7 +526,13 @@ public class AutorDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Autor autor)throws PersistentException {
+    /**
+     *
+     * @param autor
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Autor autor)throws PersistentException {
 		try {
 			modelo.Autores[] lAutoress = autor.autores.toArray();
 			for(int i = 0; i < lAutoress.length; i++) {
@@ -335,7 +546,14 @@ public class AutorDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Autor autor, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param autor
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Autor autor, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			modelo.Autores[] lAutoress = autor.autores.toArray();
 			for(int i = 0; i < lAutoress.length; i++) {
@@ -354,7 +572,13 @@ public class AutorDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Autor autor) throws PersistentException {
+    /**
+     *
+     * @param autor
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Autor autor) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(autor);
 			return true;
@@ -365,7 +589,13 @@ public class AutorDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Autor autor) throws PersistentException {
+    /**
+     *
+     * @param autor
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Autor autor) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(autor);
 			return true;
@@ -376,7 +606,12 @@ public class AutorDAO {
 		}
 	}
 	
-	public static Autor loadAutorByCriteria(AutorCriteria autorCriteria) {
+    /**
+     *
+     * @param autorCriteria
+     * @return
+     */
+    public static Autor loadAutorByCriteria(AutorCriteria autorCriteria) {
 		Autor[] autors = listAutorByCriteria(autorCriteria);
 		if(autors == null || autors.length == 0) {
 			return null;
@@ -384,7 +619,12 @@ public class AutorDAO {
 		return autors[0];
 	}
 	
-	public static Autor[] listAutorByCriteria(AutorCriteria autorCriteria) {
+    /**
+     *
+     * @param autorCriteria
+     * @return
+     */
+    public static Autor[] listAutorByCriteria(AutorCriteria autorCriteria) {
 		return autorCriteria.listAutor();
 	}
 }

@@ -18,17 +18,56 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class UsuarioDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression correo;
-	public final StringExpression usuario;
-	public final StringExpression tipoUsuario;
-	public final StringExpression contraseña;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression cliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression correo;
+
+    /**
+     *
+     */
+    public final StringExpression usuario;
+
+    /**
+     *
+     */
+    public final StringExpression tipoUsuario;
+
+    /**
+     *
+     */
+    public final StringExpression contraseña;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression cliente;
 	
-	public UsuarioDetachedCriteria() {
+    /**
+     *
+     */
+    public UsuarioDetachedCriteria() {
 		super(modelo.Usuario.class, modelo.UsuarioCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		correo = new StringExpression("correo", this.getDetachedCriteria());
@@ -40,7 +79,11 @@ public class UsuarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		cliente = new CollectionExpression("ORM_Cliente", this.getDetachedCriteria());
 	}
 	
-	public UsuarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public UsuarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.UsuarioCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		correo = new StringExpression("correo", this.getDetachedCriteria());
@@ -52,19 +95,37 @@ public class UsuarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		cliente = new CollectionExpression("ORM_Cliente", this.getDetachedCriteria());
 	}
 	
-	public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public ClienteDetachedCriteria createClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDetachedCriteria createClienteCriteria() {
 		return new ClienteDetachedCriteria(createCriteria("ORM_Cliente"));
 	}
 	
-	public Usuario uniqueUsuario(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Usuario uniqueUsuario(PersistentSession session) {
 		return (Usuario) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Usuario[] listUsuario(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Usuario[] listUsuario(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Usuario[]) list.toArray(new Usuario[list.size()]);
 	}

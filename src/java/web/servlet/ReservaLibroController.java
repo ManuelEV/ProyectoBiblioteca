@@ -39,6 +39,7 @@ public class ReservaLibroController extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws org.orm.PersistentException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, PersistentException {
@@ -175,6 +176,11 @@ public class ReservaLibroController extends HttpServlet {
 
     }
 
+    /**
+     *
+     * @param cadena
+     * @return
+     */
     public boolean isNumeric(String cadena) {
         try {
             Integer.parseInt(cadena);

@@ -18,26 +18,102 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class FuncionarioCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression RUN;
-	public final StringExpression nombre;
-	public final StringExpression apellidoMaterno;
-	public final StringExpression apellidoPaterno;
-	public final StringExpression genero;
-	public final DateExpression fechaDeNacimiento;
-	public final StringExpression cargo;
-	public final DateExpression fechaDeContrato;
-	public final DateExpression fechaTerminoContrato;
-	public final IntegerExpression numeroCelular;
-	public final IntegerExpression numeroTelefono;
-	public final StringExpression correoElectronico;
-	public final IntegerExpression idCiudadId;
-	public final AssociationExpression idCiudad;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression RUN;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoMaterno;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoPaterno;
+
+    /**
+     *
+     */
+    public final StringExpression genero;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeNacimiento;
+
+    /**
+     *
+     */
+    public final StringExpression cargo;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeContrato;
+
+    /**
+     *
+     */
+    public final DateExpression fechaTerminoContrato;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroCelular;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroTelefono;
+
+    /**
+     *
+     */
+    public final StringExpression correoElectronico;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCiudadId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCiudad;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
 	
-	public FuncionarioCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public FuncionarioCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		RUN = new StringExpression("RUN", this);
@@ -58,27 +134,51 @@ public class FuncionarioCriteria extends AbstractORMCriteria {
 		idBiblioteca = new AssociationExpression("idBiblioteca", this);
 	}
 	
-	public FuncionarioCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public FuncionarioCriteria(PersistentSession session) {
 		this(session.createCriteria(Funcionario.class));
 	}
 	
-	public FuncionarioCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public FuncionarioCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public CiudadCriteria createIdCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadCriteria createIdCiudadCriteria() {
 		return new CiudadCriteria(createCriteria("idCiudad"));
 	}
 	
-	public BibliotecaCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public Funcionario uniqueFuncionario() {
+    /**
+     *
+     * @return
+     */
+    public Funcionario uniqueFuncionario() {
 		return (Funcionario) super.uniqueResult();
 	}
 	
-	public Funcionario[] listFuncionario() {
+    /**
+     *
+     * @return
+     */
+    public Funcionario[] listFuncionario() {
 		java.util.List list = super.list();
 		return (Funcionario[]) list.toArray(new Funcionario[list.size()]);
 	}

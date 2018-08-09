@@ -27,33 +27,61 @@ public class PieChartData {
         pieDataList.add(new KeyValue("India", "3287263"));
     }
 
+    /**
+     *
+     * @return
+     */
     public static List<KeyValue> getPieDataList() {
         return pieDataList;
     }
 
+    /**
+     *
+     */
     public static class KeyValue {
 
         String key;
         String value;
 
+        /**
+         *
+         * @param key
+         * @param value
+         */
         public KeyValue(String key, String value) {
             super();
             this.key = key;
             this.value = value;
         }
 
+        /**
+         *
+         * @return
+         */
         public String getKey() {
             return key;
         }
 
+        /**
+         *
+         * @param key
+         */
         public void setKey(String key) {
             this.key = key;
         }
 
+        /**
+         *
+         * @return
+         */
         public String getValue() {
             return value;
         }
 
+        /**
+         *
+         * @param value
+         */
         public void setValue(String value) {
             this.value = value;
         }

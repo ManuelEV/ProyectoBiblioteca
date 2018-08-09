@@ -18,16 +18,51 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class EstanteDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final IntegerExpression capacidadAproximada;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final IntegerExpression idCategoriaId;
-	public final AssociationExpression idCategoria;
-	public final CollectionExpression libro;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final IntegerExpression capacidadAproximada;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCategoriaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCategoria;
+
+    /**
+     *
+     */
+    public final CollectionExpression libro;
 	
-	public EstanteDetachedCriteria() {
+    /**
+     *
+     */
+    public EstanteDetachedCriteria() {
 		super(modelo.Estante.class, modelo.EstanteCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidadAproximada = new IntegerExpression("capacidadAproximada", this.getDetachedCriteria());
@@ -38,7 +73,11 @@ public class EstanteDetachedCriteria extends AbstractORMDetachedCriteria {
 		libro = new CollectionExpression("ORM_Libro", this.getDetachedCriteria());
 	}
 	
-	public EstanteDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public EstanteDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.EstanteCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidadAproximada = new IntegerExpression("capacidadAproximada", this.getDetachedCriteria());
@@ -49,23 +88,45 @@ public class EstanteDetachedCriteria extends AbstractORMDetachedCriteria {
 		libro = new CollectionExpression("ORM_Libro", this.getDetachedCriteria());
 	}
 	
-	public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public CategoriaDetachedCriteria createIdCategoriaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CategoriaDetachedCriteria createIdCategoriaCriteria() {
 		return new CategoriaDetachedCriteria(createCriteria("idCategoria"));
 	}
 	
-	public LibroDetachedCriteria createLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroDetachedCriteria createLibroCriteria() {
 		return new LibroDetachedCriteria(createCriteria("ORM_Libro"));
 	}
 	
-	public Estante uniqueEstante(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Estante uniqueEstante(PersistentSession session) {
 		return (Estante) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Estante[] listEstante(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Estante[] listEstante(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Estante[]) list.toArray(new Estante[list.size()]);
 	}

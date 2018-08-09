@@ -5,8 +5,18 @@
 package ormsamples;
 
 import org.orm.*;
+
+/**
+ *
+ * @author Manuel
+ */
 public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
-	public void retrieveAndUpdateTestData() throws PersistentException {
+
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void retrieveAndUpdateTestData() throws PersistentException {
 		PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
 		try {
 			modelo.Biblioteca lmodeloBiblioteca = modelo.BibliotecaDAO.loadBibliotecaByQuery(null, null);
@@ -71,7 +81,11 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		
 	}
 	
-	public void retrieveByCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void retrieveByCriteria() throws PersistentException {
 		System.out.println("Retrieving Biblioteca by BibliotecaCriteria");
 		modelo.BibliotecaCriteria lmodeloBibliotecaCriteria = new modelo.BibliotecaCriteria();
 		// Please uncomment the follow line and fill in parameter(s)
@@ -194,8 +208,11 @@ public class RetrieveAndUpdateProyectoprogramacionavanzadaData {
 		
 	}
 	
-	
-	public static void main(String[] args) {
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 		try {
 			RetrieveAndUpdateProyectoprogramacionavanzadaData retrieveAndUpdateProyectoprogramacionavanzadaData = new RetrieveAndUpdateProyectoprogramacionavanzadaData();
 			try {

@@ -5,8 +5,18 @@
 package ormsamples;
 
 import org.orm.*;
+
+/**
+ *
+ * @author Manuel
+ */
 public class DeleteProyectoprogramacionavanzadaData {
-	public void deleteTestData() throws PersistentException {
+
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void deleteTestData() throws PersistentException {
 		PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
 		try {
 			modelo.Biblioteca lmodeloBiblioteca = modelo.BibliotecaDAO.loadBibliotecaByQuery(null, null);
@@ -71,7 +81,11 @@ public class DeleteProyectoprogramacionavanzadaData {
 		
 	}
 	
-	public static void main(String[] args) {
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 		try {
 			DeleteProyectoprogramacionavanzadaData deleteProyectoprogramacionavanzadaData = new DeleteProyectoprogramacionavanzadaData();
 			try {

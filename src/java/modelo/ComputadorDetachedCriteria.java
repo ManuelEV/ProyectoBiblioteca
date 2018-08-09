@@ -18,16 +18,51 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class ComputadorDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression marca;
-	public final DateExpression fechaDeAdquisicion;
-	public final DateExpression fechaUltimaSolicitud;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression solicitudComputador;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression marca;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeAdquisicion;
+
+    /**
+     *
+     */
+    public final DateExpression fechaUltimaSolicitud;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudComputador;
 	
-	public ComputadorDetachedCriteria() {
+    /**
+     *
+     */
+    public ComputadorDetachedCriteria() {
 		super(modelo.Computador.class, modelo.ComputadorCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		marca = new StringExpression("marca", this.getDetachedCriteria());
@@ -38,7 +73,11 @@ public class ComputadorDetachedCriteria extends AbstractORMDetachedCriteria {
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 	}
 	
-	public ComputadorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public ComputadorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.ComputadorCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		marca = new StringExpression("marca", this.getDetachedCriteria());
@@ -49,19 +88,37 @@ public class ComputadorDetachedCriteria extends AbstractORMDetachedCriteria {
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this.getDetachedCriteria());
 	}
 	
-	public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public SolicitudComputadorDetachedCriteria createSolicitudComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudComputadorDetachedCriteria createSolicitudComputadorCriteria() {
 		return new SolicitudComputadorDetachedCriteria(createCriteria("ORM_SolicitudComputador"));
 	}
 	
-	public Computador uniqueComputador(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Computador uniqueComputador(PersistentSession session) {
 		return (Computador) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Computador[] listComputador(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Computador[] listComputador(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Computador[]) list.toArray(new Computador[list.size()]);
 	}

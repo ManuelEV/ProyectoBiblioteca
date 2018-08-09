@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Estante {
-	public Estante() {
+
+    /**
+     *
+     */
+    public Estante() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -60,23 +68,43 @@ public class Estante {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setCapacidadAproximada(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCapacidadAproximada(int value) {
 		this.capacidadAproximada = value;
 	}
 	
-	public int getCapacidadAproximada() {
+    /**
+     *
+     * @return
+     */
+    public int getCapacidadAproximada() {
 		return capacidadAproximada;
 	}
 	
-	public void setIdBiblioteca(modelo.Biblioteca value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdBiblioteca(modelo.Biblioteca value) {
 		if (idBiblioteca != null) {
 			idBiblioteca.estante.remove(this);
 		}
@@ -85,12 +113,17 @@ public class Estante {
 		}
 	}
 	
-	public modelo.Biblioteca getIdBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Biblioteca getIdBiblioteca() {
 		return idBiblioteca;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdBiblioteca(modelo.Biblioteca value) {
 		this.idBiblioteca = value;
@@ -100,7 +133,11 @@ public class Estante {
 		return idBiblioteca;
 	}
 	
-	public void setIdCategoria(modelo.Categoria value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCategoria(modelo.Categoria value) {
 		if (idCategoria != null) {
 			idCategoria.estante.remove(this);
 		}
@@ -109,12 +146,17 @@ public class Estante {
 		}
 	}
 	
-	public modelo.Categoria getIdCategoria() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Categoria getIdCategoria() {
 		return idCategoria;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCategoria(modelo.Categoria value) {
 		this.idCategoria = value;
@@ -132,7 +174,10 @@ public class Estante {
 		return ORM_libro;
 	}
 	
-	public final modelo.LibroSetCollection libro = new modelo.LibroSetCollection(this, _ormAdapter, ORMConstants.KEY_ESTANTE_LIBRO, ORMConstants.KEY_LIBRO_IDESTANTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.LibroSetCollection libro = new modelo.LibroSetCollection(this, _ormAdapter, ORMConstants.KEY_ESTANTE_LIBRO, ORMConstants.KEY_LIBRO_IDESTANTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

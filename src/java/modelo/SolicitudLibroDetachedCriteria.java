@@ -18,17 +18,56 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudLibroDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final DateExpression fechaDeSolicitud;
-	public final TimeExpression horaDeSolicitud;
-	public final DateExpression fechaEntregaLimite;
-	public final IntegerExpression codigoLibroId;
-	public final AssociationExpression codigoLibro;
-	public final IntegerExpression idClienteId;
-	public final AssociationExpression idCliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeSolicitud;
+
+    /**
+     *
+     */
+    public final TimeExpression horaDeSolicitud;
+
+    /**
+     *
+     */
+    public final DateExpression fechaEntregaLimite;
+
+    /**
+     *
+     */
+    public final IntegerExpression codigoLibroId;
+
+    /**
+     *
+     */
+    public final AssociationExpression codigoLibro;
+
+    /**
+     *
+     */
+    public final IntegerExpression idClienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCliente;
 	
-	public SolicitudLibroDetachedCriteria() {
+    /**
+     *
+     */
+    public SolicitudLibroDetachedCriteria() {
 		super(modelo.SolicitudLibro.class, modelo.SolicitudLibroCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this.getDetachedCriteria());
@@ -40,7 +79,11 @@ public class SolicitudLibroDetachedCriteria extends AbstractORMDetachedCriteria 
 		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
-	public SolicitudLibroDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public SolicitudLibroDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.SolicitudLibroCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this.getDetachedCriteria());
@@ -52,19 +95,37 @@ public class SolicitudLibroDetachedCriteria extends AbstractORMDetachedCriteria 
 		idCliente = new AssociationExpression("ORM_IdCliente", this.getDetachedCriteria());
 	}
 	
-	public LibroDetachedCriteria createCodigoLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroDetachedCriteria createCodigoLibroCriteria() {
 		return new LibroDetachedCriteria(createCriteria("ORM_CodigoLibro"));
 	}
 	
-	public ClienteDetachedCriteria createIdClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDetachedCriteria createIdClienteCriteria() {
 		return new ClienteDetachedCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
-	public SolicitudLibro uniqueSolicitudLibro(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public SolicitudLibro uniqueSolicitudLibro(PersistentSession session) {
 		return (SolicitudLibro) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public SolicitudLibro[] listSolicitudLibro(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public SolicitudLibro[] listSolicitudLibro(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (SolicitudLibro[]) list.toArray(new SolicitudLibro[list.size()]);
 	}

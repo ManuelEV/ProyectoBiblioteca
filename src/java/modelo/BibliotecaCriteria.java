@@ -18,23 +18,87 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class BibliotecaCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final StringExpression direccion;
-	public final StringExpression propietario;
-	public final IntegerExpression numeroDeTelefono;
-	public final StringExpression correoElectronico;
-	public final IntegerExpression idCiudadId;
-	public final AssociationExpression idCiudad;
-	public final CollectionExpression estante;
-	public final CollectionExpression computador;
-	public final CollectionExpression salaDeLectura;
-	public final CollectionExpression clienteDeBiblioteca;
-	public final CollectionExpression funcionario;
-	public final CollectionExpression usuario;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final StringExpression direccion;
+
+    /**
+     *
+     */
+    public final StringExpression propietario;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDeTelefono;
+
+    /**
+     *
+     */
+    public final StringExpression correoElectronico;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCiudadId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCiudad;
+
+    /**
+     *
+     */
+    public final CollectionExpression estante;
+
+    /**
+     *
+     */
+    public final CollectionExpression computador;
+
+    /**
+     *
+     */
+    public final CollectionExpression salaDeLectura;
+
+    /**
+     *
+     */
+    public final CollectionExpression clienteDeBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression funcionario;
+
+    /**
+     *
+     */
+    public final CollectionExpression usuario;
 	
-	public BibliotecaCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public BibliotecaCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
@@ -52,47 +116,91 @@ public class BibliotecaCriteria extends AbstractORMCriteria {
 		usuario = new CollectionExpression("ORM_Usuario", this);
 	}
 	
-	public BibliotecaCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public BibliotecaCriteria(PersistentSession session) {
 		this(session.createCriteria(Biblioteca.class));
 	}
 	
-	public BibliotecaCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public BibliotecaCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public CiudadCriteria createIdCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadCriteria createIdCiudadCriteria() {
 		return new CiudadCriteria(createCriteria("idCiudad"));
 	}
 	
-	public EstanteCriteria createEstanteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EstanteCriteria createEstanteCriteria() {
 		return new EstanteCriteria(createCriteria("ORM_Estante"));
 	}
 	
-	public ComputadorCriteria createComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ComputadorCriteria createComputadorCriteria() {
 		return new ComputadorCriteria(createCriteria("ORM_Computador"));
 	}
 	
-	public SalaDeLecturaCriteria createSalaDeLecturaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SalaDeLecturaCriteria createSalaDeLecturaCriteria() {
 		return new SalaDeLecturaCriteria(createCriteria("ORM_SalaDeLectura"));
 	}
 	
-	public ClienteDeBibliotecaCriteria createClienteDeBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDeBibliotecaCriteria createClienteDeBibliotecaCriteria() {
 		return new ClienteDeBibliotecaCriteria(createCriteria("ORM_ClienteDeBiblioteca"));
 	}
 	
-	public FuncionarioCriteria createFuncionarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public FuncionarioCriteria createFuncionarioCriteria() {
 		return new FuncionarioCriteria(createCriteria("ORM_Funcionario"));
 	}
 	
-	public UsuarioCriteria createUsuarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public UsuarioCriteria createUsuarioCriteria() {
 		return new UsuarioCriteria(createCriteria("ORM_Usuario"));
 	}
 	
-	public Biblioteca uniqueBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public Biblioteca uniqueBiblioteca() {
 		return (Biblioteca) super.uniqueResult();
 	}
 	
-	public Biblioteca[] listBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public Biblioteca[] listBiblioteca() {
 		java.util.List list = super.list();
 		return (Biblioteca[]) list.toArray(new Biblioteca[list.size()]);
 	}

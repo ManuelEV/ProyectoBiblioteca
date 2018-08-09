@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class LibroDAO {
-	public static Libro loadLibroByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadLibroByORMID(session, id);
@@ -30,7 +41,13 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro getLibroByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getLibroByORMID(session, id);
@@ -41,7 +58,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadLibroByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro getLibroByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getLibroByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Libro) session.load(modelo.Libro.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro getLibroByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Libro) session.get(modelo.Libro.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Libro) session.load(modelo.Libro.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro getLibroByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro getLibroByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Libro) session.get(modelo.Libro.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static List queryLibro(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryLibro(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryLibro(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static List queryLibro(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryLibro(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryLibro(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro[] listLibroByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro[] listLibroByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listLibroByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro[] listLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro[] listLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listLibroByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static List queryLibro(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryLibro(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Libro as Libro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class LibroDAO {
 		}
 	}
 	
-	public static List queryLibro(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryLibro(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Libro as Libro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro[] listLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro[] listLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryLibro(session, condition, orderBy);
 			return (Libro[]) list.toArray(new Libro[list.size()]);
@@ -191,7 +307,16 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro[] listLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro[] listLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryLibro(session, condition, orderBy, lockMode);
 			return (Libro[]) list.toArray(new Libro[list.size()]);
@@ -202,7 +327,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadLibroByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadLibroByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Libro[] libros = listLibroByQuery(session, condition, orderBy);
 		if (libros != null && libros.length > 0)
 			return libros[0];
@@ -232,7 +380,16 @@ public class LibroDAO {
 			return null;
 	}
 	
-	public static Libro loadLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Libro loadLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Libro[] libros = listLibroByQuery(session, condition, orderBy, lockMode);
 		if (libros != null && libros.length > 0)
 			return libros[0];
@@ -240,7 +397,14 @@ public class LibroDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateLibroByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateLibroByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateLibroByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateLibroByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class LibroDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Libro as Libro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class LibroDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Libro as Libro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro createLibro() {
+    /**
+     *
+     * @return
+     */
+    public static Libro createLibro() {
 		return new modelo.Libro();
 	}
 	
-	public static boolean save(modelo.Libro libro) throws PersistentException {
+    /**
+     *
+     * @param libro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Libro libro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(libro);
 			return true;
@@ -310,7 +509,13 @@ public class LibroDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Libro libro) throws PersistentException {
+    /**
+     *
+     * @param libro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Libro libro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(libro);
 			return true;
@@ -321,7 +526,13 @@ public class LibroDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Libro libro)throws PersistentException {
+    /**
+     *
+     * @param libro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Libro libro)throws PersistentException {
 		try {
 			if (libro.getIdEstante() != null) {
 				libro.getIdEstante().libro.remove(libro);
@@ -351,7 +562,14 @@ public class LibroDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Libro libro, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param libro
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Libro libro, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			if (libro.getIdEstante() != null) {
 				libro.getIdEstante().libro.remove(libro);
@@ -386,7 +604,13 @@ public class LibroDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Libro libro) throws PersistentException {
+    /**
+     *
+     * @param libro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Libro libro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(libro);
 			return true;
@@ -397,7 +621,13 @@ public class LibroDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Libro libro) throws PersistentException {
+    /**
+     *
+     * @param libro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Libro libro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(libro);
 			return true;
@@ -408,7 +638,12 @@ public class LibroDAO {
 		}
 	}
 	
-	public static Libro loadLibroByCriteria(LibroCriteria libroCriteria) {
+    /**
+     *
+     * @param libroCriteria
+     * @return
+     */
+    public static Libro loadLibroByCriteria(LibroCriteria libroCriteria) {
 		Libro[] libros = listLibroByCriteria(libroCriteria);
 		if(libros == null || libros.length == 0) {
 			return null;
@@ -416,7 +651,12 @@ public class LibroDAO {
 		return libros[0];
 	}
 	
-	public static Libro[] listLibroByCriteria(LibroCriteria libroCriteria) {
+    /**
+     *
+     * @param libroCriteria
+     * @return
+     */
+    public static Libro[] listLibroByCriteria(LibroCriteria libroCriteria) {
 		return libroCriteria.listLibro();
 	}
 }

@@ -18,26 +18,101 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression RUN;
-	public final StringExpression nombre;
-	public final StringExpression apellidoMaterno;
-	public final StringExpression apellidoPaterno;
-	public final StringExpression genero;
-	public final DateExpression fechaDeNacimiento;
-	public final StringExpression cargo;
-	public final DateExpression fechaDeContrato;
-	public final DateExpression fechaTerminoContrato;
-	public final IntegerExpression numeroCelular;
-	public final IntegerExpression numeroTelefono;
-	public final StringExpression correoElectronico;
-	public final IntegerExpression idCiudadId;
-	public final AssociationExpression idCiudad;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression RUN;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoMaterno;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoPaterno;
+
+    /**
+     *
+     */
+    public final StringExpression genero;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeNacimiento;
+
+    /**
+     *
+     */
+    public final StringExpression cargo;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeContrato;
+
+    /**
+     *
+     */
+    public final DateExpression fechaTerminoContrato;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroCelular;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroTelefono;
+
+    /**
+     *
+     */
+    public final StringExpression correoElectronico;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCiudadId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCiudad;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
 	
-	public FuncionarioDetachedCriteria() {
+    /**
+     *
+     */
+    public FuncionarioDetachedCriteria() {
 		super(modelo.Funcionario.class, modelo.FuncionarioCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
@@ -58,7 +133,11 @@ public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 	}
 	
-	public FuncionarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public FuncionarioDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.FuncionarioCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
@@ -79,19 +158,37 @@ public class FuncionarioDetachedCriteria extends AbstractORMDetachedCriteria {
 		idBiblioteca = new AssociationExpression("idBiblioteca", this.getDetachedCriteria());
 	}
 	
-	public CiudadDetachedCriteria createIdCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadDetachedCriteria createIdCiudadCriteria() {
 		return new CiudadDetachedCriteria(createCriteria("idCiudad"));
 	}
 	
-	public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public Funcionario uniqueFuncionario(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Funcionario uniqueFuncionario(PersistentSession session) {
 		return (Funcionario) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Funcionario[] listFuncionario(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Funcionario[] listFuncionario(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Funcionario[]) list.toArray(new Funcionario[list.size()]);
 	}

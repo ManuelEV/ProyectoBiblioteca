@@ -14,8 +14,17 @@
 package modelo;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author Manuel
+ */
 public class RegistroSalaLectura implements Serializable {
-	public RegistroSalaLectura() {
+
+    /**
+     *
+     */
+    public RegistroSalaLectura() {
 	}
 	
 	public boolean equals(Object aObj) {
@@ -86,7 +95,11 @@ public class RegistroSalaLectura implements Serializable {
 		this.salaDeLecturaidSalaId = value;
 	}
 	
-	public int getSalaDeLecturaidSalaId() {
+    /**
+     *
+     * @return
+     */
+    public int getSalaDeLecturaidSalaId() {
 		return salaDeLecturaidSalaId;
 	}
 	
@@ -98,43 +111,83 @@ public class RegistroSalaLectura implements Serializable {
 		this.idClienteId = value;
 	}
 	
-	public int getIdClienteId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdClienteId() {
 		return idClienteId;
 	}
 	
-	public void setId(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setId(int value) {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public void setFechaRegistro(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaRegistro(java.util.Date value) {
 		this.fechaRegistro = value;
 	}
 	
-	public java.util.Date getFechaRegistro() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaRegistro() {
 		return fechaRegistro;
 	}
 	
-	public void setTipoRegistro(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setTipoRegistro(String value) {
 		this.tipoRegistro = value;
 	}
 	
-	public String getTipoRegistro() {
+    /**
+     *
+     * @return
+     */
+    public String getTipoRegistro() {
 		return tipoRegistro;
 	}
 	
-	public void setHoraRegistro(java.sql.Time value) {
+    /**
+     *
+     * @param value
+     */
+    public void setHoraRegistro(java.sql.Time value) {
 		this.horaRegistro = value;
 	}
 	
-	public java.sql.Time getHoraRegistro() {
+    /**
+     *
+     * @return
+     */
+    public java.sql.Time getHoraRegistro() {
 		return horaRegistro;
 	}
 	
-	public void setIdCliente(modelo.Cliente value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCliente(modelo.Cliente value) {
 		if (idCliente != null) {
 			idCliente.registroSalaLectura.remove(this);
 		}
@@ -143,12 +196,17 @@ public class RegistroSalaLectura implements Serializable {
 		}
 	}
 	
-	public modelo.Cliente getIdCliente() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Cliente getIdCliente() {
 		return idCliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCliente(modelo.Cliente value) {
 		this.idCliente = value;
@@ -158,7 +216,11 @@ public class RegistroSalaLectura implements Serializable {
 		return idCliente;
 	}
 	
-	public void setSalaDeLecturaidSala(modelo.SalaDeLectura value) {
+    /**
+     *
+     * @param value
+     */
+    public void setSalaDeLecturaidSala(modelo.SalaDeLectura value) {
 		if (salaDeLecturaidSala != null) {
 			salaDeLecturaidSala.registroSalaLectura.remove(this);
 		}
@@ -167,12 +229,17 @@ public class RegistroSalaLectura implements Serializable {
 		}
 	}
 	
-	public modelo.SalaDeLectura getSalaDeLecturaidSala() {
+    /**
+     *
+     * @return
+     */
+    public modelo.SalaDeLectura getSalaDeLecturaidSala() {
 		return salaDeLecturaidSala;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_SalaDeLecturaidSala(modelo.SalaDeLectura value) {
 		this.salaDeLecturaidSala = value;

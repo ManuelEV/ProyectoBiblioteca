@@ -18,17 +18,57 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class UsuarioCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression correo;
-	public final StringExpression usuario;
-	public final StringExpression tipoUsuario;
-	public final StringExpression contraseña;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression cliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression correo;
+
+    /**
+     *
+     */
+    public final StringExpression usuario;
+
+    /**
+     *
+     */
+    public final StringExpression tipoUsuario;
+
+    /**
+     *
+     */
+    public final StringExpression contraseña;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression cliente;
 	
-	public UsuarioCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public UsuarioCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		correo = new StringExpression("correo", this);
@@ -40,27 +80,51 @@ public class UsuarioCriteria extends AbstractORMCriteria {
 		cliente = new CollectionExpression("ORM_Cliente", this);
 	}
 	
-	public UsuarioCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public UsuarioCriteria(PersistentSession session) {
 		this(session.createCriteria(Usuario.class));
 	}
 	
-	public UsuarioCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public UsuarioCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public BibliotecaCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public ClienteCriteria createClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_Cliente"));
 	}
 	
-	public Usuario uniqueUsuario() {
+    /**
+     *
+     * @return
+     */
+    public Usuario uniqueUsuario() {
 		return (Usuario) super.uniqueResult();
 	}
 	
-	public Usuario[] listUsuario() {
+    /**
+     *
+     * @return
+     */
+    public Usuario[] listUsuario() {
 		java.util.List list = super.list();
 		return (Usuario[]) list.toArray(new Usuario[list.size()]);
 	}

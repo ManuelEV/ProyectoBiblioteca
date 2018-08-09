@@ -18,29 +18,116 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class LibroDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final IntegerExpression numeroDePaginas;
-	public final StringExpression disponibilidad;
-	public final DateExpression fechaDeAdquisicion;
-	public final DateExpression fechaDeEdicion;
-	public final StringExpression edicion;
-	public final StringExpression editor;
-	public final IntegerExpression vecesSolicitado;
-	public final DateExpression fechaUltimaSolicitud;
-	public final StringExpression colorTapa;
-	public final StringExpression estadoDeterioro;
-	public final StringExpression idioma;
-	public final IntegerExpression idEstanteId;
-	public final AssociationExpression idEstante;
-	public final IntegerExpression idCategoriaId;
-	public final AssociationExpression idCategoria;
-	public final CollectionExpression solicitudLibro;
-	public final CollectionExpression entregaDeLibro;
-	public final CollectionExpression autores;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDePaginas;
+
+    /**
+     *
+     */
+    public final StringExpression disponibilidad;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeAdquisicion;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeEdicion;
+
+    /**
+     *
+     */
+    public final StringExpression edicion;
+
+    /**
+     *
+     */
+    public final StringExpression editor;
+
+    /**
+     *
+     */
+    public final IntegerExpression vecesSolicitado;
+
+    /**
+     *
+     */
+    public final DateExpression fechaUltimaSolicitud;
+
+    /**
+     *
+     */
+    public final StringExpression colorTapa;
+
+    /**
+     *
+     */
+    public final StringExpression estadoDeterioro;
+
+    /**
+     *
+     */
+    public final StringExpression idioma;
+
+    /**
+     *
+     */
+    public final IntegerExpression idEstanteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idEstante;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCategoriaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCategoria;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudLibro;
+
+    /**
+     *
+     */
+    public final CollectionExpression entregaDeLibro;
+
+    /**
+     *
+     */
+    public final CollectionExpression autores;
 	
-	public LibroDetachedCriteria() {
+    /**
+     *
+     */
+    public LibroDetachedCriteria() {
 		super(modelo.Libro.class, modelo.LibroCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -64,7 +151,11 @@ public class LibroDetachedCriteria extends AbstractORMDetachedCriteria {
 		autores = new CollectionExpression("ORM_Autores", this.getDetachedCriteria());
 	}
 	
-	public LibroDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public LibroDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.LibroCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -88,31 +179,61 @@ public class LibroDetachedCriteria extends AbstractORMDetachedCriteria {
 		autores = new CollectionExpression("ORM_Autores", this.getDetachedCriteria());
 	}
 	
-	public EstanteDetachedCriteria createIdEstanteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EstanteDetachedCriteria createIdEstanteCriteria() {
 		return new EstanteDetachedCriteria(createCriteria("idEstante"));
 	}
 	
-	public CategoriaDetachedCriteria createIdCategoriaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CategoriaDetachedCriteria createIdCategoriaCriteria() {
 		return new CategoriaDetachedCriteria(createCriteria("idCategoria"));
 	}
 	
-	public SolicitudLibroDetachedCriteria createSolicitudLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudLibroDetachedCriteria createSolicitudLibroCriteria() {
 		return new SolicitudLibroDetachedCriteria(createCriteria("ORM_SolicitudLibro"));
 	}
 	
-	public EntregaDeLibroDetachedCriteria createEntregaDeLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EntregaDeLibroDetachedCriteria createEntregaDeLibroCriteria() {
 		return new EntregaDeLibroDetachedCriteria(createCriteria("ORM_EntregaDeLibro"));
 	}
 	
-	public AutoresDetachedCriteria createAutoresCriteria() {
+    /**
+     *
+     * @return
+     */
+    public AutoresDetachedCriteria createAutoresCriteria() {
 		return new AutoresDetachedCriteria(createCriteria("ORM_Autores"));
 	}
 	
-	public Libro uniqueLibro(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Libro uniqueLibro(PersistentSession session) {
 		return (Libro) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Libro[] listLibro(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Libro[] listLibro(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Libro[]) list.toArray(new Libro[list.size()]);
 	}

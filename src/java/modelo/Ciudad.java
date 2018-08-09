@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Ciudad {
-	public Ciudad() {
+
+    /**
+     *
+     */
+    public Ciudad() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -64,23 +72,43 @@ public class Ciudad {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setIdPais(modelo.Pais value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdPais(modelo.Pais value) {
 		if (idPais != null) {
 			idPais.ciudad.remove(this);
 		}
@@ -89,12 +117,17 @@ public class Ciudad {
 		}
 	}
 	
-	public modelo.Pais getIdPais() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Pais getIdPais() {
 		return idPais;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdPais(modelo.Pais value) {
 		this.idPais = value;
@@ -112,7 +145,10 @@ public class Ciudad {
 		return ORM_cliente;
 	}
 	
-	public final modelo.ClienteSetCollection cliente = new modelo.ClienteSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_CLIENTE, ORMConstants.KEY_CLIENTE_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.ClienteSetCollection cliente = new modelo.ClienteSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_CLIENTE, ORMConstants.KEY_CLIENTE_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Biblioteca(java.util.Set value) {
 		this.ORM_biblioteca = value;
@@ -122,7 +158,10 @@ public class Ciudad {
 		return ORM_biblioteca;
 	}
 	
-	public final modelo.BibliotecaSetCollection biblioteca = new modelo.BibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_BIBLIOTECA, ORMConstants.KEY_BIBLIOTECA_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.BibliotecaSetCollection biblioteca = new modelo.BibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_BIBLIOTECA, ORMConstants.KEY_BIBLIOTECA_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Funcionario(java.util.Set value) {
 		this.ORM_funcionario = value;
@@ -132,7 +171,10 @@ public class Ciudad {
 		return ORM_funcionario;
 	}
 	
-	public final modelo.FuncionarioSetCollection funcionario = new modelo.FuncionarioSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_FUNCIONARIO, ORMConstants.KEY_FUNCIONARIO_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.FuncionarioSetCollection funcionario = new modelo.FuncionarioSetCollection(this, _ormAdapter, ORMConstants.KEY_CIUDAD_FUNCIONARIO, ORMConstants.KEY_FUNCIONARIO_IDCIUDAD, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

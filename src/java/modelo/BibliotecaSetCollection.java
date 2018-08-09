@@ -15,12 +15,32 @@ package modelo;
 
 import org.orm.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class BibliotecaSetCollection extends org.orm.util.ORMSet {
-	public BibliotecaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
+
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param targetKey
+     * @param collType
+     */
+    public BibliotecaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
 		super(owner, adapter, ownerKey, targetKey, true, collType);
 	}
 	
-	public BibliotecaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param collType
+     */
+    public BibliotecaSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
 		super(owner, adapter, ownerKey, -1, false, collType);
 	}
 	
@@ -100,7 +120,12 @@ public class BibliotecaSetCollection extends org.orm.util.ORMSet {
 		return (Biblioteca[]) super.toArray(new Biblioteca[size()], propertyName, ascending);
 	}
 	
-	protected PersistentManager getPersistentManager() throws PersistentException {
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
+    protected PersistentManager getPersistentManager() throws PersistentException {
 		return ProyectoprogramacionavanzadaPersistentManager.instance();
 	}
 	

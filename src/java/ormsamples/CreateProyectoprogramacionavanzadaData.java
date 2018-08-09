@@ -5,8 +5,18 @@
 package ormsamples;
 
 import org.orm.*;
+
+/**
+ *
+ * @author Manuel
+ */
 public class CreateProyectoprogramacionavanzadaData {
-	public void createTestData() throws PersistentException {
+
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void createTestData() throws PersistentException {
 		PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
 		try {
 			modelo.Biblioteca lmodeloBiblioteca = modelo.BibliotecaDAO.createBiblioteca();
@@ -71,7 +81,11 @@ public class CreateProyectoprogramacionavanzadaData {
 		
 	}
 	
-	public static void main(String[] args) {
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 		try {
 			CreateProyectoprogramacionavanzadaData createProyectoprogramacionavanzadaData = new CreateProyectoprogramacionavanzadaData();
 			try {

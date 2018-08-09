@@ -18,8 +18,21 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudComputadorDAO {
-	public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudComputadorByORMID(session, id, idComputador, idCliente);
@@ -30,7 +43,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getSolicitudComputadorByORMID(session, id, idComputador, idCliente);
@@ -41,7 +62,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudComputadorByORMID(session, id, idComputador, idCliente, lockMode);
@@ -52,7 +82,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador getSolicitudComputadorByORMID(int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getSolicitudComputadorByORMID(session, id, idComputador, idCliente, lockMode);
@@ -63,7 +102,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
@@ -78,7 +126,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
@@ -93,7 +150,17 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
@@ -108,7 +175,17 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param idComputador
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador getSolicitudComputadorByORMID(PersistentSession session, int id, modelo.Computador idComputador, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudComputador solicitudcomputador = new modelo.SolicitudComputador();
 			solicitudcomputador.setId(id);
@@ -123,7 +200,14 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static List querySolicitudComputador(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudComputador(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return querySolicitudComputador(session, condition, orderBy);
@@ -134,7 +218,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static List querySolicitudComputador(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudComputador(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return querySolicitudComputador(session, condition, orderBy, lockMode);
@@ -145,7 +237,14 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador[] listSolicitudComputadorByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador[] listSolicitudComputadorByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listSolicitudComputadorByQuery(session, condition, orderBy);
@@ -156,7 +255,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador[] listSolicitudComputadorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador[] listSolicitudComputadorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listSolicitudComputadorByQuery(session, condition, orderBy, lockMode);
@@ -167,7 +274,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static List querySolicitudComputador(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudComputador(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudComputador as SolicitudComputador");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -183,7 +298,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static List querySolicitudComputador(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudComputador(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudComputador as SolicitudComputador");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -200,7 +324,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador[] listSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador[] listSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = querySolicitudComputador(session, condition, orderBy);
 			return (SolicitudComputador[]) list.toArray(new SolicitudComputador[list.size()]);
@@ -211,7 +343,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador[] listSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador[] listSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = querySolicitudComputador(session, condition, orderBy, lockMode);
 			return (SolicitudComputador[]) list.toArray(new SolicitudComputador[list.size()]);
@@ -222,7 +363,14 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudComputadorByQuery(session, condition, orderBy);
@@ -233,7 +381,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudComputadorByQuery(session, condition, orderBy, lockMode);
@@ -244,7 +400,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		SolicitudComputador[] solicitudComputadors = listSolicitudComputadorByQuery(session, condition, orderBy);
 		if (solicitudComputadors != null && solicitudComputadors.length > 0)
 			return solicitudComputadors[0];
@@ -252,7 +416,16 @@ public class SolicitudComputadorDAO {
 			return null;
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudComputador loadSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		SolicitudComputador[] solicitudComputadors = listSolicitudComputadorByQuery(session, condition, orderBy, lockMode);
 		if (solicitudComputadors != null && solicitudComputadors.length > 0)
 			return solicitudComputadors[0];
@@ -260,7 +433,14 @@ public class SolicitudComputadorDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateSolicitudComputadorByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudComputadorByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateSolicitudComputadorByQuery(session, condition, orderBy);
@@ -271,7 +451,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateSolicitudComputadorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudComputadorByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateSolicitudComputadorByQuery(session, condition, orderBy, lockMode);
@@ -282,7 +470,15 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudComputador as SolicitudComputador");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -298,7 +494,16 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudComputadorByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudComputador as SolicitudComputador");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -315,11 +520,21 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador createSolicitudComputador() {
+    /**
+     *
+     * @return
+     */
+    public static SolicitudComputador createSolicitudComputador() {
 		return new modelo.SolicitudComputador();
 	}
 	
-	public static boolean save(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
+    /**
+     *
+     * @param solicitudComputador
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(solicitudComputador);
 			return true;
@@ -330,7 +545,13 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
+    /**
+     *
+     * @param solicitudComputador
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(solicitudComputador);
 			return true;
@@ -341,7 +562,13 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.SolicitudComputador solicitudComputador)throws PersistentException {
+    /**
+     *
+     * @param solicitudComputador
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.SolicitudComputador solicitudComputador)throws PersistentException {
 		try {
 			modelo.Computador idComputador = solicitudComputador.getIdComputador();
 			if (solicitudComputador.getIdComputador() != null) {
@@ -363,7 +590,14 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.SolicitudComputador solicitudComputador, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param solicitudComputador
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.SolicitudComputador solicitudComputador, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			modelo.Computador idComputador = solicitudComputador.getIdComputador();
 			if (solicitudComputador.getIdComputador() != null) {
@@ -390,7 +624,13 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
+    /**
+     *
+     * @param solicitudComputador
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(solicitudComputador);
 			return true;
@@ -401,7 +641,13 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
+    /**
+     *
+     * @param solicitudComputador
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.SolicitudComputador solicitudComputador) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(solicitudComputador);
 			return true;
@@ -412,7 +658,12 @@ public class SolicitudComputadorDAO {
 		}
 	}
 	
-	public static SolicitudComputador loadSolicitudComputadorByCriteria(SolicitudComputadorCriteria solicitudComputadorCriteria) {
+    /**
+     *
+     * @param solicitudComputadorCriteria
+     * @return
+     */
+    public static SolicitudComputador loadSolicitudComputadorByCriteria(SolicitudComputadorCriteria solicitudComputadorCriteria) {
 		SolicitudComputador[] solicitudComputadors = listSolicitudComputadorByCriteria(solicitudComputadorCriteria);
 		if(solicitudComputadors == null || solicitudComputadors.length == 0) {
 			return null;
@@ -420,7 +671,12 @@ public class SolicitudComputadorDAO {
 		return solicitudComputadors[0];
 	}
 	
-	public static SolicitudComputador[] listSolicitudComputadorByCriteria(SolicitudComputadorCriteria solicitudComputadorCriteria) {
+    /**
+     *
+     * @param solicitudComputadorCriteria
+     * @return
+     */
+    public static SolicitudComputador[] listSolicitudComputadorByCriteria(SolicitudComputadorCriteria solicitudComputadorCriteria) {
 		return solicitudComputadorCriteria.listSolicitudComputador();
 	}
 }

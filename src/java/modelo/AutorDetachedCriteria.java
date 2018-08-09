@@ -18,16 +18,51 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class AutorDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final DateExpression fechaDeNacimiento;
-	public final StringExpression genero;
-	public final StringExpression apellidoPaterno;
-	public final StringExpression apellidoMaterno;
-	public final CollectionExpression autores;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeNacimiento;
+
+    /**
+     *
+     */
+    public final StringExpression genero;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoPaterno;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoMaterno;
+
+    /**
+     *
+     */
+    public final CollectionExpression autores;
 	
-	public AutorDetachedCriteria() {
+    /**
+     *
+     */
+    public AutorDetachedCriteria() {
 		super(modelo.Autor.class, modelo.AutorCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -38,7 +73,11 @@ public class AutorDetachedCriteria extends AbstractORMDetachedCriteria {
 		autores = new CollectionExpression("ORM_Autores", this.getDetachedCriteria());
 	}
 	
-	public AutorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public AutorDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.AutorCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -49,15 +88,29 @@ public class AutorDetachedCriteria extends AbstractORMDetachedCriteria {
 		autores = new CollectionExpression("ORM_Autores", this.getDetachedCriteria());
 	}
 	
-	public AutoresDetachedCriteria createAutoresCriteria() {
+    /**
+     *
+     * @return
+     */
+    public AutoresDetachedCriteria createAutoresCriteria() {
 		return new AutoresDetachedCriteria(createCriteria("ORM_Autores"));
 	}
 	
-	public Autor uniqueAutor(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Autor uniqueAutor(PersistentSession session) {
 		return (Autor) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Autor[] listAutor(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Autor[] listAutor(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Autor[]) list.toArray(new Autor[list.size()]);
 	}

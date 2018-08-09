@@ -18,13 +18,37 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class CategoriaCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final CollectionExpression estante;
-	public final CollectionExpression libro;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final CollectionExpression estante;
+
+    /**
+     *
+     */
+    public final CollectionExpression libro;
 	
-	public CategoriaCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public CategoriaCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
@@ -32,27 +56,51 @@ public class CategoriaCriteria extends AbstractORMCriteria {
 		libro = new CollectionExpression("ORM_Libro", this);
 	}
 	
-	public CategoriaCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public CategoriaCriteria(PersistentSession session) {
 		this(session.createCriteria(Categoria.class));
 	}
 	
-	public CategoriaCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public CategoriaCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public EstanteCriteria createEstanteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EstanteCriteria createEstanteCriteria() {
 		return new EstanteCriteria(createCriteria("ORM_Estante"));
 	}
 	
-	public LibroCriteria createLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroCriteria createLibroCriteria() {
 		return new LibroCriteria(createCriteria("ORM_Libro"));
 	}
 	
-	public Categoria uniqueCategoria() {
+    /**
+     *
+     * @return
+     */
+    public Categoria uniqueCategoria() {
 		return (Categoria) super.uniqueResult();
 	}
 	
-	public Categoria[] listCategoria() {
+    /**
+     *
+     * @return
+     */
+    public Categoria[] listCategoria() {
 		java.util.List list = super.list();
 		return (Categoria[]) list.toArray(new Categoria[list.size()]);
 	}

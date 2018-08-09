@@ -18,16 +18,52 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class ComputadorCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression marca;
-	public final DateExpression fechaDeAdquisicion;
-	public final DateExpression fechaUltimaSolicitud;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression solicitudComputador;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression marca;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeAdquisicion;
+
+    /**
+     *
+     */
+    public final DateExpression fechaUltimaSolicitud;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudComputador;
 	
-	public ComputadorCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public ComputadorCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		marca = new StringExpression("marca", this);
@@ -38,27 +74,51 @@ public class ComputadorCriteria extends AbstractORMCriteria {
 		solicitudComputador = new CollectionExpression("ORM_SolicitudComputador", this);
 	}
 	
-	public ComputadorCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public ComputadorCriteria(PersistentSession session) {
 		this(session.createCriteria(Computador.class));
 	}
 	
-	public ComputadorCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public ComputadorCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public BibliotecaCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public SolicitudComputadorCriteria createSolicitudComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudComputadorCriteria createSolicitudComputadorCriteria() {
 		return new SolicitudComputadorCriteria(createCriteria("ORM_SolicitudComputador"));
 	}
 	
-	public Computador uniqueComputador() {
+    /**
+     *
+     * @return
+     */
+    public Computador uniqueComputador() {
 		return (Computador) super.uniqueResult();
 	}
 	
-	public Computador[] listComputador() {
+    /**
+     *
+     * @return
+     */
+    public Computador[] listComputador() {
 		java.util.List list = super.list();
 		return (Computador[]) list.toArray(new Computador[list.size()]);
 	}

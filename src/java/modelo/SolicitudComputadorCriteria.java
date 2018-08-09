@@ -18,16 +18,52 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudComputadorCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final DateExpression fechaDeSolicitud;
-	public final TimeExpression horaSolicitud;
-	public final IntegerExpression idComputadorId;
-	public final AssociationExpression idComputador;
-	public final IntegerExpression idClienteId;
-	public final AssociationExpression idCliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeSolicitud;
+
+    /**
+     *
+     */
+    public final TimeExpression horaSolicitud;
+
+    /**
+     *
+     */
+    public final IntegerExpression idComputadorId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idComputador;
+
+    /**
+     *
+     */
+    public final IntegerExpression idClienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCliente;
 	
-	public SolicitudComputadorCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public SolicitudComputadorCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this);
@@ -38,27 +74,51 @@ public class SolicitudComputadorCriteria extends AbstractORMCriteria {
 		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
-	public SolicitudComputadorCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public SolicitudComputadorCriteria(PersistentSession session) {
 		this(session.createCriteria(SolicitudComputador.class));
 	}
 	
-	public SolicitudComputadorCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public SolicitudComputadorCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public ComputadorCriteria createIdComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ComputadorCriteria createIdComputadorCriteria() {
 		return new ComputadorCriteria(createCriteria("ORM_IdComputador"));
 	}
 	
-	public ClienteCriteria createIdClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createIdClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
-	public SolicitudComputador uniqueSolicitudComputador() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudComputador uniqueSolicitudComputador() {
 		return (SolicitudComputador) super.uniqueResult();
 	}
 	
-	public SolicitudComputador[] listSolicitudComputador() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudComputador[] listSolicitudComputador() {
 		java.util.List list = super.list();
 		return (SolicitudComputador[]) list.toArray(new SolicitudComputador[list.size()]);
 	}

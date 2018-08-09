@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class BibliotecaDAO {
-	public static Biblioteca loadBibliotecaByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadBibliotecaByORMID(session, id);
@@ -30,7 +41,13 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca getBibliotecaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getBibliotecaByORMID(session, id);
@@ -41,7 +58,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadBibliotecaByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca getBibliotecaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getBibliotecaByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Biblioteca) session.load(modelo.Biblioteca.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca getBibliotecaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Biblioteca) session.get(modelo.Biblioteca.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Biblioteca) session.load(modelo.Biblioteca.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca getBibliotecaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca getBibliotecaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Biblioteca) session.get(modelo.Biblioteca.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static List queryBiblioteca(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryBiblioteca(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryBiblioteca(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static List queryBiblioteca(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryBiblioteca(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryBiblioteca(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca[] listBibliotecaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca[] listBibliotecaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listBibliotecaByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca[] listBibliotecaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca[] listBibliotecaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listBibliotecaByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static List queryBiblioteca(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryBiblioteca(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Biblioteca as Biblioteca");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static List queryBiblioteca(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryBiblioteca(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Biblioteca as Biblioteca");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca[] listBibliotecaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca[] listBibliotecaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryBiblioteca(session, condition, orderBy);
 			return (Biblioteca[]) list.toArray(new Biblioteca[list.size()]);
@@ -191,7 +307,16 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca[] listBibliotecaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca[] listBibliotecaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryBiblioteca(session, condition, orderBy, lockMode);
 			return (Biblioteca[]) list.toArray(new Biblioteca[list.size()]);
@@ -202,7 +327,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadBibliotecaByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadBibliotecaByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Biblioteca[] bibliotecas = listBibliotecaByQuery(session, condition, orderBy);
 		if (bibliotecas != null && bibliotecas.length > 0)
 			return bibliotecas[0];
@@ -232,7 +380,16 @@ public class BibliotecaDAO {
 			return null;
 	}
 	
-	public static Biblioteca loadBibliotecaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Biblioteca loadBibliotecaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Biblioteca[] bibliotecas = listBibliotecaByQuery(session, condition, orderBy, lockMode);
 		if (bibliotecas != null && bibliotecas.length > 0)
 			return bibliotecas[0];
@@ -240,7 +397,14 @@ public class BibliotecaDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateBibliotecaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateBibliotecaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateBibliotecaByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateBibliotecaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateBibliotecaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateBibliotecaByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateBibliotecaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateBibliotecaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Biblioteca as Biblioteca");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateBibliotecaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateBibliotecaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Biblioteca as Biblioteca");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca createBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public static Biblioteca createBiblioteca() {
 		return new modelo.Biblioteca();
 	}
 	
-	public static boolean save(modelo.Biblioteca biblioteca) throws PersistentException {
+    /**
+     *
+     * @param biblioteca
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Biblioteca biblioteca) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(biblioteca);
 			return true;
@@ -310,7 +509,13 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Biblioteca biblioteca) throws PersistentException {
+    /**
+     *
+     * @param biblioteca
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Biblioteca biblioteca) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(biblioteca);
 			return true;
@@ -321,7 +526,13 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Biblioteca biblioteca)throws PersistentException {
+    /**
+     *
+     * @param biblioteca
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Biblioteca biblioteca)throws PersistentException {
 		try {
 			if (biblioteca.getIdCiudad() != null) {
 				biblioteca.getIdCiudad().biblioteca.remove(biblioteca);
@@ -359,7 +570,14 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Biblioteca biblioteca, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param biblioteca
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Biblioteca biblioteca, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			if (biblioteca.getIdCiudad() != null) {
 				biblioteca.getIdCiudad().biblioteca.remove(biblioteca);
@@ -402,7 +620,13 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Biblioteca biblioteca) throws PersistentException {
+    /**
+     *
+     * @param biblioteca
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Biblioteca biblioteca) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(biblioteca);
 			return true;
@@ -413,7 +637,13 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Biblioteca biblioteca) throws PersistentException {
+    /**
+     *
+     * @param biblioteca
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Biblioteca biblioteca) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(biblioteca);
 			return true;
@@ -424,7 +654,12 @@ public class BibliotecaDAO {
 		}
 	}
 	
-	public static Biblioteca loadBibliotecaByCriteria(BibliotecaCriteria bibliotecaCriteria) {
+    /**
+     *
+     * @param bibliotecaCriteria
+     * @return
+     */
+    public static Biblioteca loadBibliotecaByCriteria(BibliotecaCriteria bibliotecaCriteria) {
 		Biblioteca[] bibliotecas = listBibliotecaByCriteria(bibliotecaCriteria);
 		if(bibliotecas == null || bibliotecas.length == 0) {
 			return null;
@@ -432,7 +667,12 @@ public class BibliotecaDAO {
 		return bibliotecas[0];
 	}
 	
-	public static Biblioteca[] listBibliotecaByCriteria(BibliotecaCriteria bibliotecaCriteria) {
+    /**
+     *
+     * @param bibliotecaCriteria
+     * @return
+     */
+    public static Biblioteca[] listBibliotecaByCriteria(BibliotecaCriteria bibliotecaCriteria) {
 		return bibliotecaCriteria.listBiblioteca();
 	}
 }

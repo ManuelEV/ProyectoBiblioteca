@@ -14,8 +14,17 @@
 package modelo;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author Manuel
+ */
 public class Autores implements Serializable {
-	public Autores() {
+
+    /**
+     *
+     */
+    public Autores() {
 	}
 	
 	public boolean equals(Object aObj) {
@@ -80,7 +89,11 @@ public class Autores implements Serializable {
 		this.idAutorId = value;
 	}
 	
-	public int getIdAutorId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdAutorId() {
 		return idAutorId;
 	}
 	
@@ -92,19 +105,35 @@ public class Autores implements Serializable {
 		this.idLibroId = value;
 	}
 	
-	public int getIdLibroId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdLibroId() {
 		return idLibroId;
 	}
 	
-	public void setId(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setId(int value) {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public void setIdAutor(modelo.Autor value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdAutor(modelo.Autor value) {
 		if (idAutor != null) {
 			idAutor.autores.remove(this);
 		}
@@ -113,12 +142,17 @@ public class Autores implements Serializable {
 		}
 	}
 	
-	public modelo.Autor getIdAutor() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Autor getIdAutor() {
 		return idAutor;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdAutor(modelo.Autor value) {
 		this.idAutor = value;
@@ -128,7 +162,11 @@ public class Autores implements Serializable {
 		return idAutor;
 	}
 	
-	public void setIdLibro(modelo.Libro value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdLibro(modelo.Libro value) {
 		if (idLibro != null) {
 			idLibro.autores.remove(this);
 		}
@@ -137,12 +175,17 @@ public class Autores implements Serializable {
 		}
 	}
 	
-	public modelo.Libro getIdLibro() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Libro getIdLibro() {
 		return idLibro;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdLibro(modelo.Libro value) {
 		this.idLibro = value;

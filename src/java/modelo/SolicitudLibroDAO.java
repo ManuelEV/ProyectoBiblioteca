@@ -18,8 +18,21 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudLibroDAO {
-	public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudLibroByORMID(session, id, codigoLibro, idCliente);
@@ -30,7 +43,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getSolicitudLibroByORMID(session, id, codigoLibro, idCliente);
@@ -41,7 +62,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudLibroByORMID(session, id, codigoLibro, idCliente, lockMode);
@@ -52,7 +82,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro getSolicitudLibroByORMID(int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getSolicitudLibroByORMID(session, id, codigoLibro, idCliente, lockMode);
@@ -63,7 +102,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
@@ -78,7 +126,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
@@ -93,7 +150,17 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
@@ -108,7 +175,17 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param codigoLibro
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro getSolicitudLibroByORMID(PersistentSession session, int id, modelo.Libro codigoLibro, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			SolicitudLibro solicitudlibro = new modelo.SolicitudLibro();
 			solicitudlibro.setId(id);
@@ -123,7 +200,14 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static List querySolicitudLibro(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudLibro(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return querySolicitudLibro(session, condition, orderBy);
@@ -134,7 +218,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static List querySolicitudLibro(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudLibro(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return querySolicitudLibro(session, condition, orderBy, lockMode);
@@ -145,7 +237,14 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro[] listSolicitudLibroByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro[] listSolicitudLibroByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listSolicitudLibroByQuery(session, condition, orderBy);
@@ -156,7 +255,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro[] listSolicitudLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro[] listSolicitudLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listSolicitudLibroByQuery(session, condition, orderBy, lockMode);
@@ -167,7 +274,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static List querySolicitudLibro(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudLibro(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudLibro as SolicitudLibro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -183,7 +298,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static List querySolicitudLibro(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List querySolicitudLibro(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudLibro as SolicitudLibro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -200,7 +324,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro[] listSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro[] listSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = querySolicitudLibro(session, condition, orderBy);
 			return (SolicitudLibro[]) list.toArray(new SolicitudLibro[list.size()]);
@@ -211,7 +343,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro[] listSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro[] listSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = querySolicitudLibro(session, condition, orderBy, lockMode);
 			return (SolicitudLibro[]) list.toArray(new SolicitudLibro[list.size()]);
@@ -222,7 +363,14 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudLibroByQuery(session, condition, orderBy);
@@ -233,7 +381,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadSolicitudLibroByQuery(session, condition, orderBy, lockMode);
@@ -244,7 +400,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		SolicitudLibro[] solicitudLibros = listSolicitudLibroByQuery(session, condition, orderBy);
 		if (solicitudLibros != null && solicitudLibros.length > 0)
 			return solicitudLibros[0];
@@ -252,7 +416,16 @@ public class SolicitudLibroDAO {
 			return null;
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static SolicitudLibro loadSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		SolicitudLibro[] solicitudLibros = listSolicitudLibroByQuery(session, condition, orderBy, lockMode);
 		if (solicitudLibros != null && solicitudLibros.length > 0)
 			return solicitudLibros[0];
@@ -260,7 +433,14 @@ public class SolicitudLibroDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateSolicitudLibroByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudLibroByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateSolicitudLibroByQuery(session, condition, orderBy);
@@ -271,7 +451,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateSolicitudLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudLibroByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateSolicitudLibroByQuery(session, condition, orderBy, lockMode);
@@ -282,7 +470,15 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudLibro as SolicitudLibro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -298,7 +494,16 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateSolicitudLibroByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.SolicitudLibro as SolicitudLibro");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -315,11 +520,21 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro createSolicitudLibro() {
+    /**
+     *
+     * @return
+     */
+    public static SolicitudLibro createSolicitudLibro() {
 		return new modelo.SolicitudLibro();
 	}
 	
-	public static boolean save(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
+    /**
+     *
+     * @param solicitudLibro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(solicitudLibro);
 			return true;
@@ -330,7 +545,13 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
+    /**
+     *
+     * @param solicitudLibro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(solicitudLibro);
 			return true;
@@ -341,7 +562,13 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.SolicitudLibro solicitudLibro)throws PersistentException {
+    /**
+     *
+     * @param solicitudLibro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.SolicitudLibro solicitudLibro)throws PersistentException {
 		try {
 			modelo.Libro codigoLibro = solicitudLibro.getCodigoLibro();
 			if (solicitudLibro.getCodigoLibro() != null) {
@@ -363,7 +590,14 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.SolicitudLibro solicitudLibro, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param solicitudLibro
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.SolicitudLibro solicitudLibro, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			modelo.Libro codigoLibro = solicitudLibro.getCodigoLibro();
 			if (solicitudLibro.getCodigoLibro() != null) {
@@ -390,7 +624,13 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
+    /**
+     *
+     * @param solicitudLibro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(solicitudLibro);
 			return true;
@@ -401,7 +641,13 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
+    /**
+     *
+     * @param solicitudLibro
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.SolicitudLibro solicitudLibro) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(solicitudLibro);
 			return true;
@@ -412,7 +658,12 @@ public class SolicitudLibroDAO {
 		}
 	}
 	
-	public static SolicitudLibro loadSolicitudLibroByCriteria(SolicitudLibroCriteria solicitudLibroCriteria) {
+    /**
+     *
+     * @param solicitudLibroCriteria
+     * @return
+     */
+    public static SolicitudLibro loadSolicitudLibroByCriteria(SolicitudLibroCriteria solicitudLibroCriteria) {
 		SolicitudLibro[] solicitudLibros = listSolicitudLibroByCriteria(solicitudLibroCriteria);
 		if(solicitudLibros == null || solicitudLibros.length == 0) {
 			return null;
@@ -420,7 +671,12 @@ public class SolicitudLibroDAO {
 		return solicitudLibros[0];
 	}
 	
-	public static SolicitudLibro[] listSolicitudLibroByCriteria(SolicitudLibroCriteria solicitudLibroCriteria) {
+    /**
+     *
+     * @param solicitudLibroCriteria
+     * @return
+     */
+    public static SolicitudLibro[] listSolicitudLibroByCriteria(SolicitudLibroCriteria solicitudLibroCriteria) {
 		return solicitudLibroCriteria.listSolicitudLibro();
 	}
 }

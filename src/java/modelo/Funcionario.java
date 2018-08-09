@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Funcionario {
-	public Funcionario() {
+
+    /**
+     *
+     */
+    public Funcionario() {
 	}
 	
 	private void this_setOwner(Object owner, int key) {
@@ -68,119 +76,235 @@ public class Funcionario {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setRUN(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setRUN(String value) {
 		this.RUN = value;
 	}
 	
-	public String getRUN() {
+    /**
+     *
+     * @return
+     */
+    public String getRUN() {
 		return RUN;
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setApellidoMaterno(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setApellidoMaterno(String value) {
 		this.apellidoMaterno = value;
 	}
 	
-	public String getApellidoMaterno() {
+    /**
+     *
+     * @return
+     */
+    public String getApellidoMaterno() {
 		return apellidoMaterno;
 	}
 	
-	public void setApellidoPaterno(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setApellidoPaterno(String value) {
 		this.apellidoPaterno = value;
 	}
 	
-	public String getApellidoPaterno() {
+    /**
+     *
+     * @return
+     */
+    public String getApellidoPaterno() {
 		return apellidoPaterno;
 	}
 	
-	public void setGenero(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setGenero(String value) {
 		this.genero = value;
 	}
 	
-	public String getGenero() {
+    /**
+     *
+     * @return
+     */
+    public String getGenero() {
 		return genero;
 	}
 	
-	public void setFechaDeNacimiento(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeNacimiento(java.util.Date value) {
 		this.fechaDeNacimiento = value;
 	}
 	
-	public java.util.Date getFechaDeNacimiento() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeNacimiento() {
 		return fechaDeNacimiento;
 	}
 	
-	public void setCargo(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCargo(String value) {
 		this.cargo = value;
 	}
 	
-	public String getCargo() {
+    /**
+     *
+     * @return
+     */
+    public String getCargo() {
 		return cargo;
 	}
 	
-	public void setFechaDeContrato(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeContrato(java.util.Date value) {
 		this.fechaDeContrato = value;
 	}
 	
-	public java.util.Date getFechaDeContrato() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeContrato() {
 		return fechaDeContrato;
 	}
 	
-	public void setFechaTerminoContrato(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaTerminoContrato(java.util.Date value) {
 		this.fechaTerminoContrato = value;
 	}
 	
-	public java.util.Date getFechaTerminoContrato() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaTerminoContrato() {
 		return fechaTerminoContrato;
 	}
 	
-	public void setNumeroCelular(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroCelular(int value) {
 		setNumeroCelular(new Integer(value));
 	}
 	
-	public void setNumeroCelular(Integer value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroCelular(Integer value) {
 		this.numeroCelular = value;
 	}
 	
-	public Integer getNumeroCelular() {
+    /**
+     *
+     * @return
+     */
+    public Integer getNumeroCelular() {
 		return numeroCelular;
 	}
 	
-	public void setNumeroTelefono(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroTelefono(int value) {
 		setNumeroTelefono(new Integer(value));
 	}
 	
-	public void setNumeroTelefono(Integer value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroTelefono(Integer value) {
 		this.numeroTelefono = value;
 	}
 	
-	public Integer getNumeroTelefono() {
+    /**
+     *
+     * @return
+     */
+    public Integer getNumeroTelefono() {
 		return numeroTelefono;
 	}
 	
-	public void setCorreoElectronico(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCorreoElectronico(String value) {
 		this.correoElectronico = value;
 	}
 	
-	public String getCorreoElectronico() {
+    /**
+     *
+     * @return
+     */
+    public String getCorreoElectronico() {
 		return correoElectronico;
 	}
 	
-	public void setIdCiudad(modelo.Ciudad value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCiudad(modelo.Ciudad value) {
 		if (idCiudad != null) {
 			idCiudad.funcionario.remove(this);
 		}
@@ -189,12 +313,17 @@ public class Funcionario {
 		}
 	}
 	
-	public modelo.Ciudad getIdCiudad() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Ciudad getIdCiudad() {
 		return idCiudad;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCiudad(modelo.Ciudad value) {
 		this.idCiudad = value;
@@ -204,7 +333,11 @@ public class Funcionario {
 		return idCiudad;
 	}
 	
-	public void setIdBiblioteca(modelo.Biblioteca value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdBiblioteca(modelo.Biblioteca value) {
 		if (idBiblioteca != null) {
 			idBiblioteca.funcionario.remove(this);
 		}
@@ -213,12 +346,17 @@ public class Funcionario {
 		}
 	}
 	
-	public modelo.Biblioteca getIdBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Biblioteca getIdBiblioteca() {
 		return idBiblioteca;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdBiblioteca(modelo.Biblioteca value) {
 		this.idBiblioteca = value;

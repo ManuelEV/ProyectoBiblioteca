@@ -18,15 +18,46 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SalaDeLecturaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final IntegerExpression capacidad;
-	public final StringExpression nombre;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final CollectionExpression registroSalaLectura;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final IntegerExpression capacidad;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression registroSalaLectura;
 	
-	public SalaDeLecturaDetachedCriteria() {
+    /**
+     *
+     */
+    public SalaDeLecturaDetachedCriteria() {
 		super(modelo.SalaDeLectura.class, modelo.SalaDeLecturaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidad = new IntegerExpression("capacidad", this.getDetachedCriteria());
@@ -36,7 +67,11 @@ public class SalaDeLecturaDetachedCriteria extends AbstractORMDetachedCriteria {
 		registroSalaLectura = new CollectionExpression("ORM_RegistroSalaLectura", this.getDetachedCriteria());
 	}
 	
-	public SalaDeLecturaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public SalaDeLecturaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.SalaDeLecturaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		capacidad = new IntegerExpression("capacidad", this.getDetachedCriteria());
@@ -46,19 +81,37 @@ public class SalaDeLecturaDetachedCriteria extends AbstractORMDetachedCriteria {
 		registroSalaLectura = new CollectionExpression("ORM_RegistroSalaLectura", this.getDetachedCriteria());
 	}
 	
-	public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaDetachedCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaDetachedCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public RegistroSalaLecturaDetachedCriteria createRegistroSalaLecturaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public RegistroSalaLecturaDetachedCriteria createRegistroSalaLecturaCriteria() {
 		return new RegistroSalaLecturaDetachedCriteria(createCriteria("ORM_RegistroSalaLectura"));
 	}
 	
-	public SalaDeLectura uniqueSalaDeLectura(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public SalaDeLectura uniqueSalaDeLectura(PersistentSession session) {
 		return (SalaDeLectura) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public SalaDeLectura[] listSalaDeLectura(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public SalaDeLectura[] listSalaDeLectura(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (SalaDeLectura[]) list.toArray(new SalaDeLectura[list.size()]);
 	}

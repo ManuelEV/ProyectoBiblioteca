@@ -34,6 +34,7 @@ public class RegistroController extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws org.orm.PersistentException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, PersistentException {
@@ -140,6 +141,13 @@ public class RegistroController extends HttpServlet {
         return fechaDate;
     }
 
+    /**
+     *
+     * @param year
+     * @param month
+     * @param date
+     * @return
+     */
     public long dateToMilis(int year, int month, int date) {
         GregorianCalendar gc = new GregorianCalendar();
         gc.set(year, month, date);

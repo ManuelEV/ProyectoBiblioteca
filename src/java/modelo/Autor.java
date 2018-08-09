@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Autor {
-	public Autor() {
+
+    /**
+     *
+     */
+    public Autor() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -50,51 +58,99 @@ public class Autor {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setFechaDeNacimiento(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeNacimiento(java.util.Date value) {
 		this.fechaDeNacimiento = value;
 	}
 	
-	public java.util.Date getFechaDeNacimiento() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeNacimiento() {
 		return fechaDeNacimiento;
 	}
 	
-	public void setGenero(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setGenero(String value) {
 		this.genero = value;
 	}
 	
-	public String getGenero() {
+    /**
+     *
+     * @return
+     */
+    public String getGenero() {
 		return genero;
 	}
 	
-	public void setApellidoPaterno(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setApellidoPaterno(String value) {
 		this.apellidoPaterno = value;
 	}
 	
-	public String getApellidoPaterno() {
+    /**
+     *
+     * @return
+     */
+    public String getApellidoPaterno() {
 		return apellidoPaterno;
 	}
 	
-	public void setApellidoMaterno(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setApellidoMaterno(String value) {
 		this.apellidoMaterno = value;
 	}
 	
-	public String getApellidoMaterno() {
+    /**
+     *
+     * @return
+     */
+    public String getApellidoMaterno() {
 		return apellidoMaterno;
 	}
 	
@@ -106,7 +162,10 @@ public class Autor {
 		return ORM_autores;
 	}
 	
-	public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_AUTOR_AUTORES, ORMConstants.KEY_AUTORES_IDAUTOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.AutoresSetCollection autores = new modelo.AutoresSetCollection(this, _ormAdapter, ORMConstants.KEY_AUTOR_AUTORES, ORMConstants.KEY_AUTORES_IDAUTOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

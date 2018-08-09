@@ -18,35 +18,75 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class PaisCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final CollectionExpression ciudad;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final CollectionExpression ciudad;
 	
-	public PaisCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public PaisCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
 		ciudad = new CollectionExpression("ORM_Ciudad", this);
 	}
 	
-	public PaisCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public PaisCriteria(PersistentSession session) {
 		this(session.createCriteria(Pais.class));
 	}
 	
-	public PaisCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public PaisCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public CiudadCriteria createCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadCriteria createCiudadCriteria() {
 		return new CiudadCriteria(createCriteria("ORM_Ciudad"));
 	}
 	
-	public Pais uniquePais() {
+    /**
+     *
+     * @return
+     */
+    public Pais uniquePais() {
 		return (Pais) super.uniqueResult();
 	}
 	
-	public Pais[] listPais() {
+    /**
+     *
+     * @return
+     */
+    public Pais[] listPais() {
 		java.util.List list = super.list();
 		return (Pais[]) list.toArray(new Pais[list.size()]);
 	}

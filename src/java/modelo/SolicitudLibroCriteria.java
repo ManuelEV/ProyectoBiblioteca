@@ -18,17 +18,57 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudLibroCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final DateExpression fechaDeSolicitud;
-	public final TimeExpression horaDeSolicitud;
-	public final DateExpression fechaEntregaLimite;
-	public final IntegerExpression codigoLibroId;
-	public final AssociationExpression codigoLibro;
-	public final IntegerExpression idClienteId;
-	public final AssociationExpression idCliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeSolicitud;
+
+    /**
+     *
+     */
+    public final TimeExpression horaDeSolicitud;
+
+    /**
+     *
+     */
+    public final DateExpression fechaEntregaLimite;
+
+    /**
+     *
+     */
+    public final IntegerExpression codigoLibroId;
+
+    /**
+     *
+     */
+    public final AssociationExpression codigoLibro;
+
+    /**
+     *
+     */
+    public final IntegerExpression idClienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCliente;
 	
-	public SolicitudLibroCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public SolicitudLibroCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		fechaDeSolicitud = new DateExpression("fechaDeSolicitud", this);
@@ -40,27 +80,51 @@ public class SolicitudLibroCriteria extends AbstractORMCriteria {
 		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
-	public SolicitudLibroCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public SolicitudLibroCriteria(PersistentSession session) {
 		this(session.createCriteria(SolicitudLibro.class));
 	}
 	
-	public SolicitudLibroCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public SolicitudLibroCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public LibroCriteria createCodigoLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroCriteria createCodigoLibroCriteria() {
 		return new LibroCriteria(createCriteria("ORM_CodigoLibro"));
 	}
 	
-	public ClienteCriteria createIdClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createIdClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
-	public SolicitudLibro uniqueSolicitudLibro() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudLibro uniqueSolicitudLibro() {
 		return (SolicitudLibro) super.uniqueResult();
 	}
 	
-	public SolicitudLibro[] listSolicitudLibro() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudLibro[] listSolicitudLibro() {
 		java.util.List list = super.list();
 		return (SolicitudLibro[]) list.toArray(new SolicitudLibro[list.size()]);
 	}

@@ -18,34 +18,71 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class PaisDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final CollectionExpression ciudad;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final CollectionExpression ciudad;
 	
-	public PaisDetachedCriteria() {
+    /**
+     *
+     */
+    public PaisDetachedCriteria() {
 		super(modelo.Pais.class, modelo.PaisCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		ciudad = new CollectionExpression("ORM_Ciudad", this.getDetachedCriteria());
 	}
 	
-	public PaisDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public PaisDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.PaisCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
 		ciudad = new CollectionExpression("ORM_Ciudad", this.getDetachedCriteria());
 	}
 	
-	public CiudadDetachedCriteria createCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadDetachedCriteria createCiudadCriteria() {
 		return new CiudadDetachedCriteria(createCriteria("ORM_Ciudad"));
 	}
 	
-	public Pais uniquePais(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Pais uniquePais(PersistentSession session) {
 		return (Pais) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Pais[] listPais(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Pais[] listPais(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Pais[]) list.toArray(new Pais[list.size()]);
 	}

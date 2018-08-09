@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Cliente {
-	public Cliente() {
+
+    /**
+     *
+     */
+    public Cliente() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -102,119 +110,235 @@ public class Cliente {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setRUN(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setRUN(String value) {
 		this.RUN = value;
 	}
 	
-	public String getRUN() {
+    /**
+     *
+     * @return
+     */
+    public String getRUN() {
 		return RUN;
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setApellidoPaterno(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setApellidoPaterno(String value) {
 		this.apellidoPaterno = value;
 	}
 	
-	public String getApellidoPaterno() {
+    /**
+     *
+     * @return
+     */
+    public String getApellidoPaterno() {
 		return apellidoPaterno;
 	}
 	
-	public void setApellidoMaterno(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setApellidoMaterno(String value) {
 		this.apellidoMaterno = value;
 	}
 	
-	public String getApellidoMaterno() {
+    /**
+     *
+     * @return
+     */
+    public String getApellidoMaterno() {
 		return apellidoMaterno;
 	}
 	
-	public void setGenero(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setGenero(String value) {
 		this.genero = value;
 	}
 	
-	public String getGenero() {
+    /**
+     *
+     * @return
+     */
+    public String getGenero() {
 		return genero;
 	}
 	
-	public void setFechaDeNacimiento(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeNacimiento(java.util.Date value) {
 		this.fechaDeNacimiento = value;
 	}
 	
-	public java.util.Date getFechaDeNacimiento() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeNacimiento() {
 		return fechaDeNacimiento;
 	}
 	
-	public void setEstadoDeTrabajo(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setEstadoDeTrabajo(String value) {
 		this.estadoDeTrabajo = value;
 	}
 	
-	public String getEstadoDeTrabajo() {
+    /**
+     *
+     * @return
+     */
+    public String getEstadoDeTrabajo() {
 		return estadoDeTrabajo;
 	}
 	
-	public void setAreaDeInteres(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setAreaDeInteres(String value) {
 		this.areaDeInteres = value;
 	}
 	
-	public String getAreaDeInteres() {
+    /**
+     *
+     * @return
+     */
+    public String getAreaDeInteres() {
 		return areaDeInteres;
 	}
 	
-	public void setFechaUltimaSolicitud(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaUltimaSolicitud(java.util.Date value) {
 		this.fechaUltimaSolicitud = value;
 	}
 	
-	public java.util.Date getFechaUltimaSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaUltimaSolicitud() {
 		return fechaUltimaSolicitud;
 	}
 	
-	public void setDiasDeAtraso(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setDiasDeAtraso(int value) {
 		this.diasDeAtraso = value;
 	}
 	
-	public int getDiasDeAtraso() {
+    /**
+     *
+     * @return
+     */
+    public int getDiasDeAtraso() {
 		return diasDeAtraso;
 	}
 	
-	public void setNumeroDeCelular(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDeCelular(int value) {
 		setNumeroDeCelular(new Integer(value));
 	}
 	
-	public void setNumeroDeCelular(Integer value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDeCelular(Integer value) {
 		this.numeroDeCelular = value;
 	}
 	
-	public Integer getNumeroDeCelular() {
+    /**
+     *
+     * @return
+     */
+    public Integer getNumeroDeCelular() {
 		return numeroDeCelular;
 	}
 	
-	public void setNumeroDeTelefono(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDeTelefono(int value) {
 		setNumeroDeTelefono(new Integer(value));
 	}
 	
-	public void setNumeroDeTelefono(Integer value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDeTelefono(Integer value) {
 		this.numeroDeTelefono = value;
 	}
 	
-	public Integer getNumeroDeTelefono() {
+    /**
+     *
+     * @return
+     */
+    public Integer getNumeroDeTelefono() {
 		return numeroDeTelefono;
 	}
 	
-	public void setIdCiudad(modelo.Ciudad value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCiudad(modelo.Ciudad value) {
 		if (idCiudad != null) {
 			idCiudad.cliente.remove(this);
 		}
@@ -223,12 +347,17 @@ public class Cliente {
 		}
 	}
 	
-	public modelo.Ciudad getIdCiudad() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Ciudad getIdCiudad() {
 		return idCiudad;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCiudad(modelo.Ciudad value) {
 		this.idCiudad = value;
@@ -238,7 +367,11 @@ public class Cliente {
 		return idCiudad;
 	}
 	
-	public void setUsuario(modelo.Usuario value) {
+    /**
+     *
+     * @param value
+     */
+    public void setUsuario(modelo.Usuario value) {
 		if (usuario != null) {
 			usuario.cliente.remove(this);
 		}
@@ -247,12 +380,17 @@ public class Cliente {
 		}
 	}
 	
-	public modelo.Usuario getUsuario() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Usuario getUsuario() {
 		return usuario;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_Usuario(modelo.Usuario value) {
 		this.usuario = value;
@@ -270,7 +408,10 @@ public class Cliente {
 		return ORM_solicitudComputador;
 	}
 	
-	public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_SolicitudLibro(java.util.Set value) {
 		this.ORM_solicitudLibro = value;
@@ -280,7 +421,10 @@ public class Cliente {
 		return ORM_solicitudLibro;
 	}
 	
-	public final modelo.SolicitudLibroSetCollection solicitudLibro = new modelo.SolicitudLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDLIBRO, ORMConstants.KEY_SOLICITUDLIBRO_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.SolicitudLibroSetCollection solicitudLibro = new modelo.SolicitudLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_SOLICITUDLIBRO, ORMConstants.KEY_SOLICITUDLIBRO_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_EntregaDeLibro(java.util.Set value) {
 		this.ORM_entregaDeLibro = value;
@@ -290,7 +434,10 @@ public class Cliente {
 		return ORM_entregaDeLibro;
 	}
 	
-	public final modelo.EntregaDeLibroSetCollection entregaDeLibro = new modelo.EntregaDeLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_ENTREGADELIBRO, ORMConstants.KEY_ENTREGADELIBRO_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.EntregaDeLibroSetCollection entregaDeLibro = new modelo.EntregaDeLibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_ENTREGADELIBRO, ORMConstants.KEY_ENTREGADELIBRO_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_RegistroSalaLectura(java.util.Set value) {
 		this.ORM_registroSalaLectura = value;
@@ -300,7 +447,10 @@ public class Cliente {
 		return ORM_registroSalaLectura;
 	}
 	
-	public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_IDCLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_ClienteDeBiblioteca(java.util.Set value) {
 		this.ORM_clienteDeBiblioteca = value;
@@ -310,7 +460,10 @@ public class Cliente {
 		return ORM_clienteDeBiblioteca;
 	}
 	
-	public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_CLIENTE_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_CLIENTE, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

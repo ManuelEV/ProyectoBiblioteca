@@ -18,31 +18,127 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class ClienteCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression RUN;
-	public final StringExpression nombre;
-	public final StringExpression apellidoPaterno;
-	public final StringExpression apellidoMaterno;
-	public final StringExpression genero;
-	public final DateExpression fechaDeNacimiento;
-	public final StringExpression estadoDeTrabajo;
-	public final StringExpression areaDeInteres;
-	public final DateExpression fechaUltimaSolicitud;
-	public final IntegerExpression diasDeAtraso;
-	public final IntegerExpression numeroDeCelular;
-	public final IntegerExpression numeroDeTelefono;
-	public final IntegerExpression idCiudadId;
-	public final AssociationExpression idCiudad;
-	public final IntegerExpression usuarioId;
-	public final AssociationExpression usuario;
-	public final CollectionExpression solicitudComputador;
-	public final CollectionExpression solicitudLibro;
-	public final CollectionExpression entregaDeLibro;
-	public final CollectionExpression registroSalaLectura;
-	public final CollectionExpression clienteDeBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression RUN;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoPaterno;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoMaterno;
+
+    /**
+     *
+     */
+    public final StringExpression genero;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeNacimiento;
+
+    /**
+     *
+     */
+    public final StringExpression estadoDeTrabajo;
+
+    /**
+     *
+     */
+    public final StringExpression areaDeInteres;
+
+    /**
+     *
+     */
+    public final DateExpression fechaUltimaSolicitud;
+
+    /**
+     *
+     */
+    public final IntegerExpression diasDeAtraso;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDeCelular;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDeTelefono;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCiudadId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCiudad;
+
+    /**
+     *
+     */
+    public final IntegerExpression usuarioId;
+
+    /**
+     *
+     */
+    public final AssociationExpression usuario;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudComputador;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudLibro;
+
+    /**
+     *
+     */
+    public final CollectionExpression entregaDeLibro;
+
+    /**
+     *
+     */
+    public final CollectionExpression registroSalaLectura;
+
+    /**
+     *
+     */
+    public final CollectionExpression clienteDeBiblioteca;
 	
-	public ClienteCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public ClienteCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		RUN = new StringExpression("RUN", this);
@@ -68,47 +164,91 @@ public class ClienteCriteria extends AbstractORMCriteria {
 		clienteDeBiblioteca = new CollectionExpression("ORM_ClienteDeBiblioteca", this);
 	}
 	
-	public ClienteCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public ClienteCriteria(PersistentSession session) {
 		this(session.createCriteria(Cliente.class));
 	}
 	
-	public ClienteCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public ClienteCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public CiudadCriteria createIdCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadCriteria createIdCiudadCriteria() {
 		return new CiudadCriteria(createCriteria("idCiudad"));
 	}
 	
-	public UsuarioCriteria createUsuarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public UsuarioCriteria createUsuarioCriteria() {
 		return new UsuarioCriteria(createCriteria("usuario"));
 	}
 	
-	public SolicitudComputadorCriteria createSolicitudComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudComputadorCriteria createSolicitudComputadorCriteria() {
 		return new SolicitudComputadorCriteria(createCriteria("ORM_SolicitudComputador"));
 	}
 	
-	public SolicitudLibroCriteria createSolicitudLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudLibroCriteria createSolicitudLibroCriteria() {
 		return new SolicitudLibroCriteria(createCriteria("ORM_SolicitudLibro"));
 	}
 	
-	public EntregaDeLibroCriteria createEntregaDeLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EntregaDeLibroCriteria createEntregaDeLibroCriteria() {
 		return new EntregaDeLibroCriteria(createCriteria("ORM_EntregaDeLibro"));
 	}
 	
-	public RegistroSalaLecturaCriteria createRegistroSalaLecturaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public RegistroSalaLecturaCriteria createRegistroSalaLecturaCriteria() {
 		return new RegistroSalaLecturaCriteria(createCriteria("ORM_RegistroSalaLectura"));
 	}
 	
-	public ClienteDeBibliotecaCriteria createClienteDeBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDeBibliotecaCriteria createClienteDeBibliotecaCriteria() {
 		return new ClienteDeBibliotecaCriteria(createCriteria("ORM_ClienteDeBiblioteca"));
 	}
 	
-	public Cliente uniqueCliente() {
+    /**
+     *
+     * @return
+     */
+    public Cliente uniqueCliente() {
 		return (Cliente) super.uniqueResult();
 	}
 	
-	public Cliente[] listCliente() {
+    /**
+     *
+     * @return
+     */
+    public Cliente[] listCliente() {
 		java.util.List list = super.list();
 		return (Cliente[]) list.toArray(new Cliente[list.size()]);
 	}

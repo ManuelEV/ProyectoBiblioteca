@@ -18,23 +18,86 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class BibliotecaDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final StringExpression direccion;
-	public final StringExpression propietario;
-	public final IntegerExpression numeroDeTelefono;
-	public final StringExpression correoElectronico;
-	public final IntegerExpression idCiudadId;
-	public final AssociationExpression idCiudad;
-	public final CollectionExpression estante;
-	public final CollectionExpression computador;
-	public final CollectionExpression salaDeLectura;
-	public final CollectionExpression clienteDeBiblioteca;
-	public final CollectionExpression funcionario;
-	public final CollectionExpression usuario;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final StringExpression direccion;
+
+    /**
+     *
+     */
+    public final StringExpression propietario;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDeTelefono;
+
+    /**
+     *
+     */
+    public final StringExpression correoElectronico;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCiudadId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCiudad;
+
+    /**
+     *
+     */
+    public final CollectionExpression estante;
+
+    /**
+     *
+     */
+    public final CollectionExpression computador;
+
+    /**
+     *
+     */
+    public final CollectionExpression salaDeLectura;
+
+    /**
+     *
+     */
+    public final CollectionExpression clienteDeBiblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression funcionario;
+
+    /**
+     *
+     */
+    public final CollectionExpression usuario;
 	
-	public BibliotecaDetachedCriteria() {
+    /**
+     *
+     */
+    public BibliotecaDetachedCriteria() {
 		super(modelo.Biblioteca.class, modelo.BibliotecaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -52,7 +115,11 @@ public class BibliotecaDetachedCriteria extends AbstractORMDetachedCriteria {
 		usuario = new CollectionExpression("ORM_Usuario", this.getDetachedCriteria());
 	}
 	
-	public BibliotecaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public BibliotecaDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.BibliotecaCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		nombre = new StringExpression("nombre", this.getDetachedCriteria());
@@ -70,39 +137,77 @@ public class BibliotecaDetachedCriteria extends AbstractORMDetachedCriteria {
 		usuario = new CollectionExpression("ORM_Usuario", this.getDetachedCriteria());
 	}
 	
-	public CiudadDetachedCriteria createIdCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadDetachedCriteria createIdCiudadCriteria() {
 		return new CiudadDetachedCriteria(createCriteria("idCiudad"));
 	}
 	
-	public EstanteDetachedCriteria createEstanteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EstanteDetachedCriteria createEstanteCriteria() {
 		return new EstanteDetachedCriteria(createCriteria("ORM_Estante"));
 	}
 	
-	public ComputadorDetachedCriteria createComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ComputadorDetachedCriteria createComputadorCriteria() {
 		return new ComputadorDetachedCriteria(createCriteria("ORM_Computador"));
 	}
 	
-	public SalaDeLecturaDetachedCriteria createSalaDeLecturaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SalaDeLecturaDetachedCriteria createSalaDeLecturaCriteria() {
 		return new SalaDeLecturaDetachedCriteria(createCriteria("ORM_SalaDeLectura"));
 	}
 	
-	public ClienteDeBibliotecaDetachedCriteria createClienteDeBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDeBibliotecaDetachedCriteria createClienteDeBibliotecaCriteria() {
 		return new ClienteDeBibliotecaDetachedCriteria(createCriteria("ORM_ClienteDeBiblioteca"));
 	}
 	
-	public FuncionarioDetachedCriteria createFuncionarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public FuncionarioDetachedCriteria createFuncionarioCriteria() {
 		return new FuncionarioDetachedCriteria(createCriteria("ORM_Funcionario"));
 	}
 	
-	public UsuarioDetachedCriteria createUsuarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public UsuarioDetachedCriteria createUsuarioCriteria() {
 		return new UsuarioDetachedCriteria(createCriteria("ORM_Usuario"));
 	}
 	
-	public Biblioteca uniqueBiblioteca(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Biblioteca uniqueBiblioteca(PersistentSession session) {
 		return (Biblioteca) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Biblioteca[] listBiblioteca(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Biblioteca[] listBiblioteca(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Biblioteca[]) list.toArray(new Biblioteca[list.size()]);
 	}

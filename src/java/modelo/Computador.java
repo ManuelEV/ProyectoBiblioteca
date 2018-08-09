@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Computador {
-	public Computador() {
+
+    /**
+     *
+     */
+    public Computador() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -58,39 +66,75 @@ public class Computador {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setMarca(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setMarca(String value) {
 		this.marca = value;
 	}
 	
-	public String getMarca() {
+    /**
+     *
+     * @return
+     */
+    public String getMarca() {
 		return marca;
 	}
 	
-	public void setFechaDeAdquisicion(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeAdquisicion(java.util.Date value) {
 		this.fechaDeAdquisicion = value;
 	}
 	
-	public java.util.Date getFechaDeAdquisicion() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeAdquisicion() {
 		return fechaDeAdquisicion;
 	}
 	
-	public void setFechaUltimaSolicitud(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaUltimaSolicitud(java.util.Date value) {
 		this.fechaUltimaSolicitud = value;
 	}
 	
-	public java.util.Date getFechaUltimaSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaUltimaSolicitud() {
 		return fechaUltimaSolicitud;
 	}
 	
-	public void setIdBiblioteca(modelo.Biblioteca value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdBiblioteca(modelo.Biblioteca value) {
 		if (idBiblioteca != null) {
 			idBiblioteca.computador.remove(this);
 		}
@@ -99,12 +143,17 @@ public class Computador {
 		}
 	}
 	
-	public modelo.Biblioteca getIdBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Biblioteca getIdBiblioteca() {
 		return idBiblioteca;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdBiblioteca(modelo.Biblioteca value) {
 		this.idBiblioteca = value;
@@ -122,7 +171,10 @@ public class Computador {
 		return ORM_solicitudComputador;
 	}
 	
-	public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_COMPUTADOR_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCOMPUTADOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.SolicitudComputadorSetCollection solicitudComputador = new modelo.SolicitudComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_COMPUTADOR_SOLICITUDCOMPUTADOR, ORMConstants.KEY_SOLICITUDCOMPUTADOR_IDCOMPUTADOR, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

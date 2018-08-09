@@ -5,8 +5,18 @@
 package ormsamples;
 
 import org.orm.*;
+
+/**
+ *
+ * @author Manuel
+ */
 public class CreateProyectoprogramacionavanzadaDatabaseSchema {
-	public static void main(String[] args) {
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 		try {
 			ORMDatabaseInitiator.createSchema(modelo.ProyectoprogramacionavanzadaPersistentManager.instance());
 			modelo.ProyectoprogramacionavanzadaPersistentManager.instance().disposePersistentManager();

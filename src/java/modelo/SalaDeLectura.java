@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class SalaDeLectura {
-	public SalaDeLectura() {
+
+    /**
+     *
+     */
+    public SalaDeLectura() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -56,31 +64,59 @@ public class SalaDeLectura {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setCapacidad(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCapacidad(int value) {
 		this.capacidad = value;
 	}
 	
-	public int getCapacidad() {
+    /**
+     *
+     * @return
+     */
+    public int getCapacidad() {
 		return capacidad;
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setIdBiblioteca(modelo.Biblioteca value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdBiblioteca(modelo.Biblioteca value) {
 		if (idBiblioteca != null) {
 			idBiblioteca.salaDeLectura.remove(this);
 		}
@@ -89,12 +125,17 @@ public class SalaDeLectura {
 		}
 	}
 	
-	public modelo.Biblioteca getIdBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Biblioteca getIdBiblioteca() {
 		return idBiblioteca;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdBiblioteca(modelo.Biblioteca value) {
 		this.idBiblioteca = value;
@@ -112,7 +153,10 @@ public class SalaDeLectura {
 		return ORM_registroSalaLectura;
 	}
 	
-	public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_SALADELECTURA_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_SALADELECTURAIDSALA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.RegistroSalaLecturaSetCollection registroSalaLectura = new modelo.RegistroSalaLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_SALADELECTURA_REGISTROSALALECTURA, ORMConstants.KEY_REGISTROSALALECTURA_SALADELECTURAIDSALA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

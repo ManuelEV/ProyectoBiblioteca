@@ -15,12 +15,32 @@ package modelo;
 
 import org.orm.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class EstanteSetCollection extends org.orm.util.ORMSet {
-	public EstanteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
+
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param targetKey
+     * @param collType
+     */
+    public EstanteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
 		super(owner, adapter, ownerKey, targetKey, true, collType);
 	}
 	
-	public EstanteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param collType
+     */
+    public EstanteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
 		super(owner, adapter, ownerKey, -1, false, collType);
 	}
 	
@@ -92,7 +112,12 @@ public class EstanteSetCollection extends org.orm.util.ORMSet {
 		return (Estante[]) super.toArray(new Estante[size()], propertyName, ascending);
 	}
 	
-	protected PersistentManager getPersistentManager() throws PersistentException {
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
+    protected PersistentManager getPersistentManager() throws PersistentException {
 		return ProyectoprogramacionavanzadaPersistentManager.instance();
 	}
 	

@@ -18,7 +18,10 @@ import org.orm.PersistentTransaction;
  */
 public class CrearLibros {
     
-    
+    /**
+     *
+     * @return
+     */
     public static String[] librosNombres(){
         String lista = "1984\n" +
 "Al faro\n" +
@@ -288,6 +291,10 @@ public class CrearLibros {
         
     }
     
+    /**
+     *
+     * @return
+     */
     public static Date fechaEdicion(){
         
         int year = (int) (Math.random()*200+1800);
@@ -300,6 +307,10 @@ public class CrearLibros {
         return fecha;
     }
     
+    /**
+     *
+     * @return
+     */
     public static Date fechaAdquisicion(){
         
         int year = (int) (Math.random()*17+2000);
@@ -312,6 +323,11 @@ public class CrearLibros {
         return fecha;
     }
 
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
     public static ArrayList<modelo.Libro> generarLibros() throws PersistentException {
 
         ArrayList<modelo.Libro> lista = new ArrayList<>();
@@ -384,6 +400,11 @@ public class CrearLibros {
         return lista;
     }
 
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
     public static ArrayList<modelo.Estante> generarEstantes() throws PersistentException {
 
         ArrayList<modelo.Estante> lista = new ArrayList<>();
@@ -413,6 +434,11 @@ public class CrearLibros {
         return lista;
     }
 
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
     public static modelo.Biblioteca generarBiblioteca() throws PersistentException {
 
         modelo.Biblioteca b = new modelo.Biblioteca();
@@ -431,6 +457,10 @@ public class CrearLibros {
         return b;
     }
 
+    /**
+     *
+     * @throws PersistentException
+     */
     public void createTestData() throws PersistentException {
         PersistentTransaction t = modelo.ProyectoprogramacionavanzadaPersistentManager.instance().getSession().beginTransaction();
         try {
@@ -509,6 +539,10 @@ public class CrearLibros {
 
     }
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         try {
             CrearLibros createProyectoprogramacionavanzadaData = new CrearLibros();

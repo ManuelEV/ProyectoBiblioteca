@@ -18,16 +18,52 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class EntregaDeLibroCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final DateExpression fechaDeDevolucion;
-	public final IntegerExpression diasDeAtraso;
-	public final IntegerExpression librocodigoId;
-	public final AssociationExpression librocodigo;
-	public final IntegerExpression idClienteId;
-	public final AssociationExpression idCliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeDevolucion;
+
+    /**
+     *
+     */
+    public final IntegerExpression diasDeAtraso;
+
+    /**
+     *
+     */
+    public final IntegerExpression librocodigoId;
+
+    /**
+     *
+     */
+    public final AssociationExpression librocodigo;
+
+    /**
+     *
+     */
+    public final IntegerExpression idClienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCliente;
 	
-	public EntregaDeLibroCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public EntregaDeLibroCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		fechaDeDevolucion = new DateExpression("fechaDeDevolucion", this);
@@ -38,27 +74,51 @@ public class EntregaDeLibroCriteria extends AbstractORMCriteria {
 		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
-	public EntregaDeLibroCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public EntregaDeLibroCriteria(PersistentSession session) {
 		this(session.createCriteria(EntregaDeLibro.class));
 	}
 	
-	public EntregaDeLibroCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public EntregaDeLibroCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public LibroCriteria createLibrocodigoCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroCriteria createLibrocodigoCriteria() {
 		return new LibroCriteria(createCriteria("ORM_Librocodigo"));
 	}
 	
-	public ClienteCriteria createIdClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createIdClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
-	public EntregaDeLibro uniqueEntregaDeLibro() {
+    /**
+     *
+     * @return
+     */
+    public EntregaDeLibro uniqueEntregaDeLibro() {
 		return (EntregaDeLibro) super.uniqueResult();
 	}
 	
-	public EntregaDeLibro[] listEntregaDeLibro() {
+    /**
+     *
+     * @return
+     */
+    public EntregaDeLibro[] listEntregaDeLibro() {
 		java.util.List list = super.list();
 		return (EntregaDeLibro[]) list.toArray(new EntregaDeLibro[list.size()]);
 	}

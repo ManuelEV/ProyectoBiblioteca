@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Pais {
-	public Pais() {
+
+    /**
+     *
+     */
+    public Pais() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -42,19 +50,35 @@ public class Pais {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
@@ -66,7 +90,10 @@ public class Pais {
 		return ORM_ciudad;
 	}
 	
-	public final modelo.CiudadSetCollection ciudad = new modelo.CiudadSetCollection(this, _ormAdapter, ORMConstants.KEY_PAIS_CIUDAD, ORMConstants.KEY_CIUDAD_IDPAIS, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.CiudadSetCollection ciudad = new modelo.CiudadSetCollection(this, _ormAdapter, ORMConstants.KEY_PAIS_CIUDAD, ORMConstants.KEY_CIUDAD_IDPAIS, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

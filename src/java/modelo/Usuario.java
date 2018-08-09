@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Usuario {
-	public Usuario() {
+
+    /**
+     *
+     */
+    public Usuario() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -60,47 +68,91 @@ public class Usuario {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setCorreo(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCorreo(String value) {
 		this.correo = value;
 	}
 	
-	public String getCorreo() {
+    /**
+     *
+     * @return
+     */
+    public String getCorreo() {
 		return correo;
 	}
 	
-	public void setUsuario(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setUsuario(String value) {
 		this.usuario = value;
 	}
 	
-	public String getUsuario() {
+    /**
+     *
+     * @return
+     */
+    public String getUsuario() {
 		return usuario;
 	}
 	
-	public void setTipoUsuario(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setTipoUsuario(String value) {
 		this.tipoUsuario = value;
 	}
 	
-	public String getTipoUsuario() {
+    /**
+     *
+     * @return
+     */
+    public String getTipoUsuario() {
 		return tipoUsuario;
 	}
 	
-	public void setContraseña(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setContraseña(String value) {
 		this.contraseña = value;
 	}
 	
-	public String getContraseña() {
+    /**
+     *
+     * @return
+     */
+    public String getContraseña() {
 		return contraseña;
 	}
 	
-	public void setIdBiblioteca(modelo.Biblioteca value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdBiblioteca(modelo.Biblioteca value) {
 		if (idBiblioteca != null) {
 			idBiblioteca.usuario.remove(this);
 		}
@@ -109,12 +161,17 @@ public class Usuario {
 		}
 	}
 	
-	public modelo.Biblioteca getIdBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Biblioteca getIdBiblioteca() {
 		return idBiblioteca;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdBiblioteca(modelo.Biblioteca value) {
 		this.idBiblioteca = value;
@@ -132,7 +189,10 @@ public class Usuario {
 		return ORM_cliente;
 	}
 	
-	public final modelo.ClienteSetCollection cliente = new modelo.ClienteSetCollection(this, _ormAdapter, ORMConstants.KEY_USUARIO_CLIENTE, ORMConstants.KEY_CLIENTE_USUARIO, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.ClienteSetCollection cliente = new modelo.ClienteSetCollection(this, _ormAdapter, ORMConstants.KEY_USUARIO_CLIENTE, ORMConstants.KEY_CLIENTE_USUARIO, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

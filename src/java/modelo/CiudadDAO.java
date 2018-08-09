@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class CiudadDAO {
-	public static Ciudad loadCiudadByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCiudadByORMID(session, id);
@@ -30,7 +41,13 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad getCiudadByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getCiudadByORMID(session, id);
@@ -41,7 +58,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCiudadByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad getCiudadByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getCiudadByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Ciudad) session.load(modelo.Ciudad.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad getCiudadByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Ciudad) session.get(modelo.Ciudad.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Ciudad) session.load(modelo.Ciudad.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad getCiudadByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad getCiudadByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Ciudad) session.get(modelo.Ciudad.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static List queryCiudad(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCiudad(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryCiudad(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static List queryCiudad(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCiudad(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryCiudad(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad[] listCiudadByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad[] listCiudadByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listCiudadByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad[] listCiudadByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad[] listCiudadByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listCiudadByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static List queryCiudad(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCiudad(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Ciudad as Ciudad");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static List queryCiudad(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCiudad(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Ciudad as Ciudad");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad[] listCiudadByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad[] listCiudadByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryCiudad(session, condition, orderBy);
 			return (Ciudad[]) list.toArray(new Ciudad[list.size()]);
@@ -191,7 +307,16 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad[] listCiudadByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad[] listCiudadByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryCiudad(session, condition, orderBy, lockMode);
 			return (Ciudad[]) list.toArray(new Ciudad[list.size()]);
@@ -202,7 +327,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCiudadByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCiudadByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Ciudad[] ciudads = listCiudadByQuery(session, condition, orderBy);
 		if (ciudads != null && ciudads.length > 0)
 			return ciudads[0];
@@ -232,7 +380,16 @@ public class CiudadDAO {
 			return null;
 	}
 	
-	public static Ciudad loadCiudadByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Ciudad loadCiudadByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Ciudad[] ciudads = listCiudadByQuery(session, condition, orderBy, lockMode);
 		if (ciudads != null && ciudads.length > 0)
 			return ciudads[0];
@@ -240,7 +397,14 @@ public class CiudadDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateCiudadByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCiudadByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateCiudadByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateCiudadByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCiudadByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateCiudadByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateCiudadByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCiudadByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Ciudad as Ciudad");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateCiudadByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCiudadByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Ciudad as Ciudad");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad createCiudad() {
+    /**
+     *
+     * @return
+     */
+    public static Ciudad createCiudad() {
 		return new modelo.Ciudad();
 	}
 	
-	public static boolean save(modelo.Ciudad ciudad) throws PersistentException {
+    /**
+     *
+     * @param ciudad
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Ciudad ciudad) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(ciudad);
 			return true;
@@ -310,7 +509,13 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Ciudad ciudad) throws PersistentException {
+    /**
+     *
+     * @param ciudad
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Ciudad ciudad) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(ciudad);
 			return true;
@@ -321,7 +526,13 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Ciudad ciudad)throws PersistentException {
+    /**
+     *
+     * @param ciudad
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Ciudad ciudad)throws PersistentException {
 		try {
 			if (ciudad.getIdPais() != null) {
 				ciudad.getIdPais().ciudad.remove(ciudad);
@@ -347,7 +558,14 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Ciudad ciudad, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param ciudad
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Ciudad ciudad, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			if (ciudad.getIdPais() != null) {
 				ciudad.getIdPais().ciudad.remove(ciudad);
@@ -378,7 +596,13 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Ciudad ciudad) throws PersistentException {
+    /**
+     *
+     * @param ciudad
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Ciudad ciudad) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(ciudad);
 			return true;
@@ -389,7 +613,13 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Ciudad ciudad) throws PersistentException {
+    /**
+     *
+     * @param ciudad
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Ciudad ciudad) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(ciudad);
 			return true;
@@ -400,7 +630,12 @@ public class CiudadDAO {
 		}
 	}
 	
-	public static Ciudad loadCiudadByCriteria(CiudadCriteria ciudadCriteria) {
+    /**
+     *
+     * @param ciudadCriteria
+     * @return
+     */
+    public static Ciudad loadCiudadByCriteria(CiudadCriteria ciudadCriteria) {
 		Ciudad[] ciudads = listCiudadByCriteria(ciudadCriteria);
 		if(ciudads == null || ciudads.length == 0) {
 			return null;
@@ -408,7 +643,12 @@ public class CiudadDAO {
 		return ciudads[0];
 	}
 	
-	public static Ciudad[] listCiudadByCriteria(CiudadCriteria ciudadCriteria) {
+    /**
+     *
+     * @param ciudadCriteria
+     * @return
+     */
+    public static Ciudad[] listCiudadByCriteria(CiudadCriteria ciudadCriteria) {
 		return ciudadCriteria.listCiudad();
 	}
 }

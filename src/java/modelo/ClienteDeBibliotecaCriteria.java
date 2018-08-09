@@ -18,14 +18,42 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class ClienteDeBibliotecaCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final IntegerExpression bibliotecaidBibliotecaId;
-	public final AssociationExpression bibliotecaidBiblioteca;
-	public final IntegerExpression clienteId;
-	public final AssociationExpression cliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final IntegerExpression bibliotecaidBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression bibliotecaidBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression clienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression cliente;
 	
-	public ClienteDeBibliotecaCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public ClienteDeBibliotecaCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		bibliotecaidBibliotecaId = new IntegerExpression("ORM_BibliotecaidBiblioteca.id", this);
@@ -34,27 +62,51 @@ public class ClienteDeBibliotecaCriteria extends AbstractORMCriteria {
 		cliente = new AssociationExpression("ORM_Cliente", this);
 	}
 	
-	public ClienteDeBibliotecaCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public ClienteDeBibliotecaCriteria(PersistentSession session) {
 		this(session.createCriteria(ClienteDeBiblioteca.class));
 	}
 	
-	public ClienteDeBibliotecaCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public ClienteDeBibliotecaCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public BibliotecaCriteria createBibliotecaidBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaCriteria createBibliotecaidBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("ORM_BibliotecaidBiblioteca"));
 	}
 	
-	public ClienteCriteria createClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_Cliente"));
 	}
 	
-	public ClienteDeBiblioteca uniqueClienteDeBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDeBiblioteca uniqueClienteDeBiblioteca() {
 		return (ClienteDeBiblioteca) super.uniqueResult();
 	}
 	
-	public ClienteDeBiblioteca[] listClienteDeBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDeBiblioteca[] listClienteDeBiblioteca() {
 		java.util.List list = super.list();
 		return (ClienteDeBiblioteca[]) list.toArray(new ClienteDeBiblioteca[list.size()]);
 	}

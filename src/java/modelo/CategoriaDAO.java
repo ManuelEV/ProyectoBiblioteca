@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class CategoriaDAO {
-	public static Categoria loadCategoriaByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCategoriaByORMID(session, id);
@@ -30,7 +41,13 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria getCategoriaByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria getCategoriaByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getCategoriaByORMID(session, id);
@@ -41,7 +58,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCategoriaByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria getCategoriaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria getCategoriaByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getCategoriaByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Categoria) session.load(modelo.Categoria.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria getCategoriaByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria getCategoriaByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Categoria) session.get(modelo.Categoria.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Categoria) session.load(modelo.Categoria.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria getCategoriaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria getCategoriaByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Categoria) session.get(modelo.Categoria.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static List queryCategoria(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCategoria(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryCategoria(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static List queryCategoria(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCategoria(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryCategoria(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria[] listCategoriaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria[] listCategoriaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listCategoriaByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria[] listCategoriaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria[] listCategoriaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listCategoriaByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static List queryCategoria(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCategoria(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Categoria as Categoria");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static List queryCategoria(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryCategoria(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Categoria as Categoria");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria[] listCategoriaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria[] listCategoriaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryCategoria(session, condition, orderBy);
 			return (Categoria[]) list.toArray(new Categoria[list.size()]);
@@ -191,7 +307,16 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria[] listCategoriaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria[] listCategoriaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryCategoria(session, condition, orderBy, lockMode);
 			return (Categoria[]) list.toArray(new Categoria[list.size()]);
@@ -202,7 +327,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCategoriaByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadCategoriaByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Categoria[] categorias = listCategoriaByQuery(session, condition, orderBy);
 		if (categorias != null && categorias.length > 0)
 			return categorias[0];
@@ -232,7 +380,16 @@ public class CategoriaDAO {
 			return null;
 	}
 	
-	public static Categoria loadCategoriaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Categoria loadCategoriaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Categoria[] categorias = listCategoriaByQuery(session, condition, orderBy, lockMode);
 		if (categorias != null && categorias.length > 0)
 			return categorias[0];
@@ -240,7 +397,14 @@ public class CategoriaDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateCategoriaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCategoriaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateCategoriaByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateCategoriaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCategoriaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateCategoriaByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateCategoriaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCategoriaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Categoria as Categoria");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateCategoriaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateCategoriaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Categoria as Categoria");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria createCategoria() {
+    /**
+     *
+     * @return
+     */
+    public static Categoria createCategoria() {
 		return new modelo.Categoria();
 	}
 	
-	public static boolean save(modelo.Categoria categoria) throws PersistentException {
+    /**
+     *
+     * @param categoria
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Categoria categoria) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(categoria);
 			return true;
@@ -310,7 +509,13 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Categoria categoria) throws PersistentException {
+    /**
+     *
+     * @param categoria
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Categoria categoria) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(categoria);
 			return true;
@@ -321,7 +526,13 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Categoria categoria)throws PersistentException {
+    /**
+     *
+     * @param categoria
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Categoria categoria)throws PersistentException {
 		try {
 			modelo.Estante[] lEstantes = categoria.estante.toArray();
 			for(int i = 0; i < lEstantes.length; i++) {
@@ -339,7 +550,14 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Categoria categoria, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param categoria
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Categoria categoria, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			modelo.Estante[] lEstantes = categoria.estante.toArray();
 			for(int i = 0; i < lEstantes.length; i++) {
@@ -362,7 +580,13 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Categoria categoria) throws PersistentException {
+    /**
+     *
+     * @param categoria
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Categoria categoria) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(categoria);
 			return true;
@@ -373,7 +597,13 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Categoria categoria) throws PersistentException {
+    /**
+     *
+     * @param categoria
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Categoria categoria) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(categoria);
 			return true;
@@ -384,7 +614,12 @@ public class CategoriaDAO {
 		}
 	}
 	
-	public static Categoria loadCategoriaByCriteria(CategoriaCriteria categoriaCriteria) {
+    /**
+     *
+     * @param categoriaCriteria
+     * @return
+     */
+    public static Categoria loadCategoriaByCriteria(CategoriaCriteria categoriaCriteria) {
 		Categoria[] categorias = listCategoriaByCriteria(categoriaCriteria);
 		if(categorias == null || categorias.length == 0) {
 			return null;
@@ -392,7 +627,12 @@ public class CategoriaDAO {
 		return categorias[0];
 	}
 	
-	public static Categoria[] listCategoriaByCriteria(CategoriaCriteria categoriaCriteria) {
+    /**
+     *
+     * @param categoriaCriteria
+     * @return
+     */
+    public static Categoria[] listCategoriaByCriteria(CategoriaCriteria categoriaCriteria) {
 		return categoriaCriteria.listCategoria();
 	}
 }

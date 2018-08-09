@@ -34,6 +34,11 @@ public class probandoCharts extends ApplicationFrame{
         
     }
 
+    /**
+     *
+     * @param applicationTitle
+     * @param chartTitle
+     */
     public probandoCharts(String applicationTitle , String chartTitle) {
         super( applicationTitle );        
       JFreeChart barChart = ChartFactory.createBarChart(

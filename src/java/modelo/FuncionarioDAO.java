@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class FuncionarioDAO {
-	public static Funcionario loadFuncionarioByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadFuncionarioByORMID(session, id);
@@ -30,7 +41,13 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario getFuncionarioByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getFuncionarioByORMID(session, id);
@@ -41,7 +58,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadFuncionarioByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario getFuncionarioByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getFuncionarioByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Funcionario) session.load(modelo.Funcionario.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario getFuncionarioByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Funcionario) session.get(modelo.Funcionario.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Funcionario) session.load(modelo.Funcionario.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario getFuncionarioByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario getFuncionarioByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Funcionario) session.get(modelo.Funcionario.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static List queryFuncionario(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryFuncionario(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryFuncionario(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static List queryFuncionario(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryFuncionario(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryFuncionario(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario[] listFuncionarioByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario[] listFuncionarioByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listFuncionarioByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario[] listFuncionarioByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario[] listFuncionarioByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listFuncionarioByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static List queryFuncionario(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryFuncionario(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Funcionario as Funcionario");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static List queryFuncionario(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryFuncionario(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Funcionario as Funcionario");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario[] listFuncionarioByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario[] listFuncionarioByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryFuncionario(session, condition, orderBy);
 			return (Funcionario[]) list.toArray(new Funcionario[list.size()]);
@@ -191,7 +307,16 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario[] listFuncionarioByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario[] listFuncionarioByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryFuncionario(session, condition, orderBy, lockMode);
 			return (Funcionario[]) list.toArray(new Funcionario[list.size()]);
@@ -202,7 +327,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadFuncionarioByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadFuncionarioByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Funcionario[] funcionarios = listFuncionarioByQuery(session, condition, orderBy);
 		if (funcionarios != null && funcionarios.length > 0)
 			return funcionarios[0];
@@ -232,7 +380,16 @@ public class FuncionarioDAO {
 			return null;
 	}
 	
-	public static Funcionario loadFuncionarioByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Funcionario loadFuncionarioByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Funcionario[] funcionarios = listFuncionarioByQuery(session, condition, orderBy, lockMode);
 		if (funcionarios != null && funcionarios.length > 0)
 			return funcionarios[0];
@@ -240,7 +397,14 @@ public class FuncionarioDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateFuncionarioByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateFuncionarioByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateFuncionarioByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateFuncionarioByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateFuncionarioByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateFuncionarioByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateFuncionarioByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateFuncionarioByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Funcionario as Funcionario");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateFuncionarioByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateFuncionarioByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Funcionario as Funcionario");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario createFuncionario() {
+    /**
+     *
+     * @return
+     */
+    public static Funcionario createFuncionario() {
 		return new modelo.Funcionario();
 	}
 	
-	public static boolean save(modelo.Funcionario funcionario) throws PersistentException {
+    /**
+     *
+     * @param funcionario
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Funcionario funcionario) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(funcionario);
 			return true;
@@ -310,7 +509,13 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Funcionario funcionario) throws PersistentException {
+    /**
+     *
+     * @param funcionario
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Funcionario funcionario) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(funcionario);
 			return true;
@@ -321,7 +526,13 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Funcionario funcionario)throws PersistentException {
+    /**
+     *
+     * @param funcionario
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Funcionario funcionario)throws PersistentException {
 		try {
 			if (funcionario.getIdCiudad() != null) {
 				funcionario.getIdCiudad().funcionario.remove(funcionario);
@@ -339,7 +550,14 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Funcionario funcionario, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param funcionario
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Funcionario funcionario, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			if (funcionario.getIdCiudad() != null) {
 				funcionario.getIdCiudad().funcionario.remove(funcionario);
@@ -362,7 +580,13 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Funcionario funcionario) throws PersistentException {
+    /**
+     *
+     * @param funcionario
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Funcionario funcionario) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(funcionario);
 			return true;
@@ -373,7 +597,13 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Funcionario funcionario) throws PersistentException {
+    /**
+     *
+     * @param funcionario
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Funcionario funcionario) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(funcionario);
 			return true;
@@ -384,7 +614,12 @@ public class FuncionarioDAO {
 		}
 	}
 	
-	public static Funcionario loadFuncionarioByCriteria(FuncionarioCriteria funcionarioCriteria) {
+    /**
+     *
+     * @param funcionarioCriteria
+     * @return
+     */
+    public static Funcionario loadFuncionarioByCriteria(FuncionarioCriteria funcionarioCriteria) {
 		Funcionario[] funcionarios = listFuncionarioByCriteria(funcionarioCriteria);
 		if(funcionarios == null || funcionarios.length == 0) {
 			return null;
@@ -392,7 +627,12 @@ public class FuncionarioDAO {
 		return funcionarios[0];
 	}
 	
-	public static Funcionario[] listFuncionarioByCriteria(FuncionarioCriteria funcionarioCriteria) {
+    /**
+     *
+     * @param funcionarioCriteria
+     * @return
+     */
+    public static Funcionario[] listFuncionarioByCriteria(FuncionarioCriteria funcionarioCriteria) {
 		return funcionarioCriteria.listFuncionario();
 	}
 }

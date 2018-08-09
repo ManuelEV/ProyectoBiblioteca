@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Biblioteca {
-	public Biblioteca() {
+
+    /**
+     *
+     */
+    public Biblioteca() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -87,59 +95,115 @@ public class Biblioteca {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
-	public void setDireccion(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setDireccion(String value) {
 		this.direccion = value;
 	}
 	
-	public String getDireccion() {
+    /**
+     *
+     * @return
+     */
+    public String getDireccion() {
 		return direccion;
 	}
 	
-	public void setPropietario(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setPropietario(String value) {
 		this.propietario = value;
 	}
 	
-	public String getPropietario() {
+    /**
+     *
+     * @return
+     */
+    public String getPropietario() {
 		return propietario;
 	}
 	
-	public void setNumeroDeTelefono(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDeTelefono(int value) {
 		setNumeroDeTelefono(new Integer(value));
 	}
 	
-	public void setNumeroDeTelefono(Integer value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNumeroDeTelefono(Integer value) {
 		this.numeroDeTelefono = value;
 	}
 	
-	public Integer getNumeroDeTelefono() {
+    /**
+     *
+     * @return
+     */
+    public Integer getNumeroDeTelefono() {
 		return numeroDeTelefono;
 	}
 	
-	public void setCorreoElectronico(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCorreoElectronico(String value) {
 		this.correoElectronico = value;
 	}
 	
-	public String getCorreoElectronico() {
+    /**
+     *
+     * @return
+     */
+    public String getCorreoElectronico() {
 		return correoElectronico;
 	}
 	
-	public void setIdCiudad(modelo.Ciudad value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCiudad(modelo.Ciudad value) {
 		if (idCiudad != null) {
 			idCiudad.biblioteca.remove(this);
 		}
@@ -148,12 +212,17 @@ public class Biblioteca {
 		}
 	}
 	
-	public modelo.Ciudad getIdCiudad() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Ciudad getIdCiudad() {
 		return idCiudad;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCiudad(modelo.Ciudad value) {
 		this.idCiudad = value;
@@ -171,7 +240,10 @@ public class Biblioteca {
 		return ORM_estante;
 	}
 	
-	public final modelo.EstanteSetCollection estante = new modelo.EstanteSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_ESTANTE, ORMConstants.KEY_ESTANTE_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.EstanteSetCollection estante = new modelo.EstanteSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_ESTANTE, ORMConstants.KEY_ESTANTE_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Computador(java.util.Set value) {
 		this.ORM_computador = value;
@@ -181,7 +253,10 @@ public class Biblioteca {
 		return ORM_computador;
 	}
 	
-	public final modelo.ComputadorSetCollection computador = new modelo.ComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_COMPUTADOR, ORMConstants.KEY_COMPUTADOR_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.ComputadorSetCollection computador = new modelo.ComputadorSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_COMPUTADOR, ORMConstants.KEY_COMPUTADOR_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_SalaDeLectura(java.util.Set value) {
 		this.ORM_salaDeLectura = value;
@@ -191,7 +266,10 @@ public class Biblioteca {
 		return ORM_salaDeLectura;
 	}
 	
-	public final modelo.SalaDeLecturaSetCollection salaDeLectura = new modelo.SalaDeLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_SALADELECTURA, ORMConstants.KEY_SALADELECTURA_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.SalaDeLecturaSetCollection salaDeLectura = new modelo.SalaDeLecturaSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_SALADELECTURA, ORMConstants.KEY_SALADELECTURA_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_ClienteDeBiblioteca(java.util.Set value) {
 		this.ORM_clienteDeBiblioteca = value;
@@ -201,7 +279,10 @@ public class Biblioteca {
 		return ORM_clienteDeBiblioteca;
 	}
 	
-	public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_BIBLIOTECAIDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.ClienteDeBibliotecaSetCollection clienteDeBiblioteca = new modelo.ClienteDeBibliotecaSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_CLIENTEDEBIBLIOTECA, ORMConstants.KEY_CLIENTEDEBIBLIOTECA_BIBLIOTECAIDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Funcionario(java.util.Set value) {
 		this.ORM_funcionario = value;
@@ -211,7 +292,10 @@ public class Biblioteca {
 		return ORM_funcionario;
 	}
 	
-	public final modelo.FuncionarioSetCollection funcionario = new modelo.FuncionarioSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_FUNCIONARIO, ORMConstants.KEY_FUNCIONARIO_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.FuncionarioSetCollection funcionario = new modelo.FuncionarioSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_FUNCIONARIO, ORMConstants.KEY_FUNCIONARIO_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Usuario(java.util.Set value) {
 		this.ORM_usuario = value;
@@ -221,7 +305,10 @@ public class Biblioteca {
 		return ORM_usuario;
 	}
 	
-	public final modelo.UsuarioSetCollection usuario = new modelo.UsuarioSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_USUARIO, ORMConstants.KEY_USUARIO_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.UsuarioSetCollection usuario = new modelo.UsuarioSetCollection(this, _ormAdapter, ORMConstants.KEY_BIBLIOTECA_USUARIO, ORMConstants.KEY_USUARIO_IDBIBLIOTECA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

@@ -15,12 +15,32 @@ package modelo;
 
 import org.orm.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class ClienteSetCollection extends org.orm.util.ORMSet {
-	public ClienteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
+
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param targetKey
+     * @param collType
+     */
+    public ClienteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int targetKey, int collType) {
 		super(owner, adapter, ownerKey, targetKey, true, collType);
 	}
 	
-	public ClienteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
+    /**
+     *
+     * @param owner
+     * @param adapter
+     * @param ownerKey
+     * @param collType
+     */
+    public ClienteSetCollection(Object owner, org.orm.util.ORMAdapter adapter, int ownerKey, int collType) {
 		super(owner, adapter, ownerKey, -1, false, collType);
 	}
 	
@@ -114,7 +134,12 @@ public class ClienteSetCollection extends org.orm.util.ORMSet {
 		return (Cliente[]) super.toArray(new Cliente[size()], propertyName, ascending);
 	}
 	
-	protected PersistentManager getPersistentManager() throws PersistentException {
+    /**
+     *
+     * @return
+     * @throws PersistentException
+     */
+    protected PersistentManager getPersistentManager() throws PersistentException {
 		return ProyectoprogramacionavanzadaPersistentManager.instance();
 	}
 	

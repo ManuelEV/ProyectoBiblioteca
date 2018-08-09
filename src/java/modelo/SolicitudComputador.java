@@ -14,8 +14,17 @@
 package modelo;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author Manuel
+ */
 public class SolicitudComputador implements Serializable {
-	public SolicitudComputador() {
+
+    /**
+     *
+     */
+    public SolicitudComputador() {
 	}
 	
 	public boolean equals(Object aObj) {
@@ -84,7 +93,11 @@ public class SolicitudComputador implements Serializable {
 		this.idComputadorId = value;
 	}
 	
-	public int getIdComputadorId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdComputadorId() {
 		return idComputadorId;
 	}
 	
@@ -96,35 +109,67 @@ public class SolicitudComputador implements Serializable {
 		this.idClienteId = value;
 	}
 	
-	public int getIdClienteId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdClienteId() {
 		return idClienteId;
 	}
 	
-	public void setId(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setId(int value) {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public void setFechaDeSolicitud(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeSolicitud(java.util.Date value) {
 		this.fechaDeSolicitud = value;
 	}
 	
-	public java.util.Date getFechaDeSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeSolicitud() {
 		return fechaDeSolicitud;
 	}
 	
-	public void setHoraSolicitud(java.sql.Time value) {
+    /**
+     *
+     * @param value
+     */
+    public void setHoraSolicitud(java.sql.Time value) {
 		this.horaSolicitud = value;
 	}
 	
-	public java.sql.Time getHoraSolicitud() {
+    /**
+     *
+     * @return
+     */
+    public java.sql.Time getHoraSolicitud() {
 		return horaSolicitud;
 	}
 	
-	public void setIdCliente(modelo.Cliente value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCliente(modelo.Cliente value) {
 		if (idCliente != null) {
 			idCliente.solicitudComputador.remove(this);
 		}
@@ -133,12 +178,17 @@ public class SolicitudComputador implements Serializable {
 		}
 	}
 	
-	public modelo.Cliente getIdCliente() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Cliente getIdCliente() {
 		return idCliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCliente(modelo.Cliente value) {
 		this.idCliente = value;
@@ -148,7 +198,11 @@ public class SolicitudComputador implements Serializable {
 		return idCliente;
 	}
 	
-	public void setIdComputador(modelo.Computador value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdComputador(modelo.Computador value) {
 		if (idComputador != null) {
 			idComputador.solicitudComputador.remove(this);
 		}
@@ -157,12 +211,17 @@ public class SolicitudComputador implements Serializable {
 		}
 	}
 	
-	public modelo.Computador getIdComputador() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Computador getIdComputador() {
 		return idComputador;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdComputador(modelo.Computador value) {
 		this.idComputador = value;

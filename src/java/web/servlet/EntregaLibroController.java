@@ -34,6 +34,7 @@ public class EntregaLibroController extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws org.orm.PersistentException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, PersistentException {
@@ -141,6 +142,12 @@ public class EntregaLibroController extends HttpServlet {
 
     }
 
+    /**
+     *
+     * @param fecha1
+     * @param fecha2
+     * @return
+     */
     public static int numeroDiasEntreDosFechas(Date fecha1, Date fecha2) {
         long startTime = fecha1.getTime();
         long endTime = fecha2.getTime();

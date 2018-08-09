@@ -13,8 +13,16 @@
  */
 package modelo;
 
+/**
+ *
+ * @author Manuel
+ */
 public class Categoria {
-	public Categoria() {
+
+    /**
+     *
+     */
+    public Categoria() {
 	}
 	
 	private java.util.Set this_getSet (int key) {
@@ -47,19 +55,35 @@ public class Categoria {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public int getORMID() {
+    /**
+     *
+     * @return
+     */
+    public int getORMID() {
 		return getId();
 	}
 	
-	public void setNombre(String value) {
+    /**
+     *
+     * @param value
+     */
+    public void setNombre(String value) {
 		this.nombre = value;
 	}
 	
-	public String getNombre() {
+    /**
+     *
+     * @return
+     */
+    public String getNombre() {
 		return nombre;
 	}
 	
@@ -71,7 +95,10 @@ public class Categoria {
 		return ORM_estante;
 	}
 	
-	public final modelo.EstanteSetCollection estante = new modelo.EstanteSetCollection(this, _ormAdapter, ORMConstants.KEY_CATEGORIA_ESTANTE, ORMConstants.KEY_ESTANTE_IDCATEGORIA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.EstanteSetCollection estante = new modelo.EstanteSetCollection(this, _ormAdapter, ORMConstants.KEY_CATEGORIA_ESTANTE, ORMConstants.KEY_ESTANTE_IDCATEGORIA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	private void setORM_Libro(java.util.Set value) {
 		this.ORM_libro = value;
@@ -81,7 +108,10 @@ public class Categoria {
 		return ORM_libro;
 	}
 	
-	public final modelo.LibroSetCollection libro = new modelo.LibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CATEGORIA_LIBRO, ORMConstants.KEY_LIBRO_IDCATEGORIA, ORMConstants.KEY_MUL_ONE_TO_MANY);
+    /**
+     *
+     */
+    public final modelo.LibroSetCollection libro = new modelo.LibroSetCollection(this, _ormAdapter, ORMConstants.KEY_CATEGORIA_LIBRO, ORMConstants.KEY_LIBRO_IDCATEGORIA, ORMConstants.KEY_MUL_ONE_TO_MANY);
 	
 	public String toString() {
 		return String.valueOf(getId());

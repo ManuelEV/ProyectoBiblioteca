@@ -5,10 +5,19 @@
 package ormsamples;
 
 import org.orm.*;
+
+/**
+ *
+ * @author Manuel
+ */
 public class ListProyectoprogramacionavanzadaData {
 	private static final int ROW_COUNT = 100;
 	
-	public void listTestData() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void listTestData() throws PersistentException {
 		System.out.println("Listing Biblioteca...");
 		modelo.Biblioteca[] modeloBibliotecas = modelo.BibliotecaDAO.listBibliotecaByQuery(null, null);
 		int length = Math.min(modeloBibliotecas.length, ROW_COUNT);
@@ -155,7 +164,11 @@ public class ListProyectoprogramacionavanzadaData {
 		
 	}
 	
-	public void listByCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public void listByCriteria() throws PersistentException {
 		System.out.println("Listing Biblioteca by Criteria...");
 		modelo.BibliotecaCriteria lmodeloBibliotecaCriteria = new modelo.BibliotecaCriteria();
 		// Please uncomment the follow line and fill in parameter(s) 
@@ -398,7 +411,11 @@ public class ListProyectoprogramacionavanzadaData {
 		
 	}
 	
-	public static void main(String[] args) {
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
 		try {
 			ListProyectoprogramacionavanzadaData listProyectoprogramacionavanzadaData = new ListProyectoprogramacionavanzadaData();
 			try {

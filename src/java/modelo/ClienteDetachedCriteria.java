@@ -18,31 +18,126 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final StringExpression RUN;
-	public final StringExpression nombre;
-	public final StringExpression apellidoPaterno;
-	public final StringExpression apellidoMaterno;
-	public final StringExpression genero;
-	public final DateExpression fechaDeNacimiento;
-	public final StringExpression estadoDeTrabajo;
-	public final StringExpression areaDeInteres;
-	public final DateExpression fechaUltimaSolicitud;
-	public final IntegerExpression diasDeAtraso;
-	public final IntegerExpression numeroDeCelular;
-	public final IntegerExpression numeroDeTelefono;
-	public final IntegerExpression idCiudadId;
-	public final AssociationExpression idCiudad;
-	public final IntegerExpression usuarioId;
-	public final AssociationExpression usuario;
-	public final CollectionExpression solicitudComputador;
-	public final CollectionExpression solicitudLibro;
-	public final CollectionExpression entregaDeLibro;
-	public final CollectionExpression registroSalaLectura;
-	public final CollectionExpression clienteDeBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression RUN;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoPaterno;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoMaterno;
+
+    /**
+     *
+     */
+    public final StringExpression genero;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeNacimiento;
+
+    /**
+     *
+     */
+    public final StringExpression estadoDeTrabajo;
+
+    /**
+     *
+     */
+    public final StringExpression areaDeInteres;
+
+    /**
+     *
+     */
+    public final DateExpression fechaUltimaSolicitud;
+
+    /**
+     *
+     */
+    public final IntegerExpression diasDeAtraso;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDeCelular;
+
+    /**
+     *
+     */
+    public final IntegerExpression numeroDeTelefono;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCiudadId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCiudad;
+
+    /**
+     *
+     */
+    public final IntegerExpression usuarioId;
+
+    /**
+     *
+     */
+    public final AssociationExpression usuario;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudComputador;
+
+    /**
+     *
+     */
+    public final CollectionExpression solicitudLibro;
+
+    /**
+     *
+     */
+    public final CollectionExpression entregaDeLibro;
+
+    /**
+     *
+     */
+    public final CollectionExpression registroSalaLectura;
+
+    /**
+     *
+     */
+    public final CollectionExpression clienteDeBiblioteca;
 	
-	public ClienteDetachedCriteria() {
+    /**
+     *
+     */
+    public ClienteDetachedCriteria() {
 		super(modelo.Cliente.class, modelo.ClienteCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
@@ -68,7 +163,11 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		clienteDeBiblioteca = new CollectionExpression("ORM_ClienteDeBiblioteca", this.getDetachedCriteria());
 	}
 	
-	public ClienteDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public ClienteDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.ClienteCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		RUN = new StringExpression("RUN", this.getDetachedCriteria());
@@ -94,39 +193,77 @@ public class ClienteDetachedCriteria extends AbstractORMDetachedCriteria {
 		clienteDeBiblioteca = new CollectionExpression("ORM_ClienteDeBiblioteca", this.getDetachedCriteria());
 	}
 	
-	public CiudadDetachedCriteria createIdCiudadCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CiudadDetachedCriteria createIdCiudadCriteria() {
 		return new CiudadDetachedCriteria(createCriteria("idCiudad"));
 	}
 	
-	public UsuarioDetachedCriteria createUsuarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public UsuarioDetachedCriteria createUsuarioCriteria() {
 		return new UsuarioDetachedCriteria(createCriteria("usuario"));
 	}
 	
-	public SolicitudComputadorDetachedCriteria createSolicitudComputadorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudComputadorDetachedCriteria createSolicitudComputadorCriteria() {
 		return new SolicitudComputadorDetachedCriteria(createCriteria("ORM_SolicitudComputador"));
 	}
 	
-	public SolicitudLibroDetachedCriteria createSolicitudLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SolicitudLibroDetachedCriteria createSolicitudLibroCriteria() {
 		return new SolicitudLibroDetachedCriteria(createCriteria("ORM_SolicitudLibro"));
 	}
 	
-	public EntregaDeLibroDetachedCriteria createEntregaDeLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public EntregaDeLibroDetachedCriteria createEntregaDeLibroCriteria() {
 		return new EntregaDeLibroDetachedCriteria(createCriteria("ORM_EntregaDeLibro"));
 	}
 	
-	public RegistroSalaLecturaDetachedCriteria createRegistroSalaLecturaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public RegistroSalaLecturaDetachedCriteria createRegistroSalaLecturaCriteria() {
 		return new RegistroSalaLecturaDetachedCriteria(createCriteria("ORM_RegistroSalaLectura"));
 	}
 	
-	public ClienteDeBibliotecaDetachedCriteria createClienteDeBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteDeBibliotecaDetachedCriteria createClienteDeBibliotecaCriteria() {
 		return new ClienteDeBibliotecaDetachedCriteria(createCriteria("ORM_ClienteDeBiblioteca"));
 	}
 	
-	public Cliente uniqueCliente(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Cliente uniqueCliente(PersistentSession session) {
 		return (Cliente) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Cliente[] listCliente(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Cliente[] listCliente(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Cliente[]) list.toArray(new Cliente[list.size()]);
 	}

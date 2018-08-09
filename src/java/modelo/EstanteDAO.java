@@ -18,8 +18,19 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class EstanteDAO {
-	public static Estante loadEstanteByORMID(int id) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadEstanteByORMID(session, id);
@@ -30,7 +41,13 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(int id) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante getEstanteByORMID(int id) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getEstanteByORMID(session, id);
@@ -41,7 +58,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadEstanteByORMID(session, id, lockMode);
@@ -52,7 +76,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante getEstanteByORMID(int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getEstanteByORMID(session, id, lockMode);
@@ -63,7 +94,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Estante) session.load(modelo.Estante.class, new Integer(id));
 		}
@@ -73,7 +111,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(PersistentSession session, int id) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante getEstanteByORMID(PersistentSession session, int id) throws PersistentException {
 		try {
 			return (Estante) session.get(modelo.Estante.class, new Integer(id));
 		}
@@ -83,7 +128,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Estante) session.load(modelo.Estante.class, new Integer(id), lockMode);
 		}
@@ -93,7 +146,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante getEstanteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante getEstanteByORMID(PersistentSession session, int id, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			return (Estante) session.get(modelo.Estante.class, new Integer(id), lockMode);
 		}
@@ -103,7 +164,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static List queryEstante(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryEstante(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryEstante(session, condition, orderBy);
@@ -114,7 +182,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static List queryEstante(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryEstante(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryEstante(session, condition, orderBy, lockMode);
@@ -125,7 +201,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante[] listEstanteByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante[] listEstanteByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listEstanteByQuery(session, condition, orderBy);
@@ -136,7 +219,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante[] listEstanteByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante[] listEstanteByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listEstanteByQuery(session, condition, orderBy, lockMode);
@@ -147,7 +238,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static List queryEstante(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryEstante(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Estante as Estante");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -163,7 +262,16 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static List queryEstante(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryEstante(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Estante as Estante");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -180,7 +288,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante[] listEstanteByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante[] listEstanteByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryEstante(session, condition, orderBy);
 			return (Estante[]) list.toArray(new Estante[list.size()]);
@@ -191,7 +307,16 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante[] listEstanteByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante[] listEstanteByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryEstante(session, condition, orderBy, lockMode);
 			return (Estante[]) list.toArray(new Estante[list.size()]);
@@ -202,7 +327,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadEstanteByQuery(session, condition, orderBy);
@@ -213,7 +345,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadEstanteByQuery(session, condition, orderBy, lockMode);
@@ -224,7 +364,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		Estante[] estantes = listEstanteByQuery(session, condition, orderBy);
 		if (estantes != null && estantes.length > 0)
 			return estantes[0];
@@ -232,7 +380,16 @@ public class EstanteDAO {
 			return null;
 	}
 	
-	public static Estante loadEstanteByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static Estante loadEstanteByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		Estante[] estantes = listEstanteByQuery(session, condition, orderBy, lockMode);
 		if (estantes != null && estantes.length > 0)
 			return estantes[0];
@@ -240,7 +397,14 @@ public class EstanteDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateEstanteByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateEstanteByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateEstanteByQuery(session, condition, orderBy);
@@ -251,7 +415,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateEstanteByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateEstanteByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateEstanteByQuery(session, condition, orderBy, lockMode);
@@ -262,7 +434,15 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateEstanteByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateEstanteByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Estante as Estante");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -278,7 +458,16 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateEstanteByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateEstanteByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.Estante as Estante");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -295,11 +484,21 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante createEstante() {
+    /**
+     *
+     * @return
+     */
+    public static Estante createEstante() {
 		return new modelo.Estante();
 	}
 	
-	public static boolean save(modelo.Estante estante) throws PersistentException {
+    /**
+     *
+     * @param estante
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.Estante estante) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(estante);
 			return true;
@@ -310,7 +509,13 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.Estante estante) throws PersistentException {
+    /**
+     *
+     * @param estante
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.Estante estante) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(estante);
 			return true;
@@ -321,7 +526,13 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Estante estante)throws PersistentException {
+    /**
+     *
+     * @param estante
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Estante estante)throws PersistentException {
 		try {
 			if (estante.getIdBiblioteca() != null) {
 				estante.getIdBiblioteca().estante.remove(estante);
@@ -343,7 +554,14 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.Estante estante, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param estante
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.Estante estante, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			if (estante.getIdBiblioteca() != null) {
 				estante.getIdBiblioteca().estante.remove(estante);
@@ -370,7 +588,13 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.Estante estante) throws PersistentException {
+    /**
+     *
+     * @param estante
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.Estante estante) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(estante);
 			return true;
@@ -381,7 +605,13 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.Estante estante) throws PersistentException {
+    /**
+     *
+     * @param estante
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.Estante estante) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(estante);
 			return true;
@@ -392,7 +622,12 @@ public class EstanteDAO {
 		}
 	}
 	
-	public static Estante loadEstanteByCriteria(EstanteCriteria estanteCriteria) {
+    /**
+     *
+     * @param estanteCriteria
+     * @return
+     */
+    public static Estante loadEstanteByCriteria(EstanteCriteria estanteCriteria) {
 		Estante[] estantes = listEstanteByCriteria(estanteCriteria);
 		if(estantes == null || estantes.length == 0) {
 			return null;
@@ -400,7 +635,12 @@ public class EstanteDAO {
 		return estantes[0];
 	}
 	
-	public static Estante[] listEstanteByCriteria(EstanteCriteria estanteCriteria) {
+    /**
+     *
+     * @param estanteCriteria
+     * @return
+     */
+    public static Estante[] listEstanteByCriteria(EstanteCriteria estanteCriteria) {
 		return estanteCriteria.listEstante();
 	}
 }

@@ -18,16 +18,52 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class AutorCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final DateExpression fechaDeNacimiento;
-	public final StringExpression genero;
-	public final StringExpression apellidoPaterno;
-	public final StringExpression apellidoMaterno;
-	public final CollectionExpression autores;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final DateExpression fechaDeNacimiento;
+
+    /**
+     *
+     */
+    public final StringExpression genero;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoPaterno;
+
+    /**
+     *
+     */
+    public final StringExpression apellidoMaterno;
+
+    /**
+     *
+     */
+    public final CollectionExpression autores;
 	
-	public AutorCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public AutorCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
@@ -38,23 +74,43 @@ public class AutorCriteria extends AbstractORMCriteria {
 		autores = new CollectionExpression("ORM_Autores", this);
 	}
 	
-	public AutorCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public AutorCriteria(PersistentSession session) {
 		this(session.createCriteria(Autor.class));
 	}
 	
-	public AutorCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public AutorCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public AutoresCriteria createAutoresCriteria() {
+    /**
+     *
+     * @return
+     */
+    public AutoresCriteria createAutoresCriteria() {
 		return new AutoresCriteria(createCriteria("ORM_Autores"));
 	}
 	
-	public Autor uniqueAutor() {
+    /**
+     *
+     * @return
+     */
+    public Autor uniqueAutor() {
 		return (Autor) super.uniqueResult();
 	}
 	
-	public Autor[] listAutor() {
+    /**
+     *
+     * @return
+     */
+    public Autor[] listAutor() {
 		java.util.List list = super.list();
 		return (Autor[]) list.toArray(new Autor[list.size()]);
 	}

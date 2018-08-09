@@ -18,8 +18,21 @@ import org.hibernate.Query;
 import org.hibernate.LockMode;
 import java.util.List;
 
+/**
+ *
+ * @author Manuel
+ */
 public class RegistroSalaLecturaDAO {
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
+
+    /**
+     *
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, idCliente);
@@ -30,7 +43,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, idCliente);
@@ -41,7 +62,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, idCliente, lockMode);
@@ -52,7 +82,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura getRegistroSalaLecturaByORMID(int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return getRegistroSalaLecturaByORMID(session, id, salaDeLecturaidSala, idCliente, lockMode);
@@ -63,7 +102,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
 			registrosalalectura.setId(id);
@@ -78,7 +126,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
 			registrosalalectura.setId(id);
@@ -93,7 +150,17 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
 			registrosalalectura.setId(id);
@@ -108,7 +175,17 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param id
+     * @param salaDeLecturaidSala
+     * @param idCliente
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura getRegistroSalaLecturaByORMID(PersistentSession session, int id, modelo.SalaDeLectura salaDeLecturaidSala, modelo.Cliente idCliente, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			RegistroSalaLectura registrosalalectura = new modelo.RegistroSalaLectura();
 			registrosalalectura.setId(id);
@@ -123,7 +200,14 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static List queryRegistroSalaLectura(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryRegistroSalaLectura(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryRegistroSalaLectura(session, condition, orderBy);
@@ -134,7 +218,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static List queryRegistroSalaLectura(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryRegistroSalaLectura(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return queryRegistroSalaLectura(session, condition, orderBy, lockMode);
@@ -145,7 +237,14 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listRegistroSalaLecturaByQuery(session, condition, orderBy);
@@ -156,7 +255,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return listRegistroSalaLecturaByQuery(session, condition, orderBy, lockMode);
@@ -167,7 +274,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static List queryRegistroSalaLectura(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryRegistroSalaLectura(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.RegistroSalaLectura as RegistroSalaLectura");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -183,7 +298,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static List queryRegistroSalaLectura(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static List queryRegistroSalaLectura(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.RegistroSalaLectura as RegistroSalaLectura");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -200,7 +324,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		try {
 			List list = queryRegistroSalaLectura(session, condition, orderBy);
 			return (RegistroSalaLectura[]) list.toArray(new RegistroSalaLectura[list.size()]);
@@ -211,7 +343,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura[] listRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			List list = queryRegistroSalaLectura(session, condition, orderBy, lockMode);
 			return (RegistroSalaLectura[]) list.toArray(new RegistroSalaLectura[list.size()]);
@@ -222,7 +363,14 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadRegistroSalaLecturaByQuery(session, condition, orderBy);
@@ -233,7 +381,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return loadRegistroSalaLecturaByQuery(session, condition, orderBy, lockMode);
@@ -244,7 +400,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		RegistroSalaLectura[] registroSalaLecturas = listRegistroSalaLecturaByQuery(session, condition, orderBy);
 		if (registroSalaLecturas != null && registroSalaLecturas.length > 0)
 			return registroSalaLecturas[0];
@@ -252,7 +416,16 @@ public class RegistroSalaLecturaDAO {
 			return null;
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		RegistroSalaLectura[] registroSalaLecturas = listRegistroSalaLecturaByQuery(session, condition, orderBy, lockMode);
 		if (registroSalaLecturas != null && registroSalaLecturas.length > 0)
 			return registroSalaLecturas[0];
@@ -260,7 +433,14 @@ public class RegistroSalaLecturaDAO {
 			return null;
 	}
 	
-	public static java.util.Iterator iterateRegistroSalaLecturaByQuery(String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateRegistroSalaLecturaByQuery(String condition, String orderBy) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateRegistroSalaLecturaByQuery(session, condition, orderBy);
@@ -271,7 +451,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateRegistroSalaLecturaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateRegistroSalaLecturaByQuery(String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		try {
 			PersistentSession session = ProyectoprogramacionavanzadaPersistentManager.instance().getSession();
 			return iterateRegistroSalaLecturaByQuery(session, condition, orderBy, lockMode);
@@ -282,7 +470,15 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.RegistroSalaLectura as RegistroSalaLectura");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -298,7 +494,16 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static java.util.Iterator iterateRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
+    /**
+     *
+     * @param session
+     * @param condition
+     * @param orderBy
+     * @param lockMode
+     * @return
+     * @throws PersistentException
+     */
+    public static java.util.Iterator iterateRegistroSalaLecturaByQuery(PersistentSession session, String condition, String orderBy, org.hibernate.LockMode lockMode) throws PersistentException {
 		StringBuffer sb = new StringBuffer("From modelo.RegistroSalaLectura as RegistroSalaLectura");
 		if (condition != null)
 			sb.append(" Where ").append(condition);
@@ -315,11 +520,21 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura createRegistroSalaLectura() {
+    /**
+     *
+     * @return
+     */
+    public static RegistroSalaLectura createRegistroSalaLectura() {
 		return new modelo.RegistroSalaLectura();
 	}
 	
-	public static boolean save(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
+    /**
+     *
+     * @param registroSalaLectura
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean save(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().saveObject(registroSalaLectura);
 			return true;
@@ -330,7 +545,13 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static boolean delete(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
+    /**
+     *
+     * @param registroSalaLectura
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean delete(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().deleteObject(registroSalaLectura);
 			return true;
@@ -341,7 +562,13 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.RegistroSalaLectura registroSalaLectura)throws PersistentException {
+    /**
+     *
+     * @param registroSalaLectura
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.RegistroSalaLectura registroSalaLectura)throws PersistentException {
 		try {
 			modelo.SalaDeLectura salaDeLecturaidSala = registroSalaLectura.getSalaDeLecturaidSala();
 			if (registroSalaLectura.getSalaDeLecturaidSala() != null) {
@@ -363,7 +590,14 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static boolean deleteAndDissociate(modelo.RegistroSalaLectura registroSalaLectura, org.orm.PersistentSession session)throws PersistentException {
+    /**
+     *
+     * @param registroSalaLectura
+     * @param session
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean deleteAndDissociate(modelo.RegistroSalaLectura registroSalaLectura, org.orm.PersistentSession session)throws PersistentException {
 		try {
 			modelo.SalaDeLectura salaDeLecturaidSala = registroSalaLectura.getSalaDeLecturaidSala();
 			if (registroSalaLectura.getSalaDeLecturaidSala() != null) {
@@ -390,7 +624,13 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static boolean refresh(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
+    /**
+     *
+     * @param registroSalaLectura
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean refresh(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().refresh(registroSalaLectura);
 			return true;
@@ -401,7 +641,13 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static boolean evict(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
+    /**
+     *
+     * @param registroSalaLectura
+     * @return
+     * @throws PersistentException
+     */
+    public static boolean evict(modelo.RegistroSalaLectura registroSalaLectura) throws PersistentException {
 		try {
 			ProyectoprogramacionavanzadaPersistentManager.instance().getSession().evict(registroSalaLectura);
 			return true;
@@ -412,7 +658,12 @@ public class RegistroSalaLecturaDAO {
 		}
 	}
 	
-	public static RegistroSalaLectura loadRegistroSalaLecturaByCriteria(RegistroSalaLecturaCriteria registroSalaLecturaCriteria) {
+    /**
+     *
+     * @param registroSalaLecturaCriteria
+     * @return
+     */
+    public static RegistroSalaLectura loadRegistroSalaLecturaByCriteria(RegistroSalaLecturaCriteria registroSalaLecturaCriteria) {
 		RegistroSalaLectura[] registroSalaLecturas = listRegistroSalaLecturaByCriteria(registroSalaLecturaCriteria);
 		if(registroSalaLecturas == null || registroSalaLecturas.length == 0) {
 			return null;
@@ -420,7 +671,12 @@ public class RegistroSalaLecturaDAO {
 		return registroSalaLecturas[0];
 	}
 	
-	public static RegistroSalaLectura[] listRegistroSalaLecturaByCriteria(RegistroSalaLecturaCriteria registroSalaLecturaCriteria) {
+    /**
+     *
+     * @param registroSalaLecturaCriteria
+     * @return
+     */
+    public static RegistroSalaLectura[] listRegistroSalaLecturaByCriteria(RegistroSalaLecturaCriteria registroSalaLecturaCriteria) {
 		return registroSalaLecturaCriteria.listRegistroSalaLectura();
 	}
 }

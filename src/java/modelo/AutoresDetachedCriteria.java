@@ -18,14 +18,41 @@ import org.hibernate.criterion.DetachedCriteria;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class AutoresDetachedCriteria extends AbstractORMDetachedCriteria {
-	public final IntegerExpression id;
-	public final IntegerExpression idAutorId;
-	public final AssociationExpression idAutor;
-	public final IntegerExpression idLibroId;
-	public final AssociationExpression idLibro;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final IntegerExpression idAutorId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idAutor;
+
+    /**
+     *
+     */
+    public final IntegerExpression idLibroId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idLibro;
 	
-	public AutoresDetachedCriteria() {
+    /**
+     *
+     */
+    public AutoresDetachedCriteria() {
 		super(modelo.Autores.class, modelo.AutoresCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		idAutorId = new IntegerExpression("ORM_IdAutor.id", this.getDetachedCriteria());
@@ -34,7 +61,11 @@ public class AutoresDetachedCriteria extends AbstractORMDetachedCriteria {
 		idLibro = new AssociationExpression("ORM_IdLibro", this.getDetachedCriteria());
 	}
 	
-	public AutoresDetachedCriteria(DetachedCriteria aDetachedCriteria) {
+    /**
+     *
+     * @param aDetachedCriteria
+     */
+    public AutoresDetachedCriteria(DetachedCriteria aDetachedCriteria) {
 		super(aDetachedCriteria, modelo.AutoresCriteria.class);
 		id = new IntegerExpression("id", this.getDetachedCriteria());
 		idAutorId = new IntegerExpression("ORM_IdAutor.id", this.getDetachedCriteria());
@@ -43,19 +74,37 @@ public class AutoresDetachedCriteria extends AbstractORMDetachedCriteria {
 		idLibro = new AssociationExpression("ORM_IdLibro", this.getDetachedCriteria());
 	}
 	
-	public AutorDetachedCriteria createIdAutorCriteria() {
+    /**
+     *
+     * @return
+     */
+    public AutorDetachedCriteria createIdAutorCriteria() {
 		return new AutorDetachedCriteria(createCriteria("ORM_IdAutor"));
 	}
 	
-	public LibroDetachedCriteria createIdLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroDetachedCriteria createIdLibroCriteria() {
 		return new LibroDetachedCriteria(createCriteria("ORM_IdLibro"));
 	}
 	
-	public Autores uniqueAutores(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Autores uniqueAutores(PersistentSession session) {
 		return (Autores) super.createExecutableCriteria(session).uniqueResult();
 	}
 	
-	public Autores[] listAutores(PersistentSession session) {
+    /**
+     *
+     * @param session
+     * @return
+     */
+    public Autores[] listAutores(PersistentSession session) {
 		List list = super.createExecutableCriteria(session).list();
 		return (Autores[]) list.toArray(new Autores[list.size()]);
 	}

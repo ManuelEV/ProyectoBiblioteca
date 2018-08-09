@@ -18,16 +18,52 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class EstanteCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final IntegerExpression capacidadAproximada;
-	public final IntegerExpression idBibliotecaId;
-	public final AssociationExpression idBiblioteca;
-	public final IntegerExpression idCategoriaId;
-	public final AssociationExpression idCategoria;
-	public final CollectionExpression libro;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final IntegerExpression capacidadAproximada;
+
+    /**
+     *
+     */
+    public final IntegerExpression idBibliotecaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idBiblioteca;
+
+    /**
+     *
+     */
+    public final IntegerExpression idCategoriaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCategoria;
+
+    /**
+     *
+     */
+    public final CollectionExpression libro;
 	
-	public EstanteCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public EstanteCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		capacidadAproximada = new IntegerExpression("capacidadAproximada", this);
@@ -38,31 +74,59 @@ public class EstanteCriteria extends AbstractORMCriteria {
 		libro = new CollectionExpression("ORM_Libro", this);
 	}
 	
-	public EstanteCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public EstanteCriteria(PersistentSession session) {
 		this(session.createCriteria(Estante.class));
 	}
 	
-	public EstanteCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public EstanteCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public BibliotecaCriteria createIdBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaCriteria createIdBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("idBiblioteca"));
 	}
 	
-	public CategoriaCriteria createIdCategoriaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public CategoriaCriteria createIdCategoriaCriteria() {
 		return new CategoriaCriteria(createCriteria("idCategoria"));
 	}
 	
-	public LibroCriteria createLibroCriteria() {
+    /**
+     *
+     * @return
+     */
+    public LibroCriteria createLibroCriteria() {
 		return new LibroCriteria(createCriteria("ORM_Libro"));
 	}
 	
-	public Estante uniqueEstante() {
+    /**
+     *
+     * @return
+     */
+    public Estante uniqueEstante() {
 		return (Estante) super.uniqueResult();
 	}
 	
-	public Estante[] listEstante() {
+    /**
+     *
+     * @return
+     */
+    public Estante[] listEstante() {
 		java.util.List list = super.list();
 		return (Estante[]) list.toArray(new Estante[list.size()]);
 	}

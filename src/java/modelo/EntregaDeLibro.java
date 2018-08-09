@@ -14,8 +14,17 @@
 package modelo;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author Manuel
+ */
 public class EntregaDeLibro implements Serializable {
-	public EntregaDeLibro() {
+
+    /**
+     *
+     */
+    public EntregaDeLibro() {
 	}
 	
 	public boolean equals(Object aObj) {
@@ -84,7 +93,11 @@ public class EntregaDeLibro implements Serializable {
 		this.librocodigoId = value;
 	}
 	
-	public int getLibrocodigoId() {
+    /**
+     *
+     * @return
+     */
+    public int getLibrocodigoId() {
 		return librocodigoId;
 	}
 	
@@ -96,35 +109,67 @@ public class EntregaDeLibro implements Serializable {
 		this.idClienteId = value;
 	}
 	
-	public int getIdClienteId() {
+    /**
+     *
+     * @return
+     */
+    public int getIdClienteId() {
 		return idClienteId;
 	}
 	
-	public void setId(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setId(int value) {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public void setFechaDeDevolucion(java.util.Date value) {
+    /**
+     *
+     * @param value
+     */
+    public void setFechaDeDevolucion(java.util.Date value) {
 		this.fechaDeDevolucion = value;
 	}
 	
-	public java.util.Date getFechaDeDevolucion() {
+    /**
+     *
+     * @return
+     */
+    public java.util.Date getFechaDeDevolucion() {
 		return fechaDeDevolucion;
 	}
 	
-	public void setDiasDeAtraso(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setDiasDeAtraso(int value) {
 		this.diasDeAtraso = value;
 	}
 	
-	public int getDiasDeAtraso() {
+    /**
+     *
+     * @return
+     */
+    public int getDiasDeAtraso() {
 		return diasDeAtraso;
 	}
 	
-	public void setIdCliente(modelo.Cliente value) {
+    /**
+     *
+     * @param value
+     */
+    public void setIdCliente(modelo.Cliente value) {
 		if (idCliente != null) {
 			idCliente.entregaDeLibro.remove(this);
 		}
@@ -133,12 +178,17 @@ public class EntregaDeLibro implements Serializable {
 		}
 	}
 	
-	public modelo.Cliente getIdCliente() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Cliente getIdCliente() {
 		return idCliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_IdCliente(modelo.Cliente value) {
 		this.idCliente = value;
@@ -148,7 +198,11 @@ public class EntregaDeLibro implements Serializable {
 		return idCliente;
 	}
 	
-	public void setLibrocodigo(modelo.Libro value) {
+    /**
+     *
+     * @param value
+     */
+    public void setLibrocodigo(modelo.Libro value) {
 		if (librocodigo != null) {
 			librocodigo.entregaDeLibro.remove(this);
 		}
@@ -157,12 +211,17 @@ public class EntregaDeLibro implements Serializable {
 		}
 	}
 	
-	public modelo.Libro getLibrocodigo() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Libro getLibrocodigo() {
 		return librocodigo;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_Librocodigo(modelo.Libro value) {
 		this.librocodigo = value;

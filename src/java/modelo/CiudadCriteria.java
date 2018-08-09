@@ -18,16 +18,52 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class CiudadCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final StringExpression nombre;
-	public final IntegerExpression idPaisId;
-	public final AssociationExpression idPais;
-	public final CollectionExpression cliente;
-	public final CollectionExpression biblioteca;
-	public final CollectionExpression funcionario;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final StringExpression nombre;
+
+    /**
+     *
+     */
+    public final IntegerExpression idPaisId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idPais;
+
+    /**
+     *
+     */
+    public final CollectionExpression cliente;
+
+    /**
+     *
+     */
+    public final CollectionExpression biblioteca;
+
+    /**
+     *
+     */
+    public final CollectionExpression funcionario;
 	
-	public CiudadCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public CiudadCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		nombre = new StringExpression("nombre", this);
@@ -38,35 +74,67 @@ public class CiudadCriteria extends AbstractORMCriteria {
 		funcionario = new CollectionExpression("ORM_Funcionario", this);
 	}
 	
-	public CiudadCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public CiudadCriteria(PersistentSession session) {
 		this(session.createCriteria(Ciudad.class));
 	}
 	
-	public CiudadCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public CiudadCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public PaisCriteria createIdPaisCriteria() {
+    /**
+     *
+     * @return
+     */
+    public PaisCriteria createIdPaisCriteria() {
 		return new PaisCriteria(createCriteria("idPais"));
 	}
 	
-	public ClienteCriteria createClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_Cliente"));
 	}
 	
-	public BibliotecaCriteria createBibliotecaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public BibliotecaCriteria createBibliotecaCriteria() {
 		return new BibliotecaCriteria(createCriteria("ORM_Biblioteca"));
 	}
 	
-	public FuncionarioCriteria createFuncionarioCriteria() {
+    /**
+     *
+     * @return
+     */
+    public FuncionarioCriteria createFuncionarioCriteria() {
 		return new FuncionarioCriteria(createCriteria("ORM_Funcionario"));
 	}
 	
-	public Ciudad uniqueCiudad() {
+    /**
+     *
+     * @return
+     */
+    public Ciudad uniqueCiudad() {
 		return (Ciudad) super.uniqueResult();
 	}
 	
-	public Ciudad[] listCiudad() {
+    /**
+     *
+     * @return
+     */
+    public Ciudad[] listCiudad() {
 		java.util.List list = super.list();
 		return (Ciudad[]) list.toArray(new Ciudad[list.size()]);
 	}

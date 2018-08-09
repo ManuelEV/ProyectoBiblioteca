@@ -14,8 +14,17 @@
 package modelo;
 
 import java.io.Serializable;
+
+/**
+ *
+ * @author Manuel
+ */
 public class ClienteDeBiblioteca implements Serializable {
-	public ClienteDeBiblioteca() {
+
+    /**
+     *
+     */
+    public ClienteDeBiblioteca() {
 	}
 	
 	public boolean equals(Object aObj) {
@@ -80,7 +89,11 @@ public class ClienteDeBiblioteca implements Serializable {
 		this.bibliotecaidBibliotecaId = value;
 	}
 	
-	public int getBibliotecaidBibliotecaId() {
+    /**
+     *
+     * @return
+     */
+    public int getBibliotecaidBibliotecaId() {
 		return bibliotecaidBibliotecaId;
 	}
 	
@@ -92,19 +105,35 @@ public class ClienteDeBiblioteca implements Serializable {
 		this.clienteId = value;
 	}
 	
-	public int getClienteId() {
+    /**
+     *
+     * @return
+     */
+    public int getClienteId() {
 		return clienteId;
 	}
 	
-	public void setId(int value) {
+    /**
+     *
+     * @param value
+     */
+    public void setId(int value) {
 		this.id = value;
 	}
 	
-	public int getId() {
+    /**
+     *
+     * @return
+     */
+    public int getId() {
 		return id;
 	}
 	
-	public void setCliente(modelo.Cliente value) {
+    /**
+     *
+     * @param value
+     */
+    public void setCliente(modelo.Cliente value) {
 		if (cliente != null) {
 			cliente.clienteDeBiblioteca.remove(this);
 		}
@@ -113,12 +142,17 @@ public class ClienteDeBiblioteca implements Serializable {
 		}
 	}
 	
-	public modelo.Cliente getCliente() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Cliente getCliente() {
 		return cliente;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_Cliente(modelo.Cliente value) {
 		this.cliente = value;
@@ -128,7 +162,11 @@ public class ClienteDeBiblioteca implements Serializable {
 		return cliente;
 	}
 	
-	public void setBibliotecaidBiblioteca(modelo.Biblioteca value) {
+    /**
+     *
+     * @param value
+     */
+    public void setBibliotecaidBiblioteca(modelo.Biblioteca value) {
 		if (bibliotecaidBiblioteca != null) {
 			bibliotecaidBiblioteca.clienteDeBiblioteca.remove(this);
 		}
@@ -137,12 +175,17 @@ public class ClienteDeBiblioteca implements Serializable {
 		}
 	}
 	
-	public modelo.Biblioteca getBibliotecaidBiblioteca() {
+    /**
+     *
+     * @return
+     */
+    public modelo.Biblioteca getBibliotecaidBiblioteca() {
 		return bibliotecaidBiblioteca;
 	}
 	
 	/**
 	 * This method is for internal use only.
+     * @param value
 	 */
 	public void setORM_BibliotecaidBiblioteca(modelo.Biblioteca value) {
 		this.bibliotecaidBiblioteca = value;

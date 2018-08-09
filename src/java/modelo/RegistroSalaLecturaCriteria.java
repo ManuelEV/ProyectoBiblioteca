@@ -18,17 +18,57 @@ import org.orm.PersistentException;
 import org.orm.PersistentSession;
 import org.orm.criteria.*;
 
+/**
+ *
+ * @author Manuel
+ */
 public class RegistroSalaLecturaCriteria extends AbstractORMCriteria {
-	public final IntegerExpression id;
-	public final DateExpression fechaRegistro;
-	public final StringExpression tipoRegistro;
-	public final TimeExpression horaRegistro;
-	public final IntegerExpression salaDeLecturaidSalaId;
-	public final AssociationExpression salaDeLecturaidSala;
-	public final IntegerExpression idClienteId;
-	public final AssociationExpression idCliente;
+
+    /**
+     *
+     */
+    public final IntegerExpression id;
+
+    /**
+     *
+     */
+    public final DateExpression fechaRegistro;
+
+    /**
+     *
+     */
+    public final StringExpression tipoRegistro;
+
+    /**
+     *
+     */
+    public final TimeExpression horaRegistro;
+
+    /**
+     *
+     */
+    public final IntegerExpression salaDeLecturaidSalaId;
+
+    /**
+     *
+     */
+    public final AssociationExpression salaDeLecturaidSala;
+
+    /**
+     *
+     */
+    public final IntegerExpression idClienteId;
+
+    /**
+     *
+     */
+    public final AssociationExpression idCliente;
 	
-	public RegistroSalaLecturaCriteria(Criteria criteria) {
+    /**
+     *
+     * @param criteria
+     */
+    public RegistroSalaLecturaCriteria(Criteria criteria) {
 		super(criteria);
 		id = new IntegerExpression("id", this);
 		fechaRegistro = new DateExpression("fechaRegistro", this);
@@ -40,27 +80,51 @@ public class RegistroSalaLecturaCriteria extends AbstractORMCriteria {
 		idCliente = new AssociationExpression("ORM_IdCliente", this);
 	}
 	
-	public RegistroSalaLecturaCriteria(PersistentSession session) {
+    /**
+     *
+     * @param session
+     */
+    public RegistroSalaLecturaCriteria(PersistentSession session) {
 		this(session.createCriteria(RegistroSalaLectura.class));
 	}
 	
-	public RegistroSalaLecturaCriteria() throws PersistentException {
+    /**
+     *
+     * @throws PersistentException
+     */
+    public RegistroSalaLecturaCriteria() throws PersistentException {
 		this(ProyectoprogramacionavanzadaPersistentManager.instance().getSession());
 	}
 	
-	public SalaDeLecturaCriteria createSalaDeLecturaidSalaCriteria() {
+    /**
+     *
+     * @return
+     */
+    public SalaDeLecturaCriteria createSalaDeLecturaidSalaCriteria() {
 		return new SalaDeLecturaCriteria(createCriteria("ORM_SalaDeLecturaidSala"));
 	}
 	
-	public ClienteCriteria createIdClienteCriteria() {
+    /**
+     *
+     * @return
+     */
+    public ClienteCriteria createIdClienteCriteria() {
 		return new ClienteCriteria(createCriteria("ORM_IdCliente"));
 	}
 	
-	public RegistroSalaLectura uniqueRegistroSalaLectura() {
+    /**
+     *
+     * @return
+     */
+    public RegistroSalaLectura uniqueRegistroSalaLectura() {
 		return (RegistroSalaLectura) super.uniqueResult();
 	}
 	
-	public RegistroSalaLectura[] listRegistroSalaLectura() {
+    /**
+     *
+     * @return
+     */
+    public RegistroSalaLectura[] listRegistroSalaLectura() {
 		java.util.List list = super.list();
 		return (RegistroSalaLectura[]) list.toArray(new RegistroSalaLectura[list.size()]);
 	}
