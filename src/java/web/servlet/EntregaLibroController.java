@@ -83,7 +83,7 @@ public class EntregaLibroController extends HttpServlet {
 
                 int diasAtraso = 0;
 
-                int entrega = numeroDiasEntreDosFechas(fechaEntrega, fechaLimite);
+                int entrega = numeroDiasEntreDosFechas(fechaLimite, fechaEntrega);
 
                 if (entrega > 0) {
                     diasAtraso = entrega;
